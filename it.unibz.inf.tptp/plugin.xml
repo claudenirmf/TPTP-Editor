@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package 
+			uri = "http://www.unibz.it/inf/tptp/TPTP"
+			class = "it.unibz.inf.tptp.parser.ParserPackage"
+			genModel = "model/generated/TPTP.genmodel" />
+	</extension>
+</plugin>

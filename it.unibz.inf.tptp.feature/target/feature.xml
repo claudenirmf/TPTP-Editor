@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="it.unibz.inf.tptp.feature"
+      label="TPTP Feature "
+      version="1.0.0.201808151458"
+      provider-name="CORE">
+
+   <plugin
+         id="it.unibz.inf.tptp"
+         download-size="351"
+         install-size="946"
+         version="1.0.0.201808151458"
+         unpack="false"/>
+
+   <plugin
+         id="it.unibz.inf.tptp.ide"
+         download-size="138"
+         install-size="634"
+         version="1.0.0.201808151458"
+         unpack="false"/>
+
+   <plugin
+         id="it.unibz.inf.tptp.ui"
+         download-size="31"
+         install-size="72"
+         version="1.0.0.201808151458"
+         unpack="false"/>
+
+</feature>

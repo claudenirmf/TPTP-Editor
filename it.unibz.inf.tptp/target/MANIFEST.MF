@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: it.unibz.inf.tptp; singleton:=true
+Export-Package: it.unibz.inf.tptp.parser,it.unibz.inf.tptp.parser.antl
+ r.internal,it.unibz.inf.tptp.parser.antlr,it.unibz.inf.tptp,it.unibz.
+ inf.tptp.parser.util,it.unibz.inf.tptp.serializer,it.unibz.inf.tptp.s
+ coping,it.unibz.inf.tptp.parser.impl,it.unibz.inf.tptp.services,it.un
+ ibz.inf.tptp.generator,it.unibz.inf.tptp.validation
+Bundle-Name: it.unibz.inf.tptp
+Bundle-Version: 1.0.0.201808151458
+Require-Bundle: org.eclipse.xtext,org.eclipse.xtext.xbase,org.eclipse.
+ equinox.common;bundle-version="3.5.0",org.eclipse.emf.ecore,org.eclip
+ se.xtext.xbase.lib,org.antlr.runtime,org.eclipse.xtext.util,org.eclip
+ se.xtend.lib,org.eclipse.emf.common
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: My Company
+Import-Package: org.apache.log4j
+
