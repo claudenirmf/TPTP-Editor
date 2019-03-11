@@ -20,34 +20,34 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class TPTPSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected TPTPGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_fof_terminating_expression_LeftParenthesisKeyword_1_0_a;
-	protected AbstractElementAlias match_fof_terminating_expression_LeftParenthesisKeyword_1_0_p;
-	protected AbstractElementAlias match_tff_formula_type_definition_LeftParenthesisKeyword_0_0_a;
-	protected AbstractElementAlias match_tff_terminal_type_expression_LeftParenthesisKeyword_1_0_a;
-	protected AbstractElementAlias match_tff_terminal_type_expression_LeftParenthesisKeyword_1_0_p;
-	protected AbstractElementAlias match_tff_terminating_expression_LeftParenthesisKeyword_1_0_a;
-	protected AbstractElementAlias match_tff_terminating_expression_LeftParenthesisKeyword_1_0_p;
-	protected AbstractElementAlias match_thf_formula_type_definition_LeftParenthesisKeyword_0_0_a;
-	protected AbstractElementAlias match_thf_terminal_type_expression_LeftParenthesisKeyword_1_0_a;
-	protected AbstractElementAlias match_thf_terminal_type_expression_LeftParenthesisKeyword_1_0_p;
-	protected AbstractElementAlias match_thf_terminating_expression_LeftParenthesisKeyword_1_0_a;
-	protected AbstractElementAlias match_thf_terminating_expression_LeftParenthesisKeyword_1_0_p;
+	protected AbstractElementAlias match_Fof_terminating_expression_LeftParenthesisKeyword_1_0_a;
+	protected AbstractElementAlias match_Fof_terminating_expression_LeftParenthesisKeyword_1_0_p;
+	protected AbstractElementAlias match_Tff_formula_type_definition_LeftParenthesisKeyword_0_0_a;
+	protected AbstractElementAlias match_Tff_terminal_type_expression_LeftParenthesisKeyword_1_0_a;
+	protected AbstractElementAlias match_Tff_terminal_type_expression_LeftParenthesisKeyword_1_0_p;
+	protected AbstractElementAlias match_Tff_terminating_expression_LeftParenthesisKeyword_1_0_a;
+	protected AbstractElementAlias match_Tff_terminating_expression_LeftParenthesisKeyword_1_0_p;
+	protected AbstractElementAlias match_Thf_formula_type_definition_LeftParenthesisKeyword_0_0_a;
+	protected AbstractElementAlias match_Thf_terminal_type_expression_LeftParenthesisKeyword_1_0_a;
+	protected AbstractElementAlias match_Thf_terminal_type_expression_LeftParenthesisKeyword_1_0_p;
+	protected AbstractElementAlias match_Thf_terminating_expression_LeftParenthesisKeyword_1_0_a;
+	protected AbstractElementAlias match_Thf_terminating_expression_LeftParenthesisKeyword_1_0_p;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (TPTPGrammarAccess) access;
-		match_fof_terminating_expression_LeftParenthesisKeyword_1_0_a = new TokenAlias(true, true, grammarAccess.getFof_terminating_expressionAccess().getLeftParenthesisKeyword_1_0());
-		match_fof_terminating_expression_LeftParenthesisKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getFof_terminating_expressionAccess().getLeftParenthesisKeyword_1_0());
-		match_tff_formula_type_definition_LeftParenthesisKeyword_0_0_a = new TokenAlias(true, true, grammarAccess.getTff_formula_type_definitionAccess().getLeftParenthesisKeyword_0_0());
-		match_tff_terminal_type_expression_LeftParenthesisKeyword_1_0_a = new TokenAlias(true, true, grammarAccess.getTff_terminal_type_expressionAccess().getLeftParenthesisKeyword_1_0());
-		match_tff_terminal_type_expression_LeftParenthesisKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getTff_terminal_type_expressionAccess().getLeftParenthesisKeyword_1_0());
-		match_tff_terminating_expression_LeftParenthesisKeyword_1_0_a = new TokenAlias(true, true, grammarAccess.getTff_terminating_expressionAccess().getLeftParenthesisKeyword_1_0());
-		match_tff_terminating_expression_LeftParenthesisKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getTff_terminating_expressionAccess().getLeftParenthesisKeyword_1_0());
-		match_thf_formula_type_definition_LeftParenthesisKeyword_0_0_a = new TokenAlias(true, true, grammarAccess.getThf_formula_type_definitionAccess().getLeftParenthesisKeyword_0_0());
-		match_thf_terminal_type_expression_LeftParenthesisKeyword_1_0_a = new TokenAlias(true, true, grammarAccess.getThf_terminal_type_expressionAccess().getLeftParenthesisKeyword_1_0());
-		match_thf_terminal_type_expression_LeftParenthesisKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getThf_terminal_type_expressionAccess().getLeftParenthesisKeyword_1_0());
-		match_thf_terminating_expression_LeftParenthesisKeyword_1_0_a = new TokenAlias(true, true, grammarAccess.getThf_terminating_expressionAccess().getLeftParenthesisKeyword_1_0());
-		match_thf_terminating_expression_LeftParenthesisKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getThf_terminating_expressionAccess().getLeftParenthesisKeyword_1_0());
+		match_Fof_terminating_expression_LeftParenthesisKeyword_1_0_a = new TokenAlias(true, true, grammarAccess.getFof_terminating_expressionAccess().getLeftParenthesisKeyword_1_0());
+		match_Fof_terminating_expression_LeftParenthesisKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getFof_terminating_expressionAccess().getLeftParenthesisKeyword_1_0());
+		match_Tff_formula_type_definition_LeftParenthesisKeyword_0_0_a = new TokenAlias(true, true, grammarAccess.getTff_formula_type_definitionAccess().getLeftParenthesisKeyword_0_0());
+		match_Tff_terminal_type_expression_LeftParenthesisKeyword_1_0_a = new TokenAlias(true, true, grammarAccess.getTff_terminal_type_expressionAccess().getLeftParenthesisKeyword_1_0());
+		match_Tff_terminal_type_expression_LeftParenthesisKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getTff_terminal_type_expressionAccess().getLeftParenthesisKeyword_1_0());
+		match_Tff_terminating_expression_LeftParenthesisKeyword_1_0_a = new TokenAlias(true, true, grammarAccess.getTff_terminating_expressionAccess().getLeftParenthesisKeyword_1_0());
+		match_Tff_terminating_expression_LeftParenthesisKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getTff_terminating_expressionAccess().getLeftParenthesisKeyword_1_0());
+		match_Thf_formula_type_definition_LeftParenthesisKeyword_0_0_a = new TokenAlias(true, true, grammarAccess.getThf_formula_type_definitionAccess().getLeftParenthesisKeyword_0_0());
+		match_Thf_terminal_type_expression_LeftParenthesisKeyword_1_0_a = new TokenAlias(true, true, grammarAccess.getThf_terminal_type_expressionAccess().getLeftParenthesisKeyword_1_0());
+		match_Thf_terminal_type_expression_LeftParenthesisKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getThf_terminal_type_expressionAccess().getLeftParenthesisKeyword_1_0());
+		match_Thf_terminating_expression_LeftParenthesisKeyword_1_0_a = new TokenAlias(true, true, grammarAccess.getThf_terminating_expressionAccess().getLeftParenthesisKeyword_1_0());
+		match_Thf_terminating_expression_LeftParenthesisKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getThf_terminating_expressionAccess().getLeftParenthesisKeyword_1_0());
 	}
 	
 	@Override
@@ -62,30 +62,30 @@ public class TPTPSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_fof_terminating_expression_LeftParenthesisKeyword_1_0_a.equals(syntax))
-				emit_fof_terminating_expression_LeftParenthesisKeyword_1_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_fof_terminating_expression_LeftParenthesisKeyword_1_0_p.equals(syntax))
-				emit_fof_terminating_expression_LeftParenthesisKeyword_1_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_tff_formula_type_definition_LeftParenthesisKeyword_0_0_a.equals(syntax))
-				emit_tff_formula_type_definition_LeftParenthesisKeyword_0_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_tff_terminal_type_expression_LeftParenthesisKeyword_1_0_a.equals(syntax))
-				emit_tff_terminal_type_expression_LeftParenthesisKeyword_1_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_tff_terminal_type_expression_LeftParenthesisKeyword_1_0_p.equals(syntax))
-				emit_tff_terminal_type_expression_LeftParenthesisKeyword_1_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_tff_terminating_expression_LeftParenthesisKeyword_1_0_a.equals(syntax))
-				emit_tff_terminating_expression_LeftParenthesisKeyword_1_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_tff_terminating_expression_LeftParenthesisKeyword_1_0_p.equals(syntax))
-				emit_tff_terminating_expression_LeftParenthesisKeyword_1_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_thf_formula_type_definition_LeftParenthesisKeyword_0_0_a.equals(syntax))
-				emit_thf_formula_type_definition_LeftParenthesisKeyword_0_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_thf_terminal_type_expression_LeftParenthesisKeyword_1_0_a.equals(syntax))
-				emit_thf_terminal_type_expression_LeftParenthesisKeyword_1_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_thf_terminal_type_expression_LeftParenthesisKeyword_1_0_p.equals(syntax))
-				emit_thf_terminal_type_expression_LeftParenthesisKeyword_1_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_thf_terminating_expression_LeftParenthesisKeyword_1_0_a.equals(syntax))
-				emit_thf_terminating_expression_LeftParenthesisKeyword_1_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_thf_terminating_expression_LeftParenthesisKeyword_1_0_p.equals(syntax))
-				emit_thf_terminating_expression_LeftParenthesisKeyword_1_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_Fof_terminating_expression_LeftParenthesisKeyword_1_0_a.equals(syntax))
+				emit_Fof_terminating_expression_LeftParenthesisKeyword_1_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Fof_terminating_expression_LeftParenthesisKeyword_1_0_p.equals(syntax))
+				emit_Fof_terminating_expression_LeftParenthesisKeyword_1_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Tff_formula_type_definition_LeftParenthesisKeyword_0_0_a.equals(syntax))
+				emit_Tff_formula_type_definition_LeftParenthesisKeyword_0_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Tff_terminal_type_expression_LeftParenthesisKeyword_1_0_a.equals(syntax))
+				emit_Tff_terminal_type_expression_LeftParenthesisKeyword_1_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Tff_terminal_type_expression_LeftParenthesisKeyword_1_0_p.equals(syntax))
+				emit_Tff_terminal_type_expression_LeftParenthesisKeyword_1_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Tff_terminating_expression_LeftParenthesisKeyword_1_0_a.equals(syntax))
+				emit_Tff_terminating_expression_LeftParenthesisKeyword_1_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Tff_terminating_expression_LeftParenthesisKeyword_1_0_p.equals(syntax))
+				emit_Tff_terminating_expression_LeftParenthesisKeyword_1_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Thf_formula_type_definition_LeftParenthesisKeyword_0_0_a.equals(syntax))
+				emit_Thf_formula_type_definition_LeftParenthesisKeyword_0_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Thf_terminal_type_expression_LeftParenthesisKeyword_1_0_a.equals(syntax))
+				emit_Thf_terminal_type_expression_LeftParenthesisKeyword_1_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Thf_terminal_type_expression_LeftParenthesisKeyword_1_0_p.equals(syntax))
+				emit_Thf_terminal_type_expression_LeftParenthesisKeyword_1_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Thf_terminating_expression_LeftParenthesisKeyword_1_0_a.equals(syntax))
+				emit_Thf_terminating_expression_LeftParenthesisKeyword_1_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Thf_terminating_expression_LeftParenthesisKeyword_1_0_p.equals(syntax))
+				emit_Thf_terminating_expression_LeftParenthesisKeyword_1_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -95,12 +95,12 @@ public class TPTPSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '('*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) fof_atom=fof_atom
-	 *     (rule start) (ambiguity) fof_exp=fof_quantifier_expression
+	 *     (rule start) (ambiguity) fof_atom=Fof_atom
+	 *     (rule start) (ambiguity) fof_exp=Fof_quantifier_expression
 	 *     (rule start) (ambiguity) fof_negation?='~'
 	 *     (rule start) (ambiguity) {binary.left=}
 	 */
-	protected void emit_fof_terminating_expression_LeftParenthesisKeyword_1_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Fof_terminating_expression_LeftParenthesisKeyword_1_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -111,7 +111,7 @@ public class TPTPSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) {binary.left=}
 	 */
-	protected void emit_fof_terminating_expression_LeftParenthesisKeyword_1_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Fof_terminating_expression_LeftParenthesisKeyword_1_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -120,10 +120,10 @@ public class TPTPSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '('*
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) name=Lower_token_and_keyword
 	 *     (rule start) (ambiguity) name=STRING
-	 *     (rule start) (ambiguity) name=lower_token_and_keyword
 	 */
-	protected void emit_tff_formula_type_definition_LeftParenthesisKeyword_0_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Tff_formula_type_definition_LeftParenthesisKeyword_0_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -138,12 +138,12 @@ public class TPTPSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) name='$rat'
 	 *     (rule start) (ambiguity) name='$real'
 	 *     (rule start) (ambiguity) name='$tType'
+	 *     (rule start) (ambiguity) name=Lower_token_and_keyword
 	 *     (rule start) (ambiguity) name=STRING
 	 *     (rule start) (ambiguity) name=UPPER_TOKEN
-	 *     (rule start) (ambiguity) name=lower_token_and_keyword
 	 *     (rule start) (ambiguity) {oper.left=}
 	 */
-	protected void emit_tff_terminal_type_expression_LeftParenthesisKeyword_1_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Tff_terminal_type_expression_LeftParenthesisKeyword_1_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -154,7 +154,7 @@ public class TPTPSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) {oper.left=}
 	 */
-	protected void emit_tff_terminal_type_expression_LeftParenthesisKeyword_1_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Tff_terminal_type_expression_LeftParenthesisKeyword_1_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -163,12 +163,12 @@ public class TPTPSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '('*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) atom=tff_atom
-	 *     (rule start) (ambiguity) exp=tff_quantifier_expression
+	 *     (rule start) (ambiguity) atom=Tff_atom
+	 *     (rule start) (ambiguity) exp=Tff_quantifier_expression
 	 *     (rule start) (ambiguity) negation?='~'
 	 *     (rule start) (ambiguity) {binary.left=}
 	 */
-	protected void emit_tff_terminating_expression_LeftParenthesisKeyword_1_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Tff_terminating_expression_LeftParenthesisKeyword_1_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -179,7 +179,7 @@ public class TPTPSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) {binary.left=}
 	 */
-	protected void emit_tff_terminating_expression_LeftParenthesisKeyword_1_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Tff_terminating_expression_LeftParenthesisKeyword_1_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -188,10 +188,10 @@ public class TPTPSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '('*
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) name=Lower_token_and_keyword
 	 *     (rule start) (ambiguity) name=STRING
-	 *     (rule start) (ambiguity) name=lower_token_and_keyword
 	 */
-	protected void emit_thf_formula_type_definition_LeftParenthesisKeyword_0_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Thf_formula_type_definition_LeftParenthesisKeyword_0_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -203,11 +203,11 @@ public class TPTPSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) name='$i'
 	 *     (rule start) (ambiguity) name='$o'
 	 *     (rule start) (ambiguity) name='$tType'
+	 *     (rule start) (ambiguity) name=Lower_token_and_keyword
 	 *     (rule start) (ambiguity) name=STRING
-	 *     (rule start) (ambiguity) name=lower_token_and_keyword
 	 *     (rule start) (ambiguity) {oper.left=}
 	 */
-	protected void emit_thf_terminal_type_expression_LeftParenthesisKeyword_1_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Thf_terminal_type_expression_LeftParenthesisKeyword_1_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -218,7 +218,7 @@ public class TPTPSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) {oper.left=}
 	 */
-	protected void emit_thf_terminal_type_expression_LeftParenthesisKeyword_1_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Thf_terminal_type_expression_LeftParenthesisKeyword_1_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -227,13 +227,13 @@ public class TPTPSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '('*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) op=thf_unary_operator
-	 *     (rule start) (ambiguity) thf_atom=thf_atom
-	 *     (rule start) (ambiguity) thf_exp=thf_quantifier_expression
+	 *     (rule start) (ambiguity) op=Thf_unary_operator
+	 *     (rule start) (ambiguity) thf_atom=Thf_atom
+	 *     (rule start) (ambiguity) thf_exp=Thf_quantifier_expression
 	 *     (rule start) (ambiguity) thf_negation?='~'
 	 *     (rule start) (ambiguity) {binary.left=}
 	 */
-	protected void emit_thf_terminating_expression_LeftParenthesisKeyword_1_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Thf_terminating_expression_LeftParenthesisKeyword_1_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -244,7 +244,7 @@ public class TPTPSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) {binary.left=}
 	 */
-	protected void emit_thf_terminating_expression_LeftParenthesisKeyword_1_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Thf_terminating_expression_LeftParenthesisKeyword_1_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

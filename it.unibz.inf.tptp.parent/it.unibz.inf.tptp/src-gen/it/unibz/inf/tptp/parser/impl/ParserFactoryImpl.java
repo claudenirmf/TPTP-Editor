@@ -66,48 +66,48 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
     switch (eClass.getClassifierID())
     {
       case ParserPackage.MODEL: return createModel();
-      case ParserPackage.INCLUDE: return createinclude();
-      case ParserPackage.FOF_INPUT: return createfof_input();
-      case ParserPackage.FOF_ROOT: return createfof_root();
-      case ParserPackage.FOF_EXPRESSION: return createfof_expression();
-      case ParserPackage.FOF_ATOM: return createfof_atom();
-      case ParserPackage.FOF_CONSTANT: return createfof_constant();
-      case ParserPackage.FOF_VAR: return createfof_var();
-      case ParserPackage.FOF_VARIABLE_LIST: return createfof_variable_list();
-      case ParserPackage.TFF_INPUT: return createtff_input();
-      case ParserPackage.TFF_ROOT: return createtff_root();
-      case ParserPackage.TFF_FORMULA_TYPE_DEFINITION: return createtff_formula_type_definition();
-      case ParserPackage.TFF_TYPE_EXPRESSION: return createtff_type_expression();
-      case ParserPackage.TFF_TYPE_ATOM: return createtff_type_atom();
-      case ParserPackage.TFF_TYPE_CONSTANT: return createtff_type_constant();
-      case ParserPackage.TFF_EXPRESSION: return createtff_expression();
-      case ParserPackage.TFF_ATOM: return createtff_atom();
-      case ParserPackage.TFF_CONSTANT: return createtff_constant();
-      case ParserPackage.TFF_PREDEFINED_FUNCTION_2ARGS: return createtff_predefined_function_2_args();
-      case ParserPackage.TFF_VAR: return createtff_var();
-      case ParserPackage.TFF_VAR_DECLARATION: return createtff_var_declaration();
-      case ParserPackage.TFF_VARIABLE_LIST: return createtff_variable_list();
-      case ParserPackage.CNF_INPUT: return createcnf_input();
-      case ParserPackage.CNF_ROOT: return createcnf_root();
-      case ParserPackage.CNF_FORMULA_TYPE_DEFINITION: return createcnf_formula_type_definition();
-      case ParserPackage.CNF_OR: return createcnf_or();
-      case ParserPackage.CNF_NOT: return createcnf_not();
-      case ParserPackage.CNF_EQUALITY: return createcnf_equality();
-      case ParserPackage.CNF_EXPRESSION: return createcnf_expression();
-      case ParserPackage.CNF_CONSTANT: return createcnf_constant();
-      case ParserPackage.CNF_VAR: return createcnf_var();
-      case ParserPackage.THF_INPUT: return createthf_input();
-      case ParserPackage.THF_ROOT: return createthf_root();
-      case ParserPackage.THF_FORMULA_TYPE_DEFINITION: return createthf_formula_type_definition();
-      case ParserPackage.THF_TYPE_EXPRESSION: return createthf_type_expression();
-      case ParserPackage.THF_TYPE_ATOM: return createthf_type_atom();
-      case ParserPackage.THF_TYPE_CONSTANT: return createthf_type_constant();
-      case ParserPackage.THF_EXPRESSION: return createthf_expression();
-      case ParserPackage.THF_ATOM: return createthf_atom();
-      case ParserPackage.THF_CONSTANT: return createthf_constant();
-      case ParserPackage.THF_VAR: return createthf_var();
-      case ParserPackage.THF_VARIABLE_LIST: return createthf_variable_list();
-      case ParserPackage.THF_VAR_DECLARATION: return createthf_var_declaration();
+      case ParserPackage.INCLUDE: return createInclude();
+      case ParserPackage.FOF_INPUT: return createFof_input();
+      case ParserPackage.FOF_ROOT: return createFof_root();
+      case ParserPackage.FOF_EXPRESSION: return createFof_expression();
+      case ParserPackage.FOF_ATOM: return createFof_atom();
+      case ParserPackage.FOF_CONSTANT: return createFof_constant();
+      case ParserPackage.FOF_VAR: return createFof_var();
+      case ParserPackage.FOF_VARIABLE_LIST: return createFof_variable_list();
+      case ParserPackage.TFF_INPUT: return createTff_input();
+      case ParserPackage.TFF_ROOT: return createTff_root();
+      case ParserPackage.TFF_FORMULA_TYPE_DEFINITION: return createTff_formula_type_definition();
+      case ParserPackage.TFF_TYPE_EXPRESSION: return createTff_type_expression();
+      case ParserPackage.TFF_TYPE_ATOM: return createTff_type_atom();
+      case ParserPackage.TFF_TYPE_CONSTANT: return createTff_type_constant();
+      case ParserPackage.TFF_EXPRESSION: return createTff_expression();
+      case ParserPackage.TFF_ATOM: return createTff_atom();
+      case ParserPackage.TFF_CONSTANT: return createTff_constant();
+      case ParserPackage.TFF_PREDEFINED_FUNCTION_2ARGS: return createTff_predefined_function_2_args();
+      case ParserPackage.TFF_VAR: return createTff_var();
+      case ParserPackage.TFF_VAR_DECLARATION: return createTff_var_declaration();
+      case ParserPackage.TFF_VARIABLE_LIST: return createTff_variable_list();
+      case ParserPackage.CNF_INPUT: return createCnf_input();
+      case ParserPackage.CNF_ROOT: return createCnf_root();
+      case ParserPackage.CNF_FORMULA_TYPE_DEFINITION: return createCnf_formula_type_definition();
+      case ParserPackage.CNF_OR: return createCnf_or();
+      case ParserPackage.CNF_NOT: return createCnf_not();
+      case ParserPackage.CNF_EQUALITY: return createCnf_equality();
+      case ParserPackage.CNF_EXPRESSION: return createCnf_expression();
+      case ParserPackage.CNF_CONSTANT: return createCnf_constant();
+      case ParserPackage.CNF_VAR: return createCnf_var();
+      case ParserPackage.THF_INPUT: return createThf_input();
+      case ParserPackage.THF_ROOT: return createThf_root();
+      case ParserPackage.THF_FORMULA_TYPE_DEFINITION: return createThf_formula_type_definition();
+      case ParserPackage.THF_TYPE_EXPRESSION: return createThf_type_expression();
+      case ParserPackage.THF_TYPE_ATOM: return createThf_type_atom();
+      case ParserPackage.THF_TYPE_CONSTANT: return createThf_type_constant();
+      case ParserPackage.THF_EXPRESSION: return createThf_expression();
+      case ParserPackage.THF_ATOM: return createThf_atom();
+      case ParserPackage.THF_CONSTANT: return createThf_constant();
+      case ParserPackage.THF_VAR: return createThf_var();
+      case ParserPackage.THF_VARIABLE_LIST: return createThf_variable_list();
+      case ParserPackage.THF_VAR_DECLARATION: return createThf_var_declaration();
       case ParserPackage.BINARY: return createbinary();
       case ParserPackage.OPER: return createoper();
       default:
@@ -131,9 +131,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public include createinclude()
+  public Include createInclude()
   {
-    includeImpl include = new includeImpl();
+    IncludeImpl include = new IncludeImpl();
     return include;
   }
 
@@ -142,9 +142,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public fof_input createfof_input()
+  public Fof_input createFof_input()
   {
-    fof_inputImpl fof_input = new fof_inputImpl();
+    Fof_inputImpl fof_input = new Fof_inputImpl();
     return fof_input;
   }
 
@@ -153,9 +153,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public fof_root createfof_root()
+  public Fof_root createFof_root()
   {
-    fof_rootImpl fof_root = new fof_rootImpl();
+    Fof_rootImpl fof_root = new Fof_rootImpl();
     return fof_root;
   }
 
@@ -164,9 +164,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public fof_expression createfof_expression()
+  public Fof_expression createFof_expression()
   {
-    fof_expressionImpl fof_expression = new fof_expressionImpl();
+    Fof_expressionImpl fof_expression = new Fof_expressionImpl();
     return fof_expression;
   }
 
@@ -175,9 +175,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public fof_atom createfof_atom()
+  public Fof_atom createFof_atom()
   {
-    fof_atomImpl fof_atom = new fof_atomImpl();
+    Fof_atomImpl fof_atom = new Fof_atomImpl();
     return fof_atom;
   }
 
@@ -186,9 +186,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public fof_constant createfof_constant()
+  public Fof_constant createFof_constant()
   {
-    fof_constantImpl fof_constant = new fof_constantImpl();
+    Fof_constantImpl fof_constant = new Fof_constantImpl();
     return fof_constant;
   }
 
@@ -197,9 +197,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public fof_var createfof_var()
+  public Fof_var createFof_var()
   {
-    fof_varImpl fof_var = new fof_varImpl();
+    Fof_varImpl fof_var = new Fof_varImpl();
     return fof_var;
   }
 
@@ -208,9 +208,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public fof_variable_list createfof_variable_list()
+  public Fof_variable_list createFof_variable_list()
   {
-    fof_variable_listImpl fof_variable_list = new fof_variable_listImpl();
+    Fof_variable_listImpl fof_variable_list = new Fof_variable_listImpl();
     return fof_variable_list;
   }
 
@@ -219,9 +219,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public tff_input createtff_input()
+  public Tff_input createTff_input()
   {
-    tff_inputImpl tff_input = new tff_inputImpl();
+    Tff_inputImpl tff_input = new Tff_inputImpl();
     return tff_input;
   }
 
@@ -230,9 +230,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public tff_root createtff_root()
+  public Tff_root createTff_root()
   {
-    tff_rootImpl tff_root = new tff_rootImpl();
+    Tff_rootImpl tff_root = new Tff_rootImpl();
     return tff_root;
   }
 
@@ -241,9 +241,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public tff_formula_type_definition createtff_formula_type_definition()
+  public Tff_formula_type_definition createTff_formula_type_definition()
   {
-    tff_formula_type_definitionImpl tff_formula_type_definition = new tff_formula_type_definitionImpl();
+    Tff_formula_type_definitionImpl tff_formula_type_definition = new Tff_formula_type_definitionImpl();
     return tff_formula_type_definition;
   }
 
@@ -252,9 +252,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public tff_type_expression createtff_type_expression()
+  public Tff_type_expression createTff_type_expression()
   {
-    tff_type_expressionImpl tff_type_expression = new tff_type_expressionImpl();
+    Tff_type_expressionImpl tff_type_expression = new Tff_type_expressionImpl();
     return tff_type_expression;
   }
 
@@ -263,9 +263,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public tff_type_atom createtff_type_atom()
+  public Tff_type_atom createTff_type_atom()
   {
-    tff_type_atomImpl tff_type_atom = new tff_type_atomImpl();
+    Tff_type_atomImpl tff_type_atom = new Tff_type_atomImpl();
     return tff_type_atom;
   }
 
@@ -274,9 +274,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public tff_type_constant createtff_type_constant()
+  public Tff_type_constant createTff_type_constant()
   {
-    tff_type_constantImpl tff_type_constant = new tff_type_constantImpl();
+    Tff_type_constantImpl tff_type_constant = new Tff_type_constantImpl();
     return tff_type_constant;
   }
 
@@ -285,9 +285,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public tff_expression createtff_expression()
+  public Tff_expression createTff_expression()
   {
-    tff_expressionImpl tff_expression = new tff_expressionImpl();
+    Tff_expressionImpl tff_expression = new Tff_expressionImpl();
     return tff_expression;
   }
 
@@ -296,9 +296,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public tff_atom createtff_atom()
+  public Tff_atom createTff_atom()
   {
-    tff_atomImpl tff_atom = new tff_atomImpl();
+    Tff_atomImpl tff_atom = new Tff_atomImpl();
     return tff_atom;
   }
 
@@ -307,9 +307,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public tff_constant createtff_constant()
+  public Tff_constant createTff_constant()
   {
-    tff_constantImpl tff_constant = new tff_constantImpl();
+    Tff_constantImpl tff_constant = new Tff_constantImpl();
     return tff_constant;
   }
 
@@ -318,9 +318,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public tff_predefined_function_2_args createtff_predefined_function_2_args()
+  public Tff_predefined_function_2_args createTff_predefined_function_2_args()
   {
-    tff_predefined_function_2_argsImpl tff_predefined_function_2_args = new tff_predefined_function_2_argsImpl();
+    Tff_predefined_function_2_argsImpl tff_predefined_function_2_args = new Tff_predefined_function_2_argsImpl();
     return tff_predefined_function_2_args;
   }
 
@@ -329,9 +329,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public tff_var createtff_var()
+  public Tff_var createTff_var()
   {
-    tff_varImpl tff_var = new tff_varImpl();
+    Tff_varImpl tff_var = new Tff_varImpl();
     return tff_var;
   }
 
@@ -340,9 +340,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public tff_var_declaration createtff_var_declaration()
+  public Tff_var_declaration createTff_var_declaration()
   {
-    tff_var_declarationImpl tff_var_declaration = new tff_var_declarationImpl();
+    Tff_var_declarationImpl tff_var_declaration = new Tff_var_declarationImpl();
     return tff_var_declaration;
   }
 
@@ -351,9 +351,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public tff_variable_list createtff_variable_list()
+  public Tff_variable_list createTff_variable_list()
   {
-    tff_variable_listImpl tff_variable_list = new tff_variable_listImpl();
+    Tff_variable_listImpl tff_variable_list = new Tff_variable_listImpl();
     return tff_variable_list;
   }
 
@@ -362,9 +362,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public cnf_input createcnf_input()
+  public Cnf_input createCnf_input()
   {
-    cnf_inputImpl cnf_input = new cnf_inputImpl();
+    Cnf_inputImpl cnf_input = new Cnf_inputImpl();
     return cnf_input;
   }
 
@@ -373,9 +373,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public cnf_root createcnf_root()
+  public Cnf_root createCnf_root()
   {
-    cnf_rootImpl cnf_root = new cnf_rootImpl();
+    Cnf_rootImpl cnf_root = new Cnf_rootImpl();
     return cnf_root;
   }
 
@@ -384,9 +384,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public cnf_formula_type_definition createcnf_formula_type_definition()
+  public Cnf_formula_type_definition createCnf_formula_type_definition()
   {
-    cnf_formula_type_definitionImpl cnf_formula_type_definition = new cnf_formula_type_definitionImpl();
+    Cnf_formula_type_definitionImpl cnf_formula_type_definition = new Cnf_formula_type_definitionImpl();
     return cnf_formula_type_definition;
   }
 
@@ -395,9 +395,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public cnf_or createcnf_or()
+  public Cnf_or createCnf_or()
   {
-    cnf_orImpl cnf_or = new cnf_orImpl();
+    Cnf_orImpl cnf_or = new Cnf_orImpl();
     return cnf_or;
   }
 
@@ -406,9 +406,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public cnf_not createcnf_not()
+  public Cnf_not createCnf_not()
   {
-    cnf_notImpl cnf_not = new cnf_notImpl();
+    Cnf_notImpl cnf_not = new Cnf_notImpl();
     return cnf_not;
   }
 
@@ -417,9 +417,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public cnf_equality createcnf_equality()
+  public Cnf_equality createCnf_equality()
   {
-    cnf_equalityImpl cnf_equality = new cnf_equalityImpl();
+    Cnf_equalityImpl cnf_equality = new Cnf_equalityImpl();
     return cnf_equality;
   }
 
@@ -428,9 +428,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public cnf_expression createcnf_expression()
+  public Cnf_expression createCnf_expression()
   {
-    cnf_expressionImpl cnf_expression = new cnf_expressionImpl();
+    Cnf_expressionImpl cnf_expression = new Cnf_expressionImpl();
     return cnf_expression;
   }
 
@@ -439,9 +439,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public cnf_constant createcnf_constant()
+  public Cnf_constant createCnf_constant()
   {
-    cnf_constantImpl cnf_constant = new cnf_constantImpl();
+    Cnf_constantImpl cnf_constant = new Cnf_constantImpl();
     return cnf_constant;
   }
 
@@ -450,9 +450,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public cnf_var createcnf_var()
+  public Cnf_var createCnf_var()
   {
-    cnf_varImpl cnf_var = new cnf_varImpl();
+    Cnf_varImpl cnf_var = new Cnf_varImpl();
     return cnf_var;
   }
 
@@ -461,9 +461,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public thf_input createthf_input()
+  public Thf_input createThf_input()
   {
-    thf_inputImpl thf_input = new thf_inputImpl();
+    Thf_inputImpl thf_input = new Thf_inputImpl();
     return thf_input;
   }
 
@@ -472,9 +472,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public thf_root createthf_root()
+  public Thf_root createThf_root()
   {
-    thf_rootImpl thf_root = new thf_rootImpl();
+    Thf_rootImpl thf_root = new Thf_rootImpl();
     return thf_root;
   }
 
@@ -483,9 +483,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public thf_formula_type_definition createthf_formula_type_definition()
+  public Thf_formula_type_definition createThf_formula_type_definition()
   {
-    thf_formula_type_definitionImpl thf_formula_type_definition = new thf_formula_type_definitionImpl();
+    Thf_formula_type_definitionImpl thf_formula_type_definition = new Thf_formula_type_definitionImpl();
     return thf_formula_type_definition;
   }
 
@@ -494,9 +494,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public thf_type_expression createthf_type_expression()
+  public Thf_type_expression createThf_type_expression()
   {
-    thf_type_expressionImpl thf_type_expression = new thf_type_expressionImpl();
+    Thf_type_expressionImpl thf_type_expression = new Thf_type_expressionImpl();
     return thf_type_expression;
   }
 
@@ -505,9 +505,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public thf_type_atom createthf_type_atom()
+  public Thf_type_atom createThf_type_atom()
   {
-    thf_type_atomImpl thf_type_atom = new thf_type_atomImpl();
+    Thf_type_atomImpl thf_type_atom = new Thf_type_atomImpl();
     return thf_type_atom;
   }
 
@@ -516,9 +516,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public thf_type_constant createthf_type_constant()
+  public Thf_type_constant createThf_type_constant()
   {
-    thf_type_constantImpl thf_type_constant = new thf_type_constantImpl();
+    Thf_type_constantImpl thf_type_constant = new Thf_type_constantImpl();
     return thf_type_constant;
   }
 
@@ -527,9 +527,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public thf_expression createthf_expression()
+  public Thf_expression createThf_expression()
   {
-    thf_expressionImpl thf_expression = new thf_expressionImpl();
+    Thf_expressionImpl thf_expression = new Thf_expressionImpl();
     return thf_expression;
   }
 
@@ -538,9 +538,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public thf_atom createthf_atom()
+  public Thf_atom createThf_atom()
   {
-    thf_atomImpl thf_atom = new thf_atomImpl();
+    Thf_atomImpl thf_atom = new Thf_atomImpl();
     return thf_atom;
   }
 
@@ -549,9 +549,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public thf_constant createthf_constant()
+  public Thf_constant createThf_constant()
   {
-    thf_constantImpl thf_constant = new thf_constantImpl();
+    Thf_constantImpl thf_constant = new Thf_constantImpl();
     return thf_constant;
   }
 
@@ -560,9 +560,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public thf_var createthf_var()
+  public Thf_var createThf_var()
   {
-    thf_varImpl thf_var = new thf_varImpl();
+    Thf_varImpl thf_var = new Thf_varImpl();
     return thf_var;
   }
 
@@ -571,9 +571,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public thf_variable_list createthf_variable_list()
+  public Thf_variable_list createThf_variable_list()
   {
-    thf_variable_listImpl thf_variable_list = new thf_variable_listImpl();
+    Thf_variable_listImpl thf_variable_list = new Thf_variable_listImpl();
     return thf_variable_list;
   }
 
@@ -582,9 +582,9 @@ public class ParserFactoryImpl extends EFactoryImpl implements ParserFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public thf_var_declaration createthf_var_declaration()
+  public Thf_var_declaration createThf_var_declaration()
   {
-    thf_var_declarationImpl thf_var_declaration = new thf_var_declarationImpl();
+    Thf_var_declarationImpl thf_var_declaration = new Thf_var_declarationImpl();
     return thf_var_declaration;
   }
 

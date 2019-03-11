@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='2'>
+  <artifact classifier='osgi.bundle' id='it.unibz.inf.tptp.tests' version='1.0.0.201808151458'>
+    <properties size='5'>
+      <property name='artifact.size' value='10158'/>
+      <property name='download.size' value='10158'/>
+      <property name='maven-groupId' value='it.unibz.inf.tptp'/>
+      <property name='maven-artifactId' value='it.unibz.inf.tptp.tests'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+    </properties>
+  </artifact>
+  <artifact classifier='osgi.bundle' id='it.unibz.inf.tptp.tests.source' version='1.0.0.201808151458'>
+    <properties size='6'>
+      <property name='artifact.size' value='7439'/>
+      <property name='download.size' value='7439'/>
+      <property name='maven-groupId' value='it.unibz.inf.tptp'/>
+      <property name='maven-artifactId' value='it.unibz.inf.tptp.tests'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      <property name='maven-classifier' value='sources'/>
+    </properties>
+  </artifact>
+</artifacts>

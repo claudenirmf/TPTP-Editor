@@ -3,53 +3,53 @@
  */
 package it.unibz.inf.tptp.parser.impl;
 
+import it.unibz.inf.tptp.parser.Cnf_constant;
+import it.unibz.inf.tptp.parser.Cnf_equality;
+import it.unibz.inf.tptp.parser.Cnf_expression;
+import it.unibz.inf.tptp.parser.Cnf_formula_type_definition;
+import it.unibz.inf.tptp.parser.Cnf_input;
+import it.unibz.inf.tptp.parser.Cnf_not;
+import it.unibz.inf.tptp.parser.Cnf_or;
+import it.unibz.inf.tptp.parser.Cnf_root;
+import it.unibz.inf.tptp.parser.Cnf_var;
+import it.unibz.inf.tptp.parser.Fof_atom;
+import it.unibz.inf.tptp.parser.Fof_constant;
+import it.unibz.inf.tptp.parser.Fof_expression;
+import it.unibz.inf.tptp.parser.Fof_input;
+import it.unibz.inf.tptp.parser.Fof_root;
+import it.unibz.inf.tptp.parser.Fof_var;
+import it.unibz.inf.tptp.parser.Fof_variable_list;
+import it.unibz.inf.tptp.parser.Include;
 import it.unibz.inf.tptp.parser.Model;
 import it.unibz.inf.tptp.parser.ParserFactory;
 import it.unibz.inf.tptp.parser.ParserPackage;
+import it.unibz.inf.tptp.parser.Tff_atom;
+import it.unibz.inf.tptp.parser.Tff_constant;
+import it.unibz.inf.tptp.parser.Tff_expression;
+import it.unibz.inf.tptp.parser.Tff_formula_type_definition;
+import it.unibz.inf.tptp.parser.Tff_input;
+import it.unibz.inf.tptp.parser.Tff_predefined_function_2_args;
+import it.unibz.inf.tptp.parser.Tff_root;
+import it.unibz.inf.tptp.parser.Tff_type_atom;
+import it.unibz.inf.tptp.parser.Tff_type_constant;
+import it.unibz.inf.tptp.parser.Tff_type_expression;
+import it.unibz.inf.tptp.parser.Tff_var;
+import it.unibz.inf.tptp.parser.Tff_var_declaration;
+import it.unibz.inf.tptp.parser.Tff_variable_list;
+import it.unibz.inf.tptp.parser.Thf_atom;
+import it.unibz.inf.tptp.parser.Thf_constant;
+import it.unibz.inf.tptp.parser.Thf_expression;
+import it.unibz.inf.tptp.parser.Thf_formula_type_definition;
+import it.unibz.inf.tptp.parser.Thf_input;
+import it.unibz.inf.tptp.parser.Thf_root;
+import it.unibz.inf.tptp.parser.Thf_type_atom;
+import it.unibz.inf.tptp.parser.Thf_type_constant;
+import it.unibz.inf.tptp.parser.Thf_type_expression;
+import it.unibz.inf.tptp.parser.Thf_var;
+import it.unibz.inf.tptp.parser.Thf_var_declaration;
+import it.unibz.inf.tptp.parser.Thf_variable_list;
 import it.unibz.inf.tptp.parser.binary;
-import it.unibz.inf.tptp.parser.cnf_constant;
-import it.unibz.inf.tptp.parser.cnf_equality;
-import it.unibz.inf.tptp.parser.cnf_expression;
-import it.unibz.inf.tptp.parser.cnf_formula_type_definition;
-import it.unibz.inf.tptp.parser.cnf_input;
-import it.unibz.inf.tptp.parser.cnf_not;
-import it.unibz.inf.tptp.parser.cnf_or;
-import it.unibz.inf.tptp.parser.cnf_root;
-import it.unibz.inf.tptp.parser.cnf_var;
-import it.unibz.inf.tptp.parser.fof_atom;
-import it.unibz.inf.tptp.parser.fof_constant;
-import it.unibz.inf.tptp.parser.fof_expression;
-import it.unibz.inf.tptp.parser.fof_input;
-import it.unibz.inf.tptp.parser.fof_root;
-import it.unibz.inf.tptp.parser.fof_var;
-import it.unibz.inf.tptp.parser.fof_variable_list;
-import it.unibz.inf.tptp.parser.include;
 import it.unibz.inf.tptp.parser.oper;
-import it.unibz.inf.tptp.parser.tff_atom;
-import it.unibz.inf.tptp.parser.tff_constant;
-import it.unibz.inf.tptp.parser.tff_expression;
-import it.unibz.inf.tptp.parser.tff_formula_type_definition;
-import it.unibz.inf.tptp.parser.tff_input;
-import it.unibz.inf.tptp.parser.tff_predefined_function_2_args;
-import it.unibz.inf.tptp.parser.tff_root;
-import it.unibz.inf.tptp.parser.tff_type_atom;
-import it.unibz.inf.tptp.parser.tff_type_constant;
-import it.unibz.inf.tptp.parser.tff_type_expression;
-import it.unibz.inf.tptp.parser.tff_var;
-import it.unibz.inf.tptp.parser.tff_var_declaration;
-import it.unibz.inf.tptp.parser.tff_variable_list;
-import it.unibz.inf.tptp.parser.thf_atom;
-import it.unibz.inf.tptp.parser.thf_constant;
-import it.unibz.inf.tptp.parser.thf_expression;
-import it.unibz.inf.tptp.parser.thf_formula_type_definition;
-import it.unibz.inf.tptp.parser.thf_input;
-import it.unibz.inf.tptp.parser.thf_root;
-import it.unibz.inf.tptp.parser.thf_type_atom;
-import it.unibz.inf.tptp.parser.thf_type_constant;
-import it.unibz.inf.tptp.parser.thf_type_expression;
-import it.unibz.inf.tptp.parser.thf_var;
-import it.unibz.inf.tptp.parser.thf_var_declaration;
-import it.unibz.inf.tptp.parser.thf_variable_list;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -410,7 +410,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
 
   /**
    * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-   * 
+   *
    * <p>This method is used to initialize {@link ParserPackage#eINSTANCE} when that field is accessed.
    * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
    * <!-- begin-user-doc -->
@@ -425,7 +425,8 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
     if (isInited) return (ParserPackage)EPackage.Registry.INSTANCE.getEPackage(ParserPackage.eNS_URI);
 
     // Obtain or create and register package
-    ParserPackageImpl theParserPackage = (ParserPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ParserPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ParserPackageImpl());
+    Object registeredParserPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+    ParserPackageImpl theParserPackage = registeredParserPackage instanceof ParserPackageImpl ? (ParserPackageImpl)registeredParserPackage : new ParserPackageImpl();
 
     isInited = true;
 
@@ -438,7 +439,6 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
     // Mark meta-data to indicate it can't be changed
     theParserPackage.freeze();
 
-  
     // Update the registry and return the package
     EPackage.Registry.INSTANCE.put(ParserPackage.eNS_URI, theParserPackage);
     return theParserPackage;
@@ -469,7 +469,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getinclude()
+  public EClass getInclude()
   {
     return includeEClass;
   }
@@ -479,7 +479,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getinclude_Path()
+  public EAttribute getInclude_Path()
   {
     return (EAttribute)includeEClass.getEStructuralFeatures().get(0);
   }
@@ -489,7 +489,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getfof_input()
+  public EClass getFof_input()
   {
     return fof_inputEClass;
   }
@@ -499,7 +499,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getfof_root()
+  public EClass getFof_root()
   {
     return fof_rootEClass;
   }
@@ -509,7 +509,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getfof_root_Name()
+  public EAttribute getFof_root_Name()
   {
     return (EAttribute)fof_rootEClass.getEStructuralFeatures().get(0);
   }
@@ -519,7 +519,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getfof_root_Formula_role()
+  public EAttribute getFof_root_Formula_role()
   {
     return (EAttribute)fof_rootEClass.getEStructuralFeatures().get(1);
   }
@@ -529,7 +529,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getfof_root_Exp()
+  public EReference getFof_root_Exp()
   {
     return (EReference)fof_rootEClass.getEStructuralFeatures().get(2);
   }
@@ -539,7 +539,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getfof_expression()
+  public EClass getFof_expression()
   {
     return fof_expressionEClass;
   }
@@ -549,7 +549,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getfof_expression_Fof_atom()
+  public EReference getFof_expression_Fof_atom()
   {
     return (EReference)fof_expressionEClass.getEStructuralFeatures().get(0);
   }
@@ -559,7 +559,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getfof_expression_Fof_negation()
+  public EAttribute getFof_expression_Fof_negation()
   {
     return (EAttribute)fof_expressionEClass.getEStructuralFeatures().get(1);
   }
@@ -569,7 +569,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getfof_expression_Fof_exp()
+  public EReference getFof_expression_Fof_exp()
   {
     return (EReference)fof_expressionEClass.getEStructuralFeatures().get(2);
   }
@@ -579,7 +579,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getfof_expression_Fof_quantifier()
+  public EAttribute getFof_expression_Fof_quantifier()
   {
     return (EAttribute)fof_expressionEClass.getEStructuralFeatures().get(3);
   }
@@ -589,7 +589,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getfof_expression_Fof_param()
+  public EReference getFof_expression_Fof_param()
   {
     return (EReference)fof_expressionEClass.getEStructuralFeatures().get(4);
   }
@@ -599,7 +599,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getfof_atom()
+  public EClass getFof_atom()
   {
     return fof_atomEClass;
   }
@@ -609,7 +609,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getfof_atom_Name()
+  public EAttribute getFof_atom_Name()
   {
     return (EAttribute)fof_atomEClass.getEStructuralFeatures().get(0);
   }
@@ -619,7 +619,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getfof_constant()
+  public EClass getFof_constant()
   {
     return fof_constantEClass;
   }
@@ -629,7 +629,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getfof_constant_Fof_param()
+  public EReference getFof_constant_Fof_param()
   {
     return (EReference)fof_constantEClass.getEStructuralFeatures().get(0);
   }
@@ -639,7 +639,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getfof_var()
+  public EClass getFof_var()
   {
     return fof_varEClass;
   }
@@ -649,7 +649,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getfof_variable_list()
+  public EClass getFof_variable_list()
   {
     return fof_variable_listEClass;
   }
@@ -659,7 +659,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getfof_variable_list_Params()
+  public EReference getFof_variable_list_Params()
   {
     return (EReference)fof_variable_listEClass.getEStructuralFeatures().get(0);
   }
@@ -669,7 +669,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass gettff_input()
+  public EClass getTff_input()
   {
     return tff_inputEClass;
   }
@@ -679,7 +679,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass gettff_root()
+  public EClass getTff_root()
   {
     return tff_rootEClass;
   }
@@ -689,7 +689,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute gettff_root_Name()
+  public EAttribute getTff_root_Name()
   {
     return (EAttribute)tff_rootEClass.getEStructuralFeatures().get(0);
   }
@@ -699,7 +699,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute gettff_root_Formula_role()
+  public EAttribute getTff_root_Formula_role()
   {
     return (EAttribute)tff_rootEClass.getEStructuralFeatures().get(1);
   }
@@ -709,7 +709,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference gettff_root_Exp()
+  public EReference getTff_root_Exp()
   {
     return (EReference)tff_rootEClass.getEStructuralFeatures().get(2);
   }
@@ -719,7 +719,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference gettff_root_Def()
+  public EReference getTff_root_Def()
   {
     return (EReference)tff_rootEClass.getEStructuralFeatures().get(3);
   }
@@ -729,7 +729,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass gettff_formula_type_definition()
+  public EClass getTff_formula_type_definition()
   {
     return tff_formula_type_definitionEClass;
   }
@@ -739,7 +739,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute gettff_formula_type_definition_Name()
+  public EAttribute getTff_formula_type_definition_Name()
   {
     return (EAttribute)tff_formula_type_definitionEClass.getEStructuralFeatures().get(0);
   }
@@ -749,7 +749,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference gettff_formula_type_definition_Exp()
+  public EReference getTff_formula_type_definition_Exp()
   {
     return (EReference)tff_formula_type_definitionEClass.getEStructuralFeatures().get(1);
   }
@@ -759,7 +759,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass gettff_type_expression()
+  public EClass getTff_type_expression()
   {
     return tff_type_expressionEClass;
   }
@@ -769,7 +769,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass gettff_type_atom()
+  public EClass getTff_type_atom()
   {
     return tff_type_atomEClass;
   }
@@ -779,7 +779,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute gettff_type_atom_Name()
+  public EAttribute getTff_type_atom_Name()
   {
     return (EAttribute)tff_type_atomEClass.getEStructuralFeatures().get(0);
   }
@@ -789,7 +789,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass gettff_type_constant()
+  public EClass getTff_type_constant()
   {
     return tff_type_constantEClass;
   }
@@ -799,7 +799,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference gettff_type_constant_Param()
+  public EReference getTff_type_constant_Param()
   {
     return (EReference)tff_type_constantEClass.getEStructuralFeatures().get(0);
   }
@@ -809,7 +809,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass gettff_expression()
+  public EClass getTff_expression()
   {
     return tff_expressionEClass;
   }
@@ -819,7 +819,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference gettff_expression_Atom()
+  public EReference getTff_expression_Atom()
   {
     return (EReference)tff_expressionEClass.getEStructuralFeatures().get(0);
   }
@@ -829,7 +829,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute gettff_expression_Negation()
+  public EAttribute getTff_expression_Negation()
   {
     return (EAttribute)tff_expressionEClass.getEStructuralFeatures().get(1);
   }
@@ -839,7 +839,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference gettff_expression_Exp()
+  public EReference getTff_expression_Exp()
   {
     return (EReference)tff_expressionEClass.getEStructuralFeatures().get(2);
   }
@@ -849,7 +849,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute gettff_expression_Quantifier()
+  public EAttribute getTff_expression_Quantifier()
   {
     return (EAttribute)tff_expressionEClass.getEStructuralFeatures().get(3);
   }
@@ -859,7 +859,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference gettff_expression_Param()
+  public EReference getTff_expression_Param()
   {
     return (EReference)tff_expressionEClass.getEStructuralFeatures().get(4);
   }
@@ -869,7 +869,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass gettff_atom()
+  public EClass getTff_atom()
   {
     return tff_atomEClass;
   }
@@ -879,7 +879,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass gettff_constant()
+  public EClass getTff_constant()
   {
     return tff_constantEClass;
   }
@@ -889,7 +889,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute gettff_constant_Name()
+  public EAttribute getTff_constant_Name()
   {
     return (EAttribute)tff_constantEClass.getEStructuralFeatures().get(0);
   }
@@ -899,7 +899,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference gettff_constant_Param()
+  public EReference getTff_constant_Param()
   {
     return (EReference)tff_constantEClass.getEStructuralFeatures().get(1);
   }
@@ -909,7 +909,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute gettff_constant_Top()
+  public EAttribute getTff_constant_Top()
   {
     return (EAttribute)tff_constantEClass.getEStructuralFeatures().get(2);
   }
@@ -919,7 +919,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute gettff_constant_Bottom()
+  public EAttribute getTff_constant_Bottom()
   {
     return (EAttribute)tff_constantEClass.getEStructuralFeatures().get(3);
   }
@@ -929,7 +929,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass gettff_predefined_function_2_args()
+  public EClass getTff_predefined_function_2_args()
   {
     return tff_predefined_function_2_argsEClass;
   }
@@ -939,7 +939,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute gettff_predefined_function_2_args_Func()
+  public EAttribute getTff_predefined_function_2_args_Func()
   {
     return (EAttribute)tff_predefined_function_2_argsEClass.getEStructuralFeatures().get(0);
   }
@@ -949,7 +949,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference gettff_predefined_function_2_args_Param()
+  public EReference getTff_predefined_function_2_args_Param()
   {
     return (EReference)tff_predefined_function_2_argsEClass.getEStructuralFeatures().get(1);
   }
@@ -959,7 +959,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass gettff_var()
+  public EClass getTff_var()
   {
     return tff_varEClass;
   }
@@ -969,7 +969,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass gettff_var_declaration()
+  public EClass getTff_var_declaration()
   {
     return tff_var_declarationEClass;
   }
@@ -979,7 +979,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference gettff_var_declaration_Var()
+  public EReference getTff_var_declaration_Var()
   {
     return (EReference)tff_var_declarationEClass.getEStructuralFeatures().get(0);
   }
@@ -989,7 +989,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference gettff_var_declaration_Vartype()
+  public EReference getTff_var_declaration_Vartype()
   {
     return (EReference)tff_var_declarationEClass.getEStructuralFeatures().get(1);
   }
@@ -999,7 +999,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass gettff_variable_list()
+  public EClass getTff_variable_list()
   {
     return tff_variable_listEClass;
   }
@@ -1009,7 +1009,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference gettff_variable_list_Params()
+  public EReference getTff_variable_list_Params()
   {
     return (EReference)tff_variable_listEClass.getEStructuralFeatures().get(0);
   }
@@ -1019,7 +1019,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getcnf_input()
+  public EClass getCnf_input()
   {
     return cnf_inputEClass;
   }
@@ -1029,7 +1029,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getcnf_root()
+  public EClass getCnf_root()
   {
     return cnf_rootEClass;
   }
@@ -1039,7 +1039,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getcnf_root_Name()
+  public EAttribute getCnf_root_Name()
   {
     return (EAttribute)cnf_rootEClass.getEStructuralFeatures().get(0);
   }
@@ -1049,7 +1049,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getcnf_root_Formula_role()
+  public EAttribute getCnf_root_Formula_role()
   {
     return (EAttribute)cnf_rootEClass.getEStructuralFeatures().get(1);
   }
@@ -1059,7 +1059,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getcnf_root_Exp()
+  public EReference getCnf_root_Exp()
   {
     return (EReference)cnf_rootEClass.getEStructuralFeatures().get(2);
   }
@@ -1069,7 +1069,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getcnf_formula_type_definition()
+  public EClass getCnf_formula_type_definition()
   {
     return cnf_formula_type_definitionEClass;
   }
@@ -1079,7 +1079,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getcnf_formula_type_definition_Disjunction()
+  public EReference getCnf_formula_type_definition_Disjunction()
   {
     return (EReference)cnf_formula_type_definitionEClass.getEStructuralFeatures().get(0);
   }
@@ -1089,7 +1089,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getcnf_or()
+  public EClass getCnf_or()
   {
     return cnf_orEClass;
   }
@@ -1099,7 +1099,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getcnf_or_Or()
+  public EReference getCnf_or_Or()
   {
     return (EReference)cnf_orEClass.getEStructuralFeatures().get(0);
   }
@@ -1109,7 +1109,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getcnf_not()
+  public EClass getCnf_not()
   {
     return cnf_notEClass;
   }
@@ -1119,7 +1119,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getcnf_not_Negated()
+  public EAttribute getCnf_not_Negated()
   {
     return (EAttribute)cnf_notEClass.getEStructuralFeatures().get(0);
   }
@@ -1129,7 +1129,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getcnf_not_Literal()
+  public EReference getCnf_not_Literal()
   {
     return (EReference)cnf_notEClass.getEStructuralFeatures().get(1);
   }
@@ -1139,7 +1139,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getcnf_equality()
+  public EClass getCnf_equality()
   {
     return cnf_equalityEClass;
   }
@@ -1149,7 +1149,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getcnf_equality_ExpL()
+  public EReference getCnf_equality_ExpL()
   {
     return (EReference)cnf_equalityEClass.getEStructuralFeatures().get(0);
   }
@@ -1159,7 +1159,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getcnf_equality_Eq()
+  public EAttribute getCnf_equality_Eq()
   {
     return (EAttribute)cnf_equalityEClass.getEStructuralFeatures().get(1);
   }
@@ -1169,7 +1169,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getcnf_equality_ExpR()
+  public EReference getCnf_equality_ExpR()
   {
     return (EReference)cnf_equalityEClass.getEStructuralFeatures().get(2);
   }
@@ -1179,7 +1179,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getcnf_expression()
+  public EClass getCnf_expression()
   {
     return cnf_expressionEClass;
   }
@@ -1189,7 +1189,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getcnf_expression_Cnf_exp()
+  public EAttribute getCnf_expression_Cnf_exp()
   {
     return (EAttribute)cnf_expressionEClass.getEStructuralFeatures().get(0);
   }
@@ -1199,7 +1199,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getcnf_expression_Name()
+  public EAttribute getCnf_expression_Name()
   {
     return (EAttribute)cnf_expressionEClass.getEStructuralFeatures().get(1);
   }
@@ -1209,7 +1209,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getcnf_constant()
+  public EClass getCnf_constant()
   {
     return cnf_constantEClass;
   }
@@ -1219,7 +1219,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getcnf_constant_Param()
+  public EReference getCnf_constant_Param()
   {
     return (EReference)cnf_constantEClass.getEStructuralFeatures().get(0);
   }
@@ -1229,7 +1229,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getcnf_var()
+  public EClass getCnf_var()
   {
     return cnf_varEClass;
   }
@@ -1239,7 +1239,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getthf_input()
+  public EClass getThf_input()
   {
     return thf_inputEClass;
   }
@@ -1249,7 +1249,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getthf_root()
+  public EClass getThf_root()
   {
     return thf_rootEClass;
   }
@@ -1259,7 +1259,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getthf_root_Name()
+  public EAttribute getThf_root_Name()
   {
     return (EAttribute)thf_rootEClass.getEStructuralFeatures().get(0);
   }
@@ -1269,7 +1269,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getthf_root_Formula_role()
+  public EAttribute getThf_root_Formula_role()
   {
     return (EAttribute)thf_rootEClass.getEStructuralFeatures().get(1);
   }
@@ -1279,7 +1279,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getthf_root_Def()
+  public EReference getThf_root_Def()
   {
     return (EReference)thf_rootEClass.getEStructuralFeatures().get(2);
   }
@@ -1289,7 +1289,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getthf_root_Thf_exp()
+  public EReference getThf_root_Thf_exp()
   {
     return (EReference)thf_rootEClass.getEStructuralFeatures().get(3);
   }
@@ -1299,7 +1299,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getthf_formula_type_definition()
+  public EClass getThf_formula_type_definition()
   {
     return thf_formula_type_definitionEClass;
   }
@@ -1309,7 +1309,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getthf_formula_type_definition_Name()
+  public EAttribute getThf_formula_type_definition_Name()
   {
     return (EAttribute)thf_formula_type_definitionEClass.getEStructuralFeatures().get(0);
   }
@@ -1319,7 +1319,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getthf_formula_type_definition_Exp()
+  public EReference getThf_formula_type_definition_Exp()
   {
     return (EReference)thf_formula_type_definitionEClass.getEStructuralFeatures().get(1);
   }
@@ -1329,7 +1329,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getthf_type_expression()
+  public EClass getThf_type_expression()
   {
     return thf_type_expressionEClass;
   }
@@ -1339,7 +1339,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getthf_type_atom()
+  public EClass getThf_type_atom()
   {
     return thf_type_atomEClass;
   }
@@ -1349,7 +1349,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getthf_type_constant()
+  public EClass getThf_type_constant()
   {
     return thf_type_constantEClass;
   }
@@ -1359,7 +1359,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getthf_type_constant_Name()
+  public EAttribute getThf_type_constant_Name()
   {
     return (EAttribute)thf_type_constantEClass.getEStructuralFeatures().get(0);
   }
@@ -1369,7 +1369,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getthf_expression()
+  public EClass getThf_expression()
   {
     return thf_expressionEClass;
   }
@@ -1379,7 +1379,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getthf_expression_Thf_atom()
+  public EReference getThf_expression_Thf_atom()
   {
     return (EReference)thf_expressionEClass.getEStructuralFeatures().get(0);
   }
@@ -1389,7 +1389,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getthf_expression_Thf_negation()
+  public EAttribute getThf_expression_Thf_negation()
   {
     return (EAttribute)thf_expressionEClass.getEStructuralFeatures().get(1);
   }
@@ -1399,7 +1399,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getthf_expression_Thf_exp()
+  public EReference getThf_expression_Thf_exp()
   {
     return (EReference)thf_expressionEClass.getEStructuralFeatures().get(2);
   }
@@ -1409,7 +1409,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getthf_expression_Op()
+  public EAttribute getThf_expression_Op()
   {
     return (EAttribute)thf_expressionEClass.getEStructuralFeatures().get(3);
   }
@@ -1419,7 +1419,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getthf_atom()
+  public EClass getThf_atom()
   {
     return thf_atomEClass;
   }
@@ -1429,7 +1429,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getthf_atom_Name()
+  public EAttribute getThf_atom_Name()
   {
     return (EAttribute)thf_atomEClass.getEStructuralFeatures().get(0);
   }
@@ -1439,7 +1439,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getthf_constant()
+  public EClass getThf_constant()
   {
     return thf_constantEClass;
   }
@@ -1449,7 +1449,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getthf_constant_Thf_param()
+  public EReference getThf_constant_Thf_param()
   {
     return (EReference)thf_constantEClass.getEStructuralFeatures().get(0);
   }
@@ -1459,7 +1459,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getthf_var()
+  public EClass getThf_var()
   {
     return thf_varEClass;
   }
@@ -1469,7 +1469,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getthf_variable_list()
+  public EClass getThf_variable_list()
   {
     return thf_variable_listEClass;
   }
@@ -1479,7 +1479,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getthf_variable_list_Params()
+  public EReference getThf_variable_list_Params()
   {
     return (EReference)thf_variable_listEClass.getEStructuralFeatures().get(0);
   }
@@ -1489,7 +1489,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getthf_var_declaration()
+  public EClass getThf_var_declaration()
   {
     return thf_var_declarationEClass;
   }
@@ -1499,7 +1499,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getthf_var_declaration_Var()
+  public EReference getThf_var_declaration_Var()
   {
     return (EReference)thf_var_declarationEClass.getEStructuralFeatures().get(0);
   }
@@ -1509,7 +1509,7 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getthf_var_declaration_Vartype()
+  public EReference getThf_var_declaration_Vartype()
   {
     return (EReference)thf_var_declarationEClass.getEStructuralFeatures().get(1);
   }
@@ -1803,184 +1803,184 @@ public class ParserPackageImpl extends EPackageImpl implements ParserPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    includeEClass.getESuperTypes().add(this.getfof_input());
-    includeEClass.getESuperTypes().add(this.gettff_input());
-    includeEClass.getESuperTypes().add(this.getcnf_input());
-    includeEClass.getESuperTypes().add(this.getthf_input());
-    fof_rootEClass.getESuperTypes().add(this.getfof_input());
-    fof_constantEClass.getESuperTypes().add(this.getfof_atom());
-    fof_varEClass.getESuperTypes().add(this.getfof_atom());
-    tff_rootEClass.getESuperTypes().add(this.gettff_input());
-    tff_type_atomEClass.getESuperTypes().add(this.gettff_type_expression());
-    tff_type_constantEClass.getESuperTypes().add(this.gettff_type_atom());
-    tff_constantEClass.getESuperTypes().add(this.gettff_atom());
-    tff_predefined_function_2_argsEClass.getESuperTypes().add(this.gettff_atom());
-    tff_varEClass.getESuperTypes().add(this.gettff_type_atom());
-    tff_varEClass.getESuperTypes().add(this.gettff_atom());
-    cnf_rootEClass.getESuperTypes().add(this.getcnf_input());
-    cnf_constantEClass.getESuperTypes().add(this.getcnf_expression());
-    cnf_varEClass.getESuperTypes().add(this.getcnf_expression());
-    thf_rootEClass.getESuperTypes().add(this.getthf_input());
-    thf_type_atomEClass.getESuperTypes().add(this.getthf_type_expression());
-    thf_type_constantEClass.getESuperTypes().add(this.getthf_type_atom());
-    thf_constantEClass.getESuperTypes().add(this.getthf_atom());
-    thf_varEClass.getESuperTypes().add(this.getthf_atom());
-    binaryEClass.getESuperTypes().add(this.getfof_expression());
-    binaryEClass.getESuperTypes().add(this.gettff_expression());
-    binaryEClass.getESuperTypes().add(this.getthf_expression());
-    operEClass.getESuperTypes().add(this.gettff_type_expression());
-    operEClass.getESuperTypes().add(this.getthf_type_expression());
+    includeEClass.getESuperTypes().add(this.getFof_input());
+    includeEClass.getESuperTypes().add(this.getTff_input());
+    includeEClass.getESuperTypes().add(this.getCnf_input());
+    includeEClass.getESuperTypes().add(this.getThf_input());
+    fof_rootEClass.getESuperTypes().add(this.getFof_input());
+    fof_constantEClass.getESuperTypes().add(this.getFof_atom());
+    fof_varEClass.getESuperTypes().add(this.getFof_atom());
+    tff_rootEClass.getESuperTypes().add(this.getTff_input());
+    tff_type_atomEClass.getESuperTypes().add(this.getTff_type_expression());
+    tff_type_constantEClass.getESuperTypes().add(this.getTff_type_atom());
+    tff_constantEClass.getESuperTypes().add(this.getTff_atom());
+    tff_predefined_function_2_argsEClass.getESuperTypes().add(this.getTff_atom());
+    tff_varEClass.getESuperTypes().add(this.getTff_type_atom());
+    tff_varEClass.getESuperTypes().add(this.getTff_atom());
+    cnf_rootEClass.getESuperTypes().add(this.getCnf_input());
+    cnf_constantEClass.getESuperTypes().add(this.getCnf_expression());
+    cnf_varEClass.getESuperTypes().add(this.getCnf_expression());
+    thf_rootEClass.getESuperTypes().add(this.getThf_input());
+    thf_type_atomEClass.getESuperTypes().add(this.getThf_type_expression());
+    thf_type_constantEClass.getESuperTypes().add(this.getThf_type_atom());
+    thf_constantEClass.getESuperTypes().add(this.getThf_atom());
+    thf_varEClass.getESuperTypes().add(this.getThf_atom());
+    binaryEClass.getESuperTypes().add(this.getFof_expression());
+    binaryEClass.getESuperTypes().add(this.getTff_expression());
+    binaryEClass.getESuperTypes().add(this.getThf_expression());
+    operEClass.getESuperTypes().add(this.getTff_type_expression());
+    operEClass.getESuperTypes().add(this.getThf_type_expression());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getModel_TPTP_input(), ecorePackage.getEObject(), null, "TPTP_input", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(includeEClass, include.class, "include", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getinclude_Path(), ecorePackage.getEString(), "path", null, 0, 1, include.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(includeEClass, Include.class, "Include", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getInclude_Path(), ecorePackage.getEString(), "path", null, 0, 1, Include.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(fof_inputEClass, fof_input.class, "fof_input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(fof_inputEClass, Fof_input.class, "Fof_input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(fof_rootEClass, fof_root.class, "fof_root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getfof_root_Name(), ecorePackage.getEString(), "name", null, 0, 1, fof_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getfof_root_Formula_role(), ecorePackage.getEString(), "formula_role", null, 0, 1, fof_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getfof_root_Exp(), this.getfof_expression(), null, "exp", null, 0, 1, fof_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(fof_rootEClass, Fof_root.class, "Fof_root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFof_root_Name(), ecorePackage.getEString(), "name", null, 0, 1, Fof_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFof_root_Formula_role(), ecorePackage.getEString(), "formula_role", null, 0, 1, Fof_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFof_root_Exp(), this.getFof_expression(), null, "exp", null, 0, 1, Fof_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(fof_expressionEClass, fof_expression.class, "fof_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getfof_expression_Fof_atom(), this.getfof_atom(), null, "fof_atom", null, 0, 1, fof_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getfof_expression_Fof_negation(), ecorePackage.getEBoolean(), "fof_negation", null, 0, 1, fof_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getfof_expression_Fof_exp(), this.getfof_expression(), null, "fof_exp", null, 0, 1, fof_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getfof_expression_Fof_quantifier(), ecorePackage.getEString(), "fof_quantifier", null, 0, 1, fof_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getfof_expression_Fof_param(), this.getfof_variable_list(), null, "fof_param", null, 0, 1, fof_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(fof_expressionEClass, Fof_expression.class, "Fof_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFof_expression_Fof_atom(), this.getFof_atom(), null, "fof_atom", null, 0, 1, Fof_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFof_expression_Fof_negation(), ecorePackage.getEBoolean(), "fof_negation", null, 0, 1, Fof_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFof_expression_Fof_exp(), this.getFof_expression(), null, "fof_exp", null, 0, 1, Fof_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFof_expression_Fof_quantifier(), ecorePackage.getEString(), "fof_quantifier", null, 0, 1, Fof_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFof_expression_Fof_param(), this.getFof_variable_list(), null, "fof_param", null, 0, 1, Fof_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(fof_atomEClass, fof_atom.class, "fof_atom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getfof_atom_Name(), ecorePackage.getEString(), "name", null, 0, 1, fof_atom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(fof_atomEClass, Fof_atom.class, "Fof_atom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFof_atom_Name(), ecorePackage.getEString(), "name", null, 0, 1, Fof_atom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(fof_constantEClass, fof_constant.class, "fof_constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getfof_constant_Fof_param(), this.getfof_atom(), null, "fof_param", null, 0, -1, fof_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(fof_constantEClass, Fof_constant.class, "Fof_constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFof_constant_Fof_param(), this.getFof_atom(), null, "fof_param", null, 0, -1, Fof_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(fof_varEClass, fof_var.class, "fof_var", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(fof_varEClass, Fof_var.class, "Fof_var", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(fof_variable_listEClass, fof_variable_list.class, "fof_variable_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getfof_variable_list_Params(), this.getfof_var(), null, "params", null, 0, -1, fof_variable_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(fof_variable_listEClass, Fof_variable_list.class, "Fof_variable_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFof_variable_list_Params(), this.getFof_var(), null, "params", null, 0, -1, Fof_variable_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(tff_inputEClass, tff_input.class, "tff_input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(tff_inputEClass, Tff_input.class, "Tff_input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(tff_rootEClass, tff_root.class, "tff_root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(gettff_root_Name(), ecorePackage.getEString(), "name", null, 0, 1, tff_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(gettff_root_Formula_role(), ecorePackage.getEString(), "formula_role", null, 0, 1, tff_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(gettff_root_Exp(), this.gettff_expression(), null, "exp", null, 0, 1, tff_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(gettff_root_Def(), this.gettff_formula_type_definition(), null, "def", null, 0, 1, tff_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(tff_rootEClass, Tff_root.class, "Tff_root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTff_root_Name(), ecorePackage.getEString(), "name", null, 0, 1, Tff_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTff_root_Formula_role(), ecorePackage.getEString(), "formula_role", null, 0, 1, Tff_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTff_root_Exp(), this.getTff_expression(), null, "exp", null, 0, 1, Tff_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTff_root_Def(), this.getTff_formula_type_definition(), null, "def", null, 0, 1, Tff_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(tff_formula_type_definitionEClass, tff_formula_type_definition.class, "tff_formula_type_definition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(gettff_formula_type_definition_Name(), ecorePackage.getEString(), "name", null, 0, 1, tff_formula_type_definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(gettff_formula_type_definition_Exp(), ecorePackage.getEObject(), null, "exp", null, 0, 1, tff_formula_type_definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(tff_formula_type_definitionEClass, Tff_formula_type_definition.class, "Tff_formula_type_definition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTff_formula_type_definition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Tff_formula_type_definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTff_formula_type_definition_Exp(), ecorePackage.getEObject(), null, "exp", null, 0, 1, Tff_formula_type_definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(tff_type_expressionEClass, tff_type_expression.class, "tff_type_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(tff_type_expressionEClass, Tff_type_expression.class, "Tff_type_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(tff_type_atomEClass, tff_type_atom.class, "tff_type_atom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(gettff_type_atom_Name(), ecorePackage.getEString(), "name", null, 0, 1, tff_type_atom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(tff_type_atomEClass, Tff_type_atom.class, "Tff_type_atom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTff_type_atom_Name(), ecorePackage.getEString(), "name", null, 0, 1, Tff_type_atom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(tff_type_constantEClass, tff_type_constant.class, "tff_type_constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(gettff_type_constant_Param(), this.gettff_type_atom(), null, "param", null, 0, -1, tff_type_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(tff_type_constantEClass, Tff_type_constant.class, "Tff_type_constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTff_type_constant_Param(), this.getTff_type_atom(), null, "param", null, 0, -1, Tff_type_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(tff_expressionEClass, tff_expression.class, "tff_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(gettff_expression_Atom(), this.gettff_atom(), null, "atom", null, 0, 1, tff_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(gettff_expression_Negation(), ecorePackage.getEBoolean(), "negation", null, 0, 1, tff_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(gettff_expression_Exp(), ecorePackage.getEObject(), null, "exp", null, 0, 1, tff_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(gettff_expression_Quantifier(), ecorePackage.getEString(), "quantifier", null, 0, 1, tff_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(gettff_expression_Param(), ecorePackage.getEObject(), null, "param", null, 0, 1, tff_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(tff_expressionEClass, Tff_expression.class, "Tff_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTff_expression_Atom(), this.getTff_atom(), null, "atom", null, 0, 1, Tff_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTff_expression_Negation(), ecorePackage.getEBoolean(), "negation", null, 0, 1, Tff_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTff_expression_Exp(), ecorePackage.getEObject(), null, "exp", null, 0, 1, Tff_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTff_expression_Quantifier(), ecorePackage.getEString(), "quantifier", null, 0, 1, Tff_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTff_expression_Param(), ecorePackage.getEObject(), null, "param", null, 0, 1, Tff_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(tff_atomEClass, tff_atom.class, "tff_atom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(tff_atomEClass, Tff_atom.class, "Tff_atom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(tff_constantEClass, tff_constant.class, "tff_constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(gettff_constant_Name(), ecorePackage.getEString(), "name", null, 0, 1, tff_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(gettff_constant_Param(), ecorePackage.getEObject(), null, "param", null, 0, -1, tff_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(gettff_constant_Top(), ecorePackage.getEString(), "top", null, 0, 1, tff_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(gettff_constant_Bottom(), ecorePackage.getEString(), "bottom", null, 0, 1, tff_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(tff_constantEClass, Tff_constant.class, "Tff_constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTff_constant_Name(), ecorePackage.getEString(), "name", null, 0, 1, Tff_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTff_constant_Param(), ecorePackage.getEObject(), null, "param", null, 0, -1, Tff_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTff_constant_Top(), ecorePackage.getEString(), "top", null, 0, 1, Tff_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTff_constant_Bottom(), ecorePackage.getEString(), "bottom", null, 0, 1, Tff_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(tff_predefined_function_2_argsEClass, tff_predefined_function_2_args.class, "tff_predefined_function_2_args", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(gettff_predefined_function_2_args_Func(), ecorePackage.getEString(), "func", null, 0, 1, tff_predefined_function_2_args.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(gettff_predefined_function_2_args_Param(), this.gettff_expression(), null, "param", null, 0, -1, tff_predefined_function_2_args.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(tff_predefined_function_2_argsEClass, Tff_predefined_function_2_args.class, "Tff_predefined_function_2_args", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTff_predefined_function_2_args_Func(), ecorePackage.getEString(), "func", null, 0, 1, Tff_predefined_function_2_args.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTff_predefined_function_2_args_Param(), this.getTff_expression(), null, "param", null, 0, -1, Tff_predefined_function_2_args.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(tff_varEClass, tff_var.class, "tff_var", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(tff_varEClass, Tff_var.class, "Tff_var", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(tff_var_declarationEClass, tff_var_declaration.class, "tff_var_declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(gettff_var_declaration_Var(), this.gettff_var(), null, "var", null, 0, 1, tff_var_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(gettff_var_declaration_Vartype(), this.gettff_type_expression(), null, "vartype", null, 0, 1, tff_var_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(tff_var_declarationEClass, Tff_var_declaration.class, "Tff_var_declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTff_var_declaration_Var(), this.getTff_var(), null, "var", null, 0, 1, Tff_var_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTff_var_declaration_Vartype(), this.getTff_type_expression(), null, "vartype", null, 0, 1, Tff_var_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(tff_variable_listEClass, tff_variable_list.class, "tff_variable_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(gettff_variable_list_Params(), this.gettff_var_declaration(), null, "params", null, 0, -1, tff_variable_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(tff_variable_listEClass, Tff_variable_list.class, "Tff_variable_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTff_variable_list_Params(), this.getTff_var_declaration(), null, "params", null, 0, -1, Tff_variable_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(cnf_inputEClass, cnf_input.class, "cnf_input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(cnf_inputEClass, Cnf_input.class, "Cnf_input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(cnf_rootEClass, cnf_root.class, "cnf_root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getcnf_root_Name(), ecorePackage.getEString(), "name", null, 0, 1, cnf_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getcnf_root_Formula_role(), ecorePackage.getEString(), "formula_role", null, 0, 1, cnf_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getcnf_root_Exp(), this.getcnf_formula_type_definition(), null, "exp", null, 0, 1, cnf_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(cnf_rootEClass, Cnf_root.class, "Cnf_root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCnf_root_Name(), ecorePackage.getEString(), "name", null, 0, 1, Cnf_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCnf_root_Formula_role(), ecorePackage.getEString(), "formula_role", null, 0, 1, Cnf_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCnf_root_Exp(), this.getCnf_formula_type_definition(), null, "exp", null, 0, 1, Cnf_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(cnf_formula_type_definitionEClass, cnf_formula_type_definition.class, "cnf_formula_type_definition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getcnf_formula_type_definition_Disjunction(), this.getcnf_or(), null, "disjunction", null, 0, 1, cnf_formula_type_definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(cnf_formula_type_definitionEClass, Cnf_formula_type_definition.class, "Cnf_formula_type_definition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCnf_formula_type_definition_Disjunction(), this.getCnf_or(), null, "disjunction", null, 0, 1, Cnf_formula_type_definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(cnf_orEClass, cnf_or.class, "cnf_or", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getcnf_or_Or(), this.getcnf_not(), null, "or", null, 0, -1, cnf_or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(cnf_orEClass, Cnf_or.class, "Cnf_or", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCnf_or_Or(), this.getCnf_not(), null, "or", null, 0, -1, Cnf_or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(cnf_notEClass, cnf_not.class, "cnf_not", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getcnf_not_Negated(), ecorePackage.getEBoolean(), "negated", null, 0, 1, cnf_not.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getcnf_not_Literal(), this.getcnf_equality(), null, "literal", null, 0, 1, cnf_not.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(cnf_notEClass, Cnf_not.class, "Cnf_not", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCnf_not_Negated(), ecorePackage.getEBoolean(), "negated", null, 0, 1, Cnf_not.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCnf_not_Literal(), this.getCnf_equality(), null, "literal", null, 0, 1, Cnf_not.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(cnf_equalityEClass, cnf_equality.class, "cnf_equality", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getcnf_equality_ExpL(), this.getcnf_expression(), null, "expL", null, 0, 1, cnf_equality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getcnf_equality_Eq(), ecorePackage.getEString(), "eq", null, 0, 1, cnf_equality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getcnf_equality_ExpR(), this.getcnf_expression(), null, "expR", null, 0, 1, cnf_equality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(cnf_equalityEClass, Cnf_equality.class, "Cnf_equality", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCnf_equality_ExpL(), this.getCnf_expression(), null, "expL", null, 0, 1, Cnf_equality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCnf_equality_Eq(), ecorePackage.getEString(), "eq", null, 0, 1, Cnf_equality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCnf_equality_ExpR(), this.getCnf_expression(), null, "expR", null, 0, 1, Cnf_equality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(cnf_expressionEClass, cnf_expression.class, "cnf_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getcnf_expression_Cnf_exp(), ecorePackage.getEString(), "cnf_exp", null, 0, 1, cnf_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getcnf_expression_Name(), ecorePackage.getEString(), "name", null, 0, 1, cnf_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(cnf_expressionEClass, Cnf_expression.class, "Cnf_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCnf_expression_Cnf_exp(), ecorePackage.getEString(), "cnf_exp", null, 0, 1, Cnf_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCnf_expression_Name(), ecorePackage.getEString(), "name", null, 0, 1, Cnf_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(cnf_constantEClass, cnf_constant.class, "cnf_constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getcnf_constant_Param(), this.getcnf_expression(), null, "param", null, 0, -1, cnf_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(cnf_constantEClass, Cnf_constant.class, "Cnf_constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCnf_constant_Param(), this.getCnf_expression(), null, "param", null, 0, -1, Cnf_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(cnf_varEClass, cnf_var.class, "cnf_var", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(cnf_varEClass, Cnf_var.class, "Cnf_var", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(thf_inputEClass, thf_input.class, "thf_input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(thf_inputEClass, Thf_input.class, "Thf_input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(thf_rootEClass, thf_root.class, "thf_root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getthf_root_Name(), ecorePackage.getEString(), "name", null, 0, 1, thf_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getthf_root_Formula_role(), ecorePackage.getEString(), "formula_role", null, 0, 1, thf_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getthf_root_Def(), this.getthf_formula_type_definition(), null, "def", null, 0, 1, thf_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getthf_root_Thf_exp(), this.getthf_expression(), null, "thf_exp", null, 0, 1, thf_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(thf_rootEClass, Thf_root.class, "Thf_root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getThf_root_Name(), ecorePackage.getEString(), "name", null, 0, 1, Thf_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getThf_root_Formula_role(), ecorePackage.getEString(), "formula_role", null, 0, 1, Thf_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getThf_root_Def(), this.getThf_formula_type_definition(), null, "def", null, 0, 1, Thf_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getThf_root_Thf_exp(), this.getThf_expression(), null, "thf_exp", null, 0, 1, Thf_root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(thf_formula_type_definitionEClass, thf_formula_type_definition.class, "thf_formula_type_definition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getthf_formula_type_definition_Name(), ecorePackage.getEString(), "name", null, 0, 1, thf_formula_type_definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getthf_formula_type_definition_Exp(), this.getthf_type_expression(), null, "exp", null, 0, 1, thf_formula_type_definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(thf_formula_type_definitionEClass, Thf_formula_type_definition.class, "Thf_formula_type_definition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getThf_formula_type_definition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Thf_formula_type_definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getThf_formula_type_definition_Exp(), this.getThf_type_expression(), null, "exp", null, 0, 1, Thf_formula_type_definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(thf_type_expressionEClass, thf_type_expression.class, "thf_type_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(thf_type_expressionEClass, Thf_type_expression.class, "Thf_type_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(thf_type_atomEClass, thf_type_atom.class, "thf_type_atom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(thf_type_atomEClass, Thf_type_atom.class, "Thf_type_atom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(thf_type_constantEClass, thf_type_constant.class, "thf_type_constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getthf_type_constant_Name(), ecorePackage.getEString(), "name", null, 0, 1, thf_type_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(thf_type_constantEClass, Thf_type_constant.class, "Thf_type_constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getThf_type_constant_Name(), ecorePackage.getEString(), "name", null, 0, 1, Thf_type_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(thf_expressionEClass, thf_expression.class, "thf_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getthf_expression_Thf_atom(), this.getthf_atom(), null, "thf_atom", null, 0, 1, thf_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getthf_expression_Thf_negation(), ecorePackage.getEBoolean(), "thf_negation", null, 0, 1, thf_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getthf_expression_Thf_exp(), ecorePackage.getEObject(), null, "thf_exp", null, 0, 1, thf_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getthf_expression_Op(), ecorePackage.getEString(), "op", null, 0, 1, thf_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(thf_expressionEClass, Thf_expression.class, "Thf_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getThf_expression_Thf_atom(), this.getThf_atom(), null, "thf_atom", null, 0, 1, Thf_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getThf_expression_Thf_negation(), ecorePackage.getEBoolean(), "thf_negation", null, 0, 1, Thf_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getThf_expression_Thf_exp(), ecorePackage.getEObject(), null, "thf_exp", null, 0, 1, Thf_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getThf_expression_Op(), ecorePackage.getEString(), "op", null, 0, 1, Thf_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(thf_atomEClass, thf_atom.class, "thf_atom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getthf_atom_Name(), ecorePackage.getEString(), "name", null, 0, 1, thf_atom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(thf_atomEClass, Thf_atom.class, "Thf_atom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getThf_atom_Name(), ecorePackage.getEString(), "name", null, 0, 1, Thf_atom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(thf_constantEClass, thf_constant.class, "thf_constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getthf_constant_Thf_param(), this.getthf_atom(), null, "thf_param", null, 0, -1, thf_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(thf_constantEClass, Thf_constant.class, "Thf_constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getThf_constant_Thf_param(), this.getThf_atom(), null, "thf_param", null, 0, -1, Thf_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(thf_varEClass, thf_var.class, "thf_var", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(thf_varEClass, Thf_var.class, "Thf_var", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(thf_variable_listEClass, thf_variable_list.class, "thf_variable_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getthf_variable_list_Params(), this.getthf_var_declaration(), null, "params", null, 0, -1, thf_variable_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(thf_variable_listEClass, Thf_variable_list.class, "Thf_variable_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getThf_variable_list_Params(), this.getThf_var_declaration(), null, "params", null, 0, -1, Thf_variable_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(thf_var_declarationEClass, thf_var_declaration.class, "thf_var_declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getthf_var_declaration_Var(), this.getthf_var(), null, "var", null, 0, 1, thf_var_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getthf_var_declaration_Vartype(), this.getthf_type_expression(), null, "vartype", null, 0, 1, thf_var_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(thf_var_declarationEClass, Thf_var_declaration.class, "Thf_var_declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getThf_var_declaration_Var(), this.getThf_var(), null, "var", null, 0, 1, Thf_var_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getThf_var_declaration_Vartype(), this.getThf_type_expression(), null, "vartype", null, 0, 1, Thf_var_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(binaryEClass, binary.class, "binary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getbinary_Left(), ecorePackage.getEObject(), null, "left", null, 0, 1, binary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

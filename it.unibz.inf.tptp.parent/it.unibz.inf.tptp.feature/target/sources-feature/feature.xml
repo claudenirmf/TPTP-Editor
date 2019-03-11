@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<feature id="it.unibz.inf.tptp.feature.source" version="1.0.0.201808151458" label="TPTP Feature  Developer Resources" provider-name="CORE">
-  <includes id="it.unibz.inf.tptp.feature" version="1.0.0.201808151458"/>
-  <plugin id="it.unibz.inf.tptp.source" version="1.0.0.201808151458" download-size="0" install-size="0" unpack="false"/>
-  <plugin id="it.unibz.inf.tptp.ide.source" version="1.0.0.201808151458" download-size="0" install-size="0" unpack="false"/>
-  <plugin id="it.unibz.inf.tptp.ui.source" version="1.0.0.201808151458" download-size="0" install-size="0" unpack="false"/>
-</feature>
+<feature id="it.unibz.inf.tptp.feature.source" version="1.0.0.qualifier"><includes id="it.unibz.inf.tptp.feature" version="1.0.0.qualifier"/></feature>

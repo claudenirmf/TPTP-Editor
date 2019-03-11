@@ -81,214 +81,214 @@ public class ParserAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
-      public Adapter caseinclude(include object)
+      public Adapter caseInclude(Include object)
       {
-        return createincludeAdapter();
+        return createIncludeAdapter();
       }
       @Override
-      public Adapter casefof_input(fof_input object)
+      public Adapter caseFof_input(Fof_input object)
       {
-        return createfof_inputAdapter();
+        return createFof_inputAdapter();
       }
       @Override
-      public Adapter casefof_root(fof_root object)
+      public Adapter caseFof_root(Fof_root object)
       {
-        return createfof_rootAdapter();
+        return createFof_rootAdapter();
       }
       @Override
-      public Adapter casefof_expression(fof_expression object)
+      public Adapter caseFof_expression(Fof_expression object)
       {
-        return createfof_expressionAdapter();
+        return createFof_expressionAdapter();
       }
       @Override
-      public Adapter casefof_atom(fof_atom object)
+      public Adapter caseFof_atom(Fof_atom object)
       {
-        return createfof_atomAdapter();
+        return createFof_atomAdapter();
       }
       @Override
-      public Adapter casefof_constant(fof_constant object)
+      public Adapter caseFof_constant(Fof_constant object)
       {
-        return createfof_constantAdapter();
+        return createFof_constantAdapter();
       }
       @Override
-      public Adapter casefof_var(fof_var object)
+      public Adapter caseFof_var(Fof_var object)
       {
-        return createfof_varAdapter();
+        return createFof_varAdapter();
       }
       @Override
-      public Adapter casefof_variable_list(fof_variable_list object)
+      public Adapter caseFof_variable_list(Fof_variable_list object)
       {
-        return createfof_variable_listAdapter();
+        return createFof_variable_listAdapter();
       }
       @Override
-      public Adapter casetff_input(tff_input object)
+      public Adapter caseTff_input(Tff_input object)
       {
-        return createtff_inputAdapter();
+        return createTff_inputAdapter();
       }
       @Override
-      public Adapter casetff_root(tff_root object)
+      public Adapter caseTff_root(Tff_root object)
       {
-        return createtff_rootAdapter();
+        return createTff_rootAdapter();
       }
       @Override
-      public Adapter casetff_formula_type_definition(tff_formula_type_definition object)
+      public Adapter caseTff_formula_type_definition(Tff_formula_type_definition object)
       {
-        return createtff_formula_type_definitionAdapter();
+        return createTff_formula_type_definitionAdapter();
       }
       @Override
-      public Adapter casetff_type_expression(tff_type_expression object)
+      public Adapter caseTff_type_expression(Tff_type_expression object)
       {
-        return createtff_type_expressionAdapter();
+        return createTff_type_expressionAdapter();
       }
       @Override
-      public Adapter casetff_type_atom(tff_type_atom object)
+      public Adapter caseTff_type_atom(Tff_type_atom object)
       {
-        return createtff_type_atomAdapter();
+        return createTff_type_atomAdapter();
       }
       @Override
-      public Adapter casetff_type_constant(tff_type_constant object)
+      public Adapter caseTff_type_constant(Tff_type_constant object)
       {
-        return createtff_type_constantAdapter();
+        return createTff_type_constantAdapter();
       }
       @Override
-      public Adapter casetff_expression(tff_expression object)
+      public Adapter caseTff_expression(Tff_expression object)
       {
-        return createtff_expressionAdapter();
+        return createTff_expressionAdapter();
       }
       @Override
-      public Adapter casetff_atom(tff_atom object)
+      public Adapter caseTff_atom(Tff_atom object)
       {
-        return createtff_atomAdapter();
+        return createTff_atomAdapter();
       }
       @Override
-      public Adapter casetff_constant(tff_constant object)
+      public Adapter caseTff_constant(Tff_constant object)
       {
-        return createtff_constantAdapter();
+        return createTff_constantAdapter();
       }
       @Override
-      public Adapter casetff_predefined_function_2_args(tff_predefined_function_2_args object)
+      public Adapter caseTff_predefined_function_2_args(Tff_predefined_function_2_args object)
       {
-        return createtff_predefined_function_2_argsAdapter();
+        return createTff_predefined_function_2_argsAdapter();
       }
       @Override
-      public Adapter casetff_var(tff_var object)
+      public Adapter caseTff_var(Tff_var object)
       {
-        return createtff_varAdapter();
+        return createTff_varAdapter();
       }
       @Override
-      public Adapter casetff_var_declaration(tff_var_declaration object)
+      public Adapter caseTff_var_declaration(Tff_var_declaration object)
       {
-        return createtff_var_declarationAdapter();
+        return createTff_var_declarationAdapter();
       }
       @Override
-      public Adapter casetff_variable_list(tff_variable_list object)
+      public Adapter caseTff_variable_list(Tff_variable_list object)
       {
-        return createtff_variable_listAdapter();
+        return createTff_variable_listAdapter();
       }
       @Override
-      public Adapter casecnf_input(cnf_input object)
+      public Adapter caseCnf_input(Cnf_input object)
       {
-        return createcnf_inputAdapter();
+        return createCnf_inputAdapter();
       }
       @Override
-      public Adapter casecnf_root(cnf_root object)
+      public Adapter caseCnf_root(Cnf_root object)
       {
-        return createcnf_rootAdapter();
+        return createCnf_rootAdapter();
       }
       @Override
-      public Adapter casecnf_formula_type_definition(cnf_formula_type_definition object)
+      public Adapter caseCnf_formula_type_definition(Cnf_formula_type_definition object)
       {
-        return createcnf_formula_type_definitionAdapter();
+        return createCnf_formula_type_definitionAdapter();
       }
       @Override
-      public Adapter casecnf_or(cnf_or object)
+      public Adapter caseCnf_or(Cnf_or object)
       {
-        return createcnf_orAdapter();
+        return createCnf_orAdapter();
       }
       @Override
-      public Adapter casecnf_not(cnf_not object)
+      public Adapter caseCnf_not(Cnf_not object)
       {
-        return createcnf_notAdapter();
+        return createCnf_notAdapter();
       }
       @Override
-      public Adapter casecnf_equality(cnf_equality object)
+      public Adapter caseCnf_equality(Cnf_equality object)
       {
-        return createcnf_equalityAdapter();
+        return createCnf_equalityAdapter();
       }
       @Override
-      public Adapter casecnf_expression(cnf_expression object)
+      public Adapter caseCnf_expression(Cnf_expression object)
       {
-        return createcnf_expressionAdapter();
+        return createCnf_expressionAdapter();
       }
       @Override
-      public Adapter casecnf_constant(cnf_constant object)
+      public Adapter caseCnf_constant(Cnf_constant object)
       {
-        return createcnf_constantAdapter();
+        return createCnf_constantAdapter();
       }
       @Override
-      public Adapter casecnf_var(cnf_var object)
+      public Adapter caseCnf_var(Cnf_var object)
       {
-        return createcnf_varAdapter();
+        return createCnf_varAdapter();
       }
       @Override
-      public Adapter casethf_input(thf_input object)
+      public Adapter caseThf_input(Thf_input object)
       {
-        return createthf_inputAdapter();
+        return createThf_inputAdapter();
       }
       @Override
-      public Adapter casethf_root(thf_root object)
+      public Adapter caseThf_root(Thf_root object)
       {
-        return createthf_rootAdapter();
+        return createThf_rootAdapter();
       }
       @Override
-      public Adapter casethf_formula_type_definition(thf_formula_type_definition object)
+      public Adapter caseThf_formula_type_definition(Thf_formula_type_definition object)
       {
-        return createthf_formula_type_definitionAdapter();
+        return createThf_formula_type_definitionAdapter();
       }
       @Override
-      public Adapter casethf_type_expression(thf_type_expression object)
+      public Adapter caseThf_type_expression(Thf_type_expression object)
       {
-        return createthf_type_expressionAdapter();
+        return createThf_type_expressionAdapter();
       }
       @Override
-      public Adapter casethf_type_atom(thf_type_atom object)
+      public Adapter caseThf_type_atom(Thf_type_atom object)
       {
-        return createthf_type_atomAdapter();
+        return createThf_type_atomAdapter();
       }
       @Override
-      public Adapter casethf_type_constant(thf_type_constant object)
+      public Adapter caseThf_type_constant(Thf_type_constant object)
       {
-        return createthf_type_constantAdapter();
+        return createThf_type_constantAdapter();
       }
       @Override
-      public Adapter casethf_expression(thf_expression object)
+      public Adapter caseThf_expression(Thf_expression object)
       {
-        return createthf_expressionAdapter();
+        return createThf_expressionAdapter();
       }
       @Override
-      public Adapter casethf_atom(thf_atom object)
+      public Adapter caseThf_atom(Thf_atom object)
       {
-        return createthf_atomAdapter();
+        return createThf_atomAdapter();
       }
       @Override
-      public Adapter casethf_constant(thf_constant object)
+      public Adapter caseThf_constant(Thf_constant object)
       {
-        return createthf_constantAdapter();
+        return createThf_constantAdapter();
       }
       @Override
-      public Adapter casethf_var(thf_var object)
+      public Adapter caseThf_var(Thf_var object)
       {
-        return createthf_varAdapter();
+        return createThf_varAdapter();
       }
       @Override
-      public Adapter casethf_variable_list(thf_variable_list object)
+      public Adapter caseThf_variable_list(Thf_variable_list object)
       {
-        return createthf_variable_listAdapter();
+        return createThf_variable_listAdapter();
       }
       @Override
-      public Adapter casethf_var_declaration(thf_var_declaration object)
+      public Adapter caseThf_var_declaration(Thf_var_declaration object)
       {
-        return createthf_var_declarationAdapter();
+        return createThf_var_declarationAdapter();
       }
       @Override
       public Adapter casebinary(binary object)
@@ -338,631 +338,631 @@ public class ParserAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.include <em>include</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Include <em>Include</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.include
+   * @see it.unibz.inf.tptp.parser.Include
    * @generated
    */
-  public Adapter createincludeAdapter()
+  public Adapter createIncludeAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.fof_input <em>fof input</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Fof_input <em>Fof input</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.fof_input
+   * @see it.unibz.inf.tptp.parser.Fof_input
    * @generated
    */
-  public Adapter createfof_inputAdapter()
+  public Adapter createFof_inputAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.fof_root <em>fof root</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Fof_root <em>Fof root</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.fof_root
+   * @see it.unibz.inf.tptp.parser.Fof_root
    * @generated
    */
-  public Adapter createfof_rootAdapter()
+  public Adapter createFof_rootAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.fof_expression <em>fof expression</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Fof_expression <em>Fof expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.fof_expression
+   * @see it.unibz.inf.tptp.parser.Fof_expression
    * @generated
    */
-  public Adapter createfof_expressionAdapter()
+  public Adapter createFof_expressionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.fof_atom <em>fof atom</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Fof_atom <em>Fof atom</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.fof_atom
+   * @see it.unibz.inf.tptp.parser.Fof_atom
    * @generated
    */
-  public Adapter createfof_atomAdapter()
+  public Adapter createFof_atomAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.fof_constant <em>fof constant</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Fof_constant <em>Fof constant</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.fof_constant
+   * @see it.unibz.inf.tptp.parser.Fof_constant
    * @generated
    */
-  public Adapter createfof_constantAdapter()
+  public Adapter createFof_constantAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.fof_var <em>fof var</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Fof_var <em>Fof var</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.fof_var
+   * @see it.unibz.inf.tptp.parser.Fof_var
    * @generated
    */
-  public Adapter createfof_varAdapter()
+  public Adapter createFof_varAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.fof_variable_list <em>fof variable list</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Fof_variable_list <em>Fof variable list</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.fof_variable_list
+   * @see it.unibz.inf.tptp.parser.Fof_variable_list
    * @generated
    */
-  public Adapter createfof_variable_listAdapter()
+  public Adapter createFof_variable_listAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.tff_input <em>tff input</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Tff_input <em>Tff input</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.tff_input
+   * @see it.unibz.inf.tptp.parser.Tff_input
    * @generated
    */
-  public Adapter createtff_inputAdapter()
+  public Adapter createTff_inputAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.tff_root <em>tff root</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Tff_root <em>Tff root</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.tff_root
+   * @see it.unibz.inf.tptp.parser.Tff_root
    * @generated
    */
-  public Adapter createtff_rootAdapter()
+  public Adapter createTff_rootAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.tff_formula_type_definition <em>tff formula type definition</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Tff_formula_type_definition <em>Tff formula type definition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.tff_formula_type_definition
+   * @see it.unibz.inf.tptp.parser.Tff_formula_type_definition
    * @generated
    */
-  public Adapter createtff_formula_type_definitionAdapter()
+  public Adapter createTff_formula_type_definitionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.tff_type_expression <em>tff type expression</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Tff_type_expression <em>Tff type expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.tff_type_expression
+   * @see it.unibz.inf.tptp.parser.Tff_type_expression
    * @generated
    */
-  public Adapter createtff_type_expressionAdapter()
+  public Adapter createTff_type_expressionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.tff_type_atom <em>tff type atom</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Tff_type_atom <em>Tff type atom</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.tff_type_atom
+   * @see it.unibz.inf.tptp.parser.Tff_type_atom
    * @generated
    */
-  public Adapter createtff_type_atomAdapter()
+  public Adapter createTff_type_atomAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.tff_type_constant <em>tff type constant</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Tff_type_constant <em>Tff type constant</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.tff_type_constant
+   * @see it.unibz.inf.tptp.parser.Tff_type_constant
    * @generated
    */
-  public Adapter createtff_type_constantAdapter()
+  public Adapter createTff_type_constantAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.tff_expression <em>tff expression</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Tff_expression <em>Tff expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.tff_expression
+   * @see it.unibz.inf.tptp.parser.Tff_expression
    * @generated
    */
-  public Adapter createtff_expressionAdapter()
+  public Adapter createTff_expressionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.tff_atom <em>tff atom</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Tff_atom <em>Tff atom</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.tff_atom
+   * @see it.unibz.inf.tptp.parser.Tff_atom
    * @generated
    */
-  public Adapter createtff_atomAdapter()
+  public Adapter createTff_atomAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.tff_constant <em>tff constant</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Tff_constant <em>Tff constant</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.tff_constant
+   * @see it.unibz.inf.tptp.parser.Tff_constant
    * @generated
    */
-  public Adapter createtff_constantAdapter()
+  public Adapter createTff_constantAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.tff_predefined_function_2_args <em>tff predefined function 2args</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Tff_predefined_function_2_args <em>Tff predefined function 2args</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.tff_predefined_function_2_args
+   * @see it.unibz.inf.tptp.parser.Tff_predefined_function_2_args
    * @generated
    */
-  public Adapter createtff_predefined_function_2_argsAdapter()
+  public Adapter createTff_predefined_function_2_argsAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.tff_var <em>tff var</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Tff_var <em>Tff var</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.tff_var
+   * @see it.unibz.inf.tptp.parser.Tff_var
    * @generated
    */
-  public Adapter createtff_varAdapter()
+  public Adapter createTff_varAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.tff_var_declaration <em>tff var declaration</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Tff_var_declaration <em>Tff var declaration</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.tff_var_declaration
+   * @see it.unibz.inf.tptp.parser.Tff_var_declaration
    * @generated
    */
-  public Adapter createtff_var_declarationAdapter()
+  public Adapter createTff_var_declarationAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.tff_variable_list <em>tff variable list</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Tff_variable_list <em>Tff variable list</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.tff_variable_list
+   * @see it.unibz.inf.tptp.parser.Tff_variable_list
    * @generated
    */
-  public Adapter createtff_variable_listAdapter()
+  public Adapter createTff_variable_listAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.cnf_input <em>cnf input</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Cnf_input <em>Cnf input</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.cnf_input
+   * @see it.unibz.inf.tptp.parser.Cnf_input
    * @generated
    */
-  public Adapter createcnf_inputAdapter()
+  public Adapter createCnf_inputAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.cnf_root <em>cnf root</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Cnf_root <em>Cnf root</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.cnf_root
+   * @see it.unibz.inf.tptp.parser.Cnf_root
    * @generated
    */
-  public Adapter createcnf_rootAdapter()
+  public Adapter createCnf_rootAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.cnf_formula_type_definition <em>cnf formula type definition</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Cnf_formula_type_definition <em>Cnf formula type definition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.cnf_formula_type_definition
+   * @see it.unibz.inf.tptp.parser.Cnf_formula_type_definition
    * @generated
    */
-  public Adapter createcnf_formula_type_definitionAdapter()
+  public Adapter createCnf_formula_type_definitionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.cnf_or <em>cnf or</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Cnf_or <em>Cnf or</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.cnf_or
+   * @see it.unibz.inf.tptp.parser.Cnf_or
    * @generated
    */
-  public Adapter createcnf_orAdapter()
+  public Adapter createCnf_orAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.cnf_not <em>cnf not</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Cnf_not <em>Cnf not</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.cnf_not
+   * @see it.unibz.inf.tptp.parser.Cnf_not
    * @generated
    */
-  public Adapter createcnf_notAdapter()
+  public Adapter createCnf_notAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.cnf_equality <em>cnf equality</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Cnf_equality <em>Cnf equality</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.cnf_equality
+   * @see it.unibz.inf.tptp.parser.Cnf_equality
    * @generated
    */
-  public Adapter createcnf_equalityAdapter()
+  public Adapter createCnf_equalityAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.cnf_expression <em>cnf expression</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Cnf_expression <em>Cnf expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.cnf_expression
+   * @see it.unibz.inf.tptp.parser.Cnf_expression
    * @generated
    */
-  public Adapter createcnf_expressionAdapter()
+  public Adapter createCnf_expressionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.cnf_constant <em>cnf constant</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Cnf_constant <em>Cnf constant</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.cnf_constant
+   * @see it.unibz.inf.tptp.parser.Cnf_constant
    * @generated
    */
-  public Adapter createcnf_constantAdapter()
+  public Adapter createCnf_constantAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.cnf_var <em>cnf var</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Cnf_var <em>Cnf var</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.cnf_var
+   * @see it.unibz.inf.tptp.parser.Cnf_var
    * @generated
    */
-  public Adapter createcnf_varAdapter()
+  public Adapter createCnf_varAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.thf_input <em>thf input</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Thf_input <em>Thf input</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.thf_input
+   * @see it.unibz.inf.tptp.parser.Thf_input
    * @generated
    */
-  public Adapter createthf_inputAdapter()
+  public Adapter createThf_inputAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.thf_root <em>thf root</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Thf_root <em>Thf root</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.thf_root
+   * @see it.unibz.inf.tptp.parser.Thf_root
    * @generated
    */
-  public Adapter createthf_rootAdapter()
+  public Adapter createThf_rootAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.thf_formula_type_definition <em>thf formula type definition</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Thf_formula_type_definition <em>Thf formula type definition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.thf_formula_type_definition
+   * @see it.unibz.inf.tptp.parser.Thf_formula_type_definition
    * @generated
    */
-  public Adapter createthf_formula_type_definitionAdapter()
+  public Adapter createThf_formula_type_definitionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.thf_type_expression <em>thf type expression</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Thf_type_expression <em>Thf type expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.thf_type_expression
+   * @see it.unibz.inf.tptp.parser.Thf_type_expression
    * @generated
    */
-  public Adapter createthf_type_expressionAdapter()
+  public Adapter createThf_type_expressionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.thf_type_atom <em>thf type atom</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Thf_type_atom <em>Thf type atom</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.thf_type_atom
+   * @see it.unibz.inf.tptp.parser.Thf_type_atom
    * @generated
    */
-  public Adapter createthf_type_atomAdapter()
+  public Adapter createThf_type_atomAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.thf_type_constant <em>thf type constant</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Thf_type_constant <em>Thf type constant</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.thf_type_constant
+   * @see it.unibz.inf.tptp.parser.Thf_type_constant
    * @generated
    */
-  public Adapter createthf_type_constantAdapter()
+  public Adapter createThf_type_constantAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.thf_expression <em>thf expression</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Thf_expression <em>Thf expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.thf_expression
+   * @see it.unibz.inf.tptp.parser.Thf_expression
    * @generated
    */
-  public Adapter createthf_expressionAdapter()
+  public Adapter createThf_expressionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.thf_atom <em>thf atom</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Thf_atom <em>Thf atom</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.thf_atom
+   * @see it.unibz.inf.tptp.parser.Thf_atom
    * @generated
    */
-  public Adapter createthf_atomAdapter()
+  public Adapter createThf_atomAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.thf_constant <em>thf constant</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Thf_constant <em>Thf constant</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.thf_constant
+   * @see it.unibz.inf.tptp.parser.Thf_constant
    * @generated
    */
-  public Adapter createthf_constantAdapter()
+  public Adapter createThf_constantAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.thf_var <em>thf var</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Thf_var <em>Thf var</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.thf_var
+   * @see it.unibz.inf.tptp.parser.Thf_var
    * @generated
    */
-  public Adapter createthf_varAdapter()
+  public Adapter createThf_varAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.thf_variable_list <em>thf variable list</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Thf_variable_list <em>Thf variable list</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.thf_variable_list
+   * @see it.unibz.inf.tptp.parser.Thf_variable_list
    * @generated
    */
-  public Adapter createthf_variable_listAdapter()
+  public Adapter createThf_variable_listAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.thf_var_declaration <em>thf var declaration</em>}'.
+   * Creates a new adapter for an object of class '{@link it.unibz.inf.tptp.parser.Thf_var_declaration <em>Thf var declaration</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see it.unibz.inf.tptp.parser.thf_var_declaration
+   * @see it.unibz.inf.tptp.parser.Thf_var_declaration
    * @generated
    */
-  public Adapter createthf_var_declarationAdapter()
+  public Adapter createThf_var_declarationAdapter()
   {
     return null;
   }

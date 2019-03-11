@@ -14,8 +14,6 @@ import com.google.inject.Inject
 import org.eclipse.xtext.resource.XtextResourceSet
 import java.io.File
 import org.eclipse.emf.common.util.URI
-
-import it.unibz.inf.tptp.parser.*
 import org.eclipse.xtext.EcoreUtil2
 import java.util.LinkedList
 import java.nio.file.Files
@@ -26,6 +24,8 @@ import org.eclipse.core.runtime.URIUtil
 import org.eclipse.core.resources.ResourcesPlugin
 import org.eclipse.emf.common.CommonPlugin
 import org.eclipse.core.runtime.Path
+import it.unibz.inf.tptp.parser.Model
+import it.unibz.inf.tptp.parser.Include
 
 /**
  * Generates code from your model files on save.
@@ -51,7 +51,7 @@ class TPTPGenerator extends AbstractGenerator {
 	    
 	    files.add(resourceFile)
         (resource.contents.head as Model).TPTP_input.forEach[
-                if(it instanceof include)
+                if(it instanceof Include)
                     files.add(new File(parentFolder.canonicalPath+File.separator+it.path))                    
             ]
 	    

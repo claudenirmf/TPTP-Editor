@@ -4,11 +4,11 @@
 package it.unibz.inf.tptp.parser.impl;
 
 import it.unibz.inf.tptp.parser.ParserPackage;
+import it.unibz.inf.tptp.parser.Tff_atom;
+import it.unibz.inf.tptp.parser.Tff_expression;
+import it.unibz.inf.tptp.parser.Thf_atom;
+import it.unibz.inf.tptp.parser.Thf_expression;
 import it.unibz.inf.tptp.parser.binary;
-import it.unibz.inf.tptp.parser.tff_atom;
-import it.unibz.inf.tptp.parser.tff_expression;
-import it.unibz.inf.tptp.parser.thf_atom;
-import it.unibz.inf.tptp.parser.thf_expression;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class binaryImpl extends fof_expressionImpl implements binary
+public class binaryImpl extends Fof_expressionImpl implements binary
 {
   /**
    * The cached value of the '{@link #getAtom() <em>Atom</em>}' containment reference.
@@ -52,7 +52,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
    * @generated
    * @ordered
    */
-  protected tff_atom atom;
+  protected Tff_atom atom;
 
   /**
    * The default value of the '{@link #isNegation() <em>Negation</em>}' attribute.
@@ -122,7 +122,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
    * @generated
    * @ordered
    */
-  protected thf_atom thf_atom;
+  protected Thf_atom thf_atom;
 
   /**
    * The default value of the '{@link #isThf_negation() <em>Thf negation</em>}' attribute.
@@ -220,7 +220,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
    * <!-- end-user-doc -->
    * @generated
    */
-  public tff_atom getAtom()
+  public Tff_atom getAtom()
   {
     return atom;
   }
@@ -230,9 +230,9 @@ public class binaryImpl extends fof_expressionImpl implements binary
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAtom(tff_atom newAtom, NotificationChain msgs)
+  public NotificationChain basicSetAtom(Tff_atom newAtom, NotificationChain msgs)
   {
-    tff_atom oldAtom = atom;
+    Tff_atom oldAtom = atom;
     atom = newAtom;
     if (eNotificationRequired())
     {
@@ -247,7 +247,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAtom(tff_atom newAtom)
+  public void setAtom(Tff_atom newAtom)
   {
     if (newAtom != atom)
     {
@@ -410,7 +410,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
    * <!-- end-user-doc -->
    * @generated
    */
-  public thf_atom getThf_atom()
+  public Thf_atom getThf_atom()
   {
     return thf_atom;
   }
@@ -420,9 +420,9 @@ public class binaryImpl extends fof_expressionImpl implements binary
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetThf_atom(thf_atom newThf_atom, NotificationChain msgs)
+  public NotificationChain basicSetThf_atom(Thf_atom newThf_atom, NotificationChain msgs)
   {
-    thf_atom oldThf_atom = thf_atom;
+    Thf_atom oldThf_atom = thf_atom;
     thf_atom = newThf_atom;
     if (eNotificationRequired())
     {
@@ -437,7 +437,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setThf_atom(thf_atom newThf_atom)
+  public void setThf_atom(Thf_atom newThf_atom)
   {
     if (newThf_atom != thf_atom)
     {
@@ -718,7 +718,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
     switch (featureID)
     {
       case ParserPackage.BINARY__ATOM:
-        setAtom((tff_atom)newValue);
+        setAtom((Tff_atom)newValue);
         return;
       case ParserPackage.BINARY__NEGATION:
         setNegation((Boolean)newValue);
@@ -733,7 +733,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
         setParam((EObject)newValue);
         return;
       case ParserPackage.BINARY__THF_ATOM:
-        setThf_atom((thf_atom)newValue);
+        setThf_atom((Thf_atom)newValue);
         return;
       case ParserPackage.BINARY__THF_NEGATION:
         setThf_negation((Boolean)newValue);
@@ -765,7 +765,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
     switch (featureID)
     {
       case ParserPackage.BINARY__ATOM:
-        setAtom((tff_atom)null);
+        setAtom((Tff_atom)null);
         return;
       case ParserPackage.BINARY__NEGATION:
         setNegation(NEGATION_EDEFAULT);
@@ -780,7 +780,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
         setParam((EObject)null);
         return;
       case ParserPackage.BINARY__THF_ATOM:
-        setThf_atom((thf_atom)null);
+        setThf_atom((Thf_atom)null);
         return;
       case ParserPackage.BINARY__THF_NEGATION:
         setThf_negation(THF_NEGATION_EDEFAULT);
@@ -845,7 +845,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
   @Override
   public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
   {
-    if (baseClass == tff_expression.class)
+    if (baseClass == Tff_expression.class)
     {
       switch (derivedFeatureID)
       {
@@ -857,7 +857,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
         default: return -1;
       }
     }
-    if (baseClass == thf_expression.class)
+    if (baseClass == Thf_expression.class)
     {
       switch (derivedFeatureID)
       {
@@ -879,7 +879,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
   @Override
   public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
   {
-    if (baseClass == tff_expression.class)
+    if (baseClass == Tff_expression.class)
     {
       switch (baseFeatureID)
       {
@@ -891,7 +891,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
         default: return -1;
       }
     }
-    if (baseClass == thf_expression.class)
+    if (baseClass == Thf_expression.class)
     {
       switch (baseFeatureID)
       {
@@ -915,7 +915,7 @@ public class binaryImpl extends fof_expressionImpl implements binary
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (negation: ");
     result.append(negation);
     result.append(", quantifier: ");

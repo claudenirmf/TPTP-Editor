@@ -33,382 +33,382 @@ public interface ParserFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>include</em>'.
+   * Returns a new object of class '<em>Include</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>include</em>'.
+   * @return a new object of class '<em>Include</em>'.
    * @generated
    */
-  include createinclude();
+  Include createInclude();
 
   /**
-   * Returns a new object of class '<em>fof input</em>'.
+   * Returns a new object of class '<em>Fof input</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>fof input</em>'.
+   * @return a new object of class '<em>Fof input</em>'.
    * @generated
    */
-  fof_input createfof_input();
+  Fof_input createFof_input();
 
   /**
-   * Returns a new object of class '<em>fof root</em>'.
+   * Returns a new object of class '<em>Fof root</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>fof root</em>'.
+   * @return a new object of class '<em>Fof root</em>'.
    * @generated
    */
-  fof_root createfof_root();
+  Fof_root createFof_root();
 
   /**
-   * Returns a new object of class '<em>fof expression</em>'.
+   * Returns a new object of class '<em>Fof expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>fof expression</em>'.
+   * @return a new object of class '<em>Fof expression</em>'.
    * @generated
    */
-  fof_expression createfof_expression();
+  Fof_expression createFof_expression();
 
   /**
-   * Returns a new object of class '<em>fof atom</em>'.
+   * Returns a new object of class '<em>Fof atom</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>fof atom</em>'.
+   * @return a new object of class '<em>Fof atom</em>'.
    * @generated
    */
-  fof_atom createfof_atom();
+  Fof_atom createFof_atom();
 
   /**
-   * Returns a new object of class '<em>fof constant</em>'.
+   * Returns a new object of class '<em>Fof constant</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>fof constant</em>'.
+   * @return a new object of class '<em>Fof constant</em>'.
    * @generated
    */
-  fof_constant createfof_constant();
+  Fof_constant createFof_constant();
 
   /**
-   * Returns a new object of class '<em>fof var</em>'.
+   * Returns a new object of class '<em>Fof var</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>fof var</em>'.
+   * @return a new object of class '<em>Fof var</em>'.
    * @generated
    */
-  fof_var createfof_var();
+  Fof_var createFof_var();
 
   /**
-   * Returns a new object of class '<em>fof variable list</em>'.
+   * Returns a new object of class '<em>Fof variable list</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>fof variable list</em>'.
+   * @return a new object of class '<em>Fof variable list</em>'.
    * @generated
    */
-  fof_variable_list createfof_variable_list();
+  Fof_variable_list createFof_variable_list();
 
   /**
-   * Returns a new object of class '<em>tff input</em>'.
+   * Returns a new object of class '<em>Tff input</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>tff input</em>'.
+   * @return a new object of class '<em>Tff input</em>'.
    * @generated
    */
-  tff_input createtff_input();
+  Tff_input createTff_input();
 
   /**
-   * Returns a new object of class '<em>tff root</em>'.
+   * Returns a new object of class '<em>Tff root</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>tff root</em>'.
+   * @return a new object of class '<em>Tff root</em>'.
    * @generated
    */
-  tff_root createtff_root();
+  Tff_root createTff_root();
 
   /**
-   * Returns a new object of class '<em>tff formula type definition</em>'.
+   * Returns a new object of class '<em>Tff formula type definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>tff formula type definition</em>'.
+   * @return a new object of class '<em>Tff formula type definition</em>'.
    * @generated
    */
-  tff_formula_type_definition createtff_formula_type_definition();
+  Tff_formula_type_definition createTff_formula_type_definition();
 
   /**
-   * Returns a new object of class '<em>tff type expression</em>'.
+   * Returns a new object of class '<em>Tff type expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>tff type expression</em>'.
+   * @return a new object of class '<em>Tff type expression</em>'.
    * @generated
    */
-  tff_type_expression createtff_type_expression();
+  Tff_type_expression createTff_type_expression();
 
   /**
-   * Returns a new object of class '<em>tff type atom</em>'.
+   * Returns a new object of class '<em>Tff type atom</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>tff type atom</em>'.
+   * @return a new object of class '<em>Tff type atom</em>'.
    * @generated
    */
-  tff_type_atom createtff_type_atom();
+  Tff_type_atom createTff_type_atom();
 
   /**
-   * Returns a new object of class '<em>tff type constant</em>'.
+   * Returns a new object of class '<em>Tff type constant</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>tff type constant</em>'.
+   * @return a new object of class '<em>Tff type constant</em>'.
    * @generated
    */
-  tff_type_constant createtff_type_constant();
+  Tff_type_constant createTff_type_constant();
 
   /**
-   * Returns a new object of class '<em>tff expression</em>'.
+   * Returns a new object of class '<em>Tff expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>tff expression</em>'.
+   * @return a new object of class '<em>Tff expression</em>'.
    * @generated
    */
-  tff_expression createtff_expression();
+  Tff_expression createTff_expression();
 
   /**
-   * Returns a new object of class '<em>tff atom</em>'.
+   * Returns a new object of class '<em>Tff atom</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>tff atom</em>'.
+   * @return a new object of class '<em>Tff atom</em>'.
    * @generated
    */
-  tff_atom createtff_atom();
+  Tff_atom createTff_atom();
 
   /**
-   * Returns a new object of class '<em>tff constant</em>'.
+   * Returns a new object of class '<em>Tff constant</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>tff constant</em>'.
+   * @return a new object of class '<em>Tff constant</em>'.
    * @generated
    */
-  tff_constant createtff_constant();
+  Tff_constant createTff_constant();
 
   /**
-   * Returns a new object of class '<em>tff predefined function 2args</em>'.
+   * Returns a new object of class '<em>Tff predefined function 2args</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>tff predefined function 2args</em>'.
+   * @return a new object of class '<em>Tff predefined function 2args</em>'.
    * @generated
    */
-  tff_predefined_function_2_args createtff_predefined_function_2_args();
+  Tff_predefined_function_2_args createTff_predefined_function_2_args();
 
   /**
-   * Returns a new object of class '<em>tff var</em>'.
+   * Returns a new object of class '<em>Tff var</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>tff var</em>'.
+   * @return a new object of class '<em>Tff var</em>'.
    * @generated
    */
-  tff_var createtff_var();
+  Tff_var createTff_var();
 
   /**
-   * Returns a new object of class '<em>tff var declaration</em>'.
+   * Returns a new object of class '<em>Tff var declaration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>tff var declaration</em>'.
+   * @return a new object of class '<em>Tff var declaration</em>'.
    * @generated
    */
-  tff_var_declaration createtff_var_declaration();
+  Tff_var_declaration createTff_var_declaration();
 
   /**
-   * Returns a new object of class '<em>tff variable list</em>'.
+   * Returns a new object of class '<em>Tff variable list</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>tff variable list</em>'.
+   * @return a new object of class '<em>Tff variable list</em>'.
    * @generated
    */
-  tff_variable_list createtff_variable_list();
+  Tff_variable_list createTff_variable_list();
 
   /**
-   * Returns a new object of class '<em>cnf input</em>'.
+   * Returns a new object of class '<em>Cnf input</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>cnf input</em>'.
+   * @return a new object of class '<em>Cnf input</em>'.
    * @generated
    */
-  cnf_input createcnf_input();
+  Cnf_input createCnf_input();
 
   /**
-   * Returns a new object of class '<em>cnf root</em>'.
+   * Returns a new object of class '<em>Cnf root</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>cnf root</em>'.
+   * @return a new object of class '<em>Cnf root</em>'.
    * @generated
    */
-  cnf_root createcnf_root();
+  Cnf_root createCnf_root();
 
   /**
-   * Returns a new object of class '<em>cnf formula type definition</em>'.
+   * Returns a new object of class '<em>Cnf formula type definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>cnf formula type definition</em>'.
+   * @return a new object of class '<em>Cnf formula type definition</em>'.
    * @generated
    */
-  cnf_formula_type_definition createcnf_formula_type_definition();
+  Cnf_formula_type_definition createCnf_formula_type_definition();
 
   /**
-   * Returns a new object of class '<em>cnf or</em>'.
+   * Returns a new object of class '<em>Cnf or</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>cnf or</em>'.
+   * @return a new object of class '<em>Cnf or</em>'.
    * @generated
    */
-  cnf_or createcnf_or();
+  Cnf_or createCnf_or();
 
   /**
-   * Returns a new object of class '<em>cnf not</em>'.
+   * Returns a new object of class '<em>Cnf not</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>cnf not</em>'.
+   * @return a new object of class '<em>Cnf not</em>'.
    * @generated
    */
-  cnf_not createcnf_not();
+  Cnf_not createCnf_not();
 
   /**
-   * Returns a new object of class '<em>cnf equality</em>'.
+   * Returns a new object of class '<em>Cnf equality</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>cnf equality</em>'.
+   * @return a new object of class '<em>Cnf equality</em>'.
    * @generated
    */
-  cnf_equality createcnf_equality();
+  Cnf_equality createCnf_equality();
 
   /**
-   * Returns a new object of class '<em>cnf expression</em>'.
+   * Returns a new object of class '<em>Cnf expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>cnf expression</em>'.
+   * @return a new object of class '<em>Cnf expression</em>'.
    * @generated
    */
-  cnf_expression createcnf_expression();
+  Cnf_expression createCnf_expression();
 
   /**
-   * Returns a new object of class '<em>cnf constant</em>'.
+   * Returns a new object of class '<em>Cnf constant</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>cnf constant</em>'.
+   * @return a new object of class '<em>Cnf constant</em>'.
    * @generated
    */
-  cnf_constant createcnf_constant();
+  Cnf_constant createCnf_constant();
 
   /**
-   * Returns a new object of class '<em>cnf var</em>'.
+   * Returns a new object of class '<em>Cnf var</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>cnf var</em>'.
+   * @return a new object of class '<em>Cnf var</em>'.
    * @generated
    */
-  cnf_var createcnf_var();
+  Cnf_var createCnf_var();
 
   /**
-   * Returns a new object of class '<em>thf input</em>'.
+   * Returns a new object of class '<em>Thf input</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>thf input</em>'.
+   * @return a new object of class '<em>Thf input</em>'.
    * @generated
    */
-  thf_input createthf_input();
+  Thf_input createThf_input();
 
   /**
-   * Returns a new object of class '<em>thf root</em>'.
+   * Returns a new object of class '<em>Thf root</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>thf root</em>'.
+   * @return a new object of class '<em>Thf root</em>'.
    * @generated
    */
-  thf_root createthf_root();
+  Thf_root createThf_root();
 
   /**
-   * Returns a new object of class '<em>thf formula type definition</em>'.
+   * Returns a new object of class '<em>Thf formula type definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>thf formula type definition</em>'.
+   * @return a new object of class '<em>Thf formula type definition</em>'.
    * @generated
    */
-  thf_formula_type_definition createthf_formula_type_definition();
+  Thf_formula_type_definition createThf_formula_type_definition();
 
   /**
-   * Returns a new object of class '<em>thf type expression</em>'.
+   * Returns a new object of class '<em>Thf type expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>thf type expression</em>'.
+   * @return a new object of class '<em>Thf type expression</em>'.
    * @generated
    */
-  thf_type_expression createthf_type_expression();
+  Thf_type_expression createThf_type_expression();
 
   /**
-   * Returns a new object of class '<em>thf type atom</em>'.
+   * Returns a new object of class '<em>Thf type atom</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>thf type atom</em>'.
+   * @return a new object of class '<em>Thf type atom</em>'.
    * @generated
    */
-  thf_type_atom createthf_type_atom();
+  Thf_type_atom createThf_type_atom();
 
   /**
-   * Returns a new object of class '<em>thf type constant</em>'.
+   * Returns a new object of class '<em>Thf type constant</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>thf type constant</em>'.
+   * @return a new object of class '<em>Thf type constant</em>'.
    * @generated
    */
-  thf_type_constant createthf_type_constant();
+  Thf_type_constant createThf_type_constant();
 
   /**
-   * Returns a new object of class '<em>thf expression</em>'.
+   * Returns a new object of class '<em>Thf expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>thf expression</em>'.
+   * @return a new object of class '<em>Thf expression</em>'.
    * @generated
    */
-  thf_expression createthf_expression();
+  Thf_expression createThf_expression();
 
   /**
-   * Returns a new object of class '<em>thf atom</em>'.
+   * Returns a new object of class '<em>Thf atom</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>thf atom</em>'.
+   * @return a new object of class '<em>Thf atom</em>'.
    * @generated
    */
-  thf_atom createthf_atom();
+  Thf_atom createThf_atom();
 
   /**
-   * Returns a new object of class '<em>thf constant</em>'.
+   * Returns a new object of class '<em>Thf constant</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>thf constant</em>'.
+   * @return a new object of class '<em>Thf constant</em>'.
    * @generated
    */
-  thf_constant createthf_constant();
+  Thf_constant createThf_constant();
 
   /**
-   * Returns a new object of class '<em>thf var</em>'.
+   * Returns a new object of class '<em>Thf var</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>thf var</em>'.
+   * @return a new object of class '<em>Thf var</em>'.
    * @generated
    */
-  thf_var createthf_var();
+  Thf_var createThf_var();
 
   /**
-   * Returns a new object of class '<em>thf variable list</em>'.
+   * Returns a new object of class '<em>Thf variable list</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>thf variable list</em>'.
+   * @return a new object of class '<em>Thf variable list</em>'.
    * @generated
    */
-  thf_variable_list createthf_variable_list();
+  Thf_variable_list createThf_variable_list();
 
   /**
-   * Returns a new object of class '<em>thf var declaration</em>'.
+   * Returns a new object of class '<em>Thf var declaration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>thf var declaration</em>'.
+   * @return a new object of class '<em>Thf var declaration</em>'.
    * @generated
    */
-  thf_var_declaration createthf_var_declaration();
+  Thf_var_declaration createThf_var_declaration();
 
   /**
    * Returns a new object of class '<em>binary</em>'.

@@ -81,7 +81,7 @@ ruleModel returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getModelAccess().getTPTP_inputIncludeParserRuleCall_0_0());
 				}
-				lv_TPTP_input_0_0=ruleinclude
+				lv_TPTP_input_0_0=ruleInclude
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -90,7 +90,7 @@ ruleModel returns [EObject current=null]
 						$current,
 						"TPTP_input",
 						lv_TPTP_input_0_0,
-						"it.unibz.inf.tptp.TPTP.include");
+						"it.unibz.inf.tptp.TPTP.Include");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -101,7 +101,7 @@ ruleModel returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getModelAccess().getTPTP_inputFof_inputParserRuleCall_1_0_0());
 					}
-					lv_TPTP_input_1_0=rulefof_input
+					lv_TPTP_input_1_0=ruleFof_input
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -110,7 +110,7 @@ ruleModel returns [EObject current=null]
 							$current,
 							"TPTP_input",
 							lv_TPTP_input_1_0,
-							"it.unibz.inf.tptp.TPTP.fof_input");
+							"it.unibz.inf.tptp.TPTP.Fof_input");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -121,7 +121,7 @@ ruleModel returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getModelAccess().getTPTP_inputTff_inputParserRuleCall_1_1_0());
 					}
-					lv_TPTP_input_2_0=ruletff_input
+					lv_TPTP_input_2_0=ruleTff_input
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -130,7 +130,7 @@ ruleModel returns [EObject current=null]
 							$current,
 							"TPTP_input",
 							lv_TPTP_input_2_0,
-							"it.unibz.inf.tptp.TPTP.tff_input");
+							"it.unibz.inf.tptp.TPTP.Tff_input");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -141,7 +141,7 @@ ruleModel returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getModelAccess().getTPTP_inputCnf_inputParserRuleCall_1_2_0());
 					}
-					lv_TPTP_input_3_0=rulecnf_input
+					lv_TPTP_input_3_0=ruleCnf_input
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -150,7 +150,7 @@ ruleModel returns [EObject current=null]
 							$current,
 							"TPTP_input",
 							lv_TPTP_input_3_0,
-							"it.unibz.inf.tptp.TPTP.cnf_input");
+							"it.unibz.inf.tptp.TPTP.Cnf_input");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -161,7 +161,7 @@ ruleModel returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getModelAccess().getTPTP_inputThf_inputParserRuleCall_1_3_0());
 					}
-					lv_TPTP_input_4_0=rulethf_input
+					lv_TPTP_input_4_0=ruleThf_input
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -170,7 +170,7 @@ ruleModel returns [EObject current=null]
 							$current,
 							"TPTP_input",
 							lv_TPTP_input_4_0,
-							"it.unibz.inf.tptp.TPTP.thf_input");
+							"it.unibz.inf.tptp.TPTP.Thf_input");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -179,15 +179,15 @@ ruleModel returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleinclude
-entryRuleinclude returns [EObject current=null]:
+// Entry rule entryRuleInclude
+entryRuleInclude returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getIncludeRule()); }
-	iv_ruleinclude=ruleinclude
-	{ $current=$iv_ruleinclude.current; }
+	iv_ruleInclude=ruleInclude
+	{ $current=$iv_ruleInclude.current; }
 	EOF;
 
-// Rule include
-ruleinclude returns [EObject current=null]
+// Rule Include
+ruleInclude returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -195,15 +195,19 @@ ruleinclude returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='include('
+		otherlv_0='include'
 		{
 			newLeafNode(otherlv_0, grammarAccess.getIncludeAccess().getIncludeKeyword_0());
 		}
+		otherlv_1='('
+		{
+			newLeafNode(otherlv_1, grammarAccess.getIncludeAccess().getLeftParenthesisKeyword_1());
+		}
 		(
 			(
-				lv_path_1_0=RULE_STRING
+				lv_path_2_0=RULE_STRING
 				{
-					newLeafNode(lv_path_1_0, grammarAccess.getIncludeAccess().getPathSTRINGTerminalRuleCall_1_0());
+					newLeafNode(lv_path_2_0, grammarAccess.getIncludeAccess().getPathSTRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -212,27 +216,31 @@ ruleinclude returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"path",
-						lv_path_1_0,
+						lv_path_2_0,
 						"it.unibz.inf.tptp.TPTP.STRING");
 				}
 			)
 		)
-		otherlv_2=').'
+		otherlv_3=')'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getIncludeAccess().getRightParenthesisFullStopKeyword_2());
+			newLeafNode(otherlv_3, grammarAccess.getIncludeAccess().getRightParenthesisKeyword_3());
+		}
+		otherlv_4='.'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getIncludeAccess().getFullStopKeyword_4());
 		}
 	)
 ;
 
-// Entry rule entryRulefof_input
-entryRulefof_input returns [EObject current=null]:
+// Entry rule entryRuleFof_input
+entryRuleFof_input returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getFof_inputRule()); }
-	iv_rulefof_input=rulefof_input
-	{ $current=$iv_rulefof_input.current; }
+	iv_ruleFof_input=ruleFof_input
+	{ $current=$iv_ruleFof_input.current; }
 	EOF;
 
-// Rule fof_input
-rulefof_input returns [EObject current=null]
+// Rule Fof_input
+ruleFof_input returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -243,32 +251,32 @@ rulefof_input returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getFof_inputAccess().getFof_rootParserRuleCall_0());
 		}
-		this_fof_root_0=rulefof_root
+		this_Fof_root_0=ruleFof_root
 		{
-			$current = $this_fof_root_0.current;
+			$current = $this_Fof_root_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getFof_inputAccess().getIncludeParserRuleCall_1());
 		}
-		this_include_1=ruleinclude
+		this_Include_1=ruleInclude
 		{
-			$current = $this_include_1.current;
+			$current = $this_Include_1.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
 ;
 
-// Entry rule entryRulefof_root
-entryRulefof_root returns [EObject current=null]:
+// Entry rule entryRuleFof_root
+entryRuleFof_root returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getFof_rootRule()); }
-	iv_rulefof_root=rulefof_root
-	{ $current=$iv_rulefof_root.current; }
+	iv_ruleFof_root=ruleFof_root
+	{ $current=$iv_ruleFof_root.current; }
 	EOF;
 
-// Rule fof_root
-rulefof_root returns [EObject current=null]
+// Rule Fof_root
+ruleFof_root returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -276,17 +284,21 @@ rulefof_root returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='fof('
+		otherlv_0='fof'
 		{
 			newLeafNode(otherlv_0, grammarAccess.getFof_rootAccess().getFofKeyword_0());
+		}
+		otherlv_1='('
+		{
+			newLeafNode(otherlv_1, grammarAccess.getFof_rootAccess().getLeftParenthesisKeyword_1());
 		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getFof_rootAccess().getNameLower_token_and_keywordParserRuleCall_1_0_0());
+						newCompositeNode(grammarAccess.getFof_rootAccess().getNameLower_token_and_keywordParserRuleCall_2_0_0());
 					}
-					lv_name_1_1=rulelower_token_and_keyword
+					lv_name_2_1=ruleLower_token_and_keyword
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getFof_rootRule());
@@ -294,14 +306,14 @@ rulefof_root returns [EObject current=null]
 						set(
 							$current,
 							"name",
-							lv_name_1_1,
-							"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+							lv_name_2_1,
+							"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 						afterParserOrEnumRuleCall();
 					}
 					    |
-					lv_name_1_2=RULE_STRING
+					lv_name_2_2=RULE_STRING
 					{
-						newLeafNode(lv_name_1_2, grammarAccess.getFof_rootAccess().getNameSTRINGTerminalRuleCall_1_0_1());
+						newLeafNode(lv_name_2_2, grammarAccess.getFof_rootAccess().getNameSTRINGTerminalRuleCall_2_0_1());
 					}
 					{
 						if ($current==null) {
@@ -310,97 +322,97 @@ rulefof_root returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"name",
-							lv_name_1_2,
+							lv_name_2_2,
 							"it.unibz.inf.tptp.TPTP.STRING");
 					}
 				)
 			)
 		)
-		otherlv_2=','
+		otherlv_3=','
 		{
-			newLeafNode(otherlv_2, grammarAccess.getFof_rootAccess().getCommaKeyword_2());
+			newLeafNode(otherlv_3, grammarAccess.getFof_rootAccess().getCommaKeyword_3());
 		}
 		(
 			(
 				(
-					lv_formula_role_3_1='axiom'
+					lv_formula_role_4_1='axiom'
 					{
-						newLeafNode(lv_formula_role_3_1, grammarAccess.getFof_rootAccess().getFormula_roleAxiomKeyword_3_0_0());
+						newLeafNode(lv_formula_role_4_1, grammarAccess.getFof_rootAccess().getFormula_roleAxiomKeyword_4_0_0());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getFof_rootRule());
 						}
-						setWithLastConsumed($current, "formula_role", lv_formula_role_3_1, null);
+						setWithLastConsumed($current, "formula_role", lv_formula_role_4_1, null);
 					}
 					    |
-					lv_formula_role_3_2='hypothesis'
+					lv_formula_role_4_2='hypothesis'
 					{
-						newLeafNode(lv_formula_role_3_2, grammarAccess.getFof_rootAccess().getFormula_roleHypothesisKeyword_3_0_1());
+						newLeafNode(lv_formula_role_4_2, grammarAccess.getFof_rootAccess().getFormula_roleHypothesisKeyword_4_0_1());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getFof_rootRule());
 						}
-						setWithLastConsumed($current, "formula_role", lv_formula_role_3_2, null);
+						setWithLastConsumed($current, "formula_role", lv_formula_role_4_2, null);
 					}
 					    |
-					lv_formula_role_3_3='negated_conjecture'
+					lv_formula_role_4_3='negated_conjecture'
 					{
-						newLeafNode(lv_formula_role_3_3, grammarAccess.getFof_rootAccess().getFormula_roleNegated_conjectureKeyword_3_0_2());
+						newLeafNode(lv_formula_role_4_3, grammarAccess.getFof_rootAccess().getFormula_roleNegated_conjectureKeyword_4_0_2());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getFof_rootRule());
 						}
-						setWithLastConsumed($current, "formula_role", lv_formula_role_3_3, null);
+						setWithLastConsumed($current, "formula_role", lv_formula_role_4_3, null);
 					}
 					    |
-					lv_formula_role_3_4='conjecture'
+					lv_formula_role_4_4='conjecture'
 					{
-						newLeafNode(lv_formula_role_3_4, grammarAccess.getFof_rootAccess().getFormula_roleConjectureKeyword_3_0_3());
+						newLeafNode(lv_formula_role_4_4, grammarAccess.getFof_rootAccess().getFormula_roleConjectureKeyword_4_0_3());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getFof_rootRule());
 						}
-						setWithLastConsumed($current, "formula_role", lv_formula_role_3_4, null);
+						setWithLastConsumed($current, "formula_role", lv_formula_role_4_4, null);
 					}
 					    |
-					lv_formula_role_3_5='definition'
+					lv_formula_role_4_5='definition'
 					{
-						newLeafNode(lv_formula_role_3_5, grammarAccess.getFof_rootAccess().getFormula_roleDefinitionKeyword_3_0_4());
+						newLeafNode(lv_formula_role_4_5, grammarAccess.getFof_rootAccess().getFormula_roleDefinitionKeyword_4_0_4());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getFof_rootRule());
 						}
-						setWithLastConsumed($current, "formula_role", lv_formula_role_3_5, null);
+						setWithLastConsumed($current, "formula_role", lv_formula_role_4_5, null);
 					}
 					    |
-					lv_formula_role_3_6='lemma'
+					lv_formula_role_4_6='lemma'
 					{
-						newLeafNode(lv_formula_role_3_6, grammarAccess.getFof_rootAccess().getFormula_roleLemmaKeyword_3_0_5());
+						newLeafNode(lv_formula_role_4_6, grammarAccess.getFof_rootAccess().getFormula_roleLemmaKeyword_4_0_5());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getFof_rootRule());
 						}
-						setWithLastConsumed($current, "formula_role", lv_formula_role_3_6, null);
+						setWithLastConsumed($current, "formula_role", lv_formula_role_4_6, null);
 					}
 				)
 			)
 		)
-		otherlv_4=','
+		otherlv_5=','
 		{
-			newLeafNode(otherlv_4, grammarAccess.getFof_rootAccess().getCommaKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getFof_rootAccess().getCommaKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getFof_rootAccess().getExpFof_expressionParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getFof_rootAccess().getExpFof_expressionParserRuleCall_6_0());
 				}
-				lv_exp_5_0=rulefof_expression
+				lv_exp_6_0=ruleFof_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFof_rootRule());
@@ -408,28 +420,32 @@ rulefof_root returns [EObject current=null]
 					set(
 						$current,
 						"exp",
-						lv_exp_5_0,
-						"it.unibz.inf.tptp.TPTP.fof_expression");
+						lv_exp_6_0,
+						"it.unibz.inf.tptp.TPTP.Fof_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_6=').'
+		otherlv_7=')'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getFof_rootAccess().getRightParenthesisFullStopKeyword_6());
+			newLeafNode(otherlv_7, grammarAccess.getFof_rootAccess().getRightParenthesisKeyword_7());
+		}
+		otherlv_8='.'
+		{
+			newLeafNode(otherlv_8, grammarAccess.getFof_rootAccess().getFullStopKeyword_8());
 		}
 	)
 ;
 
-// Entry rule entryRulefof_expression
-entryRulefof_expression returns [EObject current=null]:
+// Entry rule entryRuleFof_expression
+entryRuleFof_expression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getFof_expressionRule()); }
-	iv_rulefof_expression=rulefof_expression
-	{ $current=$iv_rulefof_expression.current; }
+	iv_ruleFof_expression=ruleFof_expression
+	{ $current=$iv_ruleFof_expression.current; }
 	EOF;
 
-// Rule fof_expression
-rulefof_expression returns [EObject current=null]
+// Rule Fof_expression
+ruleFof_expression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -440,9 +456,9 @@ rulefof_expression returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getFof_expressionAccess().getFof_terminating_expressionParserRuleCall_0());
 		}
-		this_fof_terminating_expression_0=rulefof_terminating_expression
+		this_Fof_terminating_expression_0=ruleFof_terminating_expression
 		{
-			$current = $this_fof_terminating_expression_0.current;
+			$current = $this_Fof_terminating_expression_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		(
@@ -458,7 +474,7 @@ rulefof_expression returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getFof_expressionAccess().getOpBinary_operatorParserRuleCall_1_1_0());
 					}
-					lv_op_2_0=rulebinary_operator
+					lv_op_2_0=ruleBinary_operator
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getFof_expressionRule());
@@ -467,7 +483,7 @@ rulefof_expression returns [EObject current=null]
 							$current,
 							"op",
 							lv_op_2_0,
-							"it.unibz.inf.tptp.TPTP.binary_operator");
+							"it.unibz.inf.tptp.TPTP.Binary_operator");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -477,7 +493,7 @@ rulefof_expression returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getFof_expressionAccess().getRightFof_terminating_expressionParserRuleCall_1_2_0());
 					}
-					lv_right_3_0=rulefof_terminating_expression
+					lv_right_3_0=ruleFof_terminating_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getFof_expressionRule());
@@ -486,7 +502,7 @@ rulefof_expression returns [EObject current=null]
 							$current,
 							"right",
 							lv_right_3_0,
-							"it.unibz.inf.tptp.TPTP.fof_terminating_expression");
+							"it.unibz.inf.tptp.TPTP.Fof_terminating_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -495,15 +511,15 @@ rulefof_expression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulefof_terminating_expression
-entryRulefof_terminating_expression returns [EObject current=null]:
+// Entry rule entryRuleFof_terminating_expression
+entryRuleFof_terminating_expression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getFof_terminating_expressionRule()); }
-	iv_rulefof_terminating_expression=rulefof_terminating_expression
-	{ $current=$iv_rulefof_terminating_expression.current; }
+	iv_ruleFof_terminating_expression=ruleFof_terminating_expression
+	{ $current=$iv_ruleFof_terminating_expression.current; }
 	EOF;
 
-// Rule fof_terminating_expression
-rulefof_terminating_expression returns [EObject current=null]
+// Rule Fof_terminating_expression
+ruleFof_terminating_expression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -516,7 +532,7 @@ rulefof_terminating_expression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getFof_terminating_expressionAccess().getFof_atomFof_atomParserRuleCall_0_0());
 				}
-				lv_fof_atom_0_0=rulefof_atom
+				lv_fof_atom_0_0=ruleFof_atom
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFof_terminating_expressionRule());
@@ -525,7 +541,7 @@ rulefof_terminating_expression returns [EObject current=null]
 						$current,
 						"fof_atom",
 						lv_fof_atom_0_0,
-						"it.unibz.inf.tptp.TPTP.fof_atom");
+						"it.unibz.inf.tptp.TPTP.Fof_atom");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -539,9 +555,9 @@ rulefof_terminating_expression returns [EObject current=null]
 			{
 				newCompositeNode(grammarAccess.getFof_terminating_expressionAccess().getFof_expressionParserRuleCall_1_1());
 			}
-			this_fof_expression_2=rulefof_expression
+			this_Fof_expression_2=ruleFof_expression
 			{
-				$current = $this_fof_expression_2.current;
+				$current = $this_Fof_expression_2.current;
 				afterParserOrEnumRuleCall();
 			}
 			otherlv_3=')'
@@ -570,7 +586,7 @@ rulefof_terminating_expression returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getFof_terminating_expressionAccess().getFof_expFof_expressionParserRuleCall_2_1_0());
 					}
-					lv_fof_exp_5_0=rulefof_expression
+					lv_fof_exp_5_0=ruleFof_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getFof_terminating_expressionRule());
@@ -579,7 +595,7 @@ rulefof_terminating_expression returns [EObject current=null]
 							$current,
 							"fof_exp",
 							lv_fof_exp_5_0,
-							"it.unibz.inf.tptp.TPTP.fof_expression");
+							"it.unibz.inf.tptp.TPTP.Fof_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -591,7 +607,7 @@ rulefof_terminating_expression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getFof_terminating_expressionAccess().getFof_expFof_quantifier_expressionParserRuleCall_3_0());
 				}
-				lv_fof_exp_6_0=rulefof_quantifier_expression
+				lv_fof_exp_6_0=ruleFof_quantifier_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFof_terminating_expressionRule());
@@ -600,7 +616,7 @@ rulefof_terminating_expression returns [EObject current=null]
 						$current,
 						"fof_exp",
 						lv_fof_exp_6_0,
-						"it.unibz.inf.tptp.TPTP.fof_quantifier_expression");
+						"it.unibz.inf.tptp.TPTP.Fof_quantifier_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -608,15 +624,15 @@ rulefof_terminating_expression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulefof_atom
-entryRulefof_atom returns [EObject current=null]:
+// Entry rule entryRuleFof_atom
+entryRuleFof_atom returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getFof_atomRule()); }
-	iv_rulefof_atom=rulefof_atom
-	{ $current=$iv_rulefof_atom.current; }
+	iv_ruleFof_atom=ruleFof_atom
+	{ $current=$iv_ruleFof_atom.current; }
 	EOF;
 
-// Rule fof_atom
-rulefof_atom returns [EObject current=null]
+// Rule Fof_atom
+ruleFof_atom returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -627,41 +643,41 @@ rulefof_atom returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getFof_atomAccess().getFof_constantParserRuleCall_0());
 		}
-		this_fof_constant_0=rulefof_constant
+		this_Fof_constant_0=ruleFof_constant
 		{
-			$current = $this_fof_constant_0.current;
+			$current = $this_Fof_constant_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getFof_atomAccess().getFof_varParserRuleCall_1());
 		}
-		this_fof_var_1=rulefof_var
+		this_Fof_var_1=ruleFof_var
 		{
-			$current = $this_fof_var_1.current;
+			$current = $this_Fof_var_1.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getFof_atomAccess().getFof_atom_literalParserRuleCall_2());
 		}
-		this_fof_atom_literal_2=rulefof_atom_literal
+		this_Fof_atom_literal_2=ruleFof_atom_literal
 		{
-			$current = $this_fof_atom_literal_2.current;
+			$current = $this_Fof_atom_literal_2.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
 ;
 
-// Entry rule entryRulefof_atom_literal
-entryRulefof_atom_literal returns [EObject current=null]:
+// Entry rule entryRuleFof_atom_literal
+entryRuleFof_atom_literal returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getFof_atom_literalRule()); }
-	iv_rulefof_atom_literal=rulefof_atom_literal
-	{ $current=$iv_rulefof_atom_literal.current; }
+	iv_ruleFof_atom_literal=ruleFof_atom_literal
+	{ $current=$iv_ruleFof_atom_literal.current; }
 	EOF;
 
-// Rule fof_atom_literal
-rulefof_atom_literal returns [EObject current=null]
+// Rule Fof_atom_literal
+ruleFof_atom_literal returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -697,15 +713,15 @@ rulefof_atom_literal returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulefof_constant
-entryRulefof_constant returns [EObject current=null]:
+// Entry rule entryRuleFof_constant
+entryRuleFof_constant returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getFof_constantRule()); }
-	iv_rulefof_constant=rulefof_constant
-	{ $current=$iv_rulefof_constant.current; }
+	iv_ruleFof_constant=ruleFof_constant
+	{ $current=$iv_ruleFof_constant.current; }
 	EOF;
 
-// Rule fof_constant
-rulefof_constant returns [EObject current=null]
+// Rule Fof_constant
+ruleFof_constant returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -719,7 +735,7 @@ rulefof_constant returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getFof_constantAccess().getNameLower_token_and_keywordParserRuleCall_0_0_0());
 					}
-					lv_name_0_1=rulelower_token_and_keyword
+					lv_name_0_1=ruleLower_token_and_keyword
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getFof_constantRule());
@@ -728,7 +744,7 @@ rulefof_constant returns [EObject current=null]
 							$current,
 							"name",
 							lv_name_0_1,
-							"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+							"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 						afterParserOrEnumRuleCall();
 					}
 					    |
@@ -759,7 +775,7 @@ rulefof_constant returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getFof_constantAccess().getFof_paramFof_atomParserRuleCall_1_1_0());
 					}
-					lv_fof_param_2_0=rulefof_atom
+					lv_fof_param_2_0=ruleFof_atom
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getFof_constantRule());
@@ -768,7 +784,7 @@ rulefof_constant returns [EObject current=null]
 							$current,
 							"fof_param",
 							lv_fof_param_2_0,
-							"it.unibz.inf.tptp.TPTP.fof_atom");
+							"it.unibz.inf.tptp.TPTP.Fof_atom");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -783,7 +799,7 @@ rulefof_constant returns [EObject current=null]
 						{
 							newCompositeNode(grammarAccess.getFof_constantAccess().getFof_paramFof_atomParserRuleCall_1_2_1_0());
 						}
-						lv_fof_param_4_0=rulefof_atom
+						lv_fof_param_4_0=ruleFof_atom
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getFof_constantRule());
@@ -792,7 +808,7 @@ rulefof_constant returns [EObject current=null]
 								$current,
 								"fof_param",
 								lv_fof_param_4_0,
-								"it.unibz.inf.tptp.TPTP.fof_atom");
+								"it.unibz.inf.tptp.TPTP.Fof_atom");
 							afterParserOrEnumRuleCall();
 						}
 					)
@@ -806,15 +822,15 @@ rulefof_constant returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulefof_var
-entryRulefof_var returns [EObject current=null]:
+// Entry rule entryRuleFof_var
+entryRuleFof_var returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getFof_varRule()); }
-	iv_rulefof_var=rulefof_var
-	{ $current=$iv_rulefof_var.current; }
+	iv_ruleFof_var=ruleFof_var
+	{ $current=$iv_ruleFof_var.current; }
 	EOF;
 
-// Rule fof_var
-rulefof_var returns [EObject current=null]
+// Rule Fof_var
+ruleFof_var returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -841,15 +857,15 @@ rulefof_var returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulefof_quantifier_expression
-entryRulefof_quantifier_expression returns [EObject current=null]:
+// Entry rule entryRuleFof_quantifier_expression
+entryRuleFof_quantifier_expression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getFof_quantifier_expressionRule()); }
-	iv_rulefof_quantifier_expression=rulefof_quantifier_expression
-	{ $current=$iv_rulefof_quantifier_expression.current; }
+	iv_ruleFof_quantifier_expression=ruleFof_quantifier_expression
+	{ $current=$iv_ruleFof_quantifier_expression.current; }
 	EOF;
 
-// Rule fof_quantifier_expression
-rulefof_quantifier_expression returns [EObject current=null]
+// Rule Fof_quantifier_expression
+ruleFof_quantifier_expression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -893,7 +909,7 @@ rulefof_quantifier_expression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getFof_quantifier_expressionAccess().getFof_paramFof_variable_listParserRuleCall_2_0());
 				}
-				lv_fof_param_2_0=rulefof_variable_list
+				lv_fof_param_2_0=ruleFof_variable_list
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFof_quantifier_expressionRule());
@@ -902,7 +918,7 @@ rulefof_quantifier_expression returns [EObject current=null]
 						$current,
 						"fof_param",
 						lv_fof_param_2_0,
-						"it.unibz.inf.tptp.TPTP.fof_variable_list");
+						"it.unibz.inf.tptp.TPTP.Fof_variable_list");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -920,7 +936,7 @@ rulefof_quantifier_expression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getFof_quantifier_expressionAccess().getFof_expFof_expressionParserRuleCall_5_0());
 				}
-				lv_fof_exp_5_0=rulefof_expression
+				lv_fof_exp_5_0=ruleFof_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFof_quantifier_expressionRule());
@@ -929,7 +945,7 @@ rulefof_quantifier_expression returns [EObject current=null]
 						$current,
 						"fof_exp",
 						lv_fof_exp_5_0,
-						"it.unibz.inf.tptp.TPTP.fof_expression");
+						"it.unibz.inf.tptp.TPTP.Fof_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -937,15 +953,15 @@ rulefof_quantifier_expression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulefof_variable_list
-entryRulefof_variable_list returns [EObject current=null]:
+// Entry rule entryRuleFof_variable_list
+entryRuleFof_variable_list returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getFof_variable_listRule()); }
-	iv_rulefof_variable_list=rulefof_variable_list
-	{ $current=$iv_rulefof_variable_list.current; }
+	iv_ruleFof_variable_list=ruleFof_variable_list
+	{ $current=$iv_ruleFof_variable_list.current; }
 	EOF;
 
-// Rule fof_variable_list
-rulefof_variable_list returns [EObject current=null]
+// Rule Fof_variable_list
+ruleFof_variable_list returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -958,7 +974,7 @@ rulefof_variable_list returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getFof_variable_listAccess().getParamsFof_varParserRuleCall_0_0());
 				}
-				lv_params_0_0=rulefof_var
+				lv_params_0_0=ruleFof_var
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFof_variable_listRule());
@@ -967,7 +983,7 @@ rulefof_variable_list returns [EObject current=null]
 						$current,
 						"params",
 						lv_params_0_0,
-						"it.unibz.inf.tptp.TPTP.fof_var");
+						"it.unibz.inf.tptp.TPTP.Fof_var");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -982,7 +998,7 @@ rulefof_variable_list returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getFof_variable_listAccess().getParamsFof_varParserRuleCall_1_1_0());
 					}
-					lv_params_2_0=rulefof_var
+					lv_params_2_0=ruleFof_var
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getFof_variable_listRule());
@@ -991,7 +1007,7 @@ rulefof_variable_list returns [EObject current=null]
 							$current,
 							"params",
 							lv_params_2_0,
-							"it.unibz.inf.tptp.TPTP.fof_var");
+							"it.unibz.inf.tptp.TPTP.Fof_var");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -1000,15 +1016,15 @@ rulefof_variable_list returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_input
-entryRuletff_input returns [EObject current=null]:
+// Entry rule entryRuleTff_input
+entryRuleTff_input returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_inputRule()); }
-	iv_ruletff_input=ruletff_input
-	{ $current=$iv_ruletff_input.current; }
+	iv_ruleTff_input=ruleTff_input
+	{ $current=$iv_ruleTff_input.current; }
 	EOF;
 
-// Rule tff_input
-ruletff_input returns [EObject current=null]
+// Rule Tff_input
+ruleTff_input returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1019,32 +1035,32 @@ ruletff_input returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getTff_inputAccess().getTff_rootParserRuleCall_0());
 		}
-		this_tff_root_0=ruletff_root
+		this_Tff_root_0=ruleTff_root
 		{
-			$current = $this_tff_root_0.current;
+			$current = $this_Tff_root_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getTff_inputAccess().getIncludeParserRuleCall_1());
 		}
-		this_include_1=ruleinclude
+		this_Include_1=ruleInclude
 		{
-			$current = $this_include_1.current;
+			$current = $this_Include_1.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
 ;
 
-// Entry rule entryRuletff_root
-entryRuletff_root returns [EObject current=null]:
+// Entry rule entryRuleTff_root
+entryRuleTff_root returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_rootRule()); }
-	iv_ruletff_root=ruletff_root
-	{ $current=$iv_ruletff_root.current; }
+	iv_ruleTff_root=ruleTff_root
+	{ $current=$iv_ruleTff_root.current; }
 	EOF;
 
-// Rule tff_root
-ruletff_root returns [EObject current=null]
+// Rule Tff_root
+ruleTff_root returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1053,17 +1069,21 @@ ruletff_root returns [EObject current=null]
 }:
 	(
 		(
-			otherlv_0='tff('
+			otherlv_0='tff'
 			{
 				newLeafNode(otherlv_0, grammarAccess.getTff_rootAccess().getTffKeyword_0_0());
+			}
+			otherlv_1='('
+			{
+				newLeafNode(otherlv_1, grammarAccess.getTff_rootAccess().getLeftParenthesisKeyword_0_1());
 			}
 			(
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getTff_rootAccess().getNameLower_token_and_keywordParserRuleCall_0_1_0_0());
+							newCompositeNode(grammarAccess.getTff_rootAccess().getNameLower_token_and_keywordParserRuleCall_0_2_0_0());
 						}
-						lv_name_1_1=rulelower_token_and_keyword
+						lv_name_2_1=ruleLower_token_and_keyword
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getTff_rootRule());
@@ -1071,14 +1091,14 @@ ruletff_root returns [EObject current=null]
 							set(
 								$current,
 								"name",
-								lv_name_1_1,
-								"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+								lv_name_2_1,
+								"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 							afterParserOrEnumRuleCall();
 						}
 						    |
-						lv_name_1_2=RULE_STRING
+						lv_name_2_2=RULE_STRING
 						{
-							newLeafNode(lv_name_1_2, grammarAccess.getTff_rootAccess().getNameSTRINGTerminalRuleCall_0_1_0_1());
+							newLeafNode(lv_name_2_2, grammarAccess.getTff_rootAccess().getNameSTRINGTerminalRuleCall_0_2_0_1());
 						}
 						{
 							if ($current==null) {
@@ -1087,97 +1107,97 @@ ruletff_root returns [EObject current=null]
 							setWithLastConsumed(
 								$current,
 								"name",
-								lv_name_1_2,
+								lv_name_2_2,
 								"it.unibz.inf.tptp.TPTP.STRING");
 						}
 					)
 				)
 			)
-			otherlv_2=','
+			otherlv_3=','
 			{
-				newLeafNode(otherlv_2, grammarAccess.getTff_rootAccess().getCommaKeyword_0_2());
+				newLeafNode(otherlv_3, grammarAccess.getTff_rootAccess().getCommaKeyword_0_3());
 			}
 			(
 				(
 					(
-						lv_formula_role_3_1='axiom'
+						lv_formula_role_4_1='axiom'
 						{
-							newLeafNode(lv_formula_role_3_1, grammarAccess.getTff_rootAccess().getFormula_roleAxiomKeyword_0_3_0_0());
+							newLeafNode(lv_formula_role_4_1, grammarAccess.getTff_rootAccess().getFormula_roleAxiomKeyword_0_4_0_0());
 						}
 						{
 							if ($current==null) {
 								$current = createModelElement(grammarAccess.getTff_rootRule());
 							}
-							setWithLastConsumed($current, "formula_role", lv_formula_role_3_1, null);
+							setWithLastConsumed($current, "formula_role", lv_formula_role_4_1, null);
 						}
 						    |
-						lv_formula_role_3_2='hypothesis'
+						lv_formula_role_4_2='hypothesis'
 						{
-							newLeafNode(lv_formula_role_3_2, grammarAccess.getTff_rootAccess().getFormula_roleHypothesisKeyword_0_3_0_1());
+							newLeafNode(lv_formula_role_4_2, grammarAccess.getTff_rootAccess().getFormula_roleHypothesisKeyword_0_4_0_1());
 						}
 						{
 							if ($current==null) {
 								$current = createModelElement(grammarAccess.getTff_rootRule());
 							}
-							setWithLastConsumed($current, "formula_role", lv_formula_role_3_2, null);
+							setWithLastConsumed($current, "formula_role", lv_formula_role_4_2, null);
 						}
 						    |
-						lv_formula_role_3_3='negated_conjecture'
+						lv_formula_role_4_3='negated_conjecture'
 						{
-							newLeafNode(lv_formula_role_3_3, grammarAccess.getTff_rootAccess().getFormula_roleNegated_conjectureKeyword_0_3_0_2());
+							newLeafNode(lv_formula_role_4_3, grammarAccess.getTff_rootAccess().getFormula_roleNegated_conjectureKeyword_0_4_0_2());
 						}
 						{
 							if ($current==null) {
 								$current = createModelElement(grammarAccess.getTff_rootRule());
 							}
-							setWithLastConsumed($current, "formula_role", lv_formula_role_3_3, null);
+							setWithLastConsumed($current, "formula_role", lv_formula_role_4_3, null);
 						}
 						    |
-						lv_formula_role_3_4='conjecture'
+						lv_formula_role_4_4='conjecture'
 						{
-							newLeafNode(lv_formula_role_3_4, grammarAccess.getTff_rootAccess().getFormula_roleConjectureKeyword_0_3_0_3());
+							newLeafNode(lv_formula_role_4_4, grammarAccess.getTff_rootAccess().getFormula_roleConjectureKeyword_0_4_0_3());
 						}
 						{
 							if ($current==null) {
 								$current = createModelElement(grammarAccess.getTff_rootRule());
 							}
-							setWithLastConsumed($current, "formula_role", lv_formula_role_3_4, null);
+							setWithLastConsumed($current, "formula_role", lv_formula_role_4_4, null);
 						}
 						    |
-						lv_formula_role_3_5='definition'
+						lv_formula_role_4_5='definition'
 						{
-							newLeafNode(lv_formula_role_3_5, grammarAccess.getTff_rootAccess().getFormula_roleDefinitionKeyword_0_3_0_4());
+							newLeafNode(lv_formula_role_4_5, grammarAccess.getTff_rootAccess().getFormula_roleDefinitionKeyword_0_4_0_4());
 						}
 						{
 							if ($current==null) {
 								$current = createModelElement(grammarAccess.getTff_rootRule());
 							}
-							setWithLastConsumed($current, "formula_role", lv_formula_role_3_5, null);
+							setWithLastConsumed($current, "formula_role", lv_formula_role_4_5, null);
 						}
 						    |
-						lv_formula_role_3_6='lemma'
+						lv_formula_role_4_6='lemma'
 						{
-							newLeafNode(lv_formula_role_3_6, grammarAccess.getTff_rootAccess().getFormula_roleLemmaKeyword_0_3_0_5());
+							newLeafNode(lv_formula_role_4_6, grammarAccess.getTff_rootAccess().getFormula_roleLemmaKeyword_0_4_0_5());
 						}
 						{
 							if ($current==null) {
 								$current = createModelElement(grammarAccess.getTff_rootRule());
 							}
-							setWithLastConsumed($current, "formula_role", lv_formula_role_3_6, null);
+							setWithLastConsumed($current, "formula_role", lv_formula_role_4_6, null);
 						}
 					)
 				)
 			)
-			otherlv_4=','
+			otherlv_5=','
 			{
-				newLeafNode(otherlv_4, grammarAccess.getTff_rootAccess().getCommaKeyword_0_4());
+				newLeafNode(otherlv_5, grammarAccess.getTff_rootAccess().getCommaKeyword_0_5());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getTff_rootAccess().getExpTff_expressionParserRuleCall_0_5_0());
+						newCompositeNode(grammarAccess.getTff_rootAccess().getExpTff_expressionParserRuleCall_0_6_0());
 					}
-					lv_exp_5_0=ruletff_expression
+					lv_exp_6_0=ruleTff_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTff_rootRule());
@@ -1185,30 +1205,38 @@ ruletff_root returns [EObject current=null]
 						set(
 							$current,
 							"exp",
-							lv_exp_5_0,
-							"it.unibz.inf.tptp.TPTP.tff_expression");
+							lv_exp_6_0,
+							"it.unibz.inf.tptp.TPTP.Tff_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-			otherlv_6=').'
+			otherlv_7=')'
 			{
-				newLeafNode(otherlv_6, grammarAccess.getTff_rootAccess().getRightParenthesisFullStopKeyword_0_6());
+				newLeafNode(otherlv_7, grammarAccess.getTff_rootAccess().getRightParenthesisKeyword_0_7());
+			}
+			otherlv_8='.'
+			{
+				newLeafNode(otherlv_8, grammarAccess.getTff_rootAccess().getFullStopKeyword_0_8());
 			}
 		)
 		    |
 		(
-			otherlv_7='tff('
+			otherlv_9='tff'
 			{
-				newLeafNode(otherlv_7, grammarAccess.getTff_rootAccess().getTffKeyword_1_0());
+				newLeafNode(otherlv_9, grammarAccess.getTff_rootAccess().getTffKeyword_1_0());
+			}
+			otherlv_10='('
+			{
+				newLeafNode(otherlv_10, grammarAccess.getTff_rootAccess().getLeftParenthesisKeyword_1_1());
 			}
 			(
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getTff_rootAccess().getNameLower_token_and_keywordParserRuleCall_1_1_0_0());
+							newCompositeNode(grammarAccess.getTff_rootAccess().getNameLower_token_and_keywordParserRuleCall_1_2_0_0());
 						}
-						lv_name_8_1=rulelower_token_and_keyword
+						lv_name_11_1=ruleLower_token_and_keyword
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getTff_rootRule());
@@ -1216,14 +1244,14 @@ ruletff_root returns [EObject current=null]
 							set(
 								$current,
 								"name",
-								lv_name_8_1,
-								"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+								lv_name_11_1,
+								"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 							afterParserOrEnumRuleCall();
 						}
 						    |
-						lv_name_8_2=RULE_STRING
+						lv_name_11_2=RULE_STRING
 						{
-							newLeafNode(lv_name_8_2, grammarAccess.getTff_rootAccess().getNameSTRINGTerminalRuleCall_1_1_0_1());
+							newLeafNode(lv_name_11_2, grammarAccess.getTff_rootAccess().getNameSTRINGTerminalRuleCall_1_2_0_1());
 						}
 						{
 							if ($current==null) {
@@ -1232,40 +1260,40 @@ ruletff_root returns [EObject current=null]
 							setWithLastConsumed(
 								$current,
 								"name",
-								lv_name_8_2,
+								lv_name_11_2,
 								"it.unibz.inf.tptp.TPTP.STRING");
 						}
 					)
 				)
 			)
-			otherlv_9=','
+			otherlv_12=','
 			{
-				newLeafNode(otherlv_9, grammarAccess.getTff_rootAccess().getCommaKeyword_1_2());
+				newLeafNode(otherlv_12, grammarAccess.getTff_rootAccess().getCommaKeyword_1_3());
 			}
 			(
 				(
-					lv_formula_role_10_0='type'
+					lv_formula_role_13_0='type'
 					{
-						newLeafNode(lv_formula_role_10_0, grammarAccess.getTff_rootAccess().getFormula_roleTypeKeyword_1_3_0());
+						newLeafNode(lv_formula_role_13_0, grammarAccess.getTff_rootAccess().getFormula_roleTypeKeyword_1_4_0());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getTff_rootRule());
 						}
-						setWithLastConsumed($current, "formula_role", lv_formula_role_10_0, "type");
+						setWithLastConsumed($current, "formula_role", lv_formula_role_13_0, "type");
 					}
 				)
 			)
-			otherlv_11=','
+			otherlv_14=','
 			{
-				newLeafNode(otherlv_11, grammarAccess.getTff_rootAccess().getCommaKeyword_1_4());
+				newLeafNode(otherlv_14, grammarAccess.getTff_rootAccess().getCommaKeyword_1_5());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getTff_rootAccess().getDefTff_formula_type_definitionParserRuleCall_1_5_0());
+						newCompositeNode(grammarAccess.getTff_rootAccess().getDefTff_formula_type_definitionParserRuleCall_1_6_0());
 					}
-					lv_def_12_0=ruletff_formula_type_definition
+					lv_def_15_0=ruleTff_formula_type_definition
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTff_rootRule());
@@ -1273,29 +1301,33 @@ ruletff_root returns [EObject current=null]
 						set(
 							$current,
 							"def",
-							lv_def_12_0,
-							"it.unibz.inf.tptp.TPTP.tff_formula_type_definition");
+							lv_def_15_0,
+							"it.unibz.inf.tptp.TPTP.Tff_formula_type_definition");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-			otherlv_13=').'
+			otherlv_16=')'
 			{
-				newLeafNode(otherlv_13, grammarAccess.getTff_rootAccess().getRightParenthesisFullStopKeyword_1_6());
+				newLeafNode(otherlv_16, grammarAccess.getTff_rootAccess().getRightParenthesisKeyword_1_7());
+			}
+			otherlv_17='.'
+			{
+				newLeafNode(otherlv_17, grammarAccess.getTff_rootAccess().getFullStopKeyword_1_8());
 			}
 		)
 	)
 ;
 
-// Entry rule entryRuletff_formula_type_definition
-entryRuletff_formula_type_definition returns [EObject current=null]:
+// Entry rule entryRuleTff_formula_type_definition
+entryRuleTff_formula_type_definition returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_formula_type_definitionRule()); }
-	iv_ruletff_formula_type_definition=ruletff_formula_type_definition
-	{ $current=$iv_ruletff_formula_type_definition.current; }
+	iv_ruleTff_formula_type_definition=ruleTff_formula_type_definition
+	{ $current=$iv_ruleTff_formula_type_definition.current; }
 	EOF;
 
-// Rule tff_formula_type_definition
-ruletff_formula_type_definition returns [EObject current=null]
+// Rule Tff_formula_type_definition
+ruleTff_formula_type_definition returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1311,9 +1343,9 @@ ruletff_formula_type_definition returns [EObject current=null]
 			{
 				newCompositeNode(grammarAccess.getTff_formula_type_definitionAccess().getTff_formula_type_definitionParserRuleCall_0_1());
 			}
-			this_tff_formula_type_definition_1=ruletff_formula_type_definition
+			this_Tff_formula_type_definition_1=ruleTff_formula_type_definition
 			{
-				$current = $this_tff_formula_type_definition_1.current;
+				$current = $this_Tff_formula_type_definition_1.current;
 				afterParserOrEnumRuleCall();
 			}
 			otherlv_2=')'
@@ -1329,7 +1361,7 @@ ruletff_formula_type_definition returns [EObject current=null]
 						{
 							newCompositeNode(grammarAccess.getTff_formula_type_definitionAccess().getNameLower_token_and_keywordParserRuleCall_1_0_0_0());
 						}
-						lv_name_3_0=rulelower_token_and_keyword
+						lv_name_3_0=ruleLower_token_and_keyword
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getTff_formula_type_definitionRule());
@@ -1338,7 +1370,7 @@ ruletff_formula_type_definition returns [EObject current=null]
 								$current,
 								"name",
 								lv_name_3_0,
-								"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+								"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 							afterParserOrEnumRuleCall();
 						}
 					)
@@ -1373,7 +1405,7 @@ ruletff_formula_type_definition returns [EObject current=null]
 						{
 							newCompositeNode(grammarAccess.getTff_formula_type_definitionAccess().getExpTff_type_quantifier_epressionParserRuleCall_1_2_0_0());
 						}
-						lv_exp_6_1=ruletff_type_quantifier_epression
+						lv_exp_6_1=ruleTff_type_quantifier_epression
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getTff_formula_type_definitionRule());
@@ -1382,14 +1414,14 @@ ruletff_formula_type_definition returns [EObject current=null]
 								$current,
 								"exp",
 								lv_exp_6_1,
-								"it.unibz.inf.tptp.TPTP.tff_type_quantifier_epression");
+								"it.unibz.inf.tptp.TPTP.Tff_type_quantifier_epression");
 							afterParserOrEnumRuleCall();
 						}
 						    |
 						{
 							newCompositeNode(grammarAccess.getTff_formula_type_definitionAccess().getExpTff_type_expressionParserRuleCall_1_2_0_1());
 						}
-						lv_exp_6_2=ruletff_type_expression
+						lv_exp_6_2=ruleTff_type_expression
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getTff_formula_type_definitionRule());
@@ -1398,7 +1430,7 @@ ruletff_formula_type_definition returns [EObject current=null]
 								$current,
 								"exp",
 								lv_exp_6_2,
-								"it.unibz.inf.tptp.TPTP.tff_type_expression");
+								"it.unibz.inf.tptp.TPTP.Tff_type_expression");
 							afterParserOrEnumRuleCall();
 						}
 					)
@@ -1408,15 +1440,15 @@ ruletff_formula_type_definition returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_type_expression
-entryRuletff_type_expression returns [EObject current=null]:
+// Entry rule entryRuleTff_type_expression
+entryRuleTff_type_expression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_type_expressionRule()); }
-	iv_ruletff_type_expression=ruletff_type_expression
-	{ $current=$iv_ruletff_type_expression.current; }
+	iv_ruleTff_type_expression=ruleTff_type_expression
+	{ $current=$iv_ruleTff_type_expression.current; }
 	EOF;
 
-// Rule tff_type_expression
-ruletff_type_expression returns [EObject current=null]
+// Rule Tff_type_expression
+ruleTff_type_expression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1427,9 +1459,9 @@ ruletff_type_expression returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getTff_type_expressionAccess().getTff_terminal_type_expressionParserRuleCall_0());
 		}
-		this_tff_terminal_type_expression_0=ruletff_terminal_type_expression
+		this_Tff_terminal_type_expression_0=ruleTff_terminal_type_expression
 		{
-			$current = $this_tff_terminal_type_expression_0.current;
+			$current = $this_Tff_terminal_type_expression_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		(
@@ -1472,7 +1504,7 @@ ruletff_type_expression returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getTff_type_expressionAccess().getRightTff_terminal_type_expressionParserRuleCall_1_2_0());
 					}
-					lv_right_3_0=ruletff_terminal_type_expression
+					lv_right_3_0=ruleTff_terminal_type_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTff_type_expressionRule());
@@ -1481,7 +1513,7 @@ ruletff_type_expression returns [EObject current=null]
 							$current,
 							"right",
 							lv_right_3_0,
-							"it.unibz.inf.tptp.TPTP.tff_terminal_type_expression");
+							"it.unibz.inf.tptp.TPTP.Tff_terminal_type_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -1490,15 +1522,15 @@ ruletff_type_expression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_terminal_type_expression
-entryRuletff_terminal_type_expression returns [EObject current=null]:
+// Entry rule entryRuleTff_terminal_type_expression
+entryRuleTff_terminal_type_expression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_terminal_type_expressionRule()); }
-	iv_ruletff_terminal_type_expression=ruletff_terminal_type_expression
-	{ $current=$iv_ruletff_terminal_type_expression.current; }
+	iv_ruleTff_terminal_type_expression=ruleTff_terminal_type_expression
+	{ $current=$iv_ruleTff_terminal_type_expression.current; }
 	EOF;
 
-// Rule tff_terminal_type_expression
-ruletff_terminal_type_expression returns [EObject current=null]
+// Rule Tff_terminal_type_expression
+ruleTff_terminal_type_expression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1509,9 +1541,9 @@ ruletff_terminal_type_expression returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getTff_terminal_type_expressionAccess().getTff_type_atomParserRuleCall_0());
 		}
-		this_tff_type_atom_0=ruletff_type_atom
+		this_Tff_type_atom_0=ruleTff_type_atom
 		{
-			$current = $this_tff_type_atom_0.current;
+			$current = $this_Tff_type_atom_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
@@ -1523,9 +1555,9 @@ ruletff_terminal_type_expression returns [EObject current=null]
 			{
 				newCompositeNode(grammarAccess.getTff_terminal_type_expressionAccess().getTff_type_expressionParserRuleCall_1_1());
 			}
-			this_tff_type_expression_2=ruletff_type_expression
+			this_Tff_type_expression_2=ruleTff_type_expression
 			{
-				$current = $this_tff_type_expression_2.current;
+				$current = $this_Tff_type_expression_2.current;
 				afterParserOrEnumRuleCall();
 			}
 			otherlv_3=')'
@@ -1536,15 +1568,15 @@ ruletff_terminal_type_expression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_type_atom
-entryRuletff_type_atom returns [EObject current=null]:
+// Entry rule entryRuleTff_type_atom
+entryRuleTff_type_atom returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_type_atomRule()); }
-	iv_ruletff_type_atom=ruletff_type_atom
-	{ $current=$iv_ruletff_type_atom.current; }
+	iv_ruleTff_type_atom=ruleTff_type_atom
+	{ $current=$iv_ruleTff_type_atom.current; }
 	EOF;
 
-// Rule tff_type_atom
-ruletff_type_atom returns [EObject current=null]
+// Rule Tff_type_atom
+ruleTff_type_atom returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1555,41 +1587,41 @@ ruletff_type_atom returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getTff_type_atomAccess().getTff_type_constantParserRuleCall_0());
 		}
-		this_tff_type_constant_0=ruletff_type_constant
+		this_Tff_type_constant_0=ruleTff_type_constant
 		{
-			$current = $this_tff_type_constant_0.current;
+			$current = $this_Tff_type_constant_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getTff_type_atomAccess().getTff_varParserRuleCall_1());
 		}
-		this_tff_var_1=ruletff_var
+		this_Tff_var_1=ruleTff_var
 		{
-			$current = $this_tff_var_1.current;
+			$current = $this_Tff_var_1.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getTff_type_atomAccess().getTff_type_literalParserRuleCall_2());
 		}
-		this_tff_type_literal_2=ruletff_type_literal
+		this_Tff_type_literal_2=ruleTff_type_literal
 		{
-			$current = $this_tff_type_literal_2.current;
+			$current = $this_Tff_type_literal_2.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
 ;
 
-// Entry rule entryRuletff_type_constant
-entryRuletff_type_constant returns [EObject current=null]:
+// Entry rule entryRuleTff_type_constant
+entryRuleTff_type_constant returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_type_constantRule()); }
-	iv_ruletff_type_constant=ruletff_type_constant
-	{ $current=$iv_ruletff_type_constant.current; }
+	iv_ruleTff_type_constant=ruleTff_type_constant
+	{ $current=$iv_ruleTff_type_constant.current; }
 	EOF;
 
-// Rule tff_type_constant
-ruletff_type_constant returns [EObject current=null]
+// Rule Tff_type_constant
+ruleTff_type_constant returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1603,7 +1635,7 @@ ruletff_type_constant returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getTff_type_constantAccess().getNameLower_token_and_keywordParserRuleCall_0_0_0());
 					}
-					lv_name_0_1=rulelower_token_and_keyword
+					lv_name_0_1=ruleLower_token_and_keyword
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTff_type_constantRule());
@@ -1612,7 +1644,7 @@ ruletff_type_constant returns [EObject current=null]
 							$current,
 							"name",
 							lv_name_0_1,
-							"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+							"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 						afterParserOrEnumRuleCall();
 					}
 					    |
@@ -1643,7 +1675,7 @@ ruletff_type_constant returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getTff_type_constantAccess().getParamTff_type_atomParserRuleCall_1_1_0());
 					}
-					lv_param_2_0=ruletff_type_atom
+					lv_param_2_0=ruleTff_type_atom
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTff_type_constantRule());
@@ -1652,7 +1684,7 @@ ruletff_type_constant returns [EObject current=null]
 							$current,
 							"param",
 							lv_param_2_0,
-							"it.unibz.inf.tptp.TPTP.tff_type_atom");
+							"it.unibz.inf.tptp.TPTP.Tff_type_atom");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -1667,7 +1699,7 @@ ruletff_type_constant returns [EObject current=null]
 						{
 							newCompositeNode(grammarAccess.getTff_type_constantAccess().getParamTff_type_atomParserRuleCall_1_2_1_0());
 						}
-						lv_param_4_0=ruletff_type_atom
+						lv_param_4_0=ruleTff_type_atom
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getTff_type_constantRule());
@@ -1676,7 +1708,7 @@ ruletff_type_constant returns [EObject current=null]
 								$current,
 								"param",
 								lv_param_4_0,
-								"it.unibz.inf.tptp.TPTP.tff_type_atom");
+								"it.unibz.inf.tptp.TPTP.Tff_type_atom");
 							afterParserOrEnumRuleCall();
 						}
 					)
@@ -1690,15 +1722,15 @@ ruletff_type_constant returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_type_literal
-entryRuletff_type_literal returns [EObject current=null]:
+// Entry rule entryRuleTff_type_literal
+entryRuleTff_type_literal returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_type_literalRule()); }
-	iv_ruletff_type_literal=ruletff_type_literal
-	{ $current=$iv_ruletff_type_literal.current; }
+	iv_ruleTff_type_literal=ruleTff_type_literal
+	{ $current=$iv_ruleTff_type_literal.current; }
 	EOF;
 
-// Rule tff_type_literal
-ruletff_type_literal returns [EObject current=null]
+// Rule Tff_type_literal
+ruleTff_type_literal returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1778,15 +1810,15 @@ ruletff_type_literal returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_expression
-entryRuletff_expression returns [EObject current=null]:
+// Entry rule entryRuleTff_expression
+entryRuleTff_expression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_expressionRule()); }
-	iv_ruletff_expression=ruletff_expression
-	{ $current=$iv_ruletff_expression.current; }
+	iv_ruleTff_expression=ruleTff_expression
+	{ $current=$iv_ruleTff_expression.current; }
 	EOF;
 
-// Rule tff_expression
-ruletff_expression returns [EObject current=null]
+// Rule Tff_expression
+ruleTff_expression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1797,9 +1829,9 @@ ruletff_expression returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getTff_expressionAccess().getTff_terminating_expressionParserRuleCall_0());
 		}
-		this_tff_terminating_expression_0=ruletff_terminating_expression
+		this_Tff_terminating_expression_0=ruleTff_terminating_expression
 		{
-			$current = $this_tff_terminating_expression_0.current;
+			$current = $this_Tff_terminating_expression_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		(
@@ -1815,7 +1847,7 @@ ruletff_expression returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getTff_expressionAccess().getOpBinary_operatorParserRuleCall_1_1_0());
 					}
-					lv_op_2_0=rulebinary_operator
+					lv_op_2_0=ruleBinary_operator
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTff_expressionRule());
@@ -1824,7 +1856,7 @@ ruletff_expression returns [EObject current=null]
 							$current,
 							"op",
 							lv_op_2_0,
-							"it.unibz.inf.tptp.TPTP.binary_operator");
+							"it.unibz.inf.tptp.TPTP.Binary_operator");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -1834,7 +1866,7 @@ ruletff_expression returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getTff_expressionAccess().getRightTff_terminating_expressionParserRuleCall_1_2_0());
 					}
-					lv_right_3_0=ruletff_terminating_expression
+					lv_right_3_0=ruleTff_terminating_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTff_expressionRule());
@@ -1843,7 +1875,7 @@ ruletff_expression returns [EObject current=null]
 							$current,
 							"right",
 							lv_right_3_0,
-							"it.unibz.inf.tptp.TPTP.tff_terminating_expression");
+							"it.unibz.inf.tptp.TPTP.Tff_terminating_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -1852,15 +1884,15 @@ ruletff_expression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_terminating_expression
-entryRuletff_terminating_expression returns [EObject current=null]:
+// Entry rule entryRuleTff_terminating_expression
+entryRuleTff_terminating_expression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_terminating_expressionRule()); }
-	iv_ruletff_terminating_expression=ruletff_terminating_expression
-	{ $current=$iv_ruletff_terminating_expression.current; }
+	iv_ruleTff_terminating_expression=ruleTff_terminating_expression
+	{ $current=$iv_ruleTff_terminating_expression.current; }
 	EOF;
 
-// Rule tff_terminating_expression
-ruletff_terminating_expression returns [EObject current=null]
+// Rule Tff_terminating_expression
+ruleTff_terminating_expression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1873,7 +1905,7 @@ ruletff_terminating_expression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getTff_terminating_expressionAccess().getAtomTff_atomParserRuleCall_0_0());
 				}
-				lv_atom_0_0=ruletff_atom
+				lv_atom_0_0=ruleTff_atom
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTff_terminating_expressionRule());
@@ -1882,7 +1914,7 @@ ruletff_terminating_expression returns [EObject current=null]
 						$current,
 						"atom",
 						lv_atom_0_0,
-						"it.unibz.inf.tptp.TPTP.tff_atom");
+						"it.unibz.inf.tptp.TPTP.Tff_atom");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1896,9 +1928,9 @@ ruletff_terminating_expression returns [EObject current=null]
 			{
 				newCompositeNode(grammarAccess.getTff_terminating_expressionAccess().getTff_expressionParserRuleCall_1_1());
 			}
-			this_tff_expression_2=ruletff_expression
+			this_Tff_expression_2=ruleTff_expression
 			{
-				$current = $this_tff_expression_2.current;
+				$current = $this_Tff_expression_2.current;
 				afterParserOrEnumRuleCall();
 			}
 			otherlv_3=')'
@@ -1927,7 +1959,7 @@ ruletff_terminating_expression returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getTff_terminating_expressionAccess().getExpTff_expressionParserRuleCall_2_1_0());
 					}
-					lv_exp_5_0=ruletff_expression
+					lv_exp_5_0=ruleTff_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTff_terminating_expressionRule());
@@ -1936,7 +1968,7 @@ ruletff_terminating_expression returns [EObject current=null]
 							$current,
 							"exp",
 							lv_exp_5_0,
-							"it.unibz.inf.tptp.TPTP.tff_expression");
+							"it.unibz.inf.tptp.TPTP.Tff_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -1948,7 +1980,7 @@ ruletff_terminating_expression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getTff_terminating_expressionAccess().getExpTff_quantifier_expressionParserRuleCall_3_0());
 				}
-				lv_exp_6_0=ruletff_quantifier_expression
+				lv_exp_6_0=ruleTff_quantifier_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTff_terminating_expressionRule());
@@ -1957,7 +1989,7 @@ ruletff_terminating_expression returns [EObject current=null]
 						$current,
 						"exp",
 						lv_exp_6_0,
-						"it.unibz.inf.tptp.TPTP.tff_quantifier_expression");
+						"it.unibz.inf.tptp.TPTP.Tff_quantifier_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1965,15 +1997,15 @@ ruletff_terminating_expression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_atom
-entryRuletff_atom returns [EObject current=null]:
+// Entry rule entryRuleTff_atom
+entryRuleTff_atom returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_atomRule()); }
-	iv_ruletff_atom=ruletff_atom
-	{ $current=$iv_ruletff_atom.current; }
+	iv_ruleTff_atom=ruleTff_atom
+	{ $current=$iv_ruleTff_atom.current; }
 	EOF;
 
-// Rule tff_atom
-ruletff_atom returns [EObject current=null]
+// Rule Tff_atom
+ruleTff_atom returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1984,59 +2016,59 @@ ruletff_atom returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getTff_atomAccess().getTff_varParserRuleCall_0());
 		}
-		this_tff_var_0=ruletff_var
+		this_Tff_var_0=ruleTff_var
 		{
-			$current = $this_tff_var_0.current;
+			$current = $this_Tff_var_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getTff_atomAccess().getTff_atom_literalParserRuleCall_1());
 		}
-		this_tff_atom_literal_1=ruletff_atom_literal
+		this_Tff_atom_literal_1=ruleTff_atom_literal
 		{
-			$current = $this_tff_atom_literal_1.current;
+			$current = $this_Tff_atom_literal_1.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getTff_atomAccess().getTff_constantParserRuleCall_2());
 		}
-		this_tff_constant_2=ruletff_constant
+		this_Tff_constant_2=ruleTff_constant
 		{
-			$current = $this_tff_constant_2.current;
+			$current = $this_Tff_constant_2.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getTff_atomAccess().getTff_predefined_function_1_argsParserRuleCall_3());
 		}
-		this_tff_predefined_function_1_args_3=ruletff_predefined_function_1_args
+		this_Tff_predefined_function_1_args_3=ruleTff_predefined_function_1_args
 		{
-			$current = $this_tff_predefined_function_1_args_3.current;
+			$current = $this_Tff_predefined_function_1_args_3.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getTff_atomAccess().getTff_predefined_function_2_argsParserRuleCall_4());
 		}
-		this_tff_predefined_function_2_args_4=ruletff_predefined_function_2_args
+		this_Tff_predefined_function_2_args_4=ruleTff_predefined_function_2_args
 		{
-			$current = $this_tff_predefined_function_2_args_4.current;
+			$current = $this_Tff_predefined_function_2_args_4.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
 ;
 
-// Entry rule entryRuletff_constant
-entryRuletff_constant returns [EObject current=null]:
+// Entry rule entryRuleTff_constant
+entryRuleTff_constant returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_constantRule()); }
-	iv_ruletff_constant=ruletff_constant
-	{ $current=$iv_ruletff_constant.current; }
+	iv_ruleTff_constant=ruleTff_constant
+	{ $current=$iv_ruleTff_constant.current; }
 	EOF;
 
-// Rule tff_constant
-ruletff_constant returns [EObject current=null]
+// Rule Tff_constant
+ruleTff_constant returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2051,7 +2083,7 @@ ruletff_constant returns [EObject current=null]
 						{
 							newCompositeNode(grammarAccess.getTff_constantAccess().getNameLower_token_and_keywordParserRuleCall_0_0_0_0());
 						}
-						lv_name_0_1=rulelower_token_and_keyword
+						lv_name_0_1=ruleLower_token_and_keyword
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getTff_constantRule());
@@ -2060,7 +2092,7 @@ ruletff_constant returns [EObject current=null]
 								$current,
 								"name",
 								lv_name_0_1,
-								"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+								"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 							afterParserOrEnumRuleCall();
 						}
 						    |
@@ -2091,7 +2123,7 @@ ruletff_constant returns [EObject current=null]
 						{
 							newCompositeNode(grammarAccess.getTff_constantAccess().getParamTff_atomParserRuleCall_0_1_1_0());
 						}
-						lv_param_2_0=ruletff_atom
+						lv_param_2_0=ruleTff_atom
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getTff_constantRule());
@@ -2100,7 +2132,7 @@ ruletff_constant returns [EObject current=null]
 								$current,
 								"param",
 								lv_param_2_0,
-								"it.unibz.inf.tptp.TPTP.tff_atom");
+								"it.unibz.inf.tptp.TPTP.Tff_atom");
 							afterParserOrEnumRuleCall();
 						}
 					)
@@ -2115,7 +2147,7 @@ ruletff_constant returns [EObject current=null]
 							{
 								newCompositeNode(grammarAccess.getTff_constantAccess().getParamTff_atomParserRuleCall_0_1_2_1_0());
 							}
-							lv_param_4_0=ruletff_atom
+							lv_param_4_0=ruleTff_atom
 							{
 								if ($current==null) {
 									$current = createModelElementForParent(grammarAccess.getTff_constantRule());
@@ -2124,7 +2156,7 @@ ruletff_constant returns [EObject current=null]
 									$current,
 									"param",
 									lv_param_4_0,
-									"it.unibz.inf.tptp.TPTP.tff_atom");
+									"it.unibz.inf.tptp.TPTP.Tff_atom");
 								afterParserOrEnumRuleCall();
 							}
 						)
@@ -2143,7 +2175,7 @@ ruletff_constant returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getTff_constantAccess().getTopLower_token_and_keywordParserRuleCall_1_0_0());
 					}
-					lv_top_6_0=rulelower_token_and_keyword
+					lv_top_6_0=ruleLower_token_and_keyword
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTff_constantRule());
@@ -2152,7 +2184,7 @@ ruletff_constant returns [EObject current=null]
 							$current,
 							"top",
 							lv_top_6_0,
-							"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+							"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -2176,7 +2208,7 @@ ruletff_constant returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getTff_constantAccess().getBottomLower_token_and_keywordParserRuleCall_1_2_0());
 					}
-					lv_bottom_8_0=rulelower_token_and_keyword
+					lv_bottom_8_0=ruleLower_token_and_keyword
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTff_constantRule());
@@ -2185,7 +2217,7 @@ ruletff_constant returns [EObject current=null]
 							$current,
 							"bottom",
 							lv_bottom_8_0,
-							"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+							"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -2194,15 +2226,15 @@ ruletff_constant returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_atom_literal
-entryRuletff_atom_literal returns [EObject current=null]:
+// Entry rule entryRuleTff_atom_literal
+entryRuleTff_atom_literal returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_atom_literalRule()); }
-	iv_ruletff_atom_literal=ruletff_atom_literal
-	{ $current=$iv_ruletff_atom_literal.current; }
+	iv_ruleTff_atom_literal=ruleTff_atom_literal
+	{ $current=$iv_ruleTff_atom_literal.current; }
 	EOF;
 
-// Rule tff_atom_literal
-ruletff_atom_literal returns [EObject current=null]
+// Rule Tff_atom_literal
+ruleTff_atom_literal returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2238,15 +2270,15 @@ ruletff_atom_literal returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_predefined_function_1_args
-entryRuletff_predefined_function_1_args returns [EObject current=null]:
+// Entry rule entryRuleTff_predefined_function_1_args
+entryRuleTff_predefined_function_1_args returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_predefined_function_1_argsRule()); }
-	iv_ruletff_predefined_function_1_args=ruletff_predefined_function_1_args
-	{ $current=$iv_ruletff_predefined_function_1_args.current; }
+	iv_ruleTff_predefined_function_1_args=ruleTff_predefined_function_1_args
+	{ $current=$iv_ruleTff_predefined_function_1_args.current; }
 	EOF;
 
-// Rule tff_predefined_function_1_args
-ruletff_predefined_function_1_args returns [EObject current=null]
+// Rule Tff_predefined_function_1_args
+ruleTff_predefined_function_1_args returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2334,7 +2366,7 @@ ruletff_predefined_function_1_args returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getTff_predefined_function_1_argsAccess().getParamTff_expressionParserRuleCall_2_0());
 				}
-				lv_param_2_0=ruletff_expression
+				lv_param_2_0=ruleTff_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTff_predefined_function_1_argsRule());
@@ -2343,7 +2375,7 @@ ruletff_predefined_function_1_args returns [EObject current=null]
 						$current,
 						"param",
 						lv_param_2_0,
-						"it.unibz.inf.tptp.TPTP.tff_expression");
+						"it.unibz.inf.tptp.TPTP.Tff_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2355,15 +2387,15 @@ ruletff_predefined_function_1_args returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_predefined_function_2_args
-entryRuletff_predefined_function_2_args returns [EObject current=null]:
+// Entry rule entryRuleTff_predefined_function_2_args
+entryRuleTff_predefined_function_2_args returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_predefined_function_2_argsRule()); }
-	iv_ruletff_predefined_function_2_args=ruletff_predefined_function_2_args
-	{ $current=$iv_ruletff_predefined_function_2_args.current; }
+	iv_ruleTff_predefined_function_2_args=ruleTff_predefined_function_2_args
+	{ $current=$iv_ruleTff_predefined_function_2_args.current; }
 	EOF;
 
-// Rule tff_predefined_function_2_args
-ruletff_predefined_function_2_args returns [EObject current=null]
+// Rule Tff_predefined_function_2_args
+ruleTff_predefined_function_2_args returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2550,7 +2582,7 @@ ruletff_predefined_function_2_args returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getTff_predefined_function_2_argsAccess().getParamTff_expressionParserRuleCall_2_0());
 				}
-				lv_param_2_0=ruletff_expression
+				lv_param_2_0=ruleTff_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTff_predefined_function_2_argsRule());
@@ -2559,7 +2591,7 @@ ruletff_predefined_function_2_args returns [EObject current=null]
 						$current,
 						"param",
 						lv_param_2_0,
-						"it.unibz.inf.tptp.TPTP.tff_expression");
+						"it.unibz.inf.tptp.TPTP.Tff_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2573,7 +2605,7 @@ ruletff_predefined_function_2_args returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getTff_predefined_function_2_argsAccess().getParamTff_expressionParserRuleCall_4_0());
 				}
-				lv_param_4_0=ruletff_expression
+				lv_param_4_0=ruleTff_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTff_predefined_function_2_argsRule());
@@ -2582,7 +2614,7 @@ ruletff_predefined_function_2_args returns [EObject current=null]
 						$current,
 						"param",
 						lv_param_4_0,
-						"it.unibz.inf.tptp.TPTP.tff_expression");
+						"it.unibz.inf.tptp.TPTP.Tff_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2594,15 +2626,15 @@ ruletff_predefined_function_2_args returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_var
-entryRuletff_var returns [EObject current=null]:
+// Entry rule entryRuleTff_var
+entryRuleTff_var returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_varRule()); }
-	iv_ruletff_var=ruletff_var
-	{ $current=$iv_ruletff_var.current; }
+	iv_ruleTff_var=ruleTff_var
+	{ $current=$iv_ruleTff_var.current; }
 	EOF;
 
-// Rule tff_var
-ruletff_var returns [EObject current=null]
+// Rule Tff_var
+ruleTff_var returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2629,15 +2661,15 @@ ruletff_var returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_var_declaration
-entryRuletff_var_declaration returns [EObject current=null]:
+// Entry rule entryRuleTff_var_declaration
+entryRuleTff_var_declaration returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_var_declarationRule()); }
-	iv_ruletff_var_declaration=ruletff_var_declaration
-	{ $current=$iv_ruletff_var_declaration.current; }
+	iv_ruleTff_var_declaration=ruleTff_var_declaration
+	{ $current=$iv_ruleTff_var_declaration.current; }
 	EOF;
 
-// Rule tff_var_declaration
-ruletff_var_declaration returns [EObject current=null]
+// Rule Tff_var_declaration
+ruleTff_var_declaration returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2650,7 +2682,7 @@ ruletff_var_declaration returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getTff_var_declarationAccess().getVarTff_varParserRuleCall_0_0());
 				}
-				lv_var_0_0=ruletff_var
+				lv_var_0_0=ruleTff_var
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTff_var_declarationRule());
@@ -2659,7 +2691,7 @@ ruletff_var_declaration returns [EObject current=null]
 						$current,
 						"var",
 						lv_var_0_0,
-						"it.unibz.inf.tptp.TPTP.tff_var");
+						"it.unibz.inf.tptp.TPTP.Tff_var");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2673,7 +2705,7 @@ ruletff_var_declaration returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getTff_var_declarationAccess().getVartypeTff_type_expressionParserRuleCall_2_0());
 				}
-				lv_vartype_2_0=ruletff_type_expression
+				lv_vartype_2_0=ruleTff_type_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTff_var_declarationRule());
@@ -2682,7 +2714,7 @@ ruletff_var_declaration returns [EObject current=null]
 						$current,
 						"vartype",
 						lv_vartype_2_0,
-						"it.unibz.inf.tptp.TPTP.tff_type_expression");
+						"it.unibz.inf.tptp.TPTP.Tff_type_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2690,15 +2722,15 @@ ruletff_var_declaration returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_quantifier_expression
-entryRuletff_quantifier_expression returns [EObject current=null]:
+// Entry rule entryRuleTff_quantifier_expression
+entryRuleTff_quantifier_expression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_quantifier_expressionRule()); }
-	iv_ruletff_quantifier_expression=ruletff_quantifier_expression
-	{ $current=$iv_ruletff_quantifier_expression.current; }
+	iv_ruleTff_quantifier_expression=ruleTff_quantifier_expression
+	{ $current=$iv_ruleTff_quantifier_expression.current; }
 	EOF;
 
-// Rule tff_quantifier_expression
-ruletff_quantifier_expression returns [EObject current=null]
+// Rule Tff_quantifier_expression
+ruleTff_quantifier_expression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2742,7 +2774,7 @@ ruletff_quantifier_expression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getTff_quantifier_expressionAccess().getParamTff_variable_listParserRuleCall_2_0());
 				}
-				lv_param_2_0=ruletff_variable_list
+				lv_param_2_0=ruleTff_variable_list
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTff_quantifier_expressionRule());
@@ -2751,7 +2783,7 @@ ruletff_quantifier_expression returns [EObject current=null]
 						$current,
 						"param",
 						lv_param_2_0,
-						"it.unibz.inf.tptp.TPTP.tff_variable_list");
+						"it.unibz.inf.tptp.TPTP.Tff_variable_list");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2769,7 +2801,7 @@ ruletff_quantifier_expression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getTff_quantifier_expressionAccess().getExpTff_expressionParserRuleCall_5_0());
 				}
-				lv_exp_5_0=ruletff_expression
+				lv_exp_5_0=ruleTff_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTff_quantifier_expressionRule());
@@ -2778,7 +2810,7 @@ ruletff_quantifier_expression returns [EObject current=null]
 						$current,
 						"exp",
 						lv_exp_5_0,
-						"it.unibz.inf.tptp.TPTP.tff_expression");
+						"it.unibz.inf.tptp.TPTP.Tff_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2786,15 +2818,15 @@ ruletff_quantifier_expression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_type_quantifier_epression
-entryRuletff_type_quantifier_epression returns [EObject current=null]:
+// Entry rule entryRuleTff_type_quantifier_epression
+entryRuleTff_type_quantifier_epression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_type_quantifier_epressionRule()); }
-	iv_ruletff_type_quantifier_epression=ruletff_type_quantifier_epression
-	{ $current=$iv_ruletff_type_quantifier_epression.current; }
+	iv_ruleTff_type_quantifier_epression=ruleTff_type_quantifier_epression
+	{ $current=$iv_ruleTff_type_quantifier_epression.current; }
 	EOF;
 
-// Rule tff_type_quantifier_epression
-ruletff_type_quantifier_epression returns [EObject current=null]
+// Rule Tff_type_quantifier_epression
+ruleTff_type_quantifier_epression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2825,7 +2857,7 @@ ruletff_type_quantifier_epression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getTff_type_quantifier_epressionAccess().getParamTff_variable_listParserRuleCall_2_0());
 				}
-				lv_param_2_0=ruletff_variable_list
+				lv_param_2_0=ruleTff_variable_list
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTff_type_quantifier_epressionRule());
@@ -2834,7 +2866,7 @@ ruletff_type_quantifier_epression returns [EObject current=null]
 						$current,
 						"param",
 						lv_param_2_0,
-						"it.unibz.inf.tptp.TPTP.tff_variable_list");
+						"it.unibz.inf.tptp.TPTP.Tff_variable_list");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2852,7 +2884,7 @@ ruletff_type_quantifier_epression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getTff_type_quantifier_epressionAccess().getExpTff_type_expressionParserRuleCall_5_0());
 				}
-				lv_exp_5_0=ruletff_type_expression
+				lv_exp_5_0=ruleTff_type_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTff_type_quantifier_epressionRule());
@@ -2861,7 +2893,7 @@ ruletff_type_quantifier_epression returns [EObject current=null]
 						$current,
 						"exp",
 						lv_exp_5_0,
-						"it.unibz.inf.tptp.TPTP.tff_type_expression");
+						"it.unibz.inf.tptp.TPTP.Tff_type_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2869,15 +2901,15 @@ ruletff_type_quantifier_epression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuletff_variable_list
-entryRuletff_variable_list returns [EObject current=null]:
+// Entry rule entryRuleTff_variable_list
+entryRuleTff_variable_list returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTff_variable_listRule()); }
-	iv_ruletff_variable_list=ruletff_variable_list
-	{ $current=$iv_ruletff_variable_list.current; }
+	iv_ruleTff_variable_list=ruleTff_variable_list
+	{ $current=$iv_ruleTff_variable_list.current; }
 	EOF;
 
-// Rule tff_variable_list
-ruletff_variable_list returns [EObject current=null]
+// Rule Tff_variable_list
+ruleTff_variable_list returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2890,7 +2922,7 @@ ruletff_variable_list returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getTff_variable_listAccess().getParamsTff_var_declarationParserRuleCall_0_0());
 				}
-				lv_params_0_0=ruletff_var_declaration
+				lv_params_0_0=ruleTff_var_declaration
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTff_variable_listRule());
@@ -2899,7 +2931,7 @@ ruletff_variable_list returns [EObject current=null]
 						$current,
 						"params",
 						lv_params_0_0,
-						"it.unibz.inf.tptp.TPTP.tff_var_declaration");
+						"it.unibz.inf.tptp.TPTP.Tff_var_declaration");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2914,7 +2946,7 @@ ruletff_variable_list returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getTff_variable_listAccess().getParamsTff_var_declarationParserRuleCall_1_1_0());
 					}
-					lv_params_2_0=ruletff_var_declaration
+					lv_params_2_0=ruleTff_var_declaration
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTff_variable_listRule());
@@ -2923,7 +2955,7 @@ ruletff_variable_list returns [EObject current=null]
 							$current,
 							"params",
 							lv_params_2_0,
-							"it.unibz.inf.tptp.TPTP.tff_var_declaration");
+							"it.unibz.inf.tptp.TPTP.Tff_var_declaration");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -2932,15 +2964,15 @@ ruletff_variable_list returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulecnf_input
-entryRulecnf_input returns [EObject current=null]:
+// Entry rule entryRuleCnf_input
+entryRuleCnf_input returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getCnf_inputRule()); }
-	iv_rulecnf_input=rulecnf_input
-	{ $current=$iv_rulecnf_input.current; }
+	iv_ruleCnf_input=ruleCnf_input
+	{ $current=$iv_ruleCnf_input.current; }
 	EOF;
 
-// Rule cnf_input
-rulecnf_input returns [EObject current=null]
+// Rule Cnf_input
+ruleCnf_input returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2951,32 +2983,32 @@ rulecnf_input returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getCnf_inputAccess().getCnf_rootParserRuleCall_0());
 		}
-		this_cnf_root_0=rulecnf_root
+		this_Cnf_root_0=ruleCnf_root
 		{
-			$current = $this_cnf_root_0.current;
+			$current = $this_Cnf_root_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getCnf_inputAccess().getIncludeParserRuleCall_1());
 		}
-		this_include_1=ruleinclude
+		this_Include_1=ruleInclude
 		{
-			$current = $this_include_1.current;
+			$current = $this_Include_1.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
 ;
 
-// Entry rule entryRulecnf_root
-entryRulecnf_root returns [EObject current=null]:
+// Entry rule entryRuleCnf_root
+entryRuleCnf_root returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getCnf_rootRule()); }
-	iv_rulecnf_root=rulecnf_root
-	{ $current=$iv_rulecnf_root.current; }
+	iv_ruleCnf_root=ruleCnf_root
+	{ $current=$iv_ruleCnf_root.current; }
 	EOF;
 
-// Rule cnf_root
-rulecnf_root returns [EObject current=null]
+// Rule Cnf_root
+ruleCnf_root returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2984,17 +3016,21 @@ rulecnf_root returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='cnf('
+		otherlv_0='cnf'
 		{
 			newLeafNode(otherlv_0, grammarAccess.getCnf_rootAccess().getCnfKeyword_0());
+		}
+		otherlv_1='('
+		{
+			newLeafNode(otherlv_1, grammarAccess.getCnf_rootAccess().getLeftParenthesisKeyword_1());
 		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getCnf_rootAccess().getNameLower_token_and_keywordParserRuleCall_1_0_0());
+						newCompositeNode(grammarAccess.getCnf_rootAccess().getNameLower_token_and_keywordParserRuleCall_2_0_0());
 					}
-					lv_name_1_1=rulelower_token_and_keyword
+					lv_name_2_1=ruleLower_token_and_keyword
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCnf_rootRule());
@@ -3002,14 +3038,14 @@ rulecnf_root returns [EObject current=null]
 						set(
 							$current,
 							"name",
-							lv_name_1_1,
-							"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+							lv_name_2_1,
+							"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 						afterParserOrEnumRuleCall();
 					}
 					    |
-					lv_name_1_2=RULE_STRING
+					lv_name_2_2=RULE_STRING
 					{
-						newLeafNode(lv_name_1_2, grammarAccess.getCnf_rootAccess().getNameSTRINGTerminalRuleCall_1_0_1());
+						newLeafNode(lv_name_2_2, grammarAccess.getCnf_rootAccess().getNameSTRINGTerminalRuleCall_2_0_1());
 					}
 					{
 						if ($current==null) {
@@ -3018,75 +3054,75 @@ rulecnf_root returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"name",
-							lv_name_1_2,
+							lv_name_2_2,
 							"it.unibz.inf.tptp.TPTP.STRING");
 					}
 				)
 			)
 		)
-		otherlv_2=','
+		otherlv_3=','
 		{
-			newLeafNode(otherlv_2, grammarAccess.getCnf_rootAccess().getCommaKeyword_2());
+			newLeafNode(otherlv_3, grammarAccess.getCnf_rootAccess().getCommaKeyword_3());
 		}
 		(
 			(
 				(
-					lv_formula_role_3_1='axiom'
+					lv_formula_role_4_1='axiom'
 					{
-						newLeafNode(lv_formula_role_3_1, grammarAccess.getCnf_rootAccess().getFormula_roleAxiomKeyword_3_0_0());
+						newLeafNode(lv_formula_role_4_1, grammarAccess.getCnf_rootAccess().getFormula_roleAxiomKeyword_4_0_0());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getCnf_rootRule());
 						}
-						setWithLastConsumed($current, "formula_role", lv_formula_role_3_1, null);
+						setWithLastConsumed($current, "formula_role", lv_formula_role_4_1, null);
 					}
 					    |
-					lv_formula_role_3_2='hypothesis'
+					lv_formula_role_4_2='hypothesis'
 					{
-						newLeafNode(lv_formula_role_3_2, grammarAccess.getCnf_rootAccess().getFormula_roleHypothesisKeyword_3_0_1());
+						newLeafNode(lv_formula_role_4_2, grammarAccess.getCnf_rootAccess().getFormula_roleHypothesisKeyword_4_0_1());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getCnf_rootRule());
 						}
-						setWithLastConsumed($current, "formula_role", lv_formula_role_3_2, null);
+						setWithLastConsumed($current, "formula_role", lv_formula_role_4_2, null);
 					}
 					    |
-					lv_formula_role_3_3='negated_conjecture'
+					lv_formula_role_4_3='negated_conjecture'
 					{
-						newLeafNode(lv_formula_role_3_3, grammarAccess.getCnf_rootAccess().getFormula_roleNegated_conjectureKeyword_3_0_2());
+						newLeafNode(lv_formula_role_4_3, grammarAccess.getCnf_rootAccess().getFormula_roleNegated_conjectureKeyword_4_0_2());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getCnf_rootRule());
 						}
-						setWithLastConsumed($current, "formula_role", lv_formula_role_3_3, null);
+						setWithLastConsumed($current, "formula_role", lv_formula_role_4_3, null);
 					}
 					    |
-					lv_formula_role_3_4='plain'
+					lv_formula_role_4_4='plain'
 					{
-						newLeafNode(lv_formula_role_3_4, grammarAccess.getCnf_rootAccess().getFormula_rolePlainKeyword_3_0_3());
+						newLeafNode(lv_formula_role_4_4, grammarAccess.getCnf_rootAccess().getFormula_rolePlainKeyword_4_0_3());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getCnf_rootRule());
 						}
-						setWithLastConsumed($current, "formula_role", lv_formula_role_3_4, null);
+						setWithLastConsumed($current, "formula_role", lv_formula_role_4_4, null);
 					}
 				)
 			)
 		)
-		otherlv_4=','
+		otherlv_5=','
 		{
-			newLeafNode(otherlv_4, grammarAccess.getCnf_rootAccess().getCommaKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getCnf_rootAccess().getCommaKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getCnf_rootAccess().getExpCnf_formula_type_definitionParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getCnf_rootAccess().getExpCnf_formula_type_definitionParserRuleCall_6_0());
 				}
-				lv_exp_5_0=rulecnf_formula_type_definition
+				lv_exp_6_0=ruleCnf_formula_type_definition
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCnf_rootRule());
@@ -3094,28 +3130,32 @@ rulecnf_root returns [EObject current=null]
 					set(
 						$current,
 						"exp",
-						lv_exp_5_0,
-						"it.unibz.inf.tptp.TPTP.cnf_formula_type_definition");
+						lv_exp_6_0,
+						"it.unibz.inf.tptp.TPTP.Cnf_formula_type_definition");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_6=').'
+		otherlv_7=')'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getCnf_rootAccess().getRightParenthesisFullStopKeyword_6());
+			newLeafNode(otherlv_7, grammarAccess.getCnf_rootAccess().getRightParenthesisKeyword_7());
+		}
+		otherlv_8='.'
+		{
+			newLeafNode(otherlv_8, grammarAccess.getCnf_rootAccess().getFullStopKeyword_8());
 		}
 	)
 ;
 
-// Entry rule entryRulecnf_formula_type_definition
-entryRulecnf_formula_type_definition returns [EObject current=null]:
+// Entry rule entryRuleCnf_formula_type_definition
+entryRuleCnf_formula_type_definition returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getCnf_formula_type_definitionRule()); }
-	iv_rulecnf_formula_type_definition=rulecnf_formula_type_definition
-	{ $current=$iv_rulecnf_formula_type_definition.current; }
+	iv_ruleCnf_formula_type_definition=ruleCnf_formula_type_definition
+	{ $current=$iv_ruleCnf_formula_type_definition.current; }
 	EOF;
 
-// Rule cnf_formula_type_definition
-rulecnf_formula_type_definition returns [EObject current=null]
+// Rule Cnf_formula_type_definition
+ruleCnf_formula_type_definition returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -3133,7 +3173,7 @@ rulecnf_formula_type_definition returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getCnf_formula_type_definitionAccess().getDisjunctionCnf_orParserRuleCall_0_1_0());
 					}
-					lv_disjunction_1_0=rulecnf_or
+					lv_disjunction_1_0=ruleCnf_or
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCnf_formula_type_definitionRule());
@@ -3142,7 +3182,7 @@ rulecnf_formula_type_definition returns [EObject current=null]
 							$current,
 							"disjunction",
 							lv_disjunction_1_0,
-							"it.unibz.inf.tptp.TPTP.cnf_or");
+							"it.unibz.inf.tptp.TPTP.Cnf_or");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -3158,7 +3198,7 @@ rulecnf_formula_type_definition returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getCnf_formula_type_definitionAccess().getDisjunctionCnf_orParserRuleCall_1_0());
 				}
-				lv_disjunction_3_0=rulecnf_or
+				lv_disjunction_3_0=ruleCnf_or
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCnf_formula_type_definitionRule());
@@ -3167,7 +3207,7 @@ rulecnf_formula_type_definition returns [EObject current=null]
 						$current,
 						"disjunction",
 						lv_disjunction_3_0,
-						"it.unibz.inf.tptp.TPTP.cnf_or");
+						"it.unibz.inf.tptp.TPTP.Cnf_or");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -3175,15 +3215,15 @@ rulecnf_formula_type_definition returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulecnf_or
-entryRulecnf_or returns [EObject current=null]:
+// Entry rule entryRuleCnf_or
+entryRuleCnf_or returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getCnf_orRule()); }
-	iv_rulecnf_or=rulecnf_or
-	{ $current=$iv_rulecnf_or.current; }
+	iv_ruleCnf_or=ruleCnf_or
+	{ $current=$iv_ruleCnf_or.current; }
 	EOF;
 
-// Rule cnf_or
-rulecnf_or returns [EObject current=null]
+// Rule Cnf_or
+ruleCnf_or returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -3196,7 +3236,7 @@ rulecnf_or returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getCnf_orAccess().getOrCnf_notParserRuleCall_0_0());
 				}
-				lv_or_0_0=rulecnf_not
+				lv_or_0_0=ruleCnf_not
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCnf_orRule());
@@ -3205,7 +3245,7 @@ rulecnf_or returns [EObject current=null]
 						$current,
 						"or",
 						lv_or_0_0,
-						"it.unibz.inf.tptp.TPTP.cnf_not");
+						"it.unibz.inf.tptp.TPTP.Cnf_not");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -3220,7 +3260,7 @@ rulecnf_or returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getCnf_orAccess().getOrCnf_notParserRuleCall_1_1_0());
 					}
-					lv_or_2_0=rulecnf_not
+					lv_or_2_0=ruleCnf_not
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCnf_orRule());
@@ -3229,7 +3269,7 @@ rulecnf_or returns [EObject current=null]
 							$current,
 							"or",
 							lv_or_2_0,
-							"it.unibz.inf.tptp.TPTP.cnf_not");
+							"it.unibz.inf.tptp.TPTP.Cnf_not");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -3238,15 +3278,15 @@ rulecnf_or returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulecnf_not
-entryRulecnf_not returns [EObject current=null]:
+// Entry rule entryRuleCnf_not
+entryRuleCnf_not returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getCnf_notRule()); }
-	iv_rulecnf_not=rulecnf_not
-	{ $current=$iv_rulecnf_not.current; }
+	iv_ruleCnf_not=ruleCnf_not
+	{ $current=$iv_ruleCnf_not.current; }
 	EOF;
 
-// Rule cnf_not
-rulecnf_not returns [EObject current=null]
+// Rule Cnf_not
+ruleCnf_not returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -3273,7 +3313,7 @@ rulecnf_not returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getCnf_notAccess().getLiteralCnf_equalityParserRuleCall_1_0());
 				}
-				lv_literal_1_0=rulecnf_equality
+				lv_literal_1_0=ruleCnf_equality
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCnf_notRule());
@@ -3282,7 +3322,7 @@ rulecnf_not returns [EObject current=null]
 						$current,
 						"literal",
 						lv_literal_1_0,
-						"it.unibz.inf.tptp.TPTP.cnf_equality");
+						"it.unibz.inf.tptp.TPTP.Cnf_equality");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -3290,15 +3330,15 @@ rulecnf_not returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulecnf_equality
-entryRulecnf_equality returns [EObject current=null]:
+// Entry rule entryRuleCnf_equality
+entryRuleCnf_equality returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getCnf_equalityRule()); }
-	iv_rulecnf_equality=rulecnf_equality
-	{ $current=$iv_rulecnf_equality.current; }
+	iv_ruleCnf_equality=ruleCnf_equality
+	{ $current=$iv_ruleCnf_equality.current; }
 	EOF;
 
-// Rule cnf_equality
-rulecnf_equality returns [EObject current=null]
+// Rule Cnf_equality
+ruleCnf_equality returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -3311,7 +3351,7 @@ rulecnf_equality returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getCnf_equalityAccess().getExpLCnf_expressionParserRuleCall_0_0());
 				}
-				lv_expL_0_0=rulecnf_expression
+				lv_expL_0_0=ruleCnf_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCnf_equalityRule());
@@ -3320,7 +3360,7 @@ rulecnf_equality returns [EObject current=null]
 						$current,
 						"expL",
 						lv_expL_0_0,
-						"it.unibz.inf.tptp.TPTP.cnf_expression");
+						"it.unibz.inf.tptp.TPTP.Cnf_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -3358,7 +3398,7 @@ rulecnf_equality returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getCnf_equalityAccess().getExpRCnf_expressionParserRuleCall_1_1_0());
 					}
-					lv_expR_2_0=rulecnf_expression
+					lv_expR_2_0=ruleCnf_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCnf_equalityRule());
@@ -3367,7 +3407,7 @@ rulecnf_equality returns [EObject current=null]
 							$current,
 							"expR",
 							lv_expR_2_0,
-							"it.unibz.inf.tptp.TPTP.cnf_expression");
+							"it.unibz.inf.tptp.TPTP.Cnf_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -3376,15 +3416,15 @@ rulecnf_equality returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulecnf_expression
-entryRulecnf_expression returns [EObject current=null]:
+// Entry rule entryRuleCnf_expression
+entryRuleCnf_expression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getCnf_expressionRule()); }
-	iv_rulecnf_expression=rulecnf_expression
-	{ $current=$iv_rulecnf_expression.current; }
+	iv_ruleCnf_expression=ruleCnf_expression
+	{ $current=$iv_ruleCnf_expression.current; }
 	EOF;
 
-// Rule cnf_expression
-rulecnf_expression returns [EObject current=null]
+// Rule Cnf_expression
+ruleCnf_expression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -3395,18 +3435,18 @@ rulecnf_expression returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getCnf_expressionAccess().getCnf_constantParserRuleCall_0());
 		}
-		this_cnf_constant_0=rulecnf_constant
+		this_Cnf_constant_0=ruleCnf_constant
 		{
-			$current = $this_cnf_constant_0.current;
+			$current = $this_Cnf_constant_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getCnf_expressionAccess().getCnf_varParserRuleCall_1());
 		}
-		this_cnf_var_1=rulecnf_var
+		this_Cnf_var_1=ruleCnf_var
 		{
-			$current = $this_cnf_var_1.current;
+			$current = $this_Cnf_var_1.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
@@ -3415,7 +3455,7 @@ rulecnf_expression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getCnf_expressionAccess().getCnf_expCnf_statement_literalParserRuleCall_2_0());
 				}
-				lv_cnf_exp_2_0=rulecnf_statement_literal
+				lv_cnf_exp_2_0=ruleCnf_statement_literal
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCnf_expressionRule());
@@ -3424,7 +3464,7 @@ rulecnf_expression returns [EObject current=null]
 						$current,
 						"cnf_exp",
 						lv_cnf_exp_2_0,
-						"it.unibz.inf.tptp.TPTP.cnf_statement_literal");
+						"it.unibz.inf.tptp.TPTP.Cnf_statement_literal");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -3432,15 +3472,15 @@ rulecnf_expression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulecnf_constant
-entryRulecnf_constant returns [EObject current=null]:
+// Entry rule entryRuleCnf_constant
+entryRuleCnf_constant returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getCnf_constantRule()); }
-	iv_rulecnf_constant=rulecnf_constant
-	{ $current=$iv_rulecnf_constant.current; }
+	iv_ruleCnf_constant=ruleCnf_constant
+	{ $current=$iv_ruleCnf_constant.current; }
 	EOF;
 
-// Rule cnf_constant
-rulecnf_constant returns [EObject current=null]
+// Rule Cnf_constant
+ruleCnf_constant returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -3454,7 +3494,7 @@ rulecnf_constant returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getCnf_constantAccess().getNameLower_token_and_keywordParserRuleCall_0_0_0());
 					}
-					lv_name_0_1=rulelower_token_and_keyword
+					lv_name_0_1=ruleLower_token_and_keyword
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCnf_constantRule());
@@ -3463,7 +3503,7 @@ rulecnf_constant returns [EObject current=null]
 							$current,
 							"name",
 							lv_name_0_1,
-							"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+							"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 						afterParserOrEnumRuleCall();
 					}
 					    |
@@ -3494,7 +3534,7 @@ rulecnf_constant returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getCnf_constantAccess().getParamCnf_expressionParserRuleCall_1_1_0());
 					}
-					lv_param_2_0=rulecnf_expression
+					lv_param_2_0=ruleCnf_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCnf_constantRule());
@@ -3503,7 +3543,7 @@ rulecnf_constant returns [EObject current=null]
 							$current,
 							"param",
 							lv_param_2_0,
-							"it.unibz.inf.tptp.TPTP.cnf_expression");
+							"it.unibz.inf.tptp.TPTP.Cnf_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -3518,7 +3558,7 @@ rulecnf_constant returns [EObject current=null]
 						{
 							newCompositeNode(grammarAccess.getCnf_constantAccess().getParamCnf_expressionParserRuleCall_1_2_1_0());
 						}
-						lv_param_4_0=rulecnf_expression
+						lv_param_4_0=ruleCnf_expression
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getCnf_constantRule());
@@ -3527,7 +3567,7 @@ rulecnf_constant returns [EObject current=null]
 								$current,
 								"param",
 								lv_param_4_0,
-								"it.unibz.inf.tptp.TPTP.cnf_expression");
+								"it.unibz.inf.tptp.TPTP.Cnf_expression");
 							afterParserOrEnumRuleCall();
 						}
 					)
@@ -3541,15 +3581,15 @@ rulecnf_constant returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulecnf_var
-entryRulecnf_var returns [EObject current=null]:
+// Entry rule entryRuleCnf_var
+entryRuleCnf_var returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getCnf_varRule()); }
-	iv_rulecnf_var=rulecnf_var
-	{ $current=$iv_rulecnf_var.current; }
+	iv_ruleCnf_var=ruleCnf_var
+	{ $current=$iv_ruleCnf_var.current; }
 	EOF;
 
-// Rule cnf_var
-rulecnf_var returns [EObject current=null]
+// Rule Cnf_var
+ruleCnf_var returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -3576,15 +3616,15 @@ rulecnf_var returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulecnf_statement_literal
-entryRulecnf_statement_literal returns [String current=null]:
+// Entry rule entryRuleCnf_statement_literal
+entryRuleCnf_statement_literal returns [String current=null]:
 	{ newCompositeNode(grammarAccess.getCnf_statement_literalRule()); }
-	iv_rulecnf_statement_literal=rulecnf_statement_literal
-	{ $current=$iv_rulecnf_statement_literal.current.getText(); }
+	iv_ruleCnf_statement_literal=ruleCnf_statement_literal
+	{ $current=$iv_ruleCnf_statement_literal.current.getText(); }
 	EOF;
 
-// Rule cnf_statement_literal
-rulecnf_statement_literal returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+// Rule Cnf_statement_literal
+ruleCnf_statement_literal returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
 	enterRule();
 }
@@ -3606,15 +3646,15 @@ rulecnf_statement_literal returns [AntlrDatatypeRuleToken current=new AntlrDatat
 	)
 ;
 
-// Entry rule entryRulethf_input
-entryRulethf_input returns [EObject current=null]:
+// Entry rule entryRuleThf_input
+entryRuleThf_input returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_inputRule()); }
-	iv_rulethf_input=rulethf_input
-	{ $current=$iv_rulethf_input.current; }
+	iv_ruleThf_input=ruleThf_input
+	{ $current=$iv_ruleThf_input.current; }
 	EOF;
 
-// Rule thf_input
-rulethf_input returns [EObject current=null]
+// Rule Thf_input
+ruleThf_input returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -3625,32 +3665,32 @@ rulethf_input returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getThf_inputAccess().getThf_rootParserRuleCall_0());
 		}
-		this_thf_root_0=rulethf_root
+		this_Thf_root_0=ruleThf_root
 		{
-			$current = $this_thf_root_0.current;
+			$current = $this_Thf_root_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getThf_inputAccess().getIncludeParserRuleCall_1());
 		}
-		this_include_1=ruleinclude
+		this_Include_1=ruleInclude
 		{
-			$current = $this_include_1.current;
+			$current = $this_Include_1.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
 ;
 
-// Entry rule entryRulethf_root
-entryRulethf_root returns [EObject current=null]:
+// Entry rule entryRuleThf_root
+entryRuleThf_root returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_rootRule()); }
-	iv_rulethf_root=rulethf_root
-	{ $current=$iv_rulethf_root.current; }
+	iv_ruleThf_root=ruleThf_root
+	{ $current=$iv_ruleThf_root.current; }
 	EOF;
 
-// Rule thf_root
-rulethf_root returns [EObject current=null]
+// Rule Thf_root
+ruleThf_root returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -3659,17 +3699,21 @@ rulethf_root returns [EObject current=null]
 }:
 	(
 		(
-			otherlv_0='thf('
+			otherlv_0='thf'
 			{
 				newLeafNode(otherlv_0, grammarAccess.getThf_rootAccess().getThfKeyword_0_0());
+			}
+			otherlv_1='('
+			{
+				newLeafNode(otherlv_1, grammarAccess.getThf_rootAccess().getLeftParenthesisKeyword_0_1());
 			}
 			(
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getThf_rootAccess().getNameLower_token_and_keywordParserRuleCall_0_1_0_0());
+							newCompositeNode(grammarAccess.getThf_rootAccess().getNameLower_token_and_keywordParserRuleCall_0_2_0_0());
 						}
-						lv_name_1_1=rulelower_token_and_keyword
+						lv_name_2_1=ruleLower_token_and_keyword
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getThf_rootRule());
@@ -3677,14 +3721,14 @@ rulethf_root returns [EObject current=null]
 							set(
 								$current,
 								"name",
-								lv_name_1_1,
-								"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+								lv_name_2_1,
+								"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 							afterParserOrEnumRuleCall();
 						}
 						    |
-						lv_name_1_2=RULE_STRING
+						lv_name_2_2=RULE_STRING
 						{
-							newLeafNode(lv_name_1_2, grammarAccess.getThf_rootAccess().getNameSTRINGTerminalRuleCall_0_1_0_1());
+							newLeafNode(lv_name_2_2, grammarAccess.getThf_rootAccess().getNameSTRINGTerminalRuleCall_0_2_0_1());
 						}
 						{
 							if ($current==null) {
@@ -3693,40 +3737,40 @@ rulethf_root returns [EObject current=null]
 							setWithLastConsumed(
 								$current,
 								"name",
-								lv_name_1_2,
+								lv_name_2_2,
 								"it.unibz.inf.tptp.TPTP.STRING");
 						}
 					)
 				)
 			)
-			otherlv_2=','
+			otherlv_3=','
 			{
-				newLeafNode(otherlv_2, grammarAccess.getThf_rootAccess().getCommaKeyword_0_2());
+				newLeafNode(otherlv_3, grammarAccess.getThf_rootAccess().getCommaKeyword_0_3());
 			}
 			(
 				(
-					lv_formula_role_3_0='type'
+					lv_formula_role_4_0='type'
 					{
-						newLeafNode(lv_formula_role_3_0, grammarAccess.getThf_rootAccess().getFormula_roleTypeKeyword_0_3_0());
+						newLeafNode(lv_formula_role_4_0, grammarAccess.getThf_rootAccess().getFormula_roleTypeKeyword_0_4_0());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getThf_rootRule());
 						}
-						setWithLastConsumed($current, "formula_role", lv_formula_role_3_0, "type");
+						setWithLastConsumed($current, "formula_role", lv_formula_role_4_0, "type");
 					}
 				)
 			)
-			otherlv_4=','
+			otherlv_5=','
 			{
-				newLeafNode(otherlv_4, grammarAccess.getThf_rootAccess().getCommaKeyword_0_4());
+				newLeafNode(otherlv_5, grammarAccess.getThf_rootAccess().getCommaKeyword_0_5());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getThf_rootAccess().getDefThf_formula_type_definitionParserRuleCall_0_5_0());
+						newCompositeNode(grammarAccess.getThf_rootAccess().getDefThf_formula_type_definitionParserRuleCall_0_6_0());
 					}
-					lv_def_5_0=rulethf_formula_type_definition
+					lv_def_6_0=ruleThf_formula_type_definition
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getThf_rootRule());
@@ -3734,30 +3778,38 @@ rulethf_root returns [EObject current=null]
 						set(
 							$current,
 							"def",
-							lv_def_5_0,
-							"it.unibz.inf.tptp.TPTP.thf_formula_type_definition");
+							lv_def_6_0,
+							"it.unibz.inf.tptp.TPTP.Thf_formula_type_definition");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-			otherlv_6=').'
+			otherlv_7=')'
 			{
-				newLeafNode(otherlv_6, grammarAccess.getThf_rootAccess().getRightParenthesisFullStopKeyword_0_6());
+				newLeafNode(otherlv_7, grammarAccess.getThf_rootAccess().getRightParenthesisKeyword_0_7());
+			}
+			otherlv_8='.'
+			{
+				newLeafNode(otherlv_8, grammarAccess.getThf_rootAccess().getFullStopKeyword_0_8());
 			}
 		)
 		    |
 		(
-			otherlv_7='thf('
+			otherlv_9='thf'
 			{
-				newLeafNode(otherlv_7, grammarAccess.getThf_rootAccess().getThfKeyword_1_0());
+				newLeafNode(otherlv_9, grammarAccess.getThf_rootAccess().getThfKeyword_1_0());
+			}
+			otherlv_10='('
+			{
+				newLeafNode(otherlv_10, grammarAccess.getThf_rootAccess().getLeftParenthesisKeyword_1_1());
 			}
 			(
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getThf_rootAccess().getNameLower_token_and_keywordParserRuleCall_1_1_0_0());
+							newCompositeNode(grammarAccess.getThf_rootAccess().getNameLower_token_and_keywordParserRuleCall_1_2_0_0());
 						}
-						lv_name_8_1=rulelower_token_and_keyword
+						lv_name_11_1=ruleLower_token_and_keyword
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getThf_rootRule());
@@ -3765,14 +3817,14 @@ rulethf_root returns [EObject current=null]
 							set(
 								$current,
 								"name",
-								lv_name_8_1,
-								"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+								lv_name_11_1,
+								"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 							afterParserOrEnumRuleCall();
 						}
 						    |
-						lv_name_8_2=RULE_STRING
+						lv_name_11_2=RULE_STRING
 						{
-							newLeafNode(lv_name_8_2, grammarAccess.getThf_rootAccess().getNameSTRINGTerminalRuleCall_1_1_0_1());
+							newLeafNode(lv_name_11_2, grammarAccess.getThf_rootAccess().getNameSTRINGTerminalRuleCall_1_2_0_1());
 						}
 						{
 							if ($current==null) {
@@ -3781,97 +3833,97 @@ rulethf_root returns [EObject current=null]
 							setWithLastConsumed(
 								$current,
 								"name",
-								lv_name_8_2,
+								lv_name_11_2,
 								"it.unibz.inf.tptp.TPTP.STRING");
 						}
 					)
 				)
 			)
-			otherlv_9=','
+			otherlv_12=','
 			{
-				newLeafNode(otherlv_9, grammarAccess.getThf_rootAccess().getCommaKeyword_1_2());
+				newLeafNode(otherlv_12, grammarAccess.getThf_rootAccess().getCommaKeyword_1_3());
 			}
 			(
 				(
 					(
-						lv_formula_role_10_1='axiom'
+						lv_formula_role_13_1='axiom'
 						{
-							newLeafNode(lv_formula_role_10_1, grammarAccess.getThf_rootAccess().getFormula_roleAxiomKeyword_1_3_0_0());
+							newLeafNode(lv_formula_role_13_1, grammarAccess.getThf_rootAccess().getFormula_roleAxiomKeyword_1_4_0_0());
 						}
 						{
 							if ($current==null) {
 								$current = createModelElement(grammarAccess.getThf_rootRule());
 							}
-							setWithLastConsumed($current, "formula_role", lv_formula_role_10_1, null);
+							setWithLastConsumed($current, "formula_role", lv_formula_role_13_1, null);
 						}
 						    |
-						lv_formula_role_10_2='hypothesis'
+						lv_formula_role_13_2='hypothesis'
 						{
-							newLeafNode(lv_formula_role_10_2, grammarAccess.getThf_rootAccess().getFormula_roleHypothesisKeyword_1_3_0_1());
+							newLeafNode(lv_formula_role_13_2, grammarAccess.getThf_rootAccess().getFormula_roleHypothesisKeyword_1_4_0_1());
 						}
 						{
 							if ($current==null) {
 								$current = createModelElement(grammarAccess.getThf_rootRule());
 							}
-							setWithLastConsumed($current, "formula_role", lv_formula_role_10_2, null);
+							setWithLastConsumed($current, "formula_role", lv_formula_role_13_2, null);
 						}
 						    |
-						lv_formula_role_10_3='negated_conjecture'
+						lv_formula_role_13_3='negated_conjecture'
 						{
-							newLeafNode(lv_formula_role_10_3, grammarAccess.getThf_rootAccess().getFormula_roleNegated_conjectureKeyword_1_3_0_2());
+							newLeafNode(lv_formula_role_13_3, grammarAccess.getThf_rootAccess().getFormula_roleNegated_conjectureKeyword_1_4_0_2());
 						}
 						{
 							if ($current==null) {
 								$current = createModelElement(grammarAccess.getThf_rootRule());
 							}
-							setWithLastConsumed($current, "formula_role", lv_formula_role_10_3, null);
+							setWithLastConsumed($current, "formula_role", lv_formula_role_13_3, null);
 						}
 						    |
-						lv_formula_role_10_4='conjecture'
+						lv_formula_role_13_4='conjecture'
 						{
-							newLeafNode(lv_formula_role_10_4, grammarAccess.getThf_rootAccess().getFormula_roleConjectureKeyword_1_3_0_3());
+							newLeafNode(lv_formula_role_13_4, grammarAccess.getThf_rootAccess().getFormula_roleConjectureKeyword_1_4_0_3());
 						}
 						{
 							if ($current==null) {
 								$current = createModelElement(grammarAccess.getThf_rootRule());
 							}
-							setWithLastConsumed($current, "formula_role", lv_formula_role_10_4, null);
+							setWithLastConsumed($current, "formula_role", lv_formula_role_13_4, null);
 						}
 						    |
-						lv_formula_role_10_5='definition'
+						lv_formula_role_13_5='definition'
 						{
-							newLeafNode(lv_formula_role_10_5, grammarAccess.getThf_rootAccess().getFormula_roleDefinitionKeyword_1_3_0_4());
+							newLeafNode(lv_formula_role_13_5, grammarAccess.getThf_rootAccess().getFormula_roleDefinitionKeyword_1_4_0_4());
 						}
 						{
 							if ($current==null) {
 								$current = createModelElement(grammarAccess.getThf_rootRule());
 							}
-							setWithLastConsumed($current, "formula_role", lv_formula_role_10_5, null);
+							setWithLastConsumed($current, "formula_role", lv_formula_role_13_5, null);
 						}
 						    |
-						lv_formula_role_10_6='lemma'
+						lv_formula_role_13_6='lemma'
 						{
-							newLeafNode(lv_formula_role_10_6, grammarAccess.getThf_rootAccess().getFormula_roleLemmaKeyword_1_3_0_5());
+							newLeafNode(lv_formula_role_13_6, grammarAccess.getThf_rootAccess().getFormula_roleLemmaKeyword_1_4_0_5());
 						}
 						{
 							if ($current==null) {
 								$current = createModelElement(grammarAccess.getThf_rootRule());
 							}
-							setWithLastConsumed($current, "formula_role", lv_formula_role_10_6, null);
+							setWithLastConsumed($current, "formula_role", lv_formula_role_13_6, null);
 						}
 					)
 				)
 			)
-			otherlv_11=','
+			otherlv_14=','
 			{
-				newLeafNode(otherlv_11, grammarAccess.getThf_rootAccess().getCommaKeyword_1_4());
+				newLeafNode(otherlv_14, grammarAccess.getThf_rootAccess().getCommaKeyword_1_5());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getThf_rootAccess().getThf_expThf_expressionParserRuleCall_1_5_0());
+						newCompositeNode(grammarAccess.getThf_rootAccess().getThf_expThf_expressionParserRuleCall_1_6_0());
 					}
-					lv_thf_exp_12_0=rulethf_expression
+					lv_thf_exp_15_0=ruleThf_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getThf_rootRule());
@@ -3879,29 +3931,33 @@ rulethf_root returns [EObject current=null]
 						set(
 							$current,
 							"thf_exp",
-							lv_thf_exp_12_0,
-							"it.unibz.inf.tptp.TPTP.thf_expression");
+							lv_thf_exp_15_0,
+							"it.unibz.inf.tptp.TPTP.Thf_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-			otherlv_13=').'
+			otherlv_16=')'
 			{
-				newLeafNode(otherlv_13, grammarAccess.getThf_rootAccess().getRightParenthesisFullStopKeyword_1_6());
+				newLeafNode(otherlv_16, grammarAccess.getThf_rootAccess().getRightParenthesisKeyword_1_7());
+			}
+			otherlv_17='.'
+			{
+				newLeafNode(otherlv_17, grammarAccess.getThf_rootAccess().getFullStopKeyword_1_8());
 			}
 		)
 	)
 ;
 
-// Entry rule entryRulethf_formula_type_definition
-entryRulethf_formula_type_definition returns [EObject current=null]:
+// Entry rule entryRuleThf_formula_type_definition
+entryRuleThf_formula_type_definition returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_formula_type_definitionRule()); }
-	iv_rulethf_formula_type_definition=rulethf_formula_type_definition
-	{ $current=$iv_rulethf_formula_type_definition.current; }
+	iv_ruleThf_formula_type_definition=ruleThf_formula_type_definition
+	{ $current=$iv_ruleThf_formula_type_definition.current; }
 	EOF;
 
-// Rule thf_formula_type_definition
-rulethf_formula_type_definition returns [EObject current=null]
+// Rule Thf_formula_type_definition
+ruleThf_formula_type_definition returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -3917,9 +3973,9 @@ rulethf_formula_type_definition returns [EObject current=null]
 			{
 				newCompositeNode(grammarAccess.getThf_formula_type_definitionAccess().getThf_formula_type_definitionParserRuleCall_0_1());
 			}
-			this_thf_formula_type_definition_1=rulethf_formula_type_definition
+			this_Thf_formula_type_definition_1=ruleThf_formula_type_definition
 			{
-				$current = $this_thf_formula_type_definition_1.current;
+				$current = $this_Thf_formula_type_definition_1.current;
 				afterParserOrEnumRuleCall();
 			}
 			otherlv_2=')'
@@ -3935,7 +3991,7 @@ rulethf_formula_type_definition returns [EObject current=null]
 						{
 							newCompositeNode(grammarAccess.getThf_formula_type_definitionAccess().getNameLower_token_and_keywordParserRuleCall_1_0_0_0());
 						}
-						lv_name_3_1=rulelower_token_and_keyword
+						lv_name_3_1=ruleLower_token_and_keyword
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getThf_formula_type_definitionRule());
@@ -3944,7 +4000,7 @@ rulethf_formula_type_definition returns [EObject current=null]
 								$current,
 								"name",
 								lv_name_3_1,
-								"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+								"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 							afterParserOrEnumRuleCall();
 						}
 						    |
@@ -3974,7 +4030,7 @@ rulethf_formula_type_definition returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getThf_formula_type_definitionAccess().getExpThf_type_expressionParserRuleCall_1_2_0());
 					}
-					lv_exp_5_0=rulethf_type_expression
+					lv_exp_5_0=ruleThf_type_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getThf_formula_type_definitionRule());
@@ -3983,7 +4039,7 @@ rulethf_formula_type_definition returns [EObject current=null]
 							$current,
 							"exp",
 							lv_exp_5_0,
-							"it.unibz.inf.tptp.TPTP.thf_type_expression");
+							"it.unibz.inf.tptp.TPTP.Thf_type_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -3992,15 +4048,15 @@ rulethf_formula_type_definition returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulethf_type_expression
-entryRulethf_type_expression returns [EObject current=null]:
+// Entry rule entryRuleThf_type_expression
+entryRuleThf_type_expression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_type_expressionRule()); }
-	iv_rulethf_type_expression=rulethf_type_expression
-	{ $current=$iv_rulethf_type_expression.current; }
+	iv_ruleThf_type_expression=ruleThf_type_expression
+	{ $current=$iv_ruleThf_type_expression.current; }
 	EOF;
 
-// Rule thf_type_expression
-rulethf_type_expression returns [EObject current=null]
+// Rule Thf_type_expression
+ruleThf_type_expression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -4011,9 +4067,9 @@ rulethf_type_expression returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getThf_type_expressionAccess().getThf_terminal_type_expressionParserRuleCall_0());
 		}
-		this_thf_terminal_type_expression_0=rulethf_terminal_type_expression
+		this_Thf_terminal_type_expression_0=ruleThf_terminal_type_expression
 		{
-			$current = $this_thf_terminal_type_expression_0.current;
+			$current = $this_Thf_terminal_type_expression_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		(
@@ -4043,7 +4099,7 @@ rulethf_type_expression returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getThf_type_expressionAccess().getRightThf_terminal_type_expressionParserRuleCall_1_2_0());
 					}
-					lv_right_3_0=rulethf_terminal_type_expression
+					lv_right_3_0=ruleThf_terminal_type_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getThf_type_expressionRule());
@@ -4052,7 +4108,7 @@ rulethf_type_expression returns [EObject current=null]
 							$current,
 							"right",
 							lv_right_3_0,
-							"it.unibz.inf.tptp.TPTP.thf_terminal_type_expression");
+							"it.unibz.inf.tptp.TPTP.Thf_terminal_type_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -4061,15 +4117,15 @@ rulethf_type_expression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulethf_terminal_type_expression
-entryRulethf_terminal_type_expression returns [EObject current=null]:
+// Entry rule entryRuleThf_terminal_type_expression
+entryRuleThf_terminal_type_expression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_terminal_type_expressionRule()); }
-	iv_rulethf_terminal_type_expression=rulethf_terminal_type_expression
-	{ $current=$iv_rulethf_terminal_type_expression.current; }
+	iv_ruleThf_terminal_type_expression=ruleThf_terminal_type_expression
+	{ $current=$iv_ruleThf_terminal_type_expression.current; }
 	EOF;
 
-// Rule thf_terminal_type_expression
-rulethf_terminal_type_expression returns [EObject current=null]
+// Rule Thf_terminal_type_expression
+ruleThf_terminal_type_expression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -4080,9 +4136,9 @@ rulethf_terminal_type_expression returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getThf_terminal_type_expressionAccess().getThf_type_atomParserRuleCall_0());
 		}
-		this_thf_type_atom_0=rulethf_type_atom
+		this_Thf_type_atom_0=ruleThf_type_atom
 		{
-			$current = $this_thf_type_atom_0.current;
+			$current = $this_Thf_type_atom_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
@@ -4094,9 +4150,9 @@ rulethf_terminal_type_expression returns [EObject current=null]
 			{
 				newCompositeNode(grammarAccess.getThf_terminal_type_expressionAccess().getThf_type_expressionParserRuleCall_1_1());
 			}
-			this_thf_type_expression_2=rulethf_type_expression
+			this_Thf_type_expression_2=ruleThf_type_expression
 			{
-				$current = $this_thf_type_expression_2.current;
+				$current = $this_Thf_type_expression_2.current;
 				afterParserOrEnumRuleCall();
 			}
 			otherlv_3=')'
@@ -4107,15 +4163,15 @@ rulethf_terminal_type_expression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulethf_type_atom
-entryRulethf_type_atom returns [EObject current=null]:
+// Entry rule entryRuleThf_type_atom
+entryRuleThf_type_atom returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_type_atomRule()); }
-	iv_rulethf_type_atom=rulethf_type_atom
-	{ $current=$iv_rulethf_type_atom.current; }
+	iv_ruleThf_type_atom=ruleThf_type_atom
+	{ $current=$iv_ruleThf_type_atom.current; }
 	EOF;
 
-// Rule thf_type_atom
-rulethf_type_atom returns [EObject current=null]
+// Rule Thf_type_atom
+ruleThf_type_atom returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -4126,32 +4182,32 @@ rulethf_type_atom returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getThf_type_atomAccess().getThf_type_constantParserRuleCall_0());
 		}
-		this_thf_type_constant_0=rulethf_type_constant
+		this_Thf_type_constant_0=ruleThf_type_constant
 		{
-			$current = $this_thf_type_constant_0.current;
+			$current = $this_Thf_type_constant_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getThf_type_atomAccess().getThf_type_literalParserRuleCall_1());
 		}
-		this_thf_type_literal_1=rulethf_type_literal
+		this_Thf_type_literal_1=ruleThf_type_literal
 		{
-			$current = $this_thf_type_literal_1.current;
+			$current = $this_Thf_type_literal_1.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
 ;
 
-// Entry rule entryRulethf_type_constant
-entryRulethf_type_constant returns [EObject current=null]:
+// Entry rule entryRuleThf_type_constant
+entryRuleThf_type_constant returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_type_constantRule()); }
-	iv_rulethf_type_constant=rulethf_type_constant
-	{ $current=$iv_rulethf_type_constant.current; }
+	iv_ruleThf_type_constant=ruleThf_type_constant
+	{ $current=$iv_ruleThf_type_constant.current; }
 	EOF;
 
-// Rule thf_type_constant
-rulethf_type_constant returns [EObject current=null]
+// Rule Thf_type_constant
+ruleThf_type_constant returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -4164,7 +4220,7 @@ rulethf_type_constant returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getThf_type_constantAccess().getNameLower_token_and_keywordParserRuleCall_0_0());
 				}
-				lv_name_0_1=rulelower_token_and_keyword
+				lv_name_0_1=ruleLower_token_and_keyword
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getThf_type_constantRule());
@@ -4173,7 +4229,7 @@ rulethf_type_constant returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_0_1,
-						"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+						"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 					afterParserOrEnumRuleCall();
 				}
 				    |
@@ -4196,15 +4252,15 @@ rulethf_type_constant returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulethf_type_literal
-entryRulethf_type_literal returns [EObject current=null]:
+// Entry rule entryRuleThf_type_literal
+entryRuleThf_type_literal returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_type_literalRule()); }
-	iv_rulethf_type_literal=rulethf_type_literal
-	{ $current=$iv_rulethf_type_literal.current; }
+	iv_ruleThf_type_literal=ruleThf_type_literal
+	{ $current=$iv_ruleThf_type_literal.current; }
 	EOF;
 
-// Rule thf_type_literal
-rulethf_type_literal returns [EObject current=null]
+// Rule Thf_type_literal
+ruleThf_type_literal returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -4251,15 +4307,15 @@ rulethf_type_literal returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulethf_expression
-entryRulethf_expression returns [EObject current=null]:
+// Entry rule entryRuleThf_expression
+entryRuleThf_expression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_expressionRule()); }
-	iv_rulethf_expression=rulethf_expression
-	{ $current=$iv_rulethf_expression.current; }
+	iv_ruleThf_expression=ruleThf_expression
+	{ $current=$iv_ruleThf_expression.current; }
 	EOF;
 
-// Rule thf_expression
-rulethf_expression returns [EObject current=null]
+// Rule Thf_expression
+ruleThf_expression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -4270,9 +4326,9 @@ rulethf_expression returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getThf_expressionAccess().getThf_terminating_expressionParserRuleCall_0());
 		}
-		this_thf_terminating_expression_0=rulethf_terminating_expression
+		this_Thf_terminating_expression_0=ruleThf_terminating_expression
 		{
-			$current = $this_thf_terminating_expression_0.current;
+			$current = $this_Thf_terminating_expression_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		(
@@ -4288,7 +4344,7 @@ rulethf_expression returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getThf_expressionAccess().getOpThf_binary_operatorParserRuleCall_1_1_0());
 					}
-					lv_op_2_0=rulethf_binary_operator
+					lv_op_2_0=ruleThf_binary_operator
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getThf_expressionRule());
@@ -4297,7 +4353,7 @@ rulethf_expression returns [EObject current=null]
 							$current,
 							"op",
 							lv_op_2_0,
-							"it.unibz.inf.tptp.TPTP.thf_binary_operator");
+							"it.unibz.inf.tptp.TPTP.Thf_binary_operator");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -4307,7 +4363,7 @@ rulethf_expression returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getThf_expressionAccess().getRightThf_terminating_expressionParserRuleCall_1_2_0());
 					}
-					lv_right_3_0=rulethf_terminating_expression
+					lv_right_3_0=ruleThf_terminating_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getThf_expressionRule());
@@ -4316,7 +4372,7 @@ rulethf_expression returns [EObject current=null]
 							$current,
 							"right",
 							lv_right_3_0,
-							"it.unibz.inf.tptp.TPTP.thf_terminating_expression");
+							"it.unibz.inf.tptp.TPTP.Thf_terminating_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -4325,15 +4381,15 @@ rulethf_expression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulethf_terminating_expression
-entryRulethf_terminating_expression returns [EObject current=null]:
+// Entry rule entryRuleThf_terminating_expression
+entryRuleThf_terminating_expression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_terminating_expressionRule()); }
-	iv_rulethf_terminating_expression=rulethf_terminating_expression
-	{ $current=$iv_rulethf_terminating_expression.current; }
+	iv_ruleThf_terminating_expression=ruleThf_terminating_expression
+	{ $current=$iv_ruleThf_terminating_expression.current; }
 	EOF;
 
-// Rule thf_terminating_expression
-rulethf_terminating_expression returns [EObject current=null]
+// Rule Thf_terminating_expression
+ruleThf_terminating_expression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -4346,7 +4402,7 @@ rulethf_terminating_expression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getThf_terminating_expressionAccess().getThf_atomThf_atomParserRuleCall_0_0());
 				}
-				lv_thf_atom_0_0=rulethf_atom
+				lv_thf_atom_0_0=ruleThf_atom
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getThf_terminating_expressionRule());
@@ -4355,7 +4411,7 @@ rulethf_terminating_expression returns [EObject current=null]
 						$current,
 						"thf_atom",
 						lv_thf_atom_0_0,
-						"it.unibz.inf.tptp.TPTP.thf_atom");
+						"it.unibz.inf.tptp.TPTP.Thf_atom");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -4369,9 +4425,9 @@ rulethf_terminating_expression returns [EObject current=null]
 			{
 				newCompositeNode(grammarAccess.getThf_terminating_expressionAccess().getThf_expressionParserRuleCall_1_1());
 			}
-			this_thf_expression_2=rulethf_expression
+			this_Thf_expression_2=ruleThf_expression
 			{
-				$current = $this_thf_expression_2.current;
+				$current = $this_Thf_expression_2.current;
 				afterParserOrEnumRuleCall();
 			}
 			otherlv_3=')'
@@ -4400,7 +4456,7 @@ rulethf_terminating_expression returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getThf_terminating_expressionAccess().getThf_expThf_expressionParserRuleCall_2_1_0());
 					}
-					lv_thf_exp_5_0=rulethf_expression
+					lv_thf_exp_5_0=ruleThf_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getThf_terminating_expressionRule());
@@ -4409,7 +4465,7 @@ rulethf_terminating_expression returns [EObject current=null]
 							$current,
 							"thf_exp",
 							lv_thf_exp_5_0,
-							"it.unibz.inf.tptp.TPTP.thf_expression");
+							"it.unibz.inf.tptp.TPTP.Thf_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -4422,7 +4478,7 @@ rulethf_terminating_expression returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getThf_terminating_expressionAccess().getOpThf_unary_operatorParserRuleCall_3_0_0());
 					}
-					lv_op_6_0=rulethf_unary_operator
+					lv_op_6_0=ruleThf_unary_operator
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getThf_terminating_expressionRule());
@@ -4431,7 +4487,7 @@ rulethf_terminating_expression returns [EObject current=null]
 							$current,
 							"op",
 							lv_op_6_0,
-							"it.unibz.inf.tptp.TPTP.thf_unary_operator");
+							"it.unibz.inf.tptp.TPTP.Thf_unary_operator");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -4441,7 +4497,7 @@ rulethf_terminating_expression returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getThf_terminating_expressionAccess().getThf_expThf_expressionParserRuleCall_3_1_0());
 					}
-					lv_thf_exp_7_0=rulethf_expression
+					lv_thf_exp_7_0=ruleThf_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getThf_terminating_expressionRule());
@@ -4450,7 +4506,7 @@ rulethf_terminating_expression returns [EObject current=null]
 							$current,
 							"thf_exp",
 							lv_thf_exp_7_0,
-							"it.unibz.inf.tptp.TPTP.thf_expression");
+							"it.unibz.inf.tptp.TPTP.Thf_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -4462,7 +4518,7 @@ rulethf_terminating_expression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getThf_terminating_expressionAccess().getThf_expThf_quantifier_expressionParserRuleCall_4_0());
 				}
-				lv_thf_exp_8_0=rulethf_quantifier_expression
+				lv_thf_exp_8_0=ruleThf_quantifier_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getThf_terminating_expressionRule());
@@ -4471,7 +4527,7 @@ rulethf_terminating_expression returns [EObject current=null]
 						$current,
 						"thf_exp",
 						lv_thf_exp_8_0,
-						"it.unibz.inf.tptp.TPTP.thf_quantifier_expression");
+						"it.unibz.inf.tptp.TPTP.Thf_quantifier_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -4479,15 +4535,15 @@ rulethf_terminating_expression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulethf_unary_operator
-entryRulethf_unary_operator returns [String current=null]:
+// Entry rule entryRuleThf_unary_operator
+entryRuleThf_unary_operator returns [String current=null]:
 	{ newCompositeNode(grammarAccess.getThf_unary_operatorRule()); }
-	iv_rulethf_unary_operator=rulethf_unary_operator
-	{ $current=$iv_rulethf_unary_operator.current.getText(); }
+	iv_ruleThf_unary_operator=ruleThf_unary_operator
+	{ $current=$iv_ruleThf_unary_operator.current.getText(); }
 	EOF;
 
-// Rule thf_unary_operator
-rulethf_unary_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+// Rule Thf_unary_operator
+ruleThf_unary_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
 	enterRule();
 }
@@ -4533,15 +4589,15 @@ rulethf_unary_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatype
 	)
 ;
 
-// Entry rule entryRulethf_binary_operator
-entryRulethf_binary_operator returns [String current=null]:
+// Entry rule entryRuleThf_binary_operator
+entryRuleThf_binary_operator returns [String current=null]:
 	{ newCompositeNode(grammarAccess.getThf_binary_operatorRule()); }
-	iv_rulethf_binary_operator=rulethf_binary_operator
-	{ $current=$iv_rulethf_binary_operator.current.getText(); }
+	iv_ruleThf_binary_operator=ruleThf_binary_operator
+	{ $current=$iv_ruleThf_binary_operator.current.getText(); }
 	EOF;
 
-// Rule thf_binary_operator
-rulethf_binary_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+// Rule Thf_binary_operator
+ruleThf_binary_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
 	enterRule();
 }
@@ -4605,15 +4661,15 @@ rulethf_binary_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatyp
 	)
 ;
 
-// Entry rule entryRulethf_atom
-entryRulethf_atom returns [EObject current=null]:
+// Entry rule entryRuleThf_atom
+entryRuleThf_atom returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_atomRule()); }
-	iv_rulethf_atom=rulethf_atom
-	{ $current=$iv_rulethf_atom.current; }
+	iv_ruleThf_atom=ruleThf_atom
+	{ $current=$iv_ruleThf_atom.current; }
 	EOF;
 
-// Rule thf_atom
-rulethf_atom returns [EObject current=null]
+// Rule Thf_atom
+ruleThf_atom returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -4624,41 +4680,41 @@ rulethf_atom returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getThf_atomAccess().getThf_constantParserRuleCall_0());
 		}
-		this_thf_constant_0=rulethf_constant
+		this_Thf_constant_0=ruleThf_constant
 		{
-			$current = $this_thf_constant_0.current;
+			$current = $this_Thf_constant_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getThf_atomAccess().getThf_varParserRuleCall_1());
 		}
-		this_thf_var_1=rulethf_var
+		this_Thf_var_1=ruleThf_var
 		{
-			$current = $this_thf_var_1.current;
+			$current = $this_Thf_var_1.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getThf_atomAccess().getThf_atom_literalParserRuleCall_2());
 		}
-		this_thf_atom_literal_2=rulethf_atom_literal
+		this_Thf_atom_literal_2=ruleThf_atom_literal
 		{
-			$current = $this_thf_atom_literal_2.current;
+			$current = $this_Thf_atom_literal_2.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
 ;
 
-// Entry rule entryRulethf_atom_literal
-entryRulethf_atom_literal returns [EObject current=null]:
+// Entry rule entryRuleThf_atom_literal
+entryRuleThf_atom_literal returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_atom_literalRule()); }
-	iv_rulethf_atom_literal=rulethf_atom_literal
-	{ $current=$iv_rulethf_atom_literal.current; }
+	iv_ruleThf_atom_literal=ruleThf_atom_literal
+	{ $current=$iv_ruleThf_atom_literal.current; }
 	EOF;
 
-// Rule thf_atom_literal
-rulethf_atom_literal returns [EObject current=null]
+// Rule Thf_atom_literal
+ruleThf_atom_literal returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -4694,15 +4750,15 @@ rulethf_atom_literal returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulethf_constant
-entryRulethf_constant returns [EObject current=null]:
+// Entry rule entryRuleThf_constant
+entryRuleThf_constant returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_constantRule()); }
-	iv_rulethf_constant=rulethf_constant
-	{ $current=$iv_rulethf_constant.current; }
+	iv_ruleThf_constant=ruleThf_constant
+	{ $current=$iv_ruleThf_constant.current; }
 	EOF;
 
-// Rule thf_constant
-rulethf_constant returns [EObject current=null]
+// Rule Thf_constant
+ruleThf_constant returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -4716,7 +4772,7 @@ rulethf_constant returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getThf_constantAccess().getNameLower_token_and_keywordParserRuleCall_0_0_0());
 					}
-					lv_name_0_1=rulelower_token_and_keyword
+					lv_name_0_1=ruleLower_token_and_keyword
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getThf_constantRule());
@@ -4725,7 +4781,7 @@ rulethf_constant returns [EObject current=null]
 							$current,
 							"name",
 							lv_name_0_1,
-							"it.unibz.inf.tptp.TPTP.lower_token_and_keyword");
+							"it.unibz.inf.tptp.TPTP.Lower_token_and_keyword");
 						afterParserOrEnumRuleCall();
 					}
 					    |
@@ -4756,7 +4812,7 @@ rulethf_constant returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getThf_constantAccess().getThf_paramThf_atomParserRuleCall_1_1_0());
 					}
-					lv_thf_param_2_0=rulethf_atom
+					lv_thf_param_2_0=ruleThf_atom
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getThf_constantRule());
@@ -4765,7 +4821,7 @@ rulethf_constant returns [EObject current=null]
 							$current,
 							"thf_param",
 							lv_thf_param_2_0,
-							"it.unibz.inf.tptp.TPTP.thf_atom");
+							"it.unibz.inf.tptp.TPTP.Thf_atom");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -4780,7 +4836,7 @@ rulethf_constant returns [EObject current=null]
 						{
 							newCompositeNode(grammarAccess.getThf_constantAccess().getThf_paramThf_atomParserRuleCall_1_2_1_0());
 						}
-						lv_thf_param_4_0=rulethf_atom
+						lv_thf_param_4_0=ruleThf_atom
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getThf_constantRule());
@@ -4789,7 +4845,7 @@ rulethf_constant returns [EObject current=null]
 								$current,
 								"thf_param",
 								lv_thf_param_4_0,
-								"it.unibz.inf.tptp.TPTP.thf_atom");
+								"it.unibz.inf.tptp.TPTP.Thf_atom");
 							afterParserOrEnumRuleCall();
 						}
 					)
@@ -4803,15 +4859,15 @@ rulethf_constant returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulethf_var
-entryRulethf_var returns [EObject current=null]:
+// Entry rule entryRuleThf_var
+entryRuleThf_var returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_varRule()); }
-	iv_rulethf_var=rulethf_var
-	{ $current=$iv_rulethf_var.current; }
+	iv_ruleThf_var=ruleThf_var
+	{ $current=$iv_ruleThf_var.current; }
 	EOF;
 
-// Rule thf_var
-rulethf_var returns [EObject current=null]
+// Rule Thf_var
+ruleThf_var returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -4838,15 +4894,15 @@ rulethf_var returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulethf_quantifier_expression
-entryRulethf_quantifier_expression returns [EObject current=null]:
+// Entry rule entryRuleThf_quantifier_expression
+entryRuleThf_quantifier_expression returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_quantifier_expressionRule()); }
-	iv_rulethf_quantifier_expression=rulethf_quantifier_expression
-	{ $current=$iv_rulethf_quantifier_expression.current; }
+	iv_ruleThf_quantifier_expression=ruleThf_quantifier_expression
+	{ $current=$iv_ruleThf_quantifier_expression.current; }
 	EOF;
 
-// Rule thf_quantifier_expression
-rulethf_quantifier_expression returns [EObject current=null]
+// Rule Thf_quantifier_expression
+ruleThf_quantifier_expression returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -4901,7 +4957,7 @@ rulethf_quantifier_expression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getThf_quantifier_expressionAccess().getParamThf_variable_listParserRuleCall_2_0());
 				}
-				lv_param_2_0=rulethf_variable_list
+				lv_param_2_0=ruleThf_variable_list
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getThf_quantifier_expressionRule());
@@ -4910,7 +4966,7 @@ rulethf_quantifier_expression returns [EObject current=null]
 						$current,
 						"param",
 						lv_param_2_0,
-						"it.unibz.inf.tptp.TPTP.thf_variable_list");
+						"it.unibz.inf.tptp.TPTP.Thf_variable_list");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -4928,7 +4984,7 @@ rulethf_quantifier_expression returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getThf_quantifier_expressionAccess().getExpThf_expressionParserRuleCall_5_0());
 				}
-				lv_exp_5_0=rulethf_expression
+				lv_exp_5_0=ruleThf_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getThf_quantifier_expressionRule());
@@ -4937,7 +4993,7 @@ rulethf_quantifier_expression returns [EObject current=null]
 						$current,
 						"exp",
 						lv_exp_5_0,
-						"it.unibz.inf.tptp.TPTP.thf_expression");
+						"it.unibz.inf.tptp.TPTP.Thf_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -4945,15 +5001,15 @@ rulethf_quantifier_expression returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulethf_variable_list
-entryRulethf_variable_list returns [EObject current=null]:
+// Entry rule entryRuleThf_variable_list
+entryRuleThf_variable_list returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_variable_listRule()); }
-	iv_rulethf_variable_list=rulethf_variable_list
-	{ $current=$iv_rulethf_variable_list.current; }
+	iv_ruleThf_variable_list=ruleThf_variable_list
+	{ $current=$iv_ruleThf_variable_list.current; }
 	EOF;
 
-// Rule thf_variable_list
-rulethf_variable_list returns [EObject current=null]
+// Rule Thf_variable_list
+ruleThf_variable_list returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -4966,7 +5022,7 @@ rulethf_variable_list returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getThf_variable_listAccess().getParamsThf_var_declarationParserRuleCall_0_0());
 				}
-				lv_params_0_0=rulethf_var_declaration
+				lv_params_0_0=ruleThf_var_declaration
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getThf_variable_listRule());
@@ -4975,7 +5031,7 @@ rulethf_variable_list returns [EObject current=null]
 						$current,
 						"params",
 						lv_params_0_0,
-						"it.unibz.inf.tptp.TPTP.thf_var_declaration");
+						"it.unibz.inf.tptp.TPTP.Thf_var_declaration");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -4990,7 +5046,7 @@ rulethf_variable_list returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getThf_variable_listAccess().getParamsThf_var_declarationParserRuleCall_1_1_0());
 					}
-					lv_params_2_0=rulethf_var_declaration
+					lv_params_2_0=ruleThf_var_declaration
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getThf_variable_listRule());
@@ -4999,7 +5055,7 @@ rulethf_variable_list returns [EObject current=null]
 							$current,
 							"params",
 							lv_params_2_0,
-							"it.unibz.inf.tptp.TPTP.thf_var_declaration");
+							"it.unibz.inf.tptp.TPTP.Thf_var_declaration");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -5008,15 +5064,15 @@ rulethf_variable_list returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulethf_var_declaration
-entryRulethf_var_declaration returns [EObject current=null]:
+// Entry rule entryRuleThf_var_declaration
+entryRuleThf_var_declaration returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getThf_var_declarationRule()); }
-	iv_rulethf_var_declaration=rulethf_var_declaration
-	{ $current=$iv_rulethf_var_declaration.current; }
+	iv_ruleThf_var_declaration=ruleThf_var_declaration
+	{ $current=$iv_ruleThf_var_declaration.current; }
 	EOF;
 
-// Rule thf_var_declaration
-rulethf_var_declaration returns [EObject current=null]
+// Rule Thf_var_declaration
+ruleThf_var_declaration returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -5029,7 +5085,7 @@ rulethf_var_declaration returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getThf_var_declarationAccess().getVarThf_varParserRuleCall_0_0());
 				}
-				lv_var_0_0=rulethf_var
+				lv_var_0_0=ruleThf_var
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getThf_var_declarationRule());
@@ -5038,7 +5094,7 @@ rulethf_var_declaration returns [EObject current=null]
 						$current,
 						"var",
 						lv_var_0_0,
-						"it.unibz.inf.tptp.TPTP.thf_var");
+						"it.unibz.inf.tptp.TPTP.Thf_var");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -5052,7 +5108,7 @@ rulethf_var_declaration returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getThf_var_declarationAccess().getVartypeThf_type_expressionParserRuleCall_2_0());
 				}
-				lv_vartype_2_0=rulethf_type_expression
+				lv_vartype_2_0=ruleThf_type_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getThf_var_declarationRule());
@@ -5061,7 +5117,7 @@ rulethf_var_declaration returns [EObject current=null]
 						$current,
 						"vartype",
 						lv_vartype_2_0,
-						"it.unibz.inf.tptp.TPTP.thf_type_expression");
+						"it.unibz.inf.tptp.TPTP.Thf_type_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -5069,15 +5125,15 @@ rulethf_var_declaration returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulebinary_operator
-entryRulebinary_operator returns [String current=null]:
+// Entry rule entryRuleBinary_operator
+entryRuleBinary_operator returns [String current=null]:
 	{ newCompositeNode(grammarAccess.getBinary_operatorRule()); }
-	iv_rulebinary_operator=rulebinary_operator
-	{ $current=$iv_rulebinary_operator.current.getText(); }
+	iv_ruleBinary_operator=ruleBinary_operator
+	{ $current=$iv_ruleBinary_operator.current.getText(); }
 	EOF;
 
-// Rule binary_operator
-rulebinary_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+// Rule Binary_operator
+ruleBinary_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
 	enterRule();
 }
@@ -5147,15 +5203,15 @@ rulebinary_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRul
 	)
 ;
 
-// Entry rule entryRulelower_token_and_keyword
-entryRulelower_token_and_keyword returns [String current=null]:
+// Entry rule entryRuleLower_token_and_keyword
+entryRuleLower_token_and_keyword returns [String current=null]:
 	{ newCompositeNode(grammarAccess.getLower_token_and_keywordRule()); }
-	iv_rulelower_token_and_keyword=rulelower_token_and_keyword
-	{ $current=$iv_rulelower_token_and_keyword.current.getText(); }
+	iv_ruleLower_token_and_keyword=ruleLower_token_and_keyword
+	{ $current=$iv_ruleLower_token_and_keyword.current.getText(); }
 	EOF;
 
-// Rule lower_token_and_keyword
-rulelower_token_and_keyword returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+// Rule Lower_token_and_keyword
+ruleLower_token_and_keyword returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
 	enterRule();
 }

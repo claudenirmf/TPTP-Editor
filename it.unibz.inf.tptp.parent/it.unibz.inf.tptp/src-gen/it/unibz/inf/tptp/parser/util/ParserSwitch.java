@@ -82,320 +82,320 @@ public class ParserSwitch<T> extends Switch<T>
       }
       case ParserPackage.INCLUDE:
       {
-        include include = (include)theEObject;
-        T result = caseinclude(include);
-        if (result == null) result = casefof_input(include);
-        if (result == null) result = casetff_input(include);
-        if (result == null) result = casecnf_input(include);
-        if (result == null) result = casethf_input(include);
+        Include include = (Include)theEObject;
+        T result = caseInclude(include);
+        if (result == null) result = caseFof_input(include);
+        if (result == null) result = caseTff_input(include);
+        if (result == null) result = caseCnf_input(include);
+        if (result == null) result = caseThf_input(include);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.FOF_INPUT:
       {
-        fof_input fof_input = (fof_input)theEObject;
-        T result = casefof_input(fof_input);
+        Fof_input fof_input = (Fof_input)theEObject;
+        T result = caseFof_input(fof_input);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.FOF_ROOT:
       {
-        fof_root fof_root = (fof_root)theEObject;
-        T result = casefof_root(fof_root);
-        if (result == null) result = casefof_input(fof_root);
+        Fof_root fof_root = (Fof_root)theEObject;
+        T result = caseFof_root(fof_root);
+        if (result == null) result = caseFof_input(fof_root);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.FOF_EXPRESSION:
       {
-        fof_expression fof_expression = (fof_expression)theEObject;
-        T result = casefof_expression(fof_expression);
+        Fof_expression fof_expression = (Fof_expression)theEObject;
+        T result = caseFof_expression(fof_expression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.FOF_ATOM:
       {
-        fof_atom fof_atom = (fof_atom)theEObject;
-        T result = casefof_atom(fof_atom);
+        Fof_atom fof_atom = (Fof_atom)theEObject;
+        T result = caseFof_atom(fof_atom);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.FOF_CONSTANT:
       {
-        fof_constant fof_constant = (fof_constant)theEObject;
-        T result = casefof_constant(fof_constant);
-        if (result == null) result = casefof_atom(fof_constant);
+        Fof_constant fof_constant = (Fof_constant)theEObject;
+        T result = caseFof_constant(fof_constant);
+        if (result == null) result = caseFof_atom(fof_constant);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.FOF_VAR:
       {
-        fof_var fof_var = (fof_var)theEObject;
-        T result = casefof_var(fof_var);
-        if (result == null) result = casefof_atom(fof_var);
+        Fof_var fof_var = (Fof_var)theEObject;
+        T result = caseFof_var(fof_var);
+        if (result == null) result = caseFof_atom(fof_var);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.FOF_VARIABLE_LIST:
       {
-        fof_variable_list fof_variable_list = (fof_variable_list)theEObject;
-        T result = casefof_variable_list(fof_variable_list);
+        Fof_variable_list fof_variable_list = (Fof_variable_list)theEObject;
+        T result = caseFof_variable_list(fof_variable_list);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.TFF_INPUT:
       {
-        tff_input tff_input = (tff_input)theEObject;
-        T result = casetff_input(tff_input);
+        Tff_input tff_input = (Tff_input)theEObject;
+        T result = caseTff_input(tff_input);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.TFF_ROOT:
       {
-        tff_root tff_root = (tff_root)theEObject;
-        T result = casetff_root(tff_root);
-        if (result == null) result = casetff_input(tff_root);
+        Tff_root tff_root = (Tff_root)theEObject;
+        T result = caseTff_root(tff_root);
+        if (result == null) result = caseTff_input(tff_root);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.TFF_FORMULA_TYPE_DEFINITION:
       {
-        tff_formula_type_definition tff_formula_type_definition = (tff_formula_type_definition)theEObject;
-        T result = casetff_formula_type_definition(tff_formula_type_definition);
+        Tff_formula_type_definition tff_formula_type_definition = (Tff_formula_type_definition)theEObject;
+        T result = caseTff_formula_type_definition(tff_formula_type_definition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.TFF_TYPE_EXPRESSION:
       {
-        tff_type_expression tff_type_expression = (tff_type_expression)theEObject;
-        T result = casetff_type_expression(tff_type_expression);
+        Tff_type_expression tff_type_expression = (Tff_type_expression)theEObject;
+        T result = caseTff_type_expression(tff_type_expression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.TFF_TYPE_ATOM:
       {
-        tff_type_atom tff_type_atom = (tff_type_atom)theEObject;
-        T result = casetff_type_atom(tff_type_atom);
-        if (result == null) result = casetff_type_expression(tff_type_atom);
+        Tff_type_atom tff_type_atom = (Tff_type_atom)theEObject;
+        T result = caseTff_type_atom(tff_type_atom);
+        if (result == null) result = caseTff_type_expression(tff_type_atom);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.TFF_TYPE_CONSTANT:
       {
-        tff_type_constant tff_type_constant = (tff_type_constant)theEObject;
-        T result = casetff_type_constant(tff_type_constant);
-        if (result == null) result = casetff_type_atom(tff_type_constant);
-        if (result == null) result = casetff_type_expression(tff_type_constant);
+        Tff_type_constant tff_type_constant = (Tff_type_constant)theEObject;
+        T result = caseTff_type_constant(tff_type_constant);
+        if (result == null) result = caseTff_type_atom(tff_type_constant);
+        if (result == null) result = caseTff_type_expression(tff_type_constant);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.TFF_EXPRESSION:
       {
-        tff_expression tff_expression = (tff_expression)theEObject;
-        T result = casetff_expression(tff_expression);
+        Tff_expression tff_expression = (Tff_expression)theEObject;
+        T result = caseTff_expression(tff_expression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.TFF_ATOM:
       {
-        tff_atom tff_atom = (tff_atom)theEObject;
-        T result = casetff_atom(tff_atom);
+        Tff_atom tff_atom = (Tff_atom)theEObject;
+        T result = caseTff_atom(tff_atom);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.TFF_CONSTANT:
       {
-        tff_constant tff_constant = (tff_constant)theEObject;
-        T result = casetff_constant(tff_constant);
-        if (result == null) result = casetff_atom(tff_constant);
+        Tff_constant tff_constant = (Tff_constant)theEObject;
+        T result = caseTff_constant(tff_constant);
+        if (result == null) result = caseTff_atom(tff_constant);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.TFF_PREDEFINED_FUNCTION_2ARGS:
       {
-        tff_predefined_function_2_args tff_predefined_function_2_args = (tff_predefined_function_2_args)theEObject;
-        T result = casetff_predefined_function_2_args(tff_predefined_function_2_args);
-        if (result == null) result = casetff_atom(tff_predefined_function_2_args);
+        Tff_predefined_function_2_args tff_predefined_function_2_args = (Tff_predefined_function_2_args)theEObject;
+        T result = caseTff_predefined_function_2_args(tff_predefined_function_2_args);
+        if (result == null) result = caseTff_atom(tff_predefined_function_2_args);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.TFF_VAR:
       {
-        tff_var tff_var = (tff_var)theEObject;
-        T result = casetff_var(tff_var);
-        if (result == null) result = casetff_type_atom(tff_var);
-        if (result == null) result = casetff_atom(tff_var);
-        if (result == null) result = casetff_type_expression(tff_var);
+        Tff_var tff_var = (Tff_var)theEObject;
+        T result = caseTff_var(tff_var);
+        if (result == null) result = caseTff_type_atom(tff_var);
+        if (result == null) result = caseTff_atom(tff_var);
+        if (result == null) result = caseTff_type_expression(tff_var);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.TFF_VAR_DECLARATION:
       {
-        tff_var_declaration tff_var_declaration = (tff_var_declaration)theEObject;
-        T result = casetff_var_declaration(tff_var_declaration);
+        Tff_var_declaration tff_var_declaration = (Tff_var_declaration)theEObject;
+        T result = caseTff_var_declaration(tff_var_declaration);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.TFF_VARIABLE_LIST:
       {
-        tff_variable_list tff_variable_list = (tff_variable_list)theEObject;
-        T result = casetff_variable_list(tff_variable_list);
+        Tff_variable_list tff_variable_list = (Tff_variable_list)theEObject;
+        T result = caseTff_variable_list(tff_variable_list);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.CNF_INPUT:
       {
-        cnf_input cnf_input = (cnf_input)theEObject;
-        T result = casecnf_input(cnf_input);
+        Cnf_input cnf_input = (Cnf_input)theEObject;
+        T result = caseCnf_input(cnf_input);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.CNF_ROOT:
       {
-        cnf_root cnf_root = (cnf_root)theEObject;
-        T result = casecnf_root(cnf_root);
-        if (result == null) result = casecnf_input(cnf_root);
+        Cnf_root cnf_root = (Cnf_root)theEObject;
+        T result = caseCnf_root(cnf_root);
+        if (result == null) result = caseCnf_input(cnf_root);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.CNF_FORMULA_TYPE_DEFINITION:
       {
-        cnf_formula_type_definition cnf_formula_type_definition = (cnf_formula_type_definition)theEObject;
-        T result = casecnf_formula_type_definition(cnf_formula_type_definition);
+        Cnf_formula_type_definition cnf_formula_type_definition = (Cnf_formula_type_definition)theEObject;
+        T result = caseCnf_formula_type_definition(cnf_formula_type_definition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.CNF_OR:
       {
-        cnf_or cnf_or = (cnf_or)theEObject;
-        T result = casecnf_or(cnf_or);
+        Cnf_or cnf_or = (Cnf_or)theEObject;
+        T result = caseCnf_or(cnf_or);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.CNF_NOT:
       {
-        cnf_not cnf_not = (cnf_not)theEObject;
-        T result = casecnf_not(cnf_not);
+        Cnf_not cnf_not = (Cnf_not)theEObject;
+        T result = caseCnf_not(cnf_not);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.CNF_EQUALITY:
       {
-        cnf_equality cnf_equality = (cnf_equality)theEObject;
-        T result = casecnf_equality(cnf_equality);
+        Cnf_equality cnf_equality = (Cnf_equality)theEObject;
+        T result = caseCnf_equality(cnf_equality);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.CNF_EXPRESSION:
       {
-        cnf_expression cnf_expression = (cnf_expression)theEObject;
-        T result = casecnf_expression(cnf_expression);
+        Cnf_expression cnf_expression = (Cnf_expression)theEObject;
+        T result = caseCnf_expression(cnf_expression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.CNF_CONSTANT:
       {
-        cnf_constant cnf_constant = (cnf_constant)theEObject;
-        T result = casecnf_constant(cnf_constant);
-        if (result == null) result = casecnf_expression(cnf_constant);
+        Cnf_constant cnf_constant = (Cnf_constant)theEObject;
+        T result = caseCnf_constant(cnf_constant);
+        if (result == null) result = caseCnf_expression(cnf_constant);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.CNF_VAR:
       {
-        cnf_var cnf_var = (cnf_var)theEObject;
-        T result = casecnf_var(cnf_var);
-        if (result == null) result = casecnf_expression(cnf_var);
+        Cnf_var cnf_var = (Cnf_var)theEObject;
+        T result = caseCnf_var(cnf_var);
+        if (result == null) result = caseCnf_expression(cnf_var);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.THF_INPUT:
       {
-        thf_input thf_input = (thf_input)theEObject;
-        T result = casethf_input(thf_input);
+        Thf_input thf_input = (Thf_input)theEObject;
+        T result = caseThf_input(thf_input);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.THF_ROOT:
       {
-        thf_root thf_root = (thf_root)theEObject;
-        T result = casethf_root(thf_root);
-        if (result == null) result = casethf_input(thf_root);
+        Thf_root thf_root = (Thf_root)theEObject;
+        T result = caseThf_root(thf_root);
+        if (result == null) result = caseThf_input(thf_root);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.THF_FORMULA_TYPE_DEFINITION:
       {
-        thf_formula_type_definition thf_formula_type_definition = (thf_formula_type_definition)theEObject;
-        T result = casethf_formula_type_definition(thf_formula_type_definition);
+        Thf_formula_type_definition thf_formula_type_definition = (Thf_formula_type_definition)theEObject;
+        T result = caseThf_formula_type_definition(thf_formula_type_definition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.THF_TYPE_EXPRESSION:
       {
-        thf_type_expression thf_type_expression = (thf_type_expression)theEObject;
-        T result = casethf_type_expression(thf_type_expression);
+        Thf_type_expression thf_type_expression = (Thf_type_expression)theEObject;
+        T result = caseThf_type_expression(thf_type_expression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.THF_TYPE_ATOM:
       {
-        thf_type_atom thf_type_atom = (thf_type_atom)theEObject;
-        T result = casethf_type_atom(thf_type_atom);
-        if (result == null) result = casethf_type_expression(thf_type_atom);
+        Thf_type_atom thf_type_atom = (Thf_type_atom)theEObject;
+        T result = caseThf_type_atom(thf_type_atom);
+        if (result == null) result = caseThf_type_expression(thf_type_atom);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.THF_TYPE_CONSTANT:
       {
-        thf_type_constant thf_type_constant = (thf_type_constant)theEObject;
-        T result = casethf_type_constant(thf_type_constant);
-        if (result == null) result = casethf_type_atom(thf_type_constant);
-        if (result == null) result = casethf_type_expression(thf_type_constant);
+        Thf_type_constant thf_type_constant = (Thf_type_constant)theEObject;
+        T result = caseThf_type_constant(thf_type_constant);
+        if (result == null) result = caseThf_type_atom(thf_type_constant);
+        if (result == null) result = caseThf_type_expression(thf_type_constant);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.THF_EXPRESSION:
       {
-        thf_expression thf_expression = (thf_expression)theEObject;
-        T result = casethf_expression(thf_expression);
+        Thf_expression thf_expression = (Thf_expression)theEObject;
+        T result = caseThf_expression(thf_expression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.THF_ATOM:
       {
-        thf_atom thf_atom = (thf_atom)theEObject;
-        T result = casethf_atom(thf_atom);
+        Thf_atom thf_atom = (Thf_atom)theEObject;
+        T result = caseThf_atom(thf_atom);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.THF_CONSTANT:
       {
-        thf_constant thf_constant = (thf_constant)theEObject;
-        T result = casethf_constant(thf_constant);
-        if (result == null) result = casethf_atom(thf_constant);
+        Thf_constant thf_constant = (Thf_constant)theEObject;
+        T result = caseThf_constant(thf_constant);
+        if (result == null) result = caseThf_atom(thf_constant);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.THF_VAR:
       {
-        thf_var thf_var = (thf_var)theEObject;
-        T result = casethf_var(thf_var);
-        if (result == null) result = casethf_atom(thf_var);
+        Thf_var thf_var = (Thf_var)theEObject;
+        T result = caseThf_var(thf_var);
+        if (result == null) result = caseThf_atom(thf_var);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.THF_VARIABLE_LIST:
       {
-        thf_variable_list thf_variable_list = (thf_variable_list)theEObject;
-        T result = casethf_variable_list(thf_variable_list);
+        Thf_variable_list thf_variable_list = (Thf_variable_list)theEObject;
+        T result = caseThf_variable_list(thf_variable_list);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case ParserPackage.THF_VAR_DECLARATION:
       {
-        thf_var_declaration thf_var_declaration = (thf_var_declaration)theEObject;
-        T result = casethf_var_declaration(thf_var_declaration);
+        Thf_var_declaration thf_var_declaration = (Thf_var_declaration)theEObject;
+        T result = caseThf_var_declaration(thf_var_declaration);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -403,9 +403,9 @@ public class ParserSwitch<T> extends Switch<T>
       {
         binary binary = (binary)theEObject;
         T result = casebinary(binary);
-        if (result == null) result = casefof_expression(binary);
-        if (result == null) result = casetff_expression(binary);
-        if (result == null) result = casethf_expression(binary);
+        if (result == null) result = caseFof_expression(binary);
+        if (result == null) result = caseTff_expression(binary);
+        if (result == null) result = caseThf_expression(binary);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -413,8 +413,8 @@ public class ParserSwitch<T> extends Switch<T>
       {
         oper oper = (oper)theEObject;
         T result = caseoper(oper);
-        if (result == null) result = casetff_type_expression(oper);
-        if (result == null) result = casethf_type_expression(oper);
+        if (result == null) result = caseTff_type_expression(oper);
+        if (result == null) result = caseThf_type_expression(oper);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -439,673 +439,673 @@ public class ParserSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>include</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Include</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>include</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Include</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseinclude(include object)
+  public T caseInclude(Include object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>fof input</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Fof input</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>fof input</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Fof input</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casefof_input(fof_input object)
+  public T caseFof_input(Fof_input object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>fof root</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Fof root</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>fof root</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Fof root</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casefof_root(fof_root object)
+  public T caseFof_root(Fof_root object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>fof expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Fof expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>fof expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Fof expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casefof_expression(fof_expression object)
+  public T caseFof_expression(Fof_expression object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>fof atom</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Fof atom</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>fof atom</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Fof atom</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casefof_atom(fof_atom object)
+  public T caseFof_atom(Fof_atom object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>fof constant</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Fof constant</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>fof constant</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Fof constant</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casefof_constant(fof_constant object)
+  public T caseFof_constant(Fof_constant object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>fof var</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Fof var</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>fof var</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Fof var</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casefof_var(fof_var object)
+  public T caseFof_var(Fof_var object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>fof variable list</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Fof variable list</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>fof variable list</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Fof variable list</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casefof_variable_list(fof_variable_list object)
+  public T caseFof_variable_list(Fof_variable_list object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>tff input</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tff input</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>tff input</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tff input</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casetff_input(tff_input object)
+  public T caseTff_input(Tff_input object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>tff root</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tff root</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>tff root</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tff root</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casetff_root(tff_root object)
+  public T caseTff_root(Tff_root object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>tff formula type definition</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tff formula type definition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>tff formula type definition</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tff formula type definition</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casetff_formula_type_definition(tff_formula_type_definition object)
+  public T caseTff_formula_type_definition(Tff_formula_type_definition object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>tff type expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tff type expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>tff type expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tff type expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casetff_type_expression(tff_type_expression object)
+  public T caseTff_type_expression(Tff_type_expression object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>tff type atom</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tff type atom</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>tff type atom</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tff type atom</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casetff_type_atom(tff_type_atom object)
+  public T caseTff_type_atom(Tff_type_atom object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>tff type constant</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tff type constant</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>tff type constant</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tff type constant</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casetff_type_constant(tff_type_constant object)
+  public T caseTff_type_constant(Tff_type_constant object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>tff expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tff expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>tff expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tff expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casetff_expression(tff_expression object)
+  public T caseTff_expression(Tff_expression object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>tff atom</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tff atom</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>tff atom</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tff atom</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casetff_atom(tff_atom object)
+  public T caseTff_atom(Tff_atom object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>tff constant</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tff constant</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>tff constant</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tff constant</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casetff_constant(tff_constant object)
+  public T caseTff_constant(Tff_constant object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>tff predefined function 2args</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tff predefined function 2args</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>tff predefined function 2args</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tff predefined function 2args</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casetff_predefined_function_2_args(tff_predefined_function_2_args object)
+  public T caseTff_predefined_function_2_args(Tff_predefined_function_2_args object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>tff var</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tff var</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>tff var</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tff var</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casetff_var(tff_var object)
+  public T caseTff_var(Tff_var object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>tff var declaration</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tff var declaration</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>tff var declaration</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tff var declaration</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casetff_var_declaration(tff_var_declaration object)
+  public T caseTff_var_declaration(Tff_var_declaration object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>tff variable list</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tff variable list</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>tff variable list</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tff variable list</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casetff_variable_list(tff_variable_list object)
+  public T caseTff_variable_list(Tff_variable_list object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>cnf input</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Cnf input</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>cnf input</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Cnf input</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casecnf_input(cnf_input object)
+  public T caseCnf_input(Cnf_input object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>cnf root</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Cnf root</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>cnf root</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Cnf root</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casecnf_root(cnf_root object)
+  public T caseCnf_root(Cnf_root object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>cnf formula type definition</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Cnf formula type definition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>cnf formula type definition</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Cnf formula type definition</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casecnf_formula_type_definition(cnf_formula_type_definition object)
+  public T caseCnf_formula_type_definition(Cnf_formula_type_definition object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>cnf or</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Cnf or</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>cnf or</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Cnf or</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casecnf_or(cnf_or object)
+  public T caseCnf_or(Cnf_or object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>cnf not</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Cnf not</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>cnf not</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Cnf not</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casecnf_not(cnf_not object)
+  public T caseCnf_not(Cnf_not object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>cnf equality</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Cnf equality</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>cnf equality</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Cnf equality</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casecnf_equality(cnf_equality object)
+  public T caseCnf_equality(Cnf_equality object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>cnf expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Cnf expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>cnf expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Cnf expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casecnf_expression(cnf_expression object)
+  public T caseCnf_expression(Cnf_expression object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>cnf constant</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Cnf constant</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>cnf constant</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Cnf constant</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casecnf_constant(cnf_constant object)
+  public T caseCnf_constant(Cnf_constant object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>cnf var</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Cnf var</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>cnf var</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Cnf var</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casecnf_var(cnf_var object)
+  public T caseCnf_var(Cnf_var object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>thf input</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Thf input</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>thf input</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Thf input</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casethf_input(thf_input object)
+  public T caseThf_input(Thf_input object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>thf root</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Thf root</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>thf root</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Thf root</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casethf_root(thf_root object)
+  public T caseThf_root(Thf_root object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>thf formula type definition</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Thf formula type definition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>thf formula type definition</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Thf formula type definition</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casethf_formula_type_definition(thf_formula_type_definition object)
+  public T caseThf_formula_type_definition(Thf_formula_type_definition object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>thf type expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Thf type expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>thf type expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Thf type expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casethf_type_expression(thf_type_expression object)
+  public T caseThf_type_expression(Thf_type_expression object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>thf type atom</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Thf type atom</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>thf type atom</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Thf type atom</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casethf_type_atom(thf_type_atom object)
+  public T caseThf_type_atom(Thf_type_atom object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>thf type constant</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Thf type constant</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>thf type constant</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Thf type constant</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casethf_type_constant(thf_type_constant object)
+  public T caseThf_type_constant(Thf_type_constant object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>thf expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Thf expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>thf expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Thf expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casethf_expression(thf_expression object)
+  public T caseThf_expression(Thf_expression object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>thf atom</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Thf atom</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>thf atom</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Thf atom</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casethf_atom(thf_atom object)
+  public T caseThf_atom(Thf_atom object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>thf constant</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Thf constant</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>thf constant</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Thf constant</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casethf_constant(thf_constant object)
+  public T caseThf_constant(Thf_constant object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>thf var</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Thf var</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>thf var</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Thf var</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casethf_var(thf_var object)
+  public T caseThf_var(Thf_var object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>thf variable list</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Thf variable list</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>thf variable list</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Thf variable list</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casethf_variable_list(thf_variable_list object)
+  public T caseThf_variable_list(Thf_variable_list object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>thf var declaration</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Thf var declaration</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>thf var declaration</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Thf var declaration</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casethf_var_declaration(thf_var_declaration object)
+  public T caseThf_var_declaration(Thf_var_declaration object)
   {
     return null;
   }

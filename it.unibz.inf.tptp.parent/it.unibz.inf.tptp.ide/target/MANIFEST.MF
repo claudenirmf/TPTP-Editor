@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: it.unibz.inf.tptp.ide; singleton:=true
+Export-Package: it.unibz.inf.tptp.ide.contentassist.antlr.internal,it.
+ unibz.inf.tptp.ide.contentassist.antlr
+Bundle-Name: it.unibz.inf.tptp.ide
+Bundle-Version: 1.0.0.201808151458
+Require-Bundle: it.unibz.inf.tptp,org.eclipse.xtext.ide,org.eclipse.xt
+ ext.xbase.ide,org.antlr.runtime
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: My Company
+

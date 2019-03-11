@@ -86,17 +86,17 @@ public interface ParserPackage extends EPackage
   int MODEL_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.fof_inputImpl <em>fof input</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Fof_inputImpl <em>Fof input</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.fof_inputImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getfof_input()
+   * @see it.unibz.inf.tptp.parser.impl.Fof_inputImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getFof_input()
    * @generated
    */
   int FOF_INPUT = 2;
 
   /**
-   * The number of structural features of the '<em>fof input</em>' class.
+   * The number of structural features of the '<em>Fof input</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -105,11 +105,11 @@ public interface ParserPackage extends EPackage
   int FOF_INPUT_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.includeImpl <em>include</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.IncludeImpl <em>Include</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.includeImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getinclude()
+   * @see it.unibz.inf.tptp.parser.impl.IncludeImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getInclude()
    * @generated
    */
   int INCLUDE = 1;
@@ -124,7 +124,7 @@ public interface ParserPackage extends EPackage
   int INCLUDE__PATH = FOF_INPUT_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>include</em>' class.
+   * The number of structural features of the '<em>Include</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -133,11 +133,11 @@ public interface ParserPackage extends EPackage
   int INCLUDE_FEATURE_COUNT = FOF_INPUT_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.fof_rootImpl <em>fof root</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Fof_rootImpl <em>Fof root</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.fof_rootImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getfof_root()
+   * @see it.unibz.inf.tptp.parser.impl.Fof_rootImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getFof_root()
    * @generated
    */
   int FOF_ROOT = 3;
@@ -170,7 +170,7 @@ public interface ParserPackage extends EPackage
   int FOF_ROOT__EXP = FOF_INPUT_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>fof root</em>' class.
+   * The number of structural features of the '<em>Fof root</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -179,11 +179,11 @@ public interface ParserPackage extends EPackage
   int FOF_ROOT_FEATURE_COUNT = FOF_INPUT_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.fof_expressionImpl <em>fof expression</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Fof_expressionImpl <em>Fof expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.fof_expressionImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getfof_expression()
+   * @see it.unibz.inf.tptp.parser.impl.Fof_expressionImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getFof_expression()
    * @generated
    */
   int FOF_EXPRESSION = 4;
@@ -234,7 +234,7 @@ public interface ParserPackage extends EPackage
   int FOF_EXPRESSION__FOF_PARAM = 4;
 
   /**
-   * The number of structural features of the '<em>fof expression</em>' class.
+   * The number of structural features of the '<em>Fof expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -243,11 +243,11 @@ public interface ParserPackage extends EPackage
   int FOF_EXPRESSION_FEATURE_COUNT = 5;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.fof_atomImpl <em>fof atom</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Fof_atomImpl <em>Fof atom</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.fof_atomImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getfof_atom()
+   * @see it.unibz.inf.tptp.parser.impl.Fof_atomImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getFof_atom()
    * @generated
    */
   int FOF_ATOM = 5;
@@ -262,7 +262,7 @@ public interface ParserPackage extends EPackage
   int FOF_ATOM__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>fof atom</em>' class.
+   * The number of structural features of the '<em>Fof atom</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -271,11 +271,11 @@ public interface ParserPackage extends EPackage
   int FOF_ATOM_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.fof_constantImpl <em>fof constant</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Fof_constantImpl <em>Fof constant</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.fof_constantImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getfof_constant()
+   * @see it.unibz.inf.tptp.parser.impl.Fof_constantImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getFof_constant()
    * @generated
    */
   int FOF_CONSTANT = 6;
@@ -299,7 +299,7 @@ public interface ParserPackage extends EPackage
   int FOF_CONSTANT__FOF_PARAM = FOF_ATOM_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>fof constant</em>' class.
+   * The number of structural features of the '<em>Fof constant</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -308,11 +308,11 @@ public interface ParserPackage extends EPackage
   int FOF_CONSTANT_FEATURE_COUNT = FOF_ATOM_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.fof_varImpl <em>fof var</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Fof_varImpl <em>Fof var</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.fof_varImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getfof_var()
+   * @see it.unibz.inf.tptp.parser.impl.Fof_varImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getFof_var()
    * @generated
    */
   int FOF_VAR = 7;
@@ -327,7 +327,7 @@ public interface ParserPackage extends EPackage
   int FOF_VAR__NAME = FOF_ATOM__NAME;
 
   /**
-   * The number of structural features of the '<em>fof var</em>' class.
+   * The number of structural features of the '<em>Fof var</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -336,11 +336,11 @@ public interface ParserPackage extends EPackage
   int FOF_VAR_FEATURE_COUNT = FOF_ATOM_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.fof_variable_listImpl <em>fof variable list</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Fof_variable_listImpl <em>Fof variable list</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.fof_variable_listImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getfof_variable_list()
+   * @see it.unibz.inf.tptp.parser.impl.Fof_variable_listImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getFof_variable_list()
    * @generated
    */
   int FOF_VARIABLE_LIST = 8;
@@ -355,7 +355,7 @@ public interface ParserPackage extends EPackage
   int FOF_VARIABLE_LIST__PARAMS = 0;
 
   /**
-   * The number of structural features of the '<em>fof variable list</em>' class.
+   * The number of structural features of the '<em>Fof variable list</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -364,17 +364,17 @@ public interface ParserPackage extends EPackage
   int FOF_VARIABLE_LIST_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.tff_inputImpl <em>tff input</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Tff_inputImpl <em>Tff input</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.tff_inputImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_input()
+   * @see it.unibz.inf.tptp.parser.impl.Tff_inputImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_input()
    * @generated
    */
   int TFF_INPUT = 9;
 
   /**
-   * The number of structural features of the '<em>tff input</em>' class.
+   * The number of structural features of the '<em>Tff input</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -383,11 +383,11 @@ public interface ParserPackage extends EPackage
   int TFF_INPUT_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.tff_rootImpl <em>tff root</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Tff_rootImpl <em>Tff root</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.tff_rootImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_root()
+   * @see it.unibz.inf.tptp.parser.impl.Tff_rootImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_root()
    * @generated
    */
   int TFF_ROOT = 10;
@@ -429,7 +429,7 @@ public interface ParserPackage extends EPackage
   int TFF_ROOT__DEF = TFF_INPUT_FEATURE_COUNT + 3;
 
   /**
-   * The number of structural features of the '<em>tff root</em>' class.
+   * The number of structural features of the '<em>Tff root</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -438,11 +438,11 @@ public interface ParserPackage extends EPackage
   int TFF_ROOT_FEATURE_COUNT = TFF_INPUT_FEATURE_COUNT + 4;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.tff_formula_type_definitionImpl <em>tff formula type definition</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Tff_formula_type_definitionImpl <em>Tff formula type definition</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.tff_formula_type_definitionImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_formula_type_definition()
+   * @see it.unibz.inf.tptp.parser.impl.Tff_formula_type_definitionImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_formula_type_definition()
    * @generated
    */
   int TFF_FORMULA_TYPE_DEFINITION = 11;
@@ -466,7 +466,7 @@ public interface ParserPackage extends EPackage
   int TFF_FORMULA_TYPE_DEFINITION__EXP = 1;
 
   /**
-   * The number of structural features of the '<em>tff formula type definition</em>' class.
+   * The number of structural features of the '<em>Tff formula type definition</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -475,17 +475,17 @@ public interface ParserPackage extends EPackage
   int TFF_FORMULA_TYPE_DEFINITION_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.tff_type_expressionImpl <em>tff type expression</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Tff_type_expressionImpl <em>Tff type expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.tff_type_expressionImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_type_expression()
+   * @see it.unibz.inf.tptp.parser.impl.Tff_type_expressionImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_type_expression()
    * @generated
    */
   int TFF_TYPE_EXPRESSION = 12;
 
   /**
-   * The number of structural features of the '<em>tff type expression</em>' class.
+   * The number of structural features of the '<em>Tff type expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -494,11 +494,11 @@ public interface ParserPackage extends EPackage
   int TFF_TYPE_EXPRESSION_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.tff_type_atomImpl <em>tff type atom</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Tff_type_atomImpl <em>Tff type atom</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.tff_type_atomImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_type_atom()
+   * @see it.unibz.inf.tptp.parser.impl.Tff_type_atomImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_type_atom()
    * @generated
    */
   int TFF_TYPE_ATOM = 13;
@@ -513,7 +513,7 @@ public interface ParserPackage extends EPackage
   int TFF_TYPE_ATOM__NAME = TFF_TYPE_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>tff type atom</em>' class.
+   * The number of structural features of the '<em>Tff type atom</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -522,11 +522,11 @@ public interface ParserPackage extends EPackage
   int TFF_TYPE_ATOM_FEATURE_COUNT = TFF_TYPE_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.tff_type_constantImpl <em>tff type constant</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Tff_type_constantImpl <em>Tff type constant</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.tff_type_constantImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_type_constant()
+   * @see it.unibz.inf.tptp.parser.impl.Tff_type_constantImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_type_constant()
    * @generated
    */
   int TFF_TYPE_CONSTANT = 14;
@@ -550,7 +550,7 @@ public interface ParserPackage extends EPackage
   int TFF_TYPE_CONSTANT__PARAM = TFF_TYPE_ATOM_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>tff type constant</em>' class.
+   * The number of structural features of the '<em>Tff type constant</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -559,11 +559,11 @@ public interface ParserPackage extends EPackage
   int TFF_TYPE_CONSTANT_FEATURE_COUNT = TFF_TYPE_ATOM_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.tff_expressionImpl <em>tff expression</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Tff_expressionImpl <em>Tff expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.tff_expressionImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_expression()
+   * @see it.unibz.inf.tptp.parser.impl.Tff_expressionImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_expression()
    * @generated
    */
   int TFF_EXPRESSION = 15;
@@ -614,7 +614,7 @@ public interface ParserPackage extends EPackage
   int TFF_EXPRESSION__PARAM = 4;
 
   /**
-   * The number of structural features of the '<em>tff expression</em>' class.
+   * The number of structural features of the '<em>Tff expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -623,17 +623,17 @@ public interface ParserPackage extends EPackage
   int TFF_EXPRESSION_FEATURE_COUNT = 5;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.tff_atomImpl <em>tff atom</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Tff_atomImpl <em>Tff atom</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.tff_atomImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_atom()
+   * @see it.unibz.inf.tptp.parser.impl.Tff_atomImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_atom()
    * @generated
    */
   int TFF_ATOM = 16;
 
   /**
-   * The number of structural features of the '<em>tff atom</em>' class.
+   * The number of structural features of the '<em>Tff atom</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -642,11 +642,11 @@ public interface ParserPackage extends EPackage
   int TFF_ATOM_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.tff_constantImpl <em>tff constant</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Tff_constantImpl <em>Tff constant</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.tff_constantImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_constant()
+   * @see it.unibz.inf.tptp.parser.impl.Tff_constantImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_constant()
    * @generated
    */
   int TFF_CONSTANT = 17;
@@ -688,7 +688,7 @@ public interface ParserPackage extends EPackage
   int TFF_CONSTANT__BOTTOM = TFF_ATOM_FEATURE_COUNT + 3;
 
   /**
-   * The number of structural features of the '<em>tff constant</em>' class.
+   * The number of structural features of the '<em>Tff constant</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -697,11 +697,11 @@ public interface ParserPackage extends EPackage
   int TFF_CONSTANT_FEATURE_COUNT = TFF_ATOM_FEATURE_COUNT + 4;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.tff_predefined_function_2_argsImpl <em>tff predefined function 2args</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Tff_predefined_function_2_argsImpl <em>Tff predefined function 2args</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.tff_predefined_function_2_argsImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_predefined_function_2_args()
+   * @see it.unibz.inf.tptp.parser.impl.Tff_predefined_function_2_argsImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_predefined_function_2_args()
    * @generated
    */
   int TFF_PREDEFINED_FUNCTION_2ARGS = 18;
@@ -725,7 +725,7 @@ public interface ParserPackage extends EPackage
   int TFF_PREDEFINED_FUNCTION_2ARGS__PARAM = TFF_ATOM_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>tff predefined function 2args</em>' class.
+   * The number of structural features of the '<em>Tff predefined function 2args</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -734,11 +734,11 @@ public interface ParserPackage extends EPackage
   int TFF_PREDEFINED_FUNCTION_2ARGS_FEATURE_COUNT = TFF_ATOM_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.tff_varImpl <em>tff var</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Tff_varImpl <em>Tff var</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.tff_varImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_var()
+   * @see it.unibz.inf.tptp.parser.impl.Tff_varImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_var()
    * @generated
    */
   int TFF_VAR = 19;
@@ -753,7 +753,7 @@ public interface ParserPackage extends EPackage
   int TFF_VAR__NAME = TFF_TYPE_ATOM__NAME;
 
   /**
-   * The number of structural features of the '<em>tff var</em>' class.
+   * The number of structural features of the '<em>Tff var</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -762,11 +762,11 @@ public interface ParserPackage extends EPackage
   int TFF_VAR_FEATURE_COUNT = TFF_TYPE_ATOM_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.tff_var_declarationImpl <em>tff var declaration</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Tff_var_declarationImpl <em>Tff var declaration</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.tff_var_declarationImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_var_declaration()
+   * @see it.unibz.inf.tptp.parser.impl.Tff_var_declarationImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_var_declaration()
    * @generated
    */
   int TFF_VAR_DECLARATION = 20;
@@ -790,7 +790,7 @@ public interface ParserPackage extends EPackage
   int TFF_VAR_DECLARATION__VARTYPE = 1;
 
   /**
-   * The number of structural features of the '<em>tff var declaration</em>' class.
+   * The number of structural features of the '<em>Tff var declaration</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -799,11 +799,11 @@ public interface ParserPackage extends EPackage
   int TFF_VAR_DECLARATION_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.tff_variable_listImpl <em>tff variable list</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Tff_variable_listImpl <em>Tff variable list</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.tff_variable_listImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_variable_list()
+   * @see it.unibz.inf.tptp.parser.impl.Tff_variable_listImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_variable_list()
    * @generated
    */
   int TFF_VARIABLE_LIST = 21;
@@ -818,7 +818,7 @@ public interface ParserPackage extends EPackage
   int TFF_VARIABLE_LIST__PARAMS = 0;
 
   /**
-   * The number of structural features of the '<em>tff variable list</em>' class.
+   * The number of structural features of the '<em>Tff variable list</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -827,17 +827,17 @@ public interface ParserPackage extends EPackage
   int TFF_VARIABLE_LIST_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.cnf_inputImpl <em>cnf input</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_inputImpl <em>Cnf input</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.cnf_inputImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_input()
+   * @see it.unibz.inf.tptp.parser.impl.Cnf_inputImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_input()
    * @generated
    */
   int CNF_INPUT = 22;
 
   /**
-   * The number of structural features of the '<em>cnf input</em>' class.
+   * The number of structural features of the '<em>Cnf input</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -846,11 +846,11 @@ public interface ParserPackage extends EPackage
   int CNF_INPUT_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.cnf_rootImpl <em>cnf root</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_rootImpl <em>Cnf root</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.cnf_rootImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_root()
+   * @see it.unibz.inf.tptp.parser.impl.Cnf_rootImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_root()
    * @generated
    */
   int CNF_ROOT = 23;
@@ -883,7 +883,7 @@ public interface ParserPackage extends EPackage
   int CNF_ROOT__EXP = CNF_INPUT_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>cnf root</em>' class.
+   * The number of structural features of the '<em>Cnf root</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -892,11 +892,11 @@ public interface ParserPackage extends EPackage
   int CNF_ROOT_FEATURE_COUNT = CNF_INPUT_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.cnf_formula_type_definitionImpl <em>cnf formula type definition</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_formula_type_definitionImpl <em>Cnf formula type definition</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.cnf_formula_type_definitionImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_formula_type_definition()
+   * @see it.unibz.inf.tptp.parser.impl.Cnf_formula_type_definitionImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_formula_type_definition()
    * @generated
    */
   int CNF_FORMULA_TYPE_DEFINITION = 24;
@@ -911,7 +911,7 @@ public interface ParserPackage extends EPackage
   int CNF_FORMULA_TYPE_DEFINITION__DISJUNCTION = 0;
 
   /**
-   * The number of structural features of the '<em>cnf formula type definition</em>' class.
+   * The number of structural features of the '<em>Cnf formula type definition</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -920,11 +920,11 @@ public interface ParserPackage extends EPackage
   int CNF_FORMULA_TYPE_DEFINITION_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.cnf_orImpl <em>cnf or</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_orImpl <em>Cnf or</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.cnf_orImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_or()
+   * @see it.unibz.inf.tptp.parser.impl.Cnf_orImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_or()
    * @generated
    */
   int CNF_OR = 25;
@@ -939,7 +939,7 @@ public interface ParserPackage extends EPackage
   int CNF_OR__OR = 0;
 
   /**
-   * The number of structural features of the '<em>cnf or</em>' class.
+   * The number of structural features of the '<em>Cnf or</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -948,11 +948,11 @@ public interface ParserPackage extends EPackage
   int CNF_OR_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.cnf_notImpl <em>cnf not</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_notImpl <em>Cnf not</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.cnf_notImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_not()
+   * @see it.unibz.inf.tptp.parser.impl.Cnf_notImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_not()
    * @generated
    */
   int CNF_NOT = 26;
@@ -976,7 +976,7 @@ public interface ParserPackage extends EPackage
   int CNF_NOT__LITERAL = 1;
 
   /**
-   * The number of structural features of the '<em>cnf not</em>' class.
+   * The number of structural features of the '<em>Cnf not</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -985,11 +985,11 @@ public interface ParserPackage extends EPackage
   int CNF_NOT_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.cnf_equalityImpl <em>cnf equality</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_equalityImpl <em>Cnf equality</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.cnf_equalityImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_equality()
+   * @see it.unibz.inf.tptp.parser.impl.Cnf_equalityImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_equality()
    * @generated
    */
   int CNF_EQUALITY = 27;
@@ -1022,7 +1022,7 @@ public interface ParserPackage extends EPackage
   int CNF_EQUALITY__EXP_R = 2;
 
   /**
-   * The number of structural features of the '<em>cnf equality</em>' class.
+   * The number of structural features of the '<em>Cnf equality</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1031,11 +1031,11 @@ public interface ParserPackage extends EPackage
   int CNF_EQUALITY_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.cnf_expressionImpl <em>cnf expression</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_expressionImpl <em>Cnf expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.cnf_expressionImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_expression()
+   * @see it.unibz.inf.tptp.parser.impl.Cnf_expressionImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_expression()
    * @generated
    */
   int CNF_EXPRESSION = 28;
@@ -1059,7 +1059,7 @@ public interface ParserPackage extends EPackage
   int CNF_EXPRESSION__NAME = 1;
 
   /**
-   * The number of structural features of the '<em>cnf expression</em>' class.
+   * The number of structural features of the '<em>Cnf expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1068,11 +1068,11 @@ public interface ParserPackage extends EPackage
   int CNF_EXPRESSION_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.cnf_constantImpl <em>cnf constant</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_constantImpl <em>Cnf constant</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.cnf_constantImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_constant()
+   * @see it.unibz.inf.tptp.parser.impl.Cnf_constantImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_constant()
    * @generated
    */
   int CNF_CONSTANT = 29;
@@ -1105,7 +1105,7 @@ public interface ParserPackage extends EPackage
   int CNF_CONSTANT__PARAM = CNF_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>cnf constant</em>' class.
+   * The number of structural features of the '<em>Cnf constant</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1114,11 +1114,11 @@ public interface ParserPackage extends EPackage
   int CNF_CONSTANT_FEATURE_COUNT = CNF_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.cnf_varImpl <em>cnf var</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_varImpl <em>Cnf var</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.cnf_varImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_var()
+   * @see it.unibz.inf.tptp.parser.impl.Cnf_varImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_var()
    * @generated
    */
   int CNF_VAR = 30;
@@ -1142,7 +1142,7 @@ public interface ParserPackage extends EPackage
   int CNF_VAR__NAME = CNF_EXPRESSION__NAME;
 
   /**
-   * The number of structural features of the '<em>cnf var</em>' class.
+   * The number of structural features of the '<em>Cnf var</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1151,17 +1151,17 @@ public interface ParserPackage extends EPackage
   int CNF_VAR_FEATURE_COUNT = CNF_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.thf_inputImpl <em>thf input</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Thf_inputImpl <em>Thf input</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.thf_inputImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_input()
+   * @see it.unibz.inf.tptp.parser.impl.Thf_inputImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_input()
    * @generated
    */
   int THF_INPUT = 31;
 
   /**
-   * The number of structural features of the '<em>thf input</em>' class.
+   * The number of structural features of the '<em>Thf input</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1170,11 +1170,11 @@ public interface ParserPackage extends EPackage
   int THF_INPUT_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.thf_rootImpl <em>thf root</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Thf_rootImpl <em>Thf root</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.thf_rootImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_root()
+   * @see it.unibz.inf.tptp.parser.impl.Thf_rootImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_root()
    * @generated
    */
   int THF_ROOT = 32;
@@ -1216,7 +1216,7 @@ public interface ParserPackage extends EPackage
   int THF_ROOT__THF_EXP = THF_INPUT_FEATURE_COUNT + 3;
 
   /**
-   * The number of structural features of the '<em>thf root</em>' class.
+   * The number of structural features of the '<em>Thf root</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1225,11 +1225,11 @@ public interface ParserPackage extends EPackage
   int THF_ROOT_FEATURE_COUNT = THF_INPUT_FEATURE_COUNT + 4;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.thf_formula_type_definitionImpl <em>thf formula type definition</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Thf_formula_type_definitionImpl <em>Thf formula type definition</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.thf_formula_type_definitionImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_formula_type_definition()
+   * @see it.unibz.inf.tptp.parser.impl.Thf_formula_type_definitionImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_formula_type_definition()
    * @generated
    */
   int THF_FORMULA_TYPE_DEFINITION = 33;
@@ -1253,7 +1253,7 @@ public interface ParserPackage extends EPackage
   int THF_FORMULA_TYPE_DEFINITION__EXP = 1;
 
   /**
-   * The number of structural features of the '<em>thf formula type definition</em>' class.
+   * The number of structural features of the '<em>Thf formula type definition</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1262,17 +1262,17 @@ public interface ParserPackage extends EPackage
   int THF_FORMULA_TYPE_DEFINITION_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.thf_type_expressionImpl <em>thf type expression</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Thf_type_expressionImpl <em>Thf type expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.thf_type_expressionImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_type_expression()
+   * @see it.unibz.inf.tptp.parser.impl.Thf_type_expressionImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_type_expression()
    * @generated
    */
   int THF_TYPE_EXPRESSION = 34;
 
   /**
-   * The number of structural features of the '<em>thf type expression</em>' class.
+   * The number of structural features of the '<em>Thf type expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1281,17 +1281,17 @@ public interface ParserPackage extends EPackage
   int THF_TYPE_EXPRESSION_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.thf_type_atomImpl <em>thf type atom</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Thf_type_atomImpl <em>Thf type atom</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.thf_type_atomImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_type_atom()
+   * @see it.unibz.inf.tptp.parser.impl.Thf_type_atomImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_type_atom()
    * @generated
    */
   int THF_TYPE_ATOM = 35;
 
   /**
-   * The number of structural features of the '<em>thf type atom</em>' class.
+   * The number of structural features of the '<em>Thf type atom</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1300,11 +1300,11 @@ public interface ParserPackage extends EPackage
   int THF_TYPE_ATOM_FEATURE_COUNT = THF_TYPE_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.thf_type_constantImpl <em>thf type constant</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Thf_type_constantImpl <em>Thf type constant</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.thf_type_constantImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_type_constant()
+   * @see it.unibz.inf.tptp.parser.impl.Thf_type_constantImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_type_constant()
    * @generated
    */
   int THF_TYPE_CONSTANT = 36;
@@ -1319,7 +1319,7 @@ public interface ParserPackage extends EPackage
   int THF_TYPE_CONSTANT__NAME = THF_TYPE_ATOM_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>thf type constant</em>' class.
+   * The number of structural features of the '<em>Thf type constant</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1328,11 +1328,11 @@ public interface ParserPackage extends EPackage
   int THF_TYPE_CONSTANT_FEATURE_COUNT = THF_TYPE_ATOM_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.thf_expressionImpl <em>thf expression</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Thf_expressionImpl <em>Thf expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.thf_expressionImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_expression()
+   * @see it.unibz.inf.tptp.parser.impl.Thf_expressionImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_expression()
    * @generated
    */
   int THF_EXPRESSION = 37;
@@ -1374,7 +1374,7 @@ public interface ParserPackage extends EPackage
   int THF_EXPRESSION__OP = 3;
 
   /**
-   * The number of structural features of the '<em>thf expression</em>' class.
+   * The number of structural features of the '<em>Thf expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1383,11 +1383,11 @@ public interface ParserPackage extends EPackage
   int THF_EXPRESSION_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.thf_atomImpl <em>thf atom</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Thf_atomImpl <em>Thf atom</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.thf_atomImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_atom()
+   * @see it.unibz.inf.tptp.parser.impl.Thf_atomImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_atom()
    * @generated
    */
   int THF_ATOM = 38;
@@ -1402,7 +1402,7 @@ public interface ParserPackage extends EPackage
   int THF_ATOM__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>thf atom</em>' class.
+   * The number of structural features of the '<em>Thf atom</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1411,11 +1411,11 @@ public interface ParserPackage extends EPackage
   int THF_ATOM_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.thf_constantImpl <em>thf constant</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Thf_constantImpl <em>Thf constant</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.thf_constantImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_constant()
+   * @see it.unibz.inf.tptp.parser.impl.Thf_constantImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_constant()
    * @generated
    */
   int THF_CONSTANT = 39;
@@ -1439,7 +1439,7 @@ public interface ParserPackage extends EPackage
   int THF_CONSTANT__THF_PARAM = THF_ATOM_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>thf constant</em>' class.
+   * The number of structural features of the '<em>Thf constant</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1448,11 +1448,11 @@ public interface ParserPackage extends EPackage
   int THF_CONSTANT_FEATURE_COUNT = THF_ATOM_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.thf_varImpl <em>thf var</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Thf_varImpl <em>Thf var</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.thf_varImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_var()
+   * @see it.unibz.inf.tptp.parser.impl.Thf_varImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_var()
    * @generated
    */
   int THF_VAR = 40;
@@ -1467,7 +1467,7 @@ public interface ParserPackage extends EPackage
   int THF_VAR__NAME = THF_ATOM__NAME;
 
   /**
-   * The number of structural features of the '<em>thf var</em>' class.
+   * The number of structural features of the '<em>Thf var</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1476,11 +1476,11 @@ public interface ParserPackage extends EPackage
   int THF_VAR_FEATURE_COUNT = THF_ATOM_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.thf_variable_listImpl <em>thf variable list</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Thf_variable_listImpl <em>Thf variable list</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.thf_variable_listImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_variable_list()
+   * @see it.unibz.inf.tptp.parser.impl.Thf_variable_listImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_variable_list()
    * @generated
    */
   int THF_VARIABLE_LIST = 41;
@@ -1495,7 +1495,7 @@ public interface ParserPackage extends EPackage
   int THF_VARIABLE_LIST__PARAMS = 0;
 
   /**
-   * The number of structural features of the '<em>thf variable list</em>' class.
+   * The number of structural features of the '<em>Thf variable list</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1504,11 +1504,11 @@ public interface ParserPackage extends EPackage
   int THF_VARIABLE_LIST_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.thf_var_declarationImpl <em>thf var declaration</em>}' class.
+   * The meta object id for the '{@link it.unibz.inf.tptp.parser.impl.Thf_var_declarationImpl <em>Thf var declaration</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see it.unibz.inf.tptp.parser.impl.thf_var_declarationImpl
-   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_var_declaration()
+   * @see it.unibz.inf.tptp.parser.impl.Thf_var_declarationImpl
+   * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_var_declaration()
    * @generated
    */
   int THF_VAR_DECLARATION = 42;
@@ -1532,7 +1532,7 @@ public interface ParserPackage extends EPackage
   int THF_VAR_DECLARATION__VARTYPE = 1;
 
   /**
-   * The number of structural features of the '<em>thf var declaration</em>' class.
+   * The number of structural features of the '<em>Thf var declaration</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1772,1117 +1772,1117 @@ public interface ParserPackage extends EPackage
   EReference getModel_TPTP_input();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.include <em>include</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Include <em>Include</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>include</em>'.
-   * @see it.unibz.inf.tptp.parser.include
+   * @return the meta object for class '<em>Include</em>'.
+   * @see it.unibz.inf.tptp.parser.Include
    * @generated
    */
-  EClass getinclude();
+  EClass getInclude();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.include#getPath <em>Path</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Include#getPath <em>Path</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Path</em>'.
-   * @see it.unibz.inf.tptp.parser.include#getPath()
-   * @see #getinclude()
+   * @see it.unibz.inf.tptp.parser.Include#getPath()
+   * @see #getInclude()
    * @generated
    */
-  EAttribute getinclude_Path();
+  EAttribute getInclude_Path();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.fof_input <em>fof input</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Fof_input <em>Fof input</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>fof input</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_input
+   * @return the meta object for class '<em>Fof input</em>'.
+   * @see it.unibz.inf.tptp.parser.Fof_input
    * @generated
    */
-  EClass getfof_input();
+  EClass getFof_input();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.fof_root <em>fof root</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Fof_root <em>Fof root</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>fof root</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_root
+   * @return the meta object for class '<em>Fof root</em>'.
+   * @see it.unibz.inf.tptp.parser.Fof_root
    * @generated
    */
-  EClass getfof_root();
+  EClass getFof_root();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.fof_root#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Fof_root#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_root#getName()
-   * @see #getfof_root()
+   * @see it.unibz.inf.tptp.parser.Fof_root#getName()
+   * @see #getFof_root()
    * @generated
    */
-  EAttribute getfof_root_Name();
+  EAttribute getFof_root_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.fof_root#getFormula_role <em>Formula role</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Fof_root#getFormula_role <em>Formula role</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Formula role</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_root#getFormula_role()
-   * @see #getfof_root()
+   * @see it.unibz.inf.tptp.parser.Fof_root#getFormula_role()
+   * @see #getFof_root()
    * @generated
    */
-  EAttribute getfof_root_Formula_role();
+  EAttribute getFof_root_Formula_role();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.fof_root#getExp <em>Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Fof_root#getExp <em>Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Exp</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_root#getExp()
-   * @see #getfof_root()
+   * @see it.unibz.inf.tptp.parser.Fof_root#getExp()
+   * @see #getFof_root()
    * @generated
    */
-  EReference getfof_root_Exp();
+  EReference getFof_root_Exp();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.fof_expression <em>fof expression</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Fof_expression <em>Fof expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>fof expression</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_expression
+   * @return the meta object for class '<em>Fof expression</em>'.
+   * @see it.unibz.inf.tptp.parser.Fof_expression
    * @generated
    */
-  EClass getfof_expression();
+  EClass getFof_expression();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.fof_expression#getFof_atom <em>Fof atom</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Fof_expression#getFof_atom <em>Fof atom</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Fof atom</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_expression#getFof_atom()
-   * @see #getfof_expression()
+   * @see it.unibz.inf.tptp.parser.Fof_expression#getFof_atom()
+   * @see #getFof_expression()
    * @generated
    */
-  EReference getfof_expression_Fof_atom();
+  EReference getFof_expression_Fof_atom();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.fof_expression#isFof_negation <em>Fof negation</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Fof_expression#isFof_negation <em>Fof negation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Fof negation</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_expression#isFof_negation()
-   * @see #getfof_expression()
+   * @see it.unibz.inf.tptp.parser.Fof_expression#isFof_negation()
+   * @see #getFof_expression()
    * @generated
    */
-  EAttribute getfof_expression_Fof_negation();
+  EAttribute getFof_expression_Fof_negation();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.fof_expression#getFof_exp <em>Fof exp</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Fof_expression#getFof_exp <em>Fof exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Fof exp</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_expression#getFof_exp()
-   * @see #getfof_expression()
+   * @see it.unibz.inf.tptp.parser.Fof_expression#getFof_exp()
+   * @see #getFof_expression()
    * @generated
    */
-  EReference getfof_expression_Fof_exp();
+  EReference getFof_expression_Fof_exp();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.fof_expression#getFof_quantifier <em>Fof quantifier</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Fof_expression#getFof_quantifier <em>Fof quantifier</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Fof quantifier</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_expression#getFof_quantifier()
-   * @see #getfof_expression()
+   * @see it.unibz.inf.tptp.parser.Fof_expression#getFof_quantifier()
+   * @see #getFof_expression()
    * @generated
    */
-  EAttribute getfof_expression_Fof_quantifier();
+  EAttribute getFof_expression_Fof_quantifier();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.fof_expression#getFof_param <em>Fof param</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Fof_expression#getFof_param <em>Fof param</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Fof param</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_expression#getFof_param()
-   * @see #getfof_expression()
+   * @see it.unibz.inf.tptp.parser.Fof_expression#getFof_param()
+   * @see #getFof_expression()
    * @generated
    */
-  EReference getfof_expression_Fof_param();
+  EReference getFof_expression_Fof_param();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.fof_atom <em>fof atom</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Fof_atom <em>Fof atom</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>fof atom</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_atom
+   * @return the meta object for class '<em>Fof atom</em>'.
+   * @see it.unibz.inf.tptp.parser.Fof_atom
    * @generated
    */
-  EClass getfof_atom();
+  EClass getFof_atom();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.fof_atom#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Fof_atom#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_atom#getName()
-   * @see #getfof_atom()
+   * @see it.unibz.inf.tptp.parser.Fof_atom#getName()
+   * @see #getFof_atom()
    * @generated
    */
-  EAttribute getfof_atom_Name();
+  EAttribute getFof_atom_Name();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.fof_constant <em>fof constant</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Fof_constant <em>Fof constant</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>fof constant</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_constant
+   * @return the meta object for class '<em>Fof constant</em>'.
+   * @see it.unibz.inf.tptp.parser.Fof_constant
    * @generated
    */
-  EClass getfof_constant();
+  EClass getFof_constant();
 
   /**
-   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.fof_constant#getFof_param <em>Fof param</em>}'.
+   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.Fof_constant#getFof_param <em>Fof param</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Fof param</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_constant#getFof_param()
-   * @see #getfof_constant()
+   * @see it.unibz.inf.tptp.parser.Fof_constant#getFof_param()
+   * @see #getFof_constant()
    * @generated
    */
-  EReference getfof_constant_Fof_param();
+  EReference getFof_constant_Fof_param();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.fof_var <em>fof var</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Fof_var <em>Fof var</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>fof var</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_var
+   * @return the meta object for class '<em>Fof var</em>'.
+   * @see it.unibz.inf.tptp.parser.Fof_var
    * @generated
    */
-  EClass getfof_var();
+  EClass getFof_var();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.fof_variable_list <em>fof variable list</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Fof_variable_list <em>Fof variable list</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>fof variable list</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_variable_list
+   * @return the meta object for class '<em>Fof variable list</em>'.
+   * @see it.unibz.inf.tptp.parser.Fof_variable_list
    * @generated
    */
-  EClass getfof_variable_list();
+  EClass getFof_variable_list();
 
   /**
-   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.fof_variable_list#getParams <em>Params</em>}'.
+   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.Fof_variable_list#getParams <em>Params</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Params</em>'.
-   * @see it.unibz.inf.tptp.parser.fof_variable_list#getParams()
-   * @see #getfof_variable_list()
+   * @see it.unibz.inf.tptp.parser.Fof_variable_list#getParams()
+   * @see #getFof_variable_list()
    * @generated
    */
-  EReference getfof_variable_list_Params();
+  EReference getFof_variable_list_Params();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.tff_input <em>tff input</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Tff_input <em>Tff input</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>tff input</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_input
+   * @return the meta object for class '<em>Tff input</em>'.
+   * @see it.unibz.inf.tptp.parser.Tff_input
    * @generated
    */
-  EClass gettff_input();
+  EClass getTff_input();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.tff_root <em>tff root</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Tff_root <em>Tff root</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>tff root</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_root
+   * @return the meta object for class '<em>Tff root</em>'.
+   * @see it.unibz.inf.tptp.parser.Tff_root
    * @generated
    */
-  EClass gettff_root();
+  EClass getTff_root();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.tff_root#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Tff_root#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_root#getName()
-   * @see #gettff_root()
+   * @see it.unibz.inf.tptp.parser.Tff_root#getName()
+   * @see #getTff_root()
    * @generated
    */
-  EAttribute gettff_root_Name();
+  EAttribute getTff_root_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.tff_root#getFormula_role <em>Formula role</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Tff_root#getFormula_role <em>Formula role</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Formula role</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_root#getFormula_role()
-   * @see #gettff_root()
+   * @see it.unibz.inf.tptp.parser.Tff_root#getFormula_role()
+   * @see #getTff_root()
    * @generated
    */
-  EAttribute gettff_root_Formula_role();
+  EAttribute getTff_root_Formula_role();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.tff_root#getExp <em>Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Tff_root#getExp <em>Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Exp</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_root#getExp()
-   * @see #gettff_root()
+   * @see it.unibz.inf.tptp.parser.Tff_root#getExp()
+   * @see #getTff_root()
    * @generated
    */
-  EReference gettff_root_Exp();
+  EReference getTff_root_Exp();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.tff_root#getDef <em>Def</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Tff_root#getDef <em>Def</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Def</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_root#getDef()
-   * @see #gettff_root()
+   * @see it.unibz.inf.tptp.parser.Tff_root#getDef()
+   * @see #getTff_root()
    * @generated
    */
-  EReference gettff_root_Def();
+  EReference getTff_root_Def();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.tff_formula_type_definition <em>tff formula type definition</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Tff_formula_type_definition <em>Tff formula type definition</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>tff formula type definition</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_formula_type_definition
+   * @return the meta object for class '<em>Tff formula type definition</em>'.
+   * @see it.unibz.inf.tptp.parser.Tff_formula_type_definition
    * @generated
    */
-  EClass gettff_formula_type_definition();
+  EClass getTff_formula_type_definition();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.tff_formula_type_definition#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Tff_formula_type_definition#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_formula_type_definition#getName()
-   * @see #gettff_formula_type_definition()
+   * @see it.unibz.inf.tptp.parser.Tff_formula_type_definition#getName()
+   * @see #getTff_formula_type_definition()
    * @generated
    */
-  EAttribute gettff_formula_type_definition_Name();
+  EAttribute getTff_formula_type_definition_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.tff_formula_type_definition#getExp <em>Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Tff_formula_type_definition#getExp <em>Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Exp</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_formula_type_definition#getExp()
-   * @see #gettff_formula_type_definition()
+   * @see it.unibz.inf.tptp.parser.Tff_formula_type_definition#getExp()
+   * @see #getTff_formula_type_definition()
    * @generated
    */
-  EReference gettff_formula_type_definition_Exp();
+  EReference getTff_formula_type_definition_Exp();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.tff_type_expression <em>tff type expression</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Tff_type_expression <em>Tff type expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>tff type expression</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_type_expression
+   * @return the meta object for class '<em>Tff type expression</em>'.
+   * @see it.unibz.inf.tptp.parser.Tff_type_expression
    * @generated
    */
-  EClass gettff_type_expression();
+  EClass getTff_type_expression();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.tff_type_atom <em>tff type atom</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Tff_type_atom <em>Tff type atom</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>tff type atom</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_type_atom
+   * @return the meta object for class '<em>Tff type atom</em>'.
+   * @see it.unibz.inf.tptp.parser.Tff_type_atom
    * @generated
    */
-  EClass gettff_type_atom();
+  EClass getTff_type_atom();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.tff_type_atom#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Tff_type_atom#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_type_atom#getName()
-   * @see #gettff_type_atom()
+   * @see it.unibz.inf.tptp.parser.Tff_type_atom#getName()
+   * @see #getTff_type_atom()
    * @generated
    */
-  EAttribute gettff_type_atom_Name();
+  EAttribute getTff_type_atom_Name();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.tff_type_constant <em>tff type constant</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Tff_type_constant <em>Tff type constant</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>tff type constant</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_type_constant
+   * @return the meta object for class '<em>Tff type constant</em>'.
+   * @see it.unibz.inf.tptp.parser.Tff_type_constant
    * @generated
    */
-  EClass gettff_type_constant();
+  EClass getTff_type_constant();
 
   /**
-   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.tff_type_constant#getParam <em>Param</em>}'.
+   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.Tff_type_constant#getParam <em>Param</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Param</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_type_constant#getParam()
-   * @see #gettff_type_constant()
+   * @see it.unibz.inf.tptp.parser.Tff_type_constant#getParam()
+   * @see #getTff_type_constant()
    * @generated
    */
-  EReference gettff_type_constant_Param();
+  EReference getTff_type_constant_Param();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.tff_expression <em>tff expression</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Tff_expression <em>Tff expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>tff expression</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_expression
+   * @return the meta object for class '<em>Tff expression</em>'.
+   * @see it.unibz.inf.tptp.parser.Tff_expression
    * @generated
    */
-  EClass gettff_expression();
+  EClass getTff_expression();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.tff_expression#getAtom <em>Atom</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Tff_expression#getAtom <em>Atom</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Atom</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_expression#getAtom()
-   * @see #gettff_expression()
+   * @see it.unibz.inf.tptp.parser.Tff_expression#getAtom()
+   * @see #getTff_expression()
    * @generated
    */
-  EReference gettff_expression_Atom();
+  EReference getTff_expression_Atom();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.tff_expression#isNegation <em>Negation</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Tff_expression#isNegation <em>Negation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Negation</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_expression#isNegation()
-   * @see #gettff_expression()
+   * @see it.unibz.inf.tptp.parser.Tff_expression#isNegation()
+   * @see #getTff_expression()
    * @generated
    */
-  EAttribute gettff_expression_Negation();
+  EAttribute getTff_expression_Negation();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.tff_expression#getExp <em>Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Tff_expression#getExp <em>Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Exp</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_expression#getExp()
-   * @see #gettff_expression()
+   * @see it.unibz.inf.tptp.parser.Tff_expression#getExp()
+   * @see #getTff_expression()
    * @generated
    */
-  EReference gettff_expression_Exp();
+  EReference getTff_expression_Exp();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.tff_expression#getQuantifier <em>Quantifier</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Tff_expression#getQuantifier <em>Quantifier</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Quantifier</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_expression#getQuantifier()
-   * @see #gettff_expression()
+   * @see it.unibz.inf.tptp.parser.Tff_expression#getQuantifier()
+   * @see #getTff_expression()
    * @generated
    */
-  EAttribute gettff_expression_Quantifier();
+  EAttribute getTff_expression_Quantifier();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.tff_expression#getParam <em>Param</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Tff_expression#getParam <em>Param</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Param</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_expression#getParam()
-   * @see #gettff_expression()
+   * @see it.unibz.inf.tptp.parser.Tff_expression#getParam()
+   * @see #getTff_expression()
    * @generated
    */
-  EReference gettff_expression_Param();
+  EReference getTff_expression_Param();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.tff_atom <em>tff atom</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Tff_atom <em>Tff atom</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>tff atom</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_atom
+   * @return the meta object for class '<em>Tff atom</em>'.
+   * @see it.unibz.inf.tptp.parser.Tff_atom
    * @generated
    */
-  EClass gettff_atom();
+  EClass getTff_atom();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.tff_constant <em>tff constant</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Tff_constant <em>Tff constant</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>tff constant</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_constant
+   * @return the meta object for class '<em>Tff constant</em>'.
+   * @see it.unibz.inf.tptp.parser.Tff_constant
    * @generated
    */
-  EClass gettff_constant();
+  EClass getTff_constant();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.tff_constant#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Tff_constant#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_constant#getName()
-   * @see #gettff_constant()
+   * @see it.unibz.inf.tptp.parser.Tff_constant#getName()
+   * @see #getTff_constant()
    * @generated
    */
-  EAttribute gettff_constant_Name();
+  EAttribute getTff_constant_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.tff_constant#getParam <em>Param</em>}'.
+   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.Tff_constant#getParam <em>Param</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Param</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_constant#getParam()
-   * @see #gettff_constant()
+   * @see it.unibz.inf.tptp.parser.Tff_constant#getParam()
+   * @see #getTff_constant()
    * @generated
    */
-  EReference gettff_constant_Param();
+  EReference getTff_constant_Param();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.tff_constant#getTop <em>Top</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Tff_constant#getTop <em>Top</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Top</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_constant#getTop()
-   * @see #gettff_constant()
+   * @see it.unibz.inf.tptp.parser.Tff_constant#getTop()
+   * @see #getTff_constant()
    * @generated
    */
-  EAttribute gettff_constant_Top();
+  EAttribute getTff_constant_Top();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.tff_constant#getBottom <em>Bottom</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Tff_constant#getBottom <em>Bottom</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Bottom</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_constant#getBottom()
-   * @see #gettff_constant()
+   * @see it.unibz.inf.tptp.parser.Tff_constant#getBottom()
+   * @see #getTff_constant()
    * @generated
    */
-  EAttribute gettff_constant_Bottom();
+  EAttribute getTff_constant_Bottom();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.tff_predefined_function_2_args <em>tff predefined function 2args</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Tff_predefined_function_2_args <em>Tff predefined function 2args</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>tff predefined function 2args</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_predefined_function_2_args
+   * @return the meta object for class '<em>Tff predefined function 2args</em>'.
+   * @see it.unibz.inf.tptp.parser.Tff_predefined_function_2_args
    * @generated
    */
-  EClass gettff_predefined_function_2_args();
+  EClass getTff_predefined_function_2_args();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.tff_predefined_function_2_args#getFunc <em>Func</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Tff_predefined_function_2_args#getFunc <em>Func</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Func</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_predefined_function_2_args#getFunc()
-   * @see #gettff_predefined_function_2_args()
+   * @see it.unibz.inf.tptp.parser.Tff_predefined_function_2_args#getFunc()
+   * @see #getTff_predefined_function_2_args()
    * @generated
    */
-  EAttribute gettff_predefined_function_2_args_Func();
+  EAttribute getTff_predefined_function_2_args_Func();
 
   /**
-   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.tff_predefined_function_2_args#getParam <em>Param</em>}'.
+   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.Tff_predefined_function_2_args#getParam <em>Param</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Param</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_predefined_function_2_args#getParam()
-   * @see #gettff_predefined_function_2_args()
+   * @see it.unibz.inf.tptp.parser.Tff_predefined_function_2_args#getParam()
+   * @see #getTff_predefined_function_2_args()
    * @generated
    */
-  EReference gettff_predefined_function_2_args_Param();
+  EReference getTff_predefined_function_2_args_Param();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.tff_var <em>tff var</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Tff_var <em>Tff var</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>tff var</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_var
+   * @return the meta object for class '<em>Tff var</em>'.
+   * @see it.unibz.inf.tptp.parser.Tff_var
    * @generated
    */
-  EClass gettff_var();
+  EClass getTff_var();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.tff_var_declaration <em>tff var declaration</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Tff_var_declaration <em>Tff var declaration</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>tff var declaration</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_var_declaration
+   * @return the meta object for class '<em>Tff var declaration</em>'.
+   * @see it.unibz.inf.tptp.parser.Tff_var_declaration
    * @generated
    */
-  EClass gettff_var_declaration();
+  EClass getTff_var_declaration();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.tff_var_declaration#getVar <em>Var</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Tff_var_declaration#getVar <em>Var</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Var</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_var_declaration#getVar()
-   * @see #gettff_var_declaration()
+   * @see it.unibz.inf.tptp.parser.Tff_var_declaration#getVar()
+   * @see #getTff_var_declaration()
    * @generated
    */
-  EReference gettff_var_declaration_Var();
+  EReference getTff_var_declaration_Var();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.tff_var_declaration#getVartype <em>Vartype</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Tff_var_declaration#getVartype <em>Vartype</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Vartype</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_var_declaration#getVartype()
-   * @see #gettff_var_declaration()
+   * @see it.unibz.inf.tptp.parser.Tff_var_declaration#getVartype()
+   * @see #getTff_var_declaration()
    * @generated
    */
-  EReference gettff_var_declaration_Vartype();
+  EReference getTff_var_declaration_Vartype();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.tff_variable_list <em>tff variable list</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Tff_variable_list <em>Tff variable list</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>tff variable list</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_variable_list
+   * @return the meta object for class '<em>Tff variable list</em>'.
+   * @see it.unibz.inf.tptp.parser.Tff_variable_list
    * @generated
    */
-  EClass gettff_variable_list();
+  EClass getTff_variable_list();
 
   /**
-   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.tff_variable_list#getParams <em>Params</em>}'.
+   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.Tff_variable_list#getParams <em>Params</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Params</em>'.
-   * @see it.unibz.inf.tptp.parser.tff_variable_list#getParams()
-   * @see #gettff_variable_list()
+   * @see it.unibz.inf.tptp.parser.Tff_variable_list#getParams()
+   * @see #getTff_variable_list()
    * @generated
    */
-  EReference gettff_variable_list_Params();
+  EReference getTff_variable_list_Params();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.cnf_input <em>cnf input</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Cnf_input <em>Cnf input</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>cnf input</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_input
+   * @return the meta object for class '<em>Cnf input</em>'.
+   * @see it.unibz.inf.tptp.parser.Cnf_input
    * @generated
    */
-  EClass getcnf_input();
+  EClass getCnf_input();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.cnf_root <em>cnf root</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Cnf_root <em>Cnf root</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>cnf root</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_root
+   * @return the meta object for class '<em>Cnf root</em>'.
+   * @see it.unibz.inf.tptp.parser.Cnf_root
    * @generated
    */
-  EClass getcnf_root();
+  EClass getCnf_root();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.cnf_root#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Cnf_root#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_root#getName()
-   * @see #getcnf_root()
+   * @see it.unibz.inf.tptp.parser.Cnf_root#getName()
+   * @see #getCnf_root()
    * @generated
    */
-  EAttribute getcnf_root_Name();
+  EAttribute getCnf_root_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.cnf_root#getFormula_role <em>Formula role</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Cnf_root#getFormula_role <em>Formula role</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Formula role</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_root#getFormula_role()
-   * @see #getcnf_root()
+   * @see it.unibz.inf.tptp.parser.Cnf_root#getFormula_role()
+   * @see #getCnf_root()
    * @generated
    */
-  EAttribute getcnf_root_Formula_role();
+  EAttribute getCnf_root_Formula_role();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.cnf_root#getExp <em>Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Cnf_root#getExp <em>Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Exp</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_root#getExp()
-   * @see #getcnf_root()
+   * @see it.unibz.inf.tptp.parser.Cnf_root#getExp()
+   * @see #getCnf_root()
    * @generated
    */
-  EReference getcnf_root_Exp();
+  EReference getCnf_root_Exp();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.cnf_formula_type_definition <em>cnf formula type definition</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Cnf_formula_type_definition <em>Cnf formula type definition</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>cnf formula type definition</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_formula_type_definition
+   * @return the meta object for class '<em>Cnf formula type definition</em>'.
+   * @see it.unibz.inf.tptp.parser.Cnf_formula_type_definition
    * @generated
    */
-  EClass getcnf_formula_type_definition();
+  EClass getCnf_formula_type_definition();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.cnf_formula_type_definition#getDisjunction <em>Disjunction</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Cnf_formula_type_definition#getDisjunction <em>Disjunction</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Disjunction</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_formula_type_definition#getDisjunction()
-   * @see #getcnf_formula_type_definition()
+   * @see it.unibz.inf.tptp.parser.Cnf_formula_type_definition#getDisjunction()
+   * @see #getCnf_formula_type_definition()
    * @generated
    */
-  EReference getcnf_formula_type_definition_Disjunction();
+  EReference getCnf_formula_type_definition_Disjunction();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.cnf_or <em>cnf or</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Cnf_or <em>Cnf or</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>cnf or</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_or
+   * @return the meta object for class '<em>Cnf or</em>'.
+   * @see it.unibz.inf.tptp.parser.Cnf_or
    * @generated
    */
-  EClass getcnf_or();
+  EClass getCnf_or();
 
   /**
-   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.cnf_or#getOr <em>Or</em>}'.
+   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.Cnf_or#getOr <em>Or</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Or</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_or#getOr()
-   * @see #getcnf_or()
+   * @see it.unibz.inf.tptp.parser.Cnf_or#getOr()
+   * @see #getCnf_or()
    * @generated
    */
-  EReference getcnf_or_Or();
+  EReference getCnf_or_Or();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.cnf_not <em>cnf not</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Cnf_not <em>Cnf not</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>cnf not</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_not
+   * @return the meta object for class '<em>Cnf not</em>'.
+   * @see it.unibz.inf.tptp.parser.Cnf_not
    * @generated
    */
-  EClass getcnf_not();
+  EClass getCnf_not();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.cnf_not#isNegated <em>Negated</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Cnf_not#isNegated <em>Negated</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Negated</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_not#isNegated()
-   * @see #getcnf_not()
+   * @see it.unibz.inf.tptp.parser.Cnf_not#isNegated()
+   * @see #getCnf_not()
    * @generated
    */
-  EAttribute getcnf_not_Negated();
+  EAttribute getCnf_not_Negated();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.cnf_not#getLiteral <em>Literal</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Cnf_not#getLiteral <em>Literal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Literal</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_not#getLiteral()
-   * @see #getcnf_not()
+   * @see it.unibz.inf.tptp.parser.Cnf_not#getLiteral()
+   * @see #getCnf_not()
    * @generated
    */
-  EReference getcnf_not_Literal();
+  EReference getCnf_not_Literal();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.cnf_equality <em>cnf equality</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Cnf_equality <em>Cnf equality</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>cnf equality</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_equality
+   * @return the meta object for class '<em>Cnf equality</em>'.
+   * @see it.unibz.inf.tptp.parser.Cnf_equality
    * @generated
    */
-  EClass getcnf_equality();
+  EClass getCnf_equality();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.cnf_equality#getExpL <em>Exp L</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Cnf_equality#getExpL <em>Exp L</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Exp L</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_equality#getExpL()
-   * @see #getcnf_equality()
+   * @see it.unibz.inf.tptp.parser.Cnf_equality#getExpL()
+   * @see #getCnf_equality()
    * @generated
    */
-  EReference getcnf_equality_ExpL();
+  EReference getCnf_equality_ExpL();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.cnf_equality#getEq <em>Eq</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Cnf_equality#getEq <em>Eq</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Eq</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_equality#getEq()
-   * @see #getcnf_equality()
+   * @see it.unibz.inf.tptp.parser.Cnf_equality#getEq()
+   * @see #getCnf_equality()
    * @generated
    */
-  EAttribute getcnf_equality_Eq();
+  EAttribute getCnf_equality_Eq();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.cnf_equality#getExpR <em>Exp R</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Cnf_equality#getExpR <em>Exp R</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Exp R</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_equality#getExpR()
-   * @see #getcnf_equality()
+   * @see it.unibz.inf.tptp.parser.Cnf_equality#getExpR()
+   * @see #getCnf_equality()
    * @generated
    */
-  EReference getcnf_equality_ExpR();
+  EReference getCnf_equality_ExpR();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.cnf_expression <em>cnf expression</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Cnf_expression <em>Cnf expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>cnf expression</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_expression
+   * @return the meta object for class '<em>Cnf expression</em>'.
+   * @see it.unibz.inf.tptp.parser.Cnf_expression
    * @generated
    */
-  EClass getcnf_expression();
+  EClass getCnf_expression();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.cnf_expression#getCnf_exp <em>Cnf exp</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Cnf_expression#getCnf_exp <em>Cnf exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Cnf exp</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_expression#getCnf_exp()
-   * @see #getcnf_expression()
+   * @see it.unibz.inf.tptp.parser.Cnf_expression#getCnf_exp()
+   * @see #getCnf_expression()
    * @generated
    */
-  EAttribute getcnf_expression_Cnf_exp();
+  EAttribute getCnf_expression_Cnf_exp();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.cnf_expression#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Cnf_expression#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_expression#getName()
-   * @see #getcnf_expression()
+   * @see it.unibz.inf.tptp.parser.Cnf_expression#getName()
+   * @see #getCnf_expression()
    * @generated
    */
-  EAttribute getcnf_expression_Name();
+  EAttribute getCnf_expression_Name();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.cnf_constant <em>cnf constant</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Cnf_constant <em>Cnf constant</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>cnf constant</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_constant
+   * @return the meta object for class '<em>Cnf constant</em>'.
+   * @see it.unibz.inf.tptp.parser.Cnf_constant
    * @generated
    */
-  EClass getcnf_constant();
+  EClass getCnf_constant();
 
   /**
-   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.cnf_constant#getParam <em>Param</em>}'.
+   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.Cnf_constant#getParam <em>Param</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Param</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_constant#getParam()
-   * @see #getcnf_constant()
+   * @see it.unibz.inf.tptp.parser.Cnf_constant#getParam()
+   * @see #getCnf_constant()
    * @generated
    */
-  EReference getcnf_constant_Param();
+  EReference getCnf_constant_Param();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.cnf_var <em>cnf var</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Cnf_var <em>Cnf var</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>cnf var</em>'.
-   * @see it.unibz.inf.tptp.parser.cnf_var
+   * @return the meta object for class '<em>Cnf var</em>'.
+   * @see it.unibz.inf.tptp.parser.Cnf_var
    * @generated
    */
-  EClass getcnf_var();
+  EClass getCnf_var();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.thf_input <em>thf input</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Thf_input <em>Thf input</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>thf input</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_input
+   * @return the meta object for class '<em>Thf input</em>'.
+   * @see it.unibz.inf.tptp.parser.Thf_input
    * @generated
    */
-  EClass getthf_input();
+  EClass getThf_input();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.thf_root <em>thf root</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Thf_root <em>Thf root</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>thf root</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_root
+   * @return the meta object for class '<em>Thf root</em>'.
+   * @see it.unibz.inf.tptp.parser.Thf_root
    * @generated
    */
-  EClass getthf_root();
+  EClass getThf_root();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.thf_root#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Thf_root#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_root#getName()
-   * @see #getthf_root()
+   * @see it.unibz.inf.tptp.parser.Thf_root#getName()
+   * @see #getThf_root()
    * @generated
    */
-  EAttribute getthf_root_Name();
+  EAttribute getThf_root_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.thf_root#getFormula_role <em>Formula role</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Thf_root#getFormula_role <em>Formula role</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Formula role</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_root#getFormula_role()
-   * @see #getthf_root()
+   * @see it.unibz.inf.tptp.parser.Thf_root#getFormula_role()
+   * @see #getThf_root()
    * @generated
    */
-  EAttribute getthf_root_Formula_role();
+  EAttribute getThf_root_Formula_role();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.thf_root#getDef <em>Def</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Thf_root#getDef <em>Def</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Def</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_root#getDef()
-   * @see #getthf_root()
+   * @see it.unibz.inf.tptp.parser.Thf_root#getDef()
+   * @see #getThf_root()
    * @generated
    */
-  EReference getthf_root_Def();
+  EReference getThf_root_Def();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.thf_root#getThf_exp <em>Thf exp</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Thf_root#getThf_exp <em>Thf exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Thf exp</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_root#getThf_exp()
-   * @see #getthf_root()
+   * @see it.unibz.inf.tptp.parser.Thf_root#getThf_exp()
+   * @see #getThf_root()
    * @generated
    */
-  EReference getthf_root_Thf_exp();
+  EReference getThf_root_Thf_exp();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.thf_formula_type_definition <em>thf formula type definition</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Thf_formula_type_definition <em>Thf formula type definition</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>thf formula type definition</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_formula_type_definition
+   * @return the meta object for class '<em>Thf formula type definition</em>'.
+   * @see it.unibz.inf.tptp.parser.Thf_formula_type_definition
    * @generated
    */
-  EClass getthf_formula_type_definition();
+  EClass getThf_formula_type_definition();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.thf_formula_type_definition#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Thf_formula_type_definition#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_formula_type_definition#getName()
-   * @see #getthf_formula_type_definition()
+   * @see it.unibz.inf.tptp.parser.Thf_formula_type_definition#getName()
+   * @see #getThf_formula_type_definition()
    * @generated
    */
-  EAttribute getthf_formula_type_definition_Name();
+  EAttribute getThf_formula_type_definition_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.thf_formula_type_definition#getExp <em>Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Thf_formula_type_definition#getExp <em>Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Exp</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_formula_type_definition#getExp()
-   * @see #getthf_formula_type_definition()
+   * @see it.unibz.inf.tptp.parser.Thf_formula_type_definition#getExp()
+   * @see #getThf_formula_type_definition()
    * @generated
    */
-  EReference getthf_formula_type_definition_Exp();
+  EReference getThf_formula_type_definition_Exp();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.thf_type_expression <em>thf type expression</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Thf_type_expression <em>Thf type expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>thf type expression</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_type_expression
+   * @return the meta object for class '<em>Thf type expression</em>'.
+   * @see it.unibz.inf.tptp.parser.Thf_type_expression
    * @generated
    */
-  EClass getthf_type_expression();
+  EClass getThf_type_expression();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.thf_type_atom <em>thf type atom</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Thf_type_atom <em>Thf type atom</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>thf type atom</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_type_atom
+   * @return the meta object for class '<em>Thf type atom</em>'.
+   * @see it.unibz.inf.tptp.parser.Thf_type_atom
    * @generated
    */
-  EClass getthf_type_atom();
+  EClass getThf_type_atom();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.thf_type_constant <em>thf type constant</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Thf_type_constant <em>Thf type constant</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>thf type constant</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_type_constant
+   * @return the meta object for class '<em>Thf type constant</em>'.
+   * @see it.unibz.inf.tptp.parser.Thf_type_constant
    * @generated
    */
-  EClass getthf_type_constant();
+  EClass getThf_type_constant();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.thf_type_constant#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Thf_type_constant#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_type_constant#getName()
-   * @see #getthf_type_constant()
+   * @see it.unibz.inf.tptp.parser.Thf_type_constant#getName()
+   * @see #getThf_type_constant()
    * @generated
    */
-  EAttribute getthf_type_constant_Name();
+  EAttribute getThf_type_constant_Name();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.thf_expression <em>thf expression</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Thf_expression <em>Thf expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>thf expression</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_expression
+   * @return the meta object for class '<em>Thf expression</em>'.
+   * @see it.unibz.inf.tptp.parser.Thf_expression
    * @generated
    */
-  EClass getthf_expression();
+  EClass getThf_expression();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.thf_expression#getThf_atom <em>Thf atom</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Thf_expression#getThf_atom <em>Thf atom</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Thf atom</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_expression#getThf_atom()
-   * @see #getthf_expression()
+   * @see it.unibz.inf.tptp.parser.Thf_expression#getThf_atom()
+   * @see #getThf_expression()
    * @generated
    */
-  EReference getthf_expression_Thf_atom();
+  EReference getThf_expression_Thf_atom();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.thf_expression#isThf_negation <em>Thf negation</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Thf_expression#isThf_negation <em>Thf negation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Thf negation</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_expression#isThf_negation()
-   * @see #getthf_expression()
+   * @see it.unibz.inf.tptp.parser.Thf_expression#isThf_negation()
+   * @see #getThf_expression()
    * @generated
    */
-  EAttribute getthf_expression_Thf_negation();
+  EAttribute getThf_expression_Thf_negation();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.thf_expression#getThf_exp <em>Thf exp</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Thf_expression#getThf_exp <em>Thf exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Thf exp</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_expression#getThf_exp()
-   * @see #getthf_expression()
+   * @see it.unibz.inf.tptp.parser.Thf_expression#getThf_exp()
+   * @see #getThf_expression()
    * @generated
    */
-  EReference getthf_expression_Thf_exp();
+  EReference getThf_expression_Thf_exp();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.thf_expression#getOp <em>Op</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Thf_expression#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Op</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_expression#getOp()
-   * @see #getthf_expression()
+   * @see it.unibz.inf.tptp.parser.Thf_expression#getOp()
+   * @see #getThf_expression()
    * @generated
    */
-  EAttribute getthf_expression_Op();
+  EAttribute getThf_expression_Op();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.thf_atom <em>thf atom</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Thf_atom <em>Thf atom</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>thf atom</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_atom
+   * @return the meta object for class '<em>Thf atom</em>'.
+   * @see it.unibz.inf.tptp.parser.Thf_atom
    * @generated
    */
-  EClass getthf_atom();
+  EClass getThf_atom();
 
   /**
-   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.thf_atom#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link it.unibz.inf.tptp.parser.Thf_atom#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_atom#getName()
-   * @see #getthf_atom()
+   * @see it.unibz.inf.tptp.parser.Thf_atom#getName()
+   * @see #getThf_atom()
    * @generated
    */
-  EAttribute getthf_atom_Name();
+  EAttribute getThf_atom_Name();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.thf_constant <em>thf constant</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Thf_constant <em>Thf constant</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>thf constant</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_constant
+   * @return the meta object for class '<em>Thf constant</em>'.
+   * @see it.unibz.inf.tptp.parser.Thf_constant
    * @generated
    */
-  EClass getthf_constant();
+  EClass getThf_constant();
 
   /**
-   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.thf_constant#getThf_param <em>Thf param</em>}'.
+   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.Thf_constant#getThf_param <em>Thf param</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Thf param</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_constant#getThf_param()
-   * @see #getthf_constant()
+   * @see it.unibz.inf.tptp.parser.Thf_constant#getThf_param()
+   * @see #getThf_constant()
    * @generated
    */
-  EReference getthf_constant_Thf_param();
+  EReference getThf_constant_Thf_param();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.thf_var <em>thf var</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Thf_var <em>Thf var</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>thf var</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_var
+   * @return the meta object for class '<em>Thf var</em>'.
+   * @see it.unibz.inf.tptp.parser.Thf_var
    * @generated
    */
-  EClass getthf_var();
+  EClass getThf_var();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.thf_variable_list <em>thf variable list</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Thf_variable_list <em>Thf variable list</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>thf variable list</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_variable_list
+   * @return the meta object for class '<em>Thf variable list</em>'.
+   * @see it.unibz.inf.tptp.parser.Thf_variable_list
    * @generated
    */
-  EClass getthf_variable_list();
+  EClass getThf_variable_list();
 
   /**
-   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.thf_variable_list#getParams <em>Params</em>}'.
+   * Returns the meta object for the containment reference list '{@link it.unibz.inf.tptp.parser.Thf_variable_list#getParams <em>Params</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Params</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_variable_list#getParams()
-   * @see #getthf_variable_list()
+   * @see it.unibz.inf.tptp.parser.Thf_variable_list#getParams()
+   * @see #getThf_variable_list()
    * @generated
    */
-  EReference getthf_variable_list_Params();
+  EReference getThf_variable_list_Params();
 
   /**
-   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.thf_var_declaration <em>thf var declaration</em>}'.
+   * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.Thf_var_declaration <em>Thf var declaration</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>thf var declaration</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_var_declaration
+   * @return the meta object for class '<em>Thf var declaration</em>'.
+   * @see it.unibz.inf.tptp.parser.Thf_var_declaration
    * @generated
    */
-  EClass getthf_var_declaration();
+  EClass getThf_var_declaration();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.thf_var_declaration#getVar <em>Var</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Thf_var_declaration#getVar <em>Var</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Var</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_var_declaration#getVar()
-   * @see #getthf_var_declaration()
+   * @see it.unibz.inf.tptp.parser.Thf_var_declaration#getVar()
+   * @see #getThf_var_declaration()
    * @generated
    */
-  EReference getthf_var_declaration_Var();
+  EReference getThf_var_declaration_Var();
 
   /**
-   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.thf_var_declaration#getVartype <em>Vartype</em>}'.
+   * Returns the meta object for the containment reference '{@link it.unibz.inf.tptp.parser.Thf_var_declaration#getVartype <em>Vartype</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Vartype</em>'.
-   * @see it.unibz.inf.tptp.parser.thf_var_declaration#getVartype()
-   * @see #getthf_var_declaration()
+   * @see it.unibz.inf.tptp.parser.Thf_var_declaration#getVartype()
+   * @see #getThf_var_declaration()
    * @generated
    */
-  EReference getthf_var_declaration_Vartype();
+  EReference getThf_var_declaration_Vartype();
 
   /**
    * Returns the meta object for class '{@link it.unibz.inf.tptp.parser.binary <em>binary</em>}'.
@@ -3001,14 +3001,14 @@ public interface ParserPackage extends EPackage
     EReference MODEL__TPTP_INPUT = eINSTANCE.getModel_TPTP_input();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.includeImpl <em>include</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.IncludeImpl <em>Include</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.includeImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getinclude()
+     * @see it.unibz.inf.tptp.parser.impl.IncludeImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getInclude()
      * @generated
      */
-    EClass INCLUDE = eINSTANCE.getinclude();
+    EClass INCLUDE = eINSTANCE.getInclude();
 
     /**
      * The meta object literal for the '<em><b>Path</b></em>' attribute feature.
@@ -3016,27 +3016,27 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute INCLUDE__PATH = eINSTANCE.getinclude_Path();
+    EAttribute INCLUDE__PATH = eINSTANCE.getInclude_Path();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.fof_inputImpl <em>fof input</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Fof_inputImpl <em>Fof input</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.fof_inputImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getfof_input()
+     * @see it.unibz.inf.tptp.parser.impl.Fof_inputImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getFof_input()
      * @generated
      */
-    EClass FOF_INPUT = eINSTANCE.getfof_input();
+    EClass FOF_INPUT = eINSTANCE.getFof_input();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.fof_rootImpl <em>fof root</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Fof_rootImpl <em>Fof root</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.fof_rootImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getfof_root()
+     * @see it.unibz.inf.tptp.parser.impl.Fof_rootImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getFof_root()
      * @generated
      */
-    EClass FOF_ROOT = eINSTANCE.getfof_root();
+    EClass FOF_ROOT = eINSTANCE.getFof_root();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3044,7 +3044,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FOF_ROOT__NAME = eINSTANCE.getfof_root_Name();
+    EAttribute FOF_ROOT__NAME = eINSTANCE.getFof_root_Name();
 
     /**
      * The meta object literal for the '<em><b>Formula role</b></em>' attribute feature.
@@ -3052,7 +3052,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FOF_ROOT__FORMULA_ROLE = eINSTANCE.getfof_root_Formula_role();
+    EAttribute FOF_ROOT__FORMULA_ROLE = eINSTANCE.getFof_root_Formula_role();
 
     /**
      * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
@@ -3060,17 +3060,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FOF_ROOT__EXP = eINSTANCE.getfof_root_Exp();
+    EReference FOF_ROOT__EXP = eINSTANCE.getFof_root_Exp();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.fof_expressionImpl <em>fof expression</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Fof_expressionImpl <em>Fof expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.fof_expressionImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getfof_expression()
+     * @see it.unibz.inf.tptp.parser.impl.Fof_expressionImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getFof_expression()
      * @generated
      */
-    EClass FOF_EXPRESSION = eINSTANCE.getfof_expression();
+    EClass FOF_EXPRESSION = eINSTANCE.getFof_expression();
 
     /**
      * The meta object literal for the '<em><b>Fof atom</b></em>' containment reference feature.
@@ -3078,7 +3078,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FOF_EXPRESSION__FOF_ATOM = eINSTANCE.getfof_expression_Fof_atom();
+    EReference FOF_EXPRESSION__FOF_ATOM = eINSTANCE.getFof_expression_Fof_atom();
 
     /**
      * The meta object literal for the '<em><b>Fof negation</b></em>' attribute feature.
@@ -3086,7 +3086,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FOF_EXPRESSION__FOF_NEGATION = eINSTANCE.getfof_expression_Fof_negation();
+    EAttribute FOF_EXPRESSION__FOF_NEGATION = eINSTANCE.getFof_expression_Fof_negation();
 
     /**
      * The meta object literal for the '<em><b>Fof exp</b></em>' containment reference feature.
@@ -3094,7 +3094,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FOF_EXPRESSION__FOF_EXP = eINSTANCE.getfof_expression_Fof_exp();
+    EReference FOF_EXPRESSION__FOF_EXP = eINSTANCE.getFof_expression_Fof_exp();
 
     /**
      * The meta object literal for the '<em><b>Fof quantifier</b></em>' attribute feature.
@@ -3102,7 +3102,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FOF_EXPRESSION__FOF_QUANTIFIER = eINSTANCE.getfof_expression_Fof_quantifier();
+    EAttribute FOF_EXPRESSION__FOF_QUANTIFIER = eINSTANCE.getFof_expression_Fof_quantifier();
 
     /**
      * The meta object literal for the '<em><b>Fof param</b></em>' containment reference feature.
@@ -3110,17 +3110,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FOF_EXPRESSION__FOF_PARAM = eINSTANCE.getfof_expression_Fof_param();
+    EReference FOF_EXPRESSION__FOF_PARAM = eINSTANCE.getFof_expression_Fof_param();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.fof_atomImpl <em>fof atom</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Fof_atomImpl <em>Fof atom</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.fof_atomImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getfof_atom()
+     * @see it.unibz.inf.tptp.parser.impl.Fof_atomImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getFof_atom()
      * @generated
      */
-    EClass FOF_ATOM = eINSTANCE.getfof_atom();
+    EClass FOF_ATOM = eINSTANCE.getFof_atom();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3128,17 +3128,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FOF_ATOM__NAME = eINSTANCE.getfof_atom_Name();
+    EAttribute FOF_ATOM__NAME = eINSTANCE.getFof_atom_Name();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.fof_constantImpl <em>fof constant</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Fof_constantImpl <em>Fof constant</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.fof_constantImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getfof_constant()
+     * @see it.unibz.inf.tptp.parser.impl.Fof_constantImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getFof_constant()
      * @generated
      */
-    EClass FOF_CONSTANT = eINSTANCE.getfof_constant();
+    EClass FOF_CONSTANT = eINSTANCE.getFof_constant();
 
     /**
      * The meta object literal for the '<em><b>Fof param</b></em>' containment reference list feature.
@@ -3146,27 +3146,27 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FOF_CONSTANT__FOF_PARAM = eINSTANCE.getfof_constant_Fof_param();
+    EReference FOF_CONSTANT__FOF_PARAM = eINSTANCE.getFof_constant_Fof_param();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.fof_varImpl <em>fof var</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Fof_varImpl <em>Fof var</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.fof_varImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getfof_var()
+     * @see it.unibz.inf.tptp.parser.impl.Fof_varImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getFof_var()
      * @generated
      */
-    EClass FOF_VAR = eINSTANCE.getfof_var();
+    EClass FOF_VAR = eINSTANCE.getFof_var();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.fof_variable_listImpl <em>fof variable list</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Fof_variable_listImpl <em>Fof variable list</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.fof_variable_listImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getfof_variable_list()
+     * @see it.unibz.inf.tptp.parser.impl.Fof_variable_listImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getFof_variable_list()
      * @generated
      */
-    EClass FOF_VARIABLE_LIST = eINSTANCE.getfof_variable_list();
+    EClass FOF_VARIABLE_LIST = eINSTANCE.getFof_variable_list();
 
     /**
      * The meta object literal for the '<em><b>Params</b></em>' containment reference list feature.
@@ -3174,27 +3174,27 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FOF_VARIABLE_LIST__PARAMS = eINSTANCE.getfof_variable_list_Params();
+    EReference FOF_VARIABLE_LIST__PARAMS = eINSTANCE.getFof_variable_list_Params();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.tff_inputImpl <em>tff input</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Tff_inputImpl <em>Tff input</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.tff_inputImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_input()
+     * @see it.unibz.inf.tptp.parser.impl.Tff_inputImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_input()
      * @generated
      */
-    EClass TFF_INPUT = eINSTANCE.gettff_input();
+    EClass TFF_INPUT = eINSTANCE.getTff_input();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.tff_rootImpl <em>tff root</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Tff_rootImpl <em>Tff root</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.tff_rootImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_root()
+     * @see it.unibz.inf.tptp.parser.impl.Tff_rootImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_root()
      * @generated
      */
-    EClass TFF_ROOT = eINSTANCE.gettff_root();
+    EClass TFF_ROOT = eINSTANCE.getTff_root();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3202,7 +3202,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TFF_ROOT__NAME = eINSTANCE.gettff_root_Name();
+    EAttribute TFF_ROOT__NAME = eINSTANCE.getTff_root_Name();
 
     /**
      * The meta object literal for the '<em><b>Formula role</b></em>' attribute feature.
@@ -3210,7 +3210,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TFF_ROOT__FORMULA_ROLE = eINSTANCE.gettff_root_Formula_role();
+    EAttribute TFF_ROOT__FORMULA_ROLE = eINSTANCE.getTff_root_Formula_role();
 
     /**
      * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
@@ -3218,7 +3218,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TFF_ROOT__EXP = eINSTANCE.gettff_root_Exp();
+    EReference TFF_ROOT__EXP = eINSTANCE.getTff_root_Exp();
 
     /**
      * The meta object literal for the '<em><b>Def</b></em>' containment reference feature.
@@ -3226,17 +3226,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TFF_ROOT__DEF = eINSTANCE.gettff_root_Def();
+    EReference TFF_ROOT__DEF = eINSTANCE.getTff_root_Def();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.tff_formula_type_definitionImpl <em>tff formula type definition</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Tff_formula_type_definitionImpl <em>Tff formula type definition</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.tff_formula_type_definitionImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_formula_type_definition()
+     * @see it.unibz.inf.tptp.parser.impl.Tff_formula_type_definitionImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_formula_type_definition()
      * @generated
      */
-    EClass TFF_FORMULA_TYPE_DEFINITION = eINSTANCE.gettff_formula_type_definition();
+    EClass TFF_FORMULA_TYPE_DEFINITION = eINSTANCE.getTff_formula_type_definition();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3244,7 +3244,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TFF_FORMULA_TYPE_DEFINITION__NAME = eINSTANCE.gettff_formula_type_definition_Name();
+    EAttribute TFF_FORMULA_TYPE_DEFINITION__NAME = eINSTANCE.getTff_formula_type_definition_Name();
 
     /**
      * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
@@ -3252,27 +3252,27 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TFF_FORMULA_TYPE_DEFINITION__EXP = eINSTANCE.gettff_formula_type_definition_Exp();
+    EReference TFF_FORMULA_TYPE_DEFINITION__EXP = eINSTANCE.getTff_formula_type_definition_Exp();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.tff_type_expressionImpl <em>tff type expression</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Tff_type_expressionImpl <em>Tff type expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.tff_type_expressionImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_type_expression()
+     * @see it.unibz.inf.tptp.parser.impl.Tff_type_expressionImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_type_expression()
      * @generated
      */
-    EClass TFF_TYPE_EXPRESSION = eINSTANCE.gettff_type_expression();
+    EClass TFF_TYPE_EXPRESSION = eINSTANCE.getTff_type_expression();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.tff_type_atomImpl <em>tff type atom</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Tff_type_atomImpl <em>Tff type atom</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.tff_type_atomImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_type_atom()
+     * @see it.unibz.inf.tptp.parser.impl.Tff_type_atomImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_type_atom()
      * @generated
      */
-    EClass TFF_TYPE_ATOM = eINSTANCE.gettff_type_atom();
+    EClass TFF_TYPE_ATOM = eINSTANCE.getTff_type_atom();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3280,17 +3280,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TFF_TYPE_ATOM__NAME = eINSTANCE.gettff_type_atom_Name();
+    EAttribute TFF_TYPE_ATOM__NAME = eINSTANCE.getTff_type_atom_Name();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.tff_type_constantImpl <em>tff type constant</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Tff_type_constantImpl <em>Tff type constant</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.tff_type_constantImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_type_constant()
+     * @see it.unibz.inf.tptp.parser.impl.Tff_type_constantImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_type_constant()
      * @generated
      */
-    EClass TFF_TYPE_CONSTANT = eINSTANCE.gettff_type_constant();
+    EClass TFF_TYPE_CONSTANT = eINSTANCE.getTff_type_constant();
 
     /**
      * The meta object literal for the '<em><b>Param</b></em>' containment reference list feature.
@@ -3298,17 +3298,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TFF_TYPE_CONSTANT__PARAM = eINSTANCE.gettff_type_constant_Param();
+    EReference TFF_TYPE_CONSTANT__PARAM = eINSTANCE.getTff_type_constant_Param();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.tff_expressionImpl <em>tff expression</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Tff_expressionImpl <em>Tff expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.tff_expressionImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_expression()
+     * @see it.unibz.inf.tptp.parser.impl.Tff_expressionImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_expression()
      * @generated
      */
-    EClass TFF_EXPRESSION = eINSTANCE.gettff_expression();
+    EClass TFF_EXPRESSION = eINSTANCE.getTff_expression();
 
     /**
      * The meta object literal for the '<em><b>Atom</b></em>' containment reference feature.
@@ -3316,7 +3316,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TFF_EXPRESSION__ATOM = eINSTANCE.gettff_expression_Atom();
+    EReference TFF_EXPRESSION__ATOM = eINSTANCE.getTff_expression_Atom();
 
     /**
      * The meta object literal for the '<em><b>Negation</b></em>' attribute feature.
@@ -3324,7 +3324,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TFF_EXPRESSION__NEGATION = eINSTANCE.gettff_expression_Negation();
+    EAttribute TFF_EXPRESSION__NEGATION = eINSTANCE.getTff_expression_Negation();
 
     /**
      * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
@@ -3332,7 +3332,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TFF_EXPRESSION__EXP = eINSTANCE.gettff_expression_Exp();
+    EReference TFF_EXPRESSION__EXP = eINSTANCE.getTff_expression_Exp();
 
     /**
      * The meta object literal for the '<em><b>Quantifier</b></em>' attribute feature.
@@ -3340,7 +3340,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TFF_EXPRESSION__QUANTIFIER = eINSTANCE.gettff_expression_Quantifier();
+    EAttribute TFF_EXPRESSION__QUANTIFIER = eINSTANCE.getTff_expression_Quantifier();
 
     /**
      * The meta object literal for the '<em><b>Param</b></em>' containment reference feature.
@@ -3348,27 +3348,27 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TFF_EXPRESSION__PARAM = eINSTANCE.gettff_expression_Param();
+    EReference TFF_EXPRESSION__PARAM = eINSTANCE.getTff_expression_Param();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.tff_atomImpl <em>tff atom</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Tff_atomImpl <em>Tff atom</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.tff_atomImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_atom()
+     * @see it.unibz.inf.tptp.parser.impl.Tff_atomImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_atom()
      * @generated
      */
-    EClass TFF_ATOM = eINSTANCE.gettff_atom();
+    EClass TFF_ATOM = eINSTANCE.getTff_atom();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.tff_constantImpl <em>tff constant</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Tff_constantImpl <em>Tff constant</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.tff_constantImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_constant()
+     * @see it.unibz.inf.tptp.parser.impl.Tff_constantImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_constant()
      * @generated
      */
-    EClass TFF_CONSTANT = eINSTANCE.gettff_constant();
+    EClass TFF_CONSTANT = eINSTANCE.getTff_constant();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3376,7 +3376,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TFF_CONSTANT__NAME = eINSTANCE.gettff_constant_Name();
+    EAttribute TFF_CONSTANT__NAME = eINSTANCE.getTff_constant_Name();
 
     /**
      * The meta object literal for the '<em><b>Param</b></em>' containment reference list feature.
@@ -3384,7 +3384,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TFF_CONSTANT__PARAM = eINSTANCE.gettff_constant_Param();
+    EReference TFF_CONSTANT__PARAM = eINSTANCE.getTff_constant_Param();
 
     /**
      * The meta object literal for the '<em><b>Top</b></em>' attribute feature.
@@ -3392,7 +3392,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TFF_CONSTANT__TOP = eINSTANCE.gettff_constant_Top();
+    EAttribute TFF_CONSTANT__TOP = eINSTANCE.getTff_constant_Top();
 
     /**
      * The meta object literal for the '<em><b>Bottom</b></em>' attribute feature.
@@ -3400,17 +3400,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TFF_CONSTANT__BOTTOM = eINSTANCE.gettff_constant_Bottom();
+    EAttribute TFF_CONSTANT__BOTTOM = eINSTANCE.getTff_constant_Bottom();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.tff_predefined_function_2_argsImpl <em>tff predefined function 2args</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Tff_predefined_function_2_argsImpl <em>Tff predefined function 2args</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.tff_predefined_function_2_argsImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_predefined_function_2_args()
+     * @see it.unibz.inf.tptp.parser.impl.Tff_predefined_function_2_argsImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_predefined_function_2_args()
      * @generated
      */
-    EClass TFF_PREDEFINED_FUNCTION_2ARGS = eINSTANCE.gettff_predefined_function_2_args();
+    EClass TFF_PREDEFINED_FUNCTION_2ARGS = eINSTANCE.getTff_predefined_function_2_args();
 
     /**
      * The meta object literal for the '<em><b>Func</b></em>' attribute feature.
@@ -3418,7 +3418,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TFF_PREDEFINED_FUNCTION_2ARGS__FUNC = eINSTANCE.gettff_predefined_function_2_args_Func();
+    EAttribute TFF_PREDEFINED_FUNCTION_2ARGS__FUNC = eINSTANCE.getTff_predefined_function_2_args_Func();
 
     /**
      * The meta object literal for the '<em><b>Param</b></em>' containment reference list feature.
@@ -3426,27 +3426,27 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TFF_PREDEFINED_FUNCTION_2ARGS__PARAM = eINSTANCE.gettff_predefined_function_2_args_Param();
+    EReference TFF_PREDEFINED_FUNCTION_2ARGS__PARAM = eINSTANCE.getTff_predefined_function_2_args_Param();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.tff_varImpl <em>tff var</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Tff_varImpl <em>Tff var</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.tff_varImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_var()
+     * @see it.unibz.inf.tptp.parser.impl.Tff_varImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_var()
      * @generated
      */
-    EClass TFF_VAR = eINSTANCE.gettff_var();
+    EClass TFF_VAR = eINSTANCE.getTff_var();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.tff_var_declarationImpl <em>tff var declaration</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Tff_var_declarationImpl <em>Tff var declaration</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.tff_var_declarationImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_var_declaration()
+     * @see it.unibz.inf.tptp.parser.impl.Tff_var_declarationImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_var_declaration()
      * @generated
      */
-    EClass TFF_VAR_DECLARATION = eINSTANCE.gettff_var_declaration();
+    EClass TFF_VAR_DECLARATION = eINSTANCE.getTff_var_declaration();
 
     /**
      * The meta object literal for the '<em><b>Var</b></em>' containment reference feature.
@@ -3454,7 +3454,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TFF_VAR_DECLARATION__VAR = eINSTANCE.gettff_var_declaration_Var();
+    EReference TFF_VAR_DECLARATION__VAR = eINSTANCE.getTff_var_declaration_Var();
 
     /**
      * The meta object literal for the '<em><b>Vartype</b></em>' containment reference feature.
@@ -3462,17 +3462,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TFF_VAR_DECLARATION__VARTYPE = eINSTANCE.gettff_var_declaration_Vartype();
+    EReference TFF_VAR_DECLARATION__VARTYPE = eINSTANCE.getTff_var_declaration_Vartype();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.tff_variable_listImpl <em>tff variable list</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Tff_variable_listImpl <em>Tff variable list</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.tff_variable_listImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#gettff_variable_list()
+     * @see it.unibz.inf.tptp.parser.impl.Tff_variable_listImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getTff_variable_list()
      * @generated
      */
-    EClass TFF_VARIABLE_LIST = eINSTANCE.gettff_variable_list();
+    EClass TFF_VARIABLE_LIST = eINSTANCE.getTff_variable_list();
 
     /**
      * The meta object literal for the '<em><b>Params</b></em>' containment reference list feature.
@@ -3480,27 +3480,27 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TFF_VARIABLE_LIST__PARAMS = eINSTANCE.gettff_variable_list_Params();
+    EReference TFF_VARIABLE_LIST__PARAMS = eINSTANCE.getTff_variable_list_Params();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.cnf_inputImpl <em>cnf input</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_inputImpl <em>Cnf input</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.cnf_inputImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_input()
+     * @see it.unibz.inf.tptp.parser.impl.Cnf_inputImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_input()
      * @generated
      */
-    EClass CNF_INPUT = eINSTANCE.getcnf_input();
+    EClass CNF_INPUT = eINSTANCE.getCnf_input();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.cnf_rootImpl <em>cnf root</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_rootImpl <em>Cnf root</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.cnf_rootImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_root()
+     * @see it.unibz.inf.tptp.parser.impl.Cnf_rootImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_root()
      * @generated
      */
-    EClass CNF_ROOT = eINSTANCE.getcnf_root();
+    EClass CNF_ROOT = eINSTANCE.getCnf_root();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3508,7 +3508,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CNF_ROOT__NAME = eINSTANCE.getcnf_root_Name();
+    EAttribute CNF_ROOT__NAME = eINSTANCE.getCnf_root_Name();
 
     /**
      * The meta object literal for the '<em><b>Formula role</b></em>' attribute feature.
@@ -3516,7 +3516,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CNF_ROOT__FORMULA_ROLE = eINSTANCE.getcnf_root_Formula_role();
+    EAttribute CNF_ROOT__FORMULA_ROLE = eINSTANCE.getCnf_root_Formula_role();
 
     /**
      * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
@@ -3524,17 +3524,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CNF_ROOT__EXP = eINSTANCE.getcnf_root_Exp();
+    EReference CNF_ROOT__EXP = eINSTANCE.getCnf_root_Exp();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.cnf_formula_type_definitionImpl <em>cnf formula type definition</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_formula_type_definitionImpl <em>Cnf formula type definition</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.cnf_formula_type_definitionImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_formula_type_definition()
+     * @see it.unibz.inf.tptp.parser.impl.Cnf_formula_type_definitionImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_formula_type_definition()
      * @generated
      */
-    EClass CNF_FORMULA_TYPE_DEFINITION = eINSTANCE.getcnf_formula_type_definition();
+    EClass CNF_FORMULA_TYPE_DEFINITION = eINSTANCE.getCnf_formula_type_definition();
 
     /**
      * The meta object literal for the '<em><b>Disjunction</b></em>' containment reference feature.
@@ -3542,17 +3542,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CNF_FORMULA_TYPE_DEFINITION__DISJUNCTION = eINSTANCE.getcnf_formula_type_definition_Disjunction();
+    EReference CNF_FORMULA_TYPE_DEFINITION__DISJUNCTION = eINSTANCE.getCnf_formula_type_definition_Disjunction();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.cnf_orImpl <em>cnf or</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_orImpl <em>Cnf or</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.cnf_orImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_or()
+     * @see it.unibz.inf.tptp.parser.impl.Cnf_orImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_or()
      * @generated
      */
-    EClass CNF_OR = eINSTANCE.getcnf_or();
+    EClass CNF_OR = eINSTANCE.getCnf_or();
 
     /**
      * The meta object literal for the '<em><b>Or</b></em>' containment reference list feature.
@@ -3560,17 +3560,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CNF_OR__OR = eINSTANCE.getcnf_or_Or();
+    EReference CNF_OR__OR = eINSTANCE.getCnf_or_Or();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.cnf_notImpl <em>cnf not</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_notImpl <em>Cnf not</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.cnf_notImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_not()
+     * @see it.unibz.inf.tptp.parser.impl.Cnf_notImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_not()
      * @generated
      */
-    EClass CNF_NOT = eINSTANCE.getcnf_not();
+    EClass CNF_NOT = eINSTANCE.getCnf_not();
 
     /**
      * The meta object literal for the '<em><b>Negated</b></em>' attribute feature.
@@ -3578,7 +3578,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CNF_NOT__NEGATED = eINSTANCE.getcnf_not_Negated();
+    EAttribute CNF_NOT__NEGATED = eINSTANCE.getCnf_not_Negated();
 
     /**
      * The meta object literal for the '<em><b>Literal</b></em>' containment reference feature.
@@ -3586,17 +3586,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CNF_NOT__LITERAL = eINSTANCE.getcnf_not_Literal();
+    EReference CNF_NOT__LITERAL = eINSTANCE.getCnf_not_Literal();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.cnf_equalityImpl <em>cnf equality</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_equalityImpl <em>Cnf equality</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.cnf_equalityImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_equality()
+     * @see it.unibz.inf.tptp.parser.impl.Cnf_equalityImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_equality()
      * @generated
      */
-    EClass CNF_EQUALITY = eINSTANCE.getcnf_equality();
+    EClass CNF_EQUALITY = eINSTANCE.getCnf_equality();
 
     /**
      * The meta object literal for the '<em><b>Exp L</b></em>' containment reference feature.
@@ -3604,7 +3604,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CNF_EQUALITY__EXP_L = eINSTANCE.getcnf_equality_ExpL();
+    EReference CNF_EQUALITY__EXP_L = eINSTANCE.getCnf_equality_ExpL();
 
     /**
      * The meta object literal for the '<em><b>Eq</b></em>' attribute feature.
@@ -3612,7 +3612,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CNF_EQUALITY__EQ = eINSTANCE.getcnf_equality_Eq();
+    EAttribute CNF_EQUALITY__EQ = eINSTANCE.getCnf_equality_Eq();
 
     /**
      * The meta object literal for the '<em><b>Exp R</b></em>' containment reference feature.
@@ -3620,17 +3620,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CNF_EQUALITY__EXP_R = eINSTANCE.getcnf_equality_ExpR();
+    EReference CNF_EQUALITY__EXP_R = eINSTANCE.getCnf_equality_ExpR();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.cnf_expressionImpl <em>cnf expression</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_expressionImpl <em>Cnf expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.cnf_expressionImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_expression()
+     * @see it.unibz.inf.tptp.parser.impl.Cnf_expressionImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_expression()
      * @generated
      */
-    EClass CNF_EXPRESSION = eINSTANCE.getcnf_expression();
+    EClass CNF_EXPRESSION = eINSTANCE.getCnf_expression();
 
     /**
      * The meta object literal for the '<em><b>Cnf exp</b></em>' attribute feature.
@@ -3638,7 +3638,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CNF_EXPRESSION__CNF_EXP = eINSTANCE.getcnf_expression_Cnf_exp();
+    EAttribute CNF_EXPRESSION__CNF_EXP = eINSTANCE.getCnf_expression_Cnf_exp();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3646,17 +3646,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CNF_EXPRESSION__NAME = eINSTANCE.getcnf_expression_Name();
+    EAttribute CNF_EXPRESSION__NAME = eINSTANCE.getCnf_expression_Name();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.cnf_constantImpl <em>cnf constant</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_constantImpl <em>Cnf constant</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.cnf_constantImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_constant()
+     * @see it.unibz.inf.tptp.parser.impl.Cnf_constantImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_constant()
      * @generated
      */
-    EClass CNF_CONSTANT = eINSTANCE.getcnf_constant();
+    EClass CNF_CONSTANT = eINSTANCE.getCnf_constant();
 
     /**
      * The meta object literal for the '<em><b>Param</b></em>' containment reference list feature.
@@ -3664,37 +3664,37 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CNF_CONSTANT__PARAM = eINSTANCE.getcnf_constant_Param();
+    EReference CNF_CONSTANT__PARAM = eINSTANCE.getCnf_constant_Param();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.cnf_varImpl <em>cnf var</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Cnf_varImpl <em>Cnf var</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.cnf_varImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getcnf_var()
+     * @see it.unibz.inf.tptp.parser.impl.Cnf_varImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getCnf_var()
      * @generated
      */
-    EClass CNF_VAR = eINSTANCE.getcnf_var();
+    EClass CNF_VAR = eINSTANCE.getCnf_var();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.thf_inputImpl <em>thf input</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Thf_inputImpl <em>Thf input</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.thf_inputImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_input()
+     * @see it.unibz.inf.tptp.parser.impl.Thf_inputImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_input()
      * @generated
      */
-    EClass THF_INPUT = eINSTANCE.getthf_input();
+    EClass THF_INPUT = eINSTANCE.getThf_input();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.thf_rootImpl <em>thf root</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Thf_rootImpl <em>Thf root</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.thf_rootImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_root()
+     * @see it.unibz.inf.tptp.parser.impl.Thf_rootImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_root()
      * @generated
      */
-    EClass THF_ROOT = eINSTANCE.getthf_root();
+    EClass THF_ROOT = eINSTANCE.getThf_root();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3702,7 +3702,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute THF_ROOT__NAME = eINSTANCE.getthf_root_Name();
+    EAttribute THF_ROOT__NAME = eINSTANCE.getThf_root_Name();
 
     /**
      * The meta object literal for the '<em><b>Formula role</b></em>' attribute feature.
@@ -3710,7 +3710,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute THF_ROOT__FORMULA_ROLE = eINSTANCE.getthf_root_Formula_role();
+    EAttribute THF_ROOT__FORMULA_ROLE = eINSTANCE.getThf_root_Formula_role();
 
     /**
      * The meta object literal for the '<em><b>Def</b></em>' containment reference feature.
@@ -3718,7 +3718,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference THF_ROOT__DEF = eINSTANCE.getthf_root_Def();
+    EReference THF_ROOT__DEF = eINSTANCE.getThf_root_Def();
 
     /**
      * The meta object literal for the '<em><b>Thf exp</b></em>' containment reference feature.
@@ -3726,17 +3726,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference THF_ROOT__THF_EXP = eINSTANCE.getthf_root_Thf_exp();
+    EReference THF_ROOT__THF_EXP = eINSTANCE.getThf_root_Thf_exp();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.thf_formula_type_definitionImpl <em>thf formula type definition</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Thf_formula_type_definitionImpl <em>Thf formula type definition</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.thf_formula_type_definitionImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_formula_type_definition()
+     * @see it.unibz.inf.tptp.parser.impl.Thf_formula_type_definitionImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_formula_type_definition()
      * @generated
      */
-    EClass THF_FORMULA_TYPE_DEFINITION = eINSTANCE.getthf_formula_type_definition();
+    EClass THF_FORMULA_TYPE_DEFINITION = eINSTANCE.getThf_formula_type_definition();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3744,7 +3744,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute THF_FORMULA_TYPE_DEFINITION__NAME = eINSTANCE.getthf_formula_type_definition_Name();
+    EAttribute THF_FORMULA_TYPE_DEFINITION__NAME = eINSTANCE.getThf_formula_type_definition_Name();
 
     /**
      * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
@@ -3752,37 +3752,37 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference THF_FORMULA_TYPE_DEFINITION__EXP = eINSTANCE.getthf_formula_type_definition_Exp();
+    EReference THF_FORMULA_TYPE_DEFINITION__EXP = eINSTANCE.getThf_formula_type_definition_Exp();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.thf_type_expressionImpl <em>thf type expression</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Thf_type_expressionImpl <em>Thf type expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.thf_type_expressionImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_type_expression()
+     * @see it.unibz.inf.tptp.parser.impl.Thf_type_expressionImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_type_expression()
      * @generated
      */
-    EClass THF_TYPE_EXPRESSION = eINSTANCE.getthf_type_expression();
+    EClass THF_TYPE_EXPRESSION = eINSTANCE.getThf_type_expression();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.thf_type_atomImpl <em>thf type atom</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Thf_type_atomImpl <em>Thf type atom</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.thf_type_atomImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_type_atom()
+     * @see it.unibz.inf.tptp.parser.impl.Thf_type_atomImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_type_atom()
      * @generated
      */
-    EClass THF_TYPE_ATOM = eINSTANCE.getthf_type_atom();
+    EClass THF_TYPE_ATOM = eINSTANCE.getThf_type_atom();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.thf_type_constantImpl <em>thf type constant</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Thf_type_constantImpl <em>Thf type constant</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.thf_type_constantImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_type_constant()
+     * @see it.unibz.inf.tptp.parser.impl.Thf_type_constantImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_type_constant()
      * @generated
      */
-    EClass THF_TYPE_CONSTANT = eINSTANCE.getthf_type_constant();
+    EClass THF_TYPE_CONSTANT = eINSTANCE.getThf_type_constant();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3790,17 +3790,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute THF_TYPE_CONSTANT__NAME = eINSTANCE.getthf_type_constant_Name();
+    EAttribute THF_TYPE_CONSTANT__NAME = eINSTANCE.getThf_type_constant_Name();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.thf_expressionImpl <em>thf expression</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Thf_expressionImpl <em>Thf expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.thf_expressionImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_expression()
+     * @see it.unibz.inf.tptp.parser.impl.Thf_expressionImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_expression()
      * @generated
      */
-    EClass THF_EXPRESSION = eINSTANCE.getthf_expression();
+    EClass THF_EXPRESSION = eINSTANCE.getThf_expression();
 
     /**
      * The meta object literal for the '<em><b>Thf atom</b></em>' containment reference feature.
@@ -3808,7 +3808,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference THF_EXPRESSION__THF_ATOM = eINSTANCE.getthf_expression_Thf_atom();
+    EReference THF_EXPRESSION__THF_ATOM = eINSTANCE.getThf_expression_Thf_atom();
 
     /**
      * The meta object literal for the '<em><b>Thf negation</b></em>' attribute feature.
@@ -3816,7 +3816,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute THF_EXPRESSION__THF_NEGATION = eINSTANCE.getthf_expression_Thf_negation();
+    EAttribute THF_EXPRESSION__THF_NEGATION = eINSTANCE.getThf_expression_Thf_negation();
 
     /**
      * The meta object literal for the '<em><b>Thf exp</b></em>' containment reference feature.
@@ -3824,7 +3824,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference THF_EXPRESSION__THF_EXP = eINSTANCE.getthf_expression_Thf_exp();
+    EReference THF_EXPRESSION__THF_EXP = eINSTANCE.getThf_expression_Thf_exp();
 
     /**
      * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
@@ -3832,17 +3832,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute THF_EXPRESSION__OP = eINSTANCE.getthf_expression_Op();
+    EAttribute THF_EXPRESSION__OP = eINSTANCE.getThf_expression_Op();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.thf_atomImpl <em>thf atom</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Thf_atomImpl <em>Thf atom</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.thf_atomImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_atom()
+     * @see it.unibz.inf.tptp.parser.impl.Thf_atomImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_atom()
      * @generated
      */
-    EClass THF_ATOM = eINSTANCE.getthf_atom();
+    EClass THF_ATOM = eINSTANCE.getThf_atom();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3850,17 +3850,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute THF_ATOM__NAME = eINSTANCE.getthf_atom_Name();
+    EAttribute THF_ATOM__NAME = eINSTANCE.getThf_atom_Name();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.thf_constantImpl <em>thf constant</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Thf_constantImpl <em>Thf constant</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.thf_constantImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_constant()
+     * @see it.unibz.inf.tptp.parser.impl.Thf_constantImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_constant()
      * @generated
      */
-    EClass THF_CONSTANT = eINSTANCE.getthf_constant();
+    EClass THF_CONSTANT = eINSTANCE.getThf_constant();
 
     /**
      * The meta object literal for the '<em><b>Thf param</b></em>' containment reference list feature.
@@ -3868,27 +3868,27 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference THF_CONSTANT__THF_PARAM = eINSTANCE.getthf_constant_Thf_param();
+    EReference THF_CONSTANT__THF_PARAM = eINSTANCE.getThf_constant_Thf_param();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.thf_varImpl <em>thf var</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Thf_varImpl <em>Thf var</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.thf_varImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_var()
+     * @see it.unibz.inf.tptp.parser.impl.Thf_varImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_var()
      * @generated
      */
-    EClass THF_VAR = eINSTANCE.getthf_var();
+    EClass THF_VAR = eINSTANCE.getThf_var();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.thf_variable_listImpl <em>thf variable list</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Thf_variable_listImpl <em>Thf variable list</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.thf_variable_listImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_variable_list()
+     * @see it.unibz.inf.tptp.parser.impl.Thf_variable_listImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_variable_list()
      * @generated
      */
-    EClass THF_VARIABLE_LIST = eINSTANCE.getthf_variable_list();
+    EClass THF_VARIABLE_LIST = eINSTANCE.getThf_variable_list();
 
     /**
      * The meta object literal for the '<em><b>Params</b></em>' containment reference list feature.
@@ -3896,17 +3896,17 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference THF_VARIABLE_LIST__PARAMS = eINSTANCE.getthf_variable_list_Params();
+    EReference THF_VARIABLE_LIST__PARAMS = eINSTANCE.getThf_variable_list_Params();
 
     /**
-     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.thf_var_declarationImpl <em>thf var declaration</em>}' class.
+     * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.Thf_var_declarationImpl <em>Thf var declaration</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see it.unibz.inf.tptp.parser.impl.thf_var_declarationImpl
-     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getthf_var_declaration()
+     * @see it.unibz.inf.tptp.parser.impl.Thf_var_declarationImpl
+     * @see it.unibz.inf.tptp.parser.impl.ParserPackageImpl#getThf_var_declaration()
      * @generated
      */
-    EClass THF_VAR_DECLARATION = eINSTANCE.getthf_var_declaration();
+    EClass THF_VAR_DECLARATION = eINSTANCE.getThf_var_declaration();
 
     /**
      * The meta object literal for the '<em><b>Var</b></em>' containment reference feature.
@@ -3914,7 +3914,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference THF_VAR_DECLARATION__VAR = eINSTANCE.getthf_var_declaration_Var();
+    EReference THF_VAR_DECLARATION__VAR = eINSTANCE.getThf_var_declaration_Var();
 
     /**
      * The meta object literal for the '<em><b>Vartype</b></em>' containment reference feature.
@@ -3922,7 +3922,7 @@ public interface ParserPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference THF_VAR_DECLARATION__VARTYPE = eINSTANCE.getthf_var_declaration_Vartype();
+    EReference THF_VAR_DECLARATION__VARTYPE = eINSTANCE.getThf_var_declaration_Vartype();
 
     /**
      * The meta object literal for the '{@link it.unibz.inf.tptp.parser.impl.binaryImpl <em>binary</em>}' class.

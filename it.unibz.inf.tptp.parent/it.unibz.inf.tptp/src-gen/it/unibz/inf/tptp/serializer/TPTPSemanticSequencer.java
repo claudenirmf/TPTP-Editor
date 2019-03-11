@@ -4,41 +4,41 @@
 package it.unibz.inf.tptp.serializer;
 
 import com.google.inject.Inject;
+import it.unibz.inf.tptp.parser.Cnf_constant;
+import it.unibz.inf.tptp.parser.Cnf_equality;
+import it.unibz.inf.tptp.parser.Cnf_expression;
+import it.unibz.inf.tptp.parser.Cnf_formula_type_definition;
+import it.unibz.inf.tptp.parser.Cnf_not;
+import it.unibz.inf.tptp.parser.Cnf_or;
+import it.unibz.inf.tptp.parser.Cnf_root;
+import it.unibz.inf.tptp.parser.Cnf_var;
+import it.unibz.inf.tptp.parser.Fof_constant;
+import it.unibz.inf.tptp.parser.Fof_expression;
+import it.unibz.inf.tptp.parser.Fof_root;
+import it.unibz.inf.tptp.parser.Fof_var;
+import it.unibz.inf.tptp.parser.Fof_variable_list;
+import it.unibz.inf.tptp.parser.Include;
 import it.unibz.inf.tptp.parser.Model;
 import it.unibz.inf.tptp.parser.ParserPackage;
+import it.unibz.inf.tptp.parser.Tff_constant;
+import it.unibz.inf.tptp.parser.Tff_expression;
+import it.unibz.inf.tptp.parser.Tff_formula_type_definition;
+import it.unibz.inf.tptp.parser.Tff_predefined_function_2_args;
+import it.unibz.inf.tptp.parser.Tff_root;
+import it.unibz.inf.tptp.parser.Tff_type_constant;
+import it.unibz.inf.tptp.parser.Tff_var;
+import it.unibz.inf.tptp.parser.Tff_var_declaration;
+import it.unibz.inf.tptp.parser.Tff_variable_list;
+import it.unibz.inf.tptp.parser.Thf_constant;
+import it.unibz.inf.tptp.parser.Thf_expression;
+import it.unibz.inf.tptp.parser.Thf_formula_type_definition;
+import it.unibz.inf.tptp.parser.Thf_root;
+import it.unibz.inf.tptp.parser.Thf_type_constant;
+import it.unibz.inf.tptp.parser.Thf_var;
+import it.unibz.inf.tptp.parser.Thf_var_declaration;
+import it.unibz.inf.tptp.parser.Thf_variable_list;
 import it.unibz.inf.tptp.parser.binary;
-import it.unibz.inf.tptp.parser.cnf_constant;
-import it.unibz.inf.tptp.parser.cnf_equality;
-import it.unibz.inf.tptp.parser.cnf_expression;
-import it.unibz.inf.tptp.parser.cnf_formula_type_definition;
-import it.unibz.inf.tptp.parser.cnf_not;
-import it.unibz.inf.tptp.parser.cnf_or;
-import it.unibz.inf.tptp.parser.cnf_root;
-import it.unibz.inf.tptp.parser.cnf_var;
-import it.unibz.inf.tptp.parser.fof_constant;
-import it.unibz.inf.tptp.parser.fof_expression;
-import it.unibz.inf.tptp.parser.fof_root;
-import it.unibz.inf.tptp.parser.fof_var;
-import it.unibz.inf.tptp.parser.fof_variable_list;
-import it.unibz.inf.tptp.parser.include;
 import it.unibz.inf.tptp.parser.oper;
-import it.unibz.inf.tptp.parser.tff_constant;
-import it.unibz.inf.tptp.parser.tff_expression;
-import it.unibz.inf.tptp.parser.tff_formula_type_definition;
-import it.unibz.inf.tptp.parser.tff_predefined_function_2_args;
-import it.unibz.inf.tptp.parser.tff_root;
-import it.unibz.inf.tptp.parser.tff_type_constant;
-import it.unibz.inf.tptp.parser.tff_var;
-import it.unibz.inf.tptp.parser.tff_var_declaration;
-import it.unibz.inf.tptp.parser.tff_variable_list;
-import it.unibz.inf.tptp.parser.thf_constant;
-import it.unibz.inf.tptp.parser.thf_expression;
-import it.unibz.inf.tptp.parser.thf_formula_type_definition;
-import it.unibz.inf.tptp.parser.thf_root;
-import it.unibz.inf.tptp.parser.thf_type_constant;
-import it.unibz.inf.tptp.parser.thf_var;
-import it.unibz.inf.tptp.parser.thf_var_declaration;
-import it.unibz.inf.tptp.parser.thf_variable_list;
 import it.unibz.inf.tptp.services.TPTPGrammarAccess;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -65,227 +65,227 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == ParserPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case ParserPackage.MODEL:
-				sequence_Model(context, (Model) semanticObject); 
-				return; 
-			case ParserPackage.BINARY:
-				if (rule == grammarAccess.getFof_expressionRule()
-						|| action == grammarAccess.getFof_expressionAccess().getBinaryLeftAction_1_0()
-						|| rule == grammarAccess.getFof_terminating_expressionRule()) {
-					sequence_fof_expression(context, (binary) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getTff_expressionRule()
-						|| action == grammarAccess.getTff_expressionAccess().getBinaryLeftAction_1_0()
-						|| rule == grammarAccess.getTff_terminating_expressionRule()) {
-					sequence_tff_expression(context, (binary) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getThf_expressionRule()
-						|| action == grammarAccess.getThf_expressionAccess().getBinaryLeftAction_1_0()
-						|| rule == grammarAccess.getThf_terminating_expressionRule()) {
-					sequence_thf_expression(context, (binary) semanticObject); 
-					return; 
-				}
-				else break;
 			case ParserPackage.CNF_CONSTANT:
-				sequence_cnf_constant(context, (cnf_constant) semanticObject); 
+				sequence_Cnf_constant(context, (Cnf_constant) semanticObject); 
 				return; 
 			case ParserPackage.CNF_EQUALITY:
-				sequence_cnf_equality(context, (cnf_equality) semanticObject); 
+				sequence_Cnf_equality(context, (Cnf_equality) semanticObject); 
 				return; 
 			case ParserPackage.CNF_EXPRESSION:
-				sequence_cnf_expression(context, (cnf_expression) semanticObject); 
+				sequence_Cnf_expression(context, (Cnf_expression) semanticObject); 
 				return; 
 			case ParserPackage.CNF_FORMULA_TYPE_DEFINITION:
-				sequence_cnf_formula_type_definition(context, (cnf_formula_type_definition) semanticObject); 
+				sequence_Cnf_formula_type_definition(context, (Cnf_formula_type_definition) semanticObject); 
 				return; 
 			case ParserPackage.CNF_NOT:
-				sequence_cnf_not(context, (cnf_not) semanticObject); 
+				sequence_Cnf_not(context, (Cnf_not) semanticObject); 
 				return; 
 			case ParserPackage.CNF_OR:
-				sequence_cnf_or(context, (cnf_or) semanticObject); 
+				sequence_Cnf_or(context, (Cnf_or) semanticObject); 
 				return; 
 			case ParserPackage.CNF_ROOT:
-				sequence_cnf_root(context, (cnf_root) semanticObject); 
+				sequence_Cnf_root(context, (Cnf_root) semanticObject); 
 				return; 
 			case ParserPackage.CNF_VAR:
-				sequence_cnf_var(context, (cnf_var) semanticObject); 
+				sequence_Cnf_var(context, (Cnf_var) semanticObject); 
 				return; 
 			case ParserPackage.FOF_CONSTANT:
 				if (rule == grammarAccess.getFof_atom_literalRule()) {
-					sequence_fof_atom_literal(context, (fof_constant) semanticObject); 
+					sequence_Fof_atom_literal(context, (Fof_constant) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getFof_atomRule()) {
-					sequence_fof_atom_literal_fof_constant(context, (fof_constant) semanticObject); 
+					sequence_Fof_atom_literal_Fof_constant(context, (Fof_constant) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getFof_constantRule()) {
-					sequence_fof_constant(context, (fof_constant) semanticObject); 
+					sequence_Fof_constant(context, (Fof_constant) semanticObject); 
 					return; 
 				}
 				else break;
 			case ParserPackage.FOF_EXPRESSION:
 				if (rule == grammarAccess.getFof_quantifier_expressionRule()) {
-					sequence_fof_quantifier_expression(context, (fof_expression) semanticObject); 
+					sequence_Fof_quantifier_expression(context, (Fof_expression) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getFof_expressionRule()
 						|| action == grammarAccess.getFof_expressionAccess().getBinaryLeftAction_1_0()
 						|| rule == grammarAccess.getFof_terminating_expressionRule()) {
-					sequence_fof_terminating_expression(context, (fof_expression) semanticObject); 
+					sequence_Fof_terminating_expression(context, (Fof_expression) semanticObject); 
 					return; 
 				}
 				else break;
 			case ParserPackage.FOF_ROOT:
-				sequence_fof_root(context, (fof_root) semanticObject); 
+				sequence_Fof_root(context, (Fof_root) semanticObject); 
 				return; 
 			case ParserPackage.FOF_VAR:
-				sequence_fof_var(context, (fof_var) semanticObject); 
+				sequence_Fof_var(context, (Fof_var) semanticObject); 
 				return; 
 			case ParserPackage.FOF_VARIABLE_LIST:
-				sequence_fof_variable_list(context, (fof_variable_list) semanticObject); 
+				sequence_Fof_variable_list(context, (Fof_variable_list) semanticObject); 
 				return; 
 			case ParserPackage.INCLUDE:
-				sequence_include(context, (include) semanticObject); 
+				sequence_Include(context, (Include) semanticObject); 
 				return; 
-			case ParserPackage.OPER:
-				if (rule == grammarAccess.getTff_type_expressionRule()
-						|| action == grammarAccess.getTff_type_expressionAccess().getOperLeftAction_1_0()
-						|| rule == grammarAccess.getTff_terminal_type_expressionRule()) {
-					sequence_tff_type_expression(context, (oper) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getThf_type_expressionRule()
-						|| action == grammarAccess.getThf_type_expressionAccess().getOperLeftAction_1_0()
-						|| rule == grammarAccess.getThf_terminal_type_expressionRule()) {
-					sequence_thf_type_expression(context, (oper) semanticObject); 
-					return; 
-				}
-				else break;
+			case ParserPackage.MODEL:
+				sequence_Model(context, (Model) semanticObject); 
+				return; 
 			case ParserPackage.TFF_CONSTANT:
 				if (rule == grammarAccess.getTff_atom_literalRule()) {
-					sequence_tff_atom_literal(context, (tff_constant) semanticObject); 
+					sequence_Tff_atom_literal(context, (Tff_constant) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getTff_atomRule()) {
-					sequence_tff_atom_literal_tff_constant_tff_predefined_function_1_args(context, (tff_constant) semanticObject); 
+					sequence_Tff_atom_literal_Tff_constant_Tff_predefined_function_1_args(context, (Tff_constant) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getTff_constantRule()) {
-					sequence_tff_constant(context, (tff_constant) semanticObject); 
+					sequence_Tff_constant(context, (Tff_constant) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getTff_predefined_function_1_argsRule()) {
-					sequence_tff_predefined_function_1_args(context, (tff_constant) semanticObject); 
+					sequence_Tff_predefined_function_1_args(context, (Tff_constant) semanticObject); 
 					return; 
 				}
 				else break;
 			case ParserPackage.TFF_EXPRESSION:
 				if (rule == grammarAccess.getTff_quantifier_expressionRule()) {
-					sequence_tff_quantifier_expression(context, (tff_expression) semanticObject); 
+					sequence_Tff_quantifier_expression(context, (Tff_expression) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getTff_expressionRule()
 						|| action == grammarAccess.getTff_expressionAccess().getBinaryLeftAction_1_0()
 						|| rule == grammarAccess.getTff_terminating_expressionRule()) {
-					sequence_tff_terminating_expression(context, (tff_expression) semanticObject); 
+					sequence_Tff_terminating_expression(context, (Tff_expression) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getTff_type_quantifier_epressionRule()) {
-					sequence_tff_type_quantifier_epression(context, (tff_expression) semanticObject); 
+					sequence_Tff_type_quantifier_epression(context, (Tff_expression) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getThf_quantifier_expressionRule()) {
-					sequence_thf_quantifier_expression(context, (tff_expression) semanticObject); 
+					sequence_Thf_quantifier_expression(context, (Tff_expression) semanticObject); 
 					return; 
 				}
 				else break;
 			case ParserPackage.TFF_FORMULA_TYPE_DEFINITION:
-				sequence_tff_formula_type_definition(context, (tff_formula_type_definition) semanticObject); 
+				sequence_Tff_formula_type_definition(context, (Tff_formula_type_definition) semanticObject); 
 				return; 
 			case ParserPackage.TFF_PREDEFINED_FUNCTION_2ARGS:
-				sequence_tff_predefined_function_2_args(context, (tff_predefined_function_2_args) semanticObject); 
+				sequence_Tff_predefined_function_2_args(context, (Tff_predefined_function_2_args) semanticObject); 
 				return; 
 			case ParserPackage.TFF_ROOT:
-				sequence_tff_root(context, (tff_root) semanticObject); 
+				sequence_Tff_root(context, (Tff_root) semanticObject); 
 				return; 
 			case ParserPackage.TFF_TYPE_CONSTANT:
 				if (rule == grammarAccess.getTff_type_constantRule()) {
-					sequence_tff_type_constant(context, (tff_type_constant) semanticObject); 
+					sequence_Tff_type_constant(context, (Tff_type_constant) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getTff_type_expressionRule()
 						|| action == grammarAccess.getTff_type_expressionAccess().getOperLeftAction_1_0()
 						|| rule == grammarAccess.getTff_terminal_type_expressionRule()
 						|| rule == grammarAccess.getTff_type_atomRule()) {
-					sequence_tff_type_constant_tff_type_literal(context, (tff_type_constant) semanticObject); 
+					sequence_Tff_type_constant_Tff_type_literal(context, (Tff_type_constant) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getTff_type_literalRule()) {
-					sequence_tff_type_literal(context, (tff_type_constant) semanticObject); 
+					sequence_Tff_type_literal(context, (Tff_type_constant) semanticObject); 
 					return; 
 				}
 				else break;
 			case ParserPackage.TFF_VAR:
-				sequence_tff_var(context, (tff_var) semanticObject); 
+				sequence_Tff_var(context, (Tff_var) semanticObject); 
 				return; 
 			case ParserPackage.TFF_VAR_DECLARATION:
-				sequence_tff_var_declaration(context, (tff_var_declaration) semanticObject); 
+				sequence_Tff_var_declaration(context, (Tff_var_declaration) semanticObject); 
 				return; 
 			case ParserPackage.TFF_VARIABLE_LIST:
-				sequence_tff_variable_list(context, (tff_variable_list) semanticObject); 
+				sequence_Tff_variable_list(context, (Tff_variable_list) semanticObject); 
 				return; 
 			case ParserPackage.THF_CONSTANT:
 				if (rule == grammarAccess.getThf_atom_literalRule()) {
-					sequence_thf_atom_literal(context, (thf_constant) semanticObject); 
+					sequence_Thf_atom_literal(context, (Thf_constant) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getThf_atomRule()) {
-					sequence_thf_atom_literal_thf_constant(context, (thf_constant) semanticObject); 
+					sequence_Thf_atom_literal_Thf_constant(context, (Thf_constant) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getThf_constantRule()) {
-					sequence_thf_constant(context, (thf_constant) semanticObject); 
+					sequence_Thf_constant(context, (Thf_constant) semanticObject); 
 					return; 
 				}
 				else break;
 			case ParserPackage.THF_EXPRESSION:
-				sequence_thf_terminating_expression(context, (thf_expression) semanticObject); 
+				sequence_Thf_terminating_expression(context, (Thf_expression) semanticObject); 
 				return; 
 			case ParserPackage.THF_FORMULA_TYPE_DEFINITION:
-				sequence_thf_formula_type_definition(context, (thf_formula_type_definition) semanticObject); 
+				sequence_Thf_formula_type_definition(context, (Thf_formula_type_definition) semanticObject); 
 				return; 
 			case ParserPackage.THF_ROOT:
-				sequence_thf_root(context, (thf_root) semanticObject); 
+				sequence_Thf_root(context, (Thf_root) semanticObject); 
 				return; 
 			case ParserPackage.THF_TYPE_CONSTANT:
 				if (rule == grammarAccess.getThf_type_constantRule()) {
-					sequence_thf_type_constant(context, (thf_type_constant) semanticObject); 
+					sequence_Thf_type_constant(context, (Thf_type_constant) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getThf_type_expressionRule()
 						|| action == grammarAccess.getThf_type_expressionAccess().getOperLeftAction_1_0()
 						|| rule == grammarAccess.getThf_terminal_type_expressionRule()
 						|| rule == grammarAccess.getThf_type_atomRule()) {
-					sequence_thf_type_constant_thf_type_literal(context, (thf_type_constant) semanticObject); 
+					sequence_Thf_type_constant_Thf_type_literal(context, (Thf_type_constant) semanticObject); 
 					return; 
 				}
 				else if (rule == grammarAccess.getThf_type_literalRule()) {
-					sequence_thf_type_literal(context, (thf_type_constant) semanticObject); 
+					sequence_Thf_type_literal(context, (Thf_type_constant) semanticObject); 
 					return; 
 				}
 				else break;
 			case ParserPackage.THF_VAR:
-				sequence_thf_var(context, (thf_var) semanticObject); 
+				sequence_Thf_var(context, (Thf_var) semanticObject); 
 				return; 
 			case ParserPackage.THF_VAR_DECLARATION:
-				sequence_thf_var_declaration(context, (thf_var_declaration) semanticObject); 
+				sequence_Thf_var_declaration(context, (Thf_var_declaration) semanticObject); 
 				return; 
 			case ParserPackage.THF_VARIABLE_LIST:
-				sequence_thf_variable_list(context, (thf_variable_list) semanticObject); 
+				sequence_Thf_variable_list(context, (Thf_variable_list) semanticObject); 
 				return; 
+			case ParserPackage.BINARY:
+				if (rule == grammarAccess.getFof_expressionRule()
+						|| action == grammarAccess.getFof_expressionAccess().getBinaryLeftAction_1_0()
+						|| rule == grammarAccess.getFof_terminating_expressionRule()) {
+					sequence_Fof_expression(context, (binary) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getTff_expressionRule()
+						|| action == grammarAccess.getTff_expressionAccess().getBinaryLeftAction_1_0()
+						|| rule == grammarAccess.getTff_terminating_expressionRule()) {
+					sequence_Tff_expression(context, (binary) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getThf_expressionRule()
+						|| action == grammarAccess.getThf_expressionAccess().getBinaryLeftAction_1_0()
+						|| rule == grammarAccess.getThf_terminating_expressionRule()) {
+					sequence_Thf_expression(context, (binary) semanticObject); 
+					return; 
+				}
+				else break;
+			case ParserPackage.OPER:
+				if (rule == grammarAccess.getTff_type_expressionRule()
+						|| action == grammarAccess.getTff_type_expressionAccess().getOperLeftAction_1_0()
+						|| rule == grammarAccess.getTff_terminal_type_expressionRule()) {
+					sequence_Tff_type_expression(context, (oper) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getThf_type_expressionRule()
+						|| action == grammarAccess.getThf_type_expressionAccess().getOperLeftAction_1_0()
+						|| rule == grammarAccess.getThf_terminal_type_expressionRule()) {
+					sequence_Thf_type_expression(context, (oper) semanticObject); 
+					return; 
+				}
+				else break;
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -293,52 +293,37 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     Model returns Model
+	 *     Cnf_expression returns Cnf_constant
+	 *     Cnf_constant returns Cnf_constant
 	 *
 	 * Constraint:
-	 *     (
-	 *         TPTP_input+=include+ | 
-	 *         (TPTP_input+=include+ (TPTP_input+=fof_input+ | TPTP_input+=tff_input+ | TPTP_input+=cnf_input+ | TPTP_input+=thf_input+))
-	 *     )?
+	 *     ((name=Lower_token_and_keyword | name=STRING) (param+=Cnf_expression param+=Cnf_expression*)?)
 	 */
-	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
+	protected void sequence_Cnf_constant(ISerializationContext context, Cnf_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     cnf_expression returns cnf_constant
-	 *     cnf_constant returns cnf_constant
+	 *     Cnf_equality returns Cnf_equality
 	 *
 	 * Constraint:
-	 *     ((name=lower_token_and_keyword | name=STRING) (param+=cnf_expression param+=cnf_expression*)?)
+	 *     (expL=Cnf_expression ((eq='=' | eq='!=') expR=Cnf_expression)?)
 	 */
-	protected void sequence_cnf_constant(ISerializationContext context, cnf_constant semanticObject) {
+	protected void sequence_Cnf_equality(ISerializationContext context, Cnf_equality semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     cnf_equality returns cnf_equality
+	 *     Cnf_expression returns Cnf_expression
 	 *
 	 * Constraint:
-	 *     (expL=cnf_expression ((eq='=' | eq='!=') expR=cnf_expression)?)
+	 *     cnf_exp=Cnf_statement_literal
 	 */
-	protected void sequence_cnf_equality(ISerializationContext context, cnf_equality semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     cnf_expression returns cnf_expression
-	 *
-	 * Constraint:
-	 *     cnf_exp=cnf_statement_literal
-	 */
-	protected void sequence_cnf_expression(ISerializationContext context, cnf_expression semanticObject) {
+	protected void sequence_Cnf_expression(ISerializationContext context, Cnf_expression semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ParserPackage.Literals.CNF_EXPRESSION__CNF_EXP) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ParserPackage.Literals.CNF_EXPRESSION__CNF_EXP));
@@ -351,66 +336,66 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     cnf_formula_type_definition returns cnf_formula_type_definition
+	 *     Cnf_formula_type_definition returns Cnf_formula_type_definition
 	 *
 	 * Constraint:
-	 *     (disjunction=cnf_or | disjunction=cnf_or)
+	 *     (disjunction=Cnf_or | disjunction=Cnf_or)
 	 */
-	protected void sequence_cnf_formula_type_definition(ISerializationContext context, cnf_formula_type_definition semanticObject) {
+	protected void sequence_Cnf_formula_type_definition(ISerializationContext context, Cnf_formula_type_definition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     cnf_not returns cnf_not
+	 *     Cnf_not returns Cnf_not
 	 *
 	 * Constraint:
-	 *     (negated?='~'? literal=cnf_equality)
+	 *     (negated?='~'? literal=Cnf_equality)
 	 */
-	protected void sequence_cnf_not(ISerializationContext context, cnf_not semanticObject) {
+	protected void sequence_Cnf_not(ISerializationContext context, Cnf_not semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     cnf_or returns cnf_or
+	 *     Cnf_or returns Cnf_or
 	 *
 	 * Constraint:
-	 *     (or+=cnf_not or+=cnf_not*)
+	 *     (or+=Cnf_not or+=Cnf_not*)
 	 */
-	protected void sequence_cnf_or(ISerializationContext context, cnf_or semanticObject) {
+	protected void sequence_Cnf_or(ISerializationContext context, Cnf_or semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     cnf_input returns cnf_root
-	 *     cnf_root returns cnf_root
+	 *     Cnf_input returns Cnf_root
+	 *     Cnf_root returns Cnf_root
 	 *
 	 * Constraint:
 	 *     (
-	 *         (name=lower_token_and_keyword | name=STRING) 
+	 *         (name=Lower_token_and_keyword | name=STRING) 
 	 *         (formula_role='axiom' | formula_role='hypothesis' | formula_role='negated_conjecture' | formula_role='plain') 
-	 *         exp=cnf_formula_type_definition
+	 *         exp=Cnf_formula_type_definition
 	 *     )
 	 */
-	protected void sequence_cnf_root(ISerializationContext context, cnf_root semanticObject) {
+	protected void sequence_Cnf_root(ISerializationContext context, Cnf_root semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     cnf_expression returns cnf_var
-	 *     cnf_var returns cnf_var
+	 *     Cnf_expression returns Cnf_var
+	 *     Cnf_var returns Cnf_var
 	 *
 	 * Constraint:
 	 *     name=UPPER_TOKEN
 	 */
-	protected void sequence_cnf_var(ISerializationContext context, cnf_var semanticObject) {
+	protected void sequence_Cnf_var(ISerializationContext context, Cnf_var semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ParserPackage.Literals.CNF_EXPRESSION__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ParserPackage.Literals.CNF_EXPRESSION__NAME));
@@ -423,50 +408,50 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     fof_atom_literal returns fof_constant
+	 *     Fof_atom_literal returns Fof_constant
 	 *
 	 * Constraint:
 	 *     (name='$true' | name='$false')
 	 */
-	protected void sequence_fof_atom_literal(ISerializationContext context, fof_constant semanticObject) {
+	protected void sequence_Fof_atom_literal(ISerializationContext context, Fof_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     fof_atom returns fof_constant
+	 *     Fof_atom returns Fof_constant
 	 *
 	 * Constraint:
-	 *     (name='$true' | name='$false' | ((name=lower_token_and_keyword | name=STRING) (fof_param+=fof_atom fof_param+=fof_atom*)?))
+	 *     (name='$true' | name='$false' | ((name=Lower_token_and_keyword | name=STRING) (fof_param+=Fof_atom fof_param+=Fof_atom*)?))
 	 */
-	protected void sequence_fof_atom_literal_fof_constant(ISerializationContext context, fof_constant semanticObject) {
+	protected void sequence_Fof_atom_literal_Fof_constant(ISerializationContext context, Fof_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     fof_constant returns fof_constant
+	 *     Fof_constant returns Fof_constant
 	 *
 	 * Constraint:
-	 *     ((name=lower_token_and_keyword | name=STRING) (fof_param+=fof_atom fof_param+=fof_atom*)?)
+	 *     ((name=Lower_token_and_keyword | name=STRING) (fof_param+=Fof_atom fof_param+=Fof_atom*)?)
 	 */
-	protected void sequence_fof_constant(ISerializationContext context, fof_constant semanticObject) {
+	protected void sequence_Fof_constant(ISerializationContext context, Fof_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     fof_expression returns binary
-	 *     fof_expression.binary_1_0 returns binary
-	 *     fof_terminating_expression returns binary
+	 *     Fof_expression returns binary
+	 *     Fof_expression.binary_1_0 returns binary
+	 *     Fof_terminating_expression returns binary
 	 *
 	 * Constraint:
-	 *     (left=fof_expression_binary_1_0 op=binary_operator right=fof_terminating_expression)
+	 *     (left=Fof_expression_binary_1_0 op=Binary_operator right=Fof_terminating_expression)
 	 */
-	protected void sequence_fof_expression(ISerializationContext context, binary semanticObject) {
+	protected void sequence_Fof_expression(ISerializationContext context, binary semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ParserPackage.Literals.BINARY__LEFT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ParserPackage.Literals.BINARY__LEFT));
@@ -485,24 +470,24 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     fof_quantifier_expression returns fof_expression
+	 *     Fof_quantifier_expression returns Fof_expression
 	 *
 	 * Constraint:
-	 *     ((fof_quantifier='!' | fof_quantifier='?') fof_param=fof_variable_list fof_exp=fof_expression)
+	 *     ((fof_quantifier='!' | fof_quantifier='?') fof_param=Fof_variable_list fof_exp=Fof_expression)
 	 */
-	protected void sequence_fof_quantifier_expression(ISerializationContext context, fof_expression semanticObject) {
+	protected void sequence_Fof_quantifier_expression(ISerializationContext context, Fof_expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     fof_input returns fof_root
-	 *     fof_root returns fof_root
+	 *     Fof_input returns Fof_root
+	 *     Fof_root returns Fof_root
 	 *
 	 * Constraint:
 	 *     (
-	 *         (name=lower_token_and_keyword | name=STRING) 
+	 *         (name=Lower_token_and_keyword | name=STRING) 
 	 *         (
 	 *             formula_role='axiom' | 
 	 *             formula_role='hypothesis' | 
@@ -511,37 +496,37 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             formula_role='definition' | 
 	 *             formula_role='lemma'
 	 *         ) 
-	 *         exp=fof_expression
+	 *         exp=Fof_expression
 	 *     )
 	 */
-	protected void sequence_fof_root(ISerializationContext context, fof_root semanticObject) {
+	protected void sequence_Fof_root(ISerializationContext context, Fof_root semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     fof_expression returns fof_expression
-	 *     fof_expression.binary_1_0 returns fof_expression
-	 *     fof_terminating_expression returns fof_expression
+	 *     Fof_expression returns Fof_expression
+	 *     Fof_expression.binary_1_0 returns Fof_expression
+	 *     Fof_terminating_expression returns Fof_expression
 	 *
 	 * Constraint:
-	 *     (fof_atom=fof_atom | (fof_negation?='~' fof_exp=fof_expression) | fof_exp=fof_quantifier_expression)
+	 *     (fof_atom=Fof_atom | (fof_negation?='~' fof_exp=Fof_expression) | fof_exp=Fof_quantifier_expression)
 	 */
-	protected void sequence_fof_terminating_expression(ISerializationContext context, fof_expression semanticObject) {
+	protected void sequence_Fof_terminating_expression(ISerializationContext context, Fof_expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     fof_atom returns fof_var
-	 *     fof_var returns fof_var
+	 *     Fof_atom returns Fof_var
+	 *     Fof_var returns Fof_var
 	 *
 	 * Constraint:
 	 *     name=UPPER_TOKEN
 	 */
-	protected void sequence_fof_var(ISerializationContext context, fof_var semanticObject) {
+	protected void sequence_Fof_var(ISerializationContext context, Fof_var semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ParserPackage.Literals.FOF_ATOM__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ParserPackage.Literals.FOF_ATOM__NAME));
@@ -554,58 +539,73 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     fof_variable_list returns fof_variable_list
+	 *     Fof_variable_list returns Fof_variable_list
 	 *
 	 * Constraint:
-	 *     (params+=fof_var params+=fof_var*)
+	 *     (params+=Fof_var params+=Fof_var*)
 	 */
-	protected void sequence_fof_variable_list(ISerializationContext context, fof_variable_list semanticObject) {
+	protected void sequence_Fof_variable_list(ISerializationContext context, Fof_variable_list semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     include returns include
-	 *     fof_input returns include
-	 *     tff_input returns include
-	 *     cnf_input returns include
-	 *     thf_input returns include
+	 *     Include returns Include
+	 *     Fof_input returns Include
+	 *     Tff_input returns Include
+	 *     Cnf_input returns Include
+	 *     Thf_input returns Include
 	 *
 	 * Constraint:
 	 *     path=STRING
 	 */
-	protected void sequence_include(ISerializationContext context, include semanticObject) {
+	protected void sequence_Include(ISerializationContext context, Include semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ParserPackage.Literals.INCLUDE__PATH) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ParserPackage.Literals.INCLUDE__PATH));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getIncludeAccess().getPathSTRINGTerminalRuleCall_1_0(), semanticObject.getPath());
+		feeder.accept(grammarAccess.getIncludeAccess().getPathSTRINGTerminalRuleCall_2_0(), semanticObject.getPath());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     tff_atom_literal returns tff_constant
+	 *     Model returns Model
 	 *
 	 * Constraint:
-	 *     (name='$true' | name='$false')
+	 *     (
+	 *         TPTP_input+=Include+ | 
+	 *         (TPTP_input+=Include+ (TPTP_input+=Fof_input+ | TPTP_input+=Tff_input+ | TPTP_input+=Cnf_input+ | TPTP_input+=Thf_input+))
+	 *     )?
 	 */
-	protected void sequence_tff_atom_literal(ISerializationContext context, tff_constant semanticObject) {
+	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     tff_atom returns tff_constant
+	 *     Tff_atom_literal returns Tff_constant
+	 *
+	 * Constraint:
+	 *     (name='$true' | name='$false')
+	 */
+	protected void sequence_Tff_atom_literal(ISerializationContext context, Tff_constant semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Tff_atom returns Tff_constant
 	 *
 	 * Constraint:
 	 *     (
-	 *         ((name=lower_token_and_keyword | name=STRING) (param+=tff_atom param+=tff_atom*)?) | 
-	 *         (top=lower_token_and_keyword name='/' bottom=lower_token_and_keyword) | 
+	 *         ((name=Lower_token_and_keyword | name=STRING) (param+=Tff_atom param+=Tff_atom*)?) | 
+	 *         (top=Lower_token_and_keyword name='/' bottom=Lower_token_and_keyword) | 
 	 *         name='$true' | 
 	 *         name='$false' | 
 	 *         (
@@ -617,40 +617,40 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *                 name='$to_rat' | 
 	 *                 name='$to_real'
 	 *             ) 
-	 *             param+=tff_expression
+	 *             param+=Tff_expression
 	 *         )
 	 *     )
 	 */
-	protected void sequence_tff_atom_literal_tff_constant_tff_predefined_function_1_args(ISerializationContext context, tff_constant semanticObject) {
+	protected void sequence_Tff_atom_literal_Tff_constant_Tff_predefined_function_1_args(ISerializationContext context, Tff_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     tff_constant returns tff_constant
+	 *     Tff_constant returns Tff_constant
 	 *
 	 * Constraint:
 	 *     (
-	 *         ((name=lower_token_and_keyword | name=STRING) (param+=tff_atom param+=tff_atom*)?) | 
-	 *         (top=lower_token_and_keyword name='/' bottom=lower_token_and_keyword)
+	 *         ((name=Lower_token_and_keyword | name=STRING) (param+=Tff_atom param+=Tff_atom*)?) | 
+	 *         (top=Lower_token_and_keyword name='/' bottom=Lower_token_and_keyword)
 	 *     )
 	 */
-	protected void sequence_tff_constant(ISerializationContext context, tff_constant semanticObject) {
+	protected void sequence_Tff_constant(ISerializationContext context, Tff_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     tff_expression returns binary
-	 *     tff_expression.binary_1_0 returns binary
-	 *     tff_terminating_expression returns binary
+	 *     Tff_expression returns binary
+	 *     Tff_expression.binary_1_0 returns binary
+	 *     Tff_terminating_expression returns binary
 	 *
 	 * Constraint:
-	 *     (left=tff_expression_binary_1_0 op=binary_operator right=tff_terminating_expression)
+	 *     (left=Tff_expression_binary_1_0 op=Binary_operator right=Tff_terminating_expression)
 	 */
-	protected void sequence_tff_expression(ISerializationContext context, binary semanticObject) {
+	protected void sequence_Tff_expression(ISerializationContext context, binary semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ParserPackage.Literals.BINARY__LEFT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ParserPackage.Literals.BINARY__LEFT));
@@ -669,19 +669,19 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     tff_formula_type_definition returns tff_formula_type_definition
+	 *     Tff_formula_type_definition returns Tff_formula_type_definition
 	 *
 	 * Constraint:
-	 *     ((name=lower_token_and_keyword | name=STRING) (exp=tff_type_quantifier_epression | exp=tff_type_expression))
+	 *     ((name=Lower_token_and_keyword | name=STRING) (exp=Tff_type_quantifier_epression | exp=Tff_type_expression))
 	 */
-	protected void sequence_tff_formula_type_definition(ISerializationContext context, tff_formula_type_definition semanticObject) {
+	protected void sequence_Tff_formula_type_definition(ISerializationContext context, Tff_formula_type_definition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     tff_predefined_function_1_args returns tff_constant
+	 *     Tff_predefined_function_1_args returns Tff_constant
 	 *
 	 * Constraint:
 	 *     (
@@ -693,18 +693,18 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             name='$to_rat' | 
 	 *             name='$to_real'
 	 *         ) 
-	 *         param+=tff_expression
+	 *         param+=Tff_expression
 	 *     )
 	 */
-	protected void sequence_tff_predefined_function_1_args(ISerializationContext context, tff_constant semanticObject) {
+	protected void sequence_Tff_predefined_function_1_args(ISerializationContext context, Tff_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     tff_atom returns tff_predefined_function_2_args
-	 *     tff_predefined_function_2_args returns tff_predefined_function_2_args
+	 *     Tff_atom returns Tff_predefined_function_2_args
+	 *     Tff_predefined_function_2_args returns Tff_predefined_function_2_args
 	 *
 	 * Constraint:
 	 *     (
@@ -725,36 +725,36 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             func='$greater' | 
 	 *             func='$eq'
 	 *         ) 
-	 *         param+=tff_expression 
-	 *         param+=tff_expression
+	 *         param+=Tff_expression 
+	 *         param+=Tff_expression
 	 *     )
 	 */
-	protected void sequence_tff_predefined_function_2_args(ISerializationContext context, tff_predefined_function_2_args semanticObject) {
+	protected void sequence_Tff_predefined_function_2_args(ISerializationContext context, Tff_predefined_function_2_args semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     tff_quantifier_expression returns tff_expression
+	 *     Tff_quantifier_expression returns Tff_expression
 	 *
 	 * Constraint:
-	 *     ((quantifier='!' | quantifier='?') param=tff_variable_list exp=tff_expression)
+	 *     ((quantifier='!' | quantifier='?') param=Tff_variable_list exp=Tff_expression)
 	 */
-	protected void sequence_tff_quantifier_expression(ISerializationContext context, tff_expression semanticObject) {
+	protected void sequence_Tff_quantifier_expression(ISerializationContext context, Tff_expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     tff_input returns tff_root
-	 *     tff_root returns tff_root
+	 *     Tff_input returns Tff_root
+	 *     Tff_root returns Tff_root
 	 *
 	 * Constraint:
 	 *     (
 	 *         (
-	 *             (name=lower_token_and_keyword | name=STRING) 
+	 *             (name=Lower_token_and_keyword | name=STRING) 
 	 *             (
 	 *                 formula_role='axiom' | 
 	 *                 formula_role='hypothesis' | 
@@ -763,52 +763,52 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *                 formula_role='definition' | 
 	 *                 formula_role='lemma'
 	 *             ) 
-	 *             exp=tff_expression
+	 *             exp=Tff_expression
 	 *         ) | 
-	 *         ((name=lower_token_and_keyword | name=STRING) formula_role='type' def=tff_formula_type_definition)
+	 *         ((name=Lower_token_and_keyword | name=STRING) formula_role='type' def=Tff_formula_type_definition)
 	 *     )
 	 */
-	protected void sequence_tff_root(ISerializationContext context, tff_root semanticObject) {
+	protected void sequence_Tff_root(ISerializationContext context, Tff_root semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     tff_expression returns tff_expression
-	 *     tff_expression.binary_1_0 returns tff_expression
-	 *     tff_terminating_expression returns tff_expression
+	 *     Tff_expression returns Tff_expression
+	 *     Tff_expression.binary_1_0 returns Tff_expression
+	 *     Tff_terminating_expression returns Tff_expression
 	 *
 	 * Constraint:
-	 *     (atom=tff_atom | (negation?='~' exp=tff_expression) | exp=tff_quantifier_expression)
+	 *     (atom=Tff_atom | (negation?='~' exp=Tff_expression) | exp=Tff_quantifier_expression)
 	 */
-	protected void sequence_tff_terminating_expression(ISerializationContext context, tff_expression semanticObject) {
+	protected void sequence_Tff_terminating_expression(ISerializationContext context, Tff_expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     tff_type_constant returns tff_type_constant
+	 *     Tff_type_constant returns Tff_type_constant
 	 *
 	 * Constraint:
-	 *     ((name=lower_token_and_keyword | name=STRING) (param+=tff_type_atom param+=tff_type_atom*)?)
+	 *     ((name=Lower_token_and_keyword | name=STRING) (param+=Tff_type_atom param+=Tff_type_atom*)?)
 	 */
-	protected void sequence_tff_type_constant(ISerializationContext context, tff_type_constant semanticObject) {
+	protected void sequence_Tff_type_constant(ISerializationContext context, Tff_type_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     tff_type_expression returns tff_type_constant
-	 *     tff_type_expression.oper_1_0 returns tff_type_constant
-	 *     tff_terminal_type_expression returns tff_type_constant
-	 *     tff_type_atom returns tff_type_constant
+	 *     Tff_type_expression returns Tff_type_constant
+	 *     Tff_type_expression.oper_1_0 returns Tff_type_constant
+	 *     Tff_terminal_type_expression returns Tff_type_constant
+	 *     Tff_type_atom returns Tff_type_constant
 	 *
 	 * Constraint:
 	 *     (
-	 *         ((name=lower_token_and_keyword | name=STRING) (param+=tff_type_atom param+=tff_type_atom*)?) | 
+	 *         ((name=Lower_token_and_keyword | name=STRING) (param+=Tff_type_atom param+=Tff_type_atom*)?) | 
 	 *         name='$i' | 
 	 *         name='$o' | 
 	 *         name='$tType' | 
@@ -817,28 +817,28 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name='$rat'
 	 *     )
 	 */
-	protected void sequence_tff_type_constant_tff_type_literal(ISerializationContext context, tff_type_constant semanticObject) {
+	protected void sequence_Tff_type_constant_Tff_type_literal(ISerializationContext context, Tff_type_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     tff_type_expression returns oper
-	 *     tff_type_expression.oper_1_0 returns oper
-	 *     tff_terminal_type_expression returns oper
+	 *     Tff_type_expression returns oper
+	 *     Tff_type_expression.oper_1_0 returns oper
+	 *     Tff_terminal_type_expression returns oper
 	 *
 	 * Constraint:
-	 *     (left=tff_type_expression_oper_1_0 (op='>' | op='*') right+=tff_terminal_type_expression)
+	 *     (left=Tff_type_expression_oper_1_0 (op='>' | op='*') right+=Tff_terminal_type_expression)
 	 */
-	protected void sequence_tff_type_expression(ISerializationContext context, oper semanticObject) {
+	protected void sequence_Tff_type_expression(ISerializationContext context, oper semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     tff_type_literal returns tff_type_constant
+	 *     Tff_type_literal returns Tff_type_constant
 	 *
 	 * Constraint:
 	 *     (
@@ -850,19 +850,19 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name='$rat'
 	 *     )
 	 */
-	protected void sequence_tff_type_literal(ISerializationContext context, tff_type_constant semanticObject) {
+	protected void sequence_Tff_type_literal(ISerializationContext context, Tff_type_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     tff_type_quantifier_epression returns tff_expression
+	 *     Tff_type_quantifier_epression returns Tff_expression
 	 *
 	 * Constraint:
-	 *     (quantifier='!>' param=tff_variable_list exp=tff_type_expression)
+	 *     (quantifier='!>' param=Tff_variable_list exp=Tff_type_expression)
 	 */
-	protected void sequence_tff_type_quantifier_epression(ISerializationContext context, tff_expression semanticObject) {
+	protected void sequence_Tff_type_quantifier_epression(ISerializationContext context, Tff_expression semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ParserPackage.Literals.TFF_EXPRESSION__QUANTIFIER) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ParserPackage.Literals.TFF_EXPRESSION__QUANTIFIER));
@@ -881,12 +881,35 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     tff_var_declaration returns tff_var_declaration
+	 *     Tff_type_expression returns Tff_var
+	 *     Tff_type_expression.oper_1_0 returns Tff_var
+	 *     Tff_terminal_type_expression returns Tff_var
+	 *     Tff_type_atom returns Tff_var
+	 *     Tff_atom returns Tff_var
+	 *     Tff_var returns Tff_var
 	 *
 	 * Constraint:
-	 *     (var=tff_var vartype=tff_type_expression)
+	 *     name=UPPER_TOKEN
 	 */
-	protected void sequence_tff_var_declaration(ISerializationContext context, tff_var_declaration semanticObject) {
+	protected void sequence_Tff_var(ISerializationContext context, Tff_var semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ParserPackage.Literals.TFF_TYPE_ATOM__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ParserPackage.Literals.TFF_TYPE_ATOM__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTff_varAccess().getNameUPPER_TOKENTerminalRuleCall_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Tff_var_declaration returns Tff_var_declaration
+	 *
+	 * Constraint:
+	 *     (var=Tff_var vartype=Tff_type_expression)
+	 */
+	protected void sequence_Tff_var_declaration(ISerializationContext context, Tff_var_declaration semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ParserPackage.Literals.TFF_VAR_DECLARATION__VAR) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ParserPackage.Literals.TFF_VAR_DECLARATION__VAR));
@@ -902,85 +925,62 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     tff_type_expression returns tff_var
-	 *     tff_type_expression.oper_1_0 returns tff_var
-	 *     tff_terminal_type_expression returns tff_var
-	 *     tff_type_atom returns tff_var
-	 *     tff_atom returns tff_var
-	 *     tff_var returns tff_var
+	 *     Tff_variable_list returns Tff_variable_list
 	 *
 	 * Constraint:
-	 *     name=UPPER_TOKEN
+	 *     (params+=Tff_var_declaration params+=Tff_var_declaration*)
 	 */
-	protected void sequence_tff_var(ISerializationContext context, tff_var semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ParserPackage.Literals.TFF_TYPE_ATOM__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ParserPackage.Literals.TFF_TYPE_ATOM__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getTff_varAccess().getNameUPPER_TOKENTerminalRuleCall_0(), semanticObject.getName());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     tff_variable_list returns tff_variable_list
-	 *
-	 * Constraint:
-	 *     (params+=tff_var_declaration params+=tff_var_declaration*)
-	 */
-	protected void sequence_tff_variable_list(ISerializationContext context, tff_variable_list semanticObject) {
+	protected void sequence_Tff_variable_list(ISerializationContext context, Tff_variable_list semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     thf_atom_literal returns thf_constant
+	 *     Thf_atom_literal returns Thf_constant
 	 *
 	 * Constraint:
 	 *     (name='$true' | name='$false')
 	 */
-	protected void sequence_thf_atom_literal(ISerializationContext context, thf_constant semanticObject) {
+	protected void sequence_Thf_atom_literal(ISerializationContext context, Thf_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     thf_atom returns thf_constant
+	 *     Thf_atom returns Thf_constant
 	 *
 	 * Constraint:
-	 *     (name='$true' | name='$false' | ((name=lower_token_and_keyword | name=STRING) (thf_param+=thf_atom thf_param+=thf_atom*)?))
+	 *     (name='$true' | name='$false' | ((name=Lower_token_and_keyword | name=STRING) (thf_param+=Thf_atom thf_param+=Thf_atom*)?))
 	 */
-	protected void sequence_thf_atom_literal_thf_constant(ISerializationContext context, thf_constant semanticObject) {
+	protected void sequence_Thf_atom_literal_Thf_constant(ISerializationContext context, Thf_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     thf_constant returns thf_constant
+	 *     Thf_constant returns Thf_constant
 	 *
 	 * Constraint:
-	 *     ((name=lower_token_and_keyword | name=STRING) (thf_param+=thf_atom thf_param+=thf_atom*)?)
+	 *     ((name=Lower_token_and_keyword | name=STRING) (thf_param+=Thf_atom thf_param+=Thf_atom*)?)
 	 */
-	protected void sequence_thf_constant(ISerializationContext context, thf_constant semanticObject) {
+	protected void sequence_Thf_constant(ISerializationContext context, Thf_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     thf_expression returns binary
-	 *     thf_expression.binary_1_0 returns binary
-	 *     thf_terminating_expression returns binary
+	 *     Thf_expression returns binary
+	 *     Thf_expression.binary_1_0 returns binary
+	 *     Thf_terminating_expression returns binary
 	 *
 	 * Constraint:
-	 *     (left=thf_expression_binary_1_0 op=thf_binary_operator right=thf_terminating_expression)
+	 *     (left=Thf_expression_binary_1_0 op=Thf_binary_operator right=Thf_terminating_expression)
 	 */
-	protected void sequence_thf_expression(ISerializationContext context, binary semanticObject) {
+	protected void sequence_Thf_expression(ISerializationContext context, binary semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ParserPackage.Literals.BINARY__LEFT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ParserPackage.Literals.BINARY__LEFT));
@@ -999,38 +999,38 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     thf_formula_type_definition returns thf_formula_type_definition
+	 *     Thf_formula_type_definition returns Thf_formula_type_definition
 	 *
 	 * Constraint:
-	 *     ((name=lower_token_and_keyword | name=STRING) exp=thf_type_expression)
+	 *     ((name=Lower_token_and_keyword | name=STRING) exp=Thf_type_expression)
 	 */
-	protected void sequence_thf_formula_type_definition(ISerializationContext context, thf_formula_type_definition semanticObject) {
+	protected void sequence_Thf_formula_type_definition(ISerializationContext context, Thf_formula_type_definition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     thf_quantifier_expression returns tff_expression
+	 *     Thf_quantifier_expression returns Tff_expression
 	 *
 	 * Constraint:
-	 *     ((quantifier='!' | quantifier='?' | quantifier='^') param=thf_variable_list exp=thf_expression)
+	 *     ((quantifier='!' | quantifier='?' | quantifier='^') param=Thf_variable_list exp=Thf_expression)
 	 */
-	protected void sequence_thf_quantifier_expression(ISerializationContext context, tff_expression semanticObject) {
+	protected void sequence_Thf_quantifier_expression(ISerializationContext context, Tff_expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     thf_input returns thf_root
-	 *     thf_root returns thf_root
+	 *     Thf_input returns Thf_root
+	 *     Thf_root returns Thf_root
 	 *
 	 * Constraint:
 	 *     (
-	 *         ((name=lower_token_and_keyword | name=STRING) formula_role='type' def=thf_formula_type_definition) | 
+	 *         ((name=Lower_token_and_keyword | name=STRING) formula_role='type' def=Thf_formula_type_definition) | 
 	 *         (
-	 *             (name=lower_token_and_keyword | name=STRING) 
+	 *             (name=Lower_token_and_keyword | name=STRING) 
 	 *             (
 	 *                 formula_role='axiom' | 
 	 *                 formula_role='hypothesis' | 
@@ -1039,90 +1039,109 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *                 formula_role='definition' | 
 	 *                 formula_role='lemma'
 	 *             ) 
-	 *             thf_exp=thf_expression
+	 *             thf_exp=Thf_expression
 	 *         )
 	 *     )
 	 */
-	protected void sequence_thf_root(ISerializationContext context, thf_root semanticObject) {
+	protected void sequence_Thf_root(ISerializationContext context, Thf_root semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     thf_expression returns thf_expression
-	 *     thf_expression.binary_1_0 returns thf_expression
-	 *     thf_terminating_expression returns thf_expression
+	 *     Thf_expression returns Thf_expression
+	 *     Thf_expression.binary_1_0 returns Thf_expression
+	 *     Thf_terminating_expression returns Thf_expression
 	 *
 	 * Constraint:
-	 *     (thf_atom=thf_atom | (thf_negation?='~' thf_exp=thf_expression) | (op=thf_unary_operator thf_exp=thf_expression) | thf_exp=thf_quantifier_expression)
+	 *     (thf_atom=Thf_atom | (thf_negation?='~' thf_exp=Thf_expression) | (op=Thf_unary_operator thf_exp=Thf_expression) | thf_exp=Thf_quantifier_expression)
 	 */
-	protected void sequence_thf_terminating_expression(ISerializationContext context, thf_expression semanticObject) {
+	protected void sequence_Thf_terminating_expression(ISerializationContext context, Thf_expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     thf_type_constant returns thf_type_constant
+	 *     Thf_type_constant returns Thf_type_constant
 	 *
 	 * Constraint:
-	 *     (name=lower_token_and_keyword | name=STRING)
+	 *     (name=Lower_token_and_keyword | name=STRING)
 	 */
-	protected void sequence_thf_type_constant(ISerializationContext context, thf_type_constant semanticObject) {
+	protected void sequence_Thf_type_constant(ISerializationContext context, Thf_type_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     thf_type_expression returns thf_type_constant
-	 *     thf_type_expression.oper_1_0 returns thf_type_constant
-	 *     thf_terminal_type_expression returns thf_type_constant
-	 *     thf_type_atom returns thf_type_constant
+	 *     Thf_type_expression returns Thf_type_constant
+	 *     Thf_type_expression.oper_1_0 returns Thf_type_constant
+	 *     Thf_terminal_type_expression returns Thf_type_constant
+	 *     Thf_type_atom returns Thf_type_constant
 	 *
 	 * Constraint:
-	 *     (name=lower_token_and_keyword | name=STRING | name='$i' | name='$o' | name='$tType')
+	 *     (name=Lower_token_and_keyword | name=STRING | name='$i' | name='$o' | name='$tType')
 	 */
-	protected void sequence_thf_type_constant_thf_type_literal(ISerializationContext context, thf_type_constant semanticObject) {
+	protected void sequence_Thf_type_constant_Thf_type_literal(ISerializationContext context, Thf_type_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     thf_type_expression returns oper
-	 *     thf_type_expression.oper_1_0 returns oper
-	 *     thf_terminal_type_expression returns oper
+	 *     Thf_type_expression returns oper
+	 *     Thf_type_expression.oper_1_0 returns oper
+	 *     Thf_terminal_type_expression returns oper
 	 *
 	 * Constraint:
-	 *     (left=thf_type_expression_oper_1_0 op='>' right+=thf_terminal_type_expression)
+	 *     (left=Thf_type_expression_oper_1_0 op='>' right+=Thf_terminal_type_expression)
 	 */
-	protected void sequence_thf_type_expression(ISerializationContext context, oper semanticObject) {
+	protected void sequence_Thf_type_expression(ISerializationContext context, oper semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     thf_type_literal returns thf_type_constant
+	 *     Thf_type_literal returns Thf_type_constant
 	 *
 	 * Constraint:
 	 *     (name='$i' | name='$o' | name='$tType')
 	 */
-	protected void sequence_thf_type_literal(ISerializationContext context, thf_type_constant semanticObject) {
+	protected void sequence_Thf_type_literal(ISerializationContext context, Thf_type_constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     thf_var_declaration returns thf_var_declaration
+	 *     Thf_atom returns Thf_var
+	 *     Thf_var returns Thf_var
 	 *
 	 * Constraint:
-	 *     (var=thf_var vartype=thf_type_expression)
+	 *     name=UPPER_TOKEN
 	 */
-	protected void sequence_thf_var_declaration(ISerializationContext context, thf_var_declaration semanticObject) {
+	protected void sequence_Thf_var(ISerializationContext context, Thf_var semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ParserPackage.Literals.THF_ATOM__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ParserPackage.Literals.THF_ATOM__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getThf_varAccess().getNameUPPER_TOKENTerminalRuleCall_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Thf_var_declaration returns Thf_var_declaration
+	 *
+	 * Constraint:
+	 *     (var=Thf_var vartype=Thf_type_expression)
+	 */
+	protected void sequence_Thf_var_declaration(ISerializationContext context, Thf_var_declaration semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ParserPackage.Literals.THF_VAR_DECLARATION__VAR) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ParserPackage.Literals.THF_VAR_DECLARATION__VAR));
@@ -1138,31 +1157,12 @@ public class TPTPSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     thf_atom returns thf_var
-	 *     thf_var returns thf_var
+	 *     Thf_variable_list returns Thf_variable_list
 	 *
 	 * Constraint:
-	 *     name=UPPER_TOKEN
+	 *     (params+=Thf_var_declaration params+=Thf_var_declaration*)
 	 */
-	protected void sequence_thf_var(ISerializationContext context, thf_var semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ParserPackage.Literals.THF_ATOM__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ParserPackage.Literals.THF_ATOM__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getThf_varAccess().getNameUPPER_TOKENTerminalRuleCall_0(), semanticObject.getName());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     thf_variable_list returns thf_variable_list
-	 *
-	 * Constraint:
-	 *     (params+=thf_var_declaration params+=thf_var_declaration*)
-	 */
-	protected void sequence_thf_variable_list(ISerializationContext context, thf_variable_list semanticObject) {
+	protected void sequence_Thf_variable_list(ISerializationContext context, Thf_variable_list semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

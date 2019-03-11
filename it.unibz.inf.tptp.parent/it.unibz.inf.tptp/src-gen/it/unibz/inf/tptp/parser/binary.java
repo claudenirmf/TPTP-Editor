@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface binary extends fof_expression, tff_expression, thf_expression
+public interface binary extends Fof_expression, Tff_expression, Thf_expression
 {
   /**
    * Returns the value of the '<em><b>Left</b></em>' containment reference.

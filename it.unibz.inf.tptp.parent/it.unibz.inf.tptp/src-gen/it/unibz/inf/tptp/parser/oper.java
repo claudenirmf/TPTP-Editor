@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface oper extends tff_type_expression, thf_type_expression
+public interface oper extends Tff_type_expression, Thf_type_expression
 {
   /**
    * Returns the value of the '<em><b>Left</b></em>' containment reference.

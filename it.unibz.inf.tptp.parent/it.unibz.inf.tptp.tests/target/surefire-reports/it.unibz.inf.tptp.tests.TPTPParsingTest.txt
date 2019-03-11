@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: it.unibz.inf.tptp.tests.TPTPParsingTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.995 sec <<< FAILURE! - in it.unibz.inf.tptp.tests.TPTPParsingTest
+loadModel(it.unibz.inf.tptp.tests.TPTPParsingTest)  Time elapsed: 0.374 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertNotNull(Assert.java:712)
+	at org.junit.Assert.assertNotNull(Assert.java:722)
+	at it.unibz.inf.tptp.tests.TPTPParsingTest.loadModel(TPTPParsingTest.java:32)
+
